@@ -1,0 +1,1582 @@
+INFO 2025-07-02 15:24:52,947 autoreload 18104 15388 Watching for file changes with StatReloader
+INFO 2025-07-02 15:25:59,764 autoreload 11476 11628 Watching for file changes with StatReloader
+INFO 2025-07-02 15:27:19,606 autoreload 12316 7280 Watching for file changes with StatReloader
+INFO 2025-07-02 15:29:04,296 autoreload 12316 7280 C:\Users\o.qosimov\Desktop\planshet\core\settings\base.py changed, reloading.
+INFO 2025-07-02 15:29:05,088 autoreload 8752 9248 Watching for file changes with StatReloader
+INFO 2025-07-02 15:29:10,760 basehttp 8752 15264 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-07-02 15:29:10,773 basehttp 8752 15264 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3062
+INFO 2025-07-02 15:29:10,926 basehttp 8752 15264 "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103009
+INFO 2025-07-02 15:29:10,934 basehttp 8752 15264 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44244
+INFO 2025-07-02 15:29:10,943 basehttp 8752 15656 "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382975
+INFO 2025-07-02 15:29:10,944 basehttp 8752 20404 "GET /static/jazzmin/css/main.css HTTP/1.1" 200 16969
+INFO 2025-07-02 15:29:10,944 basehttp 8752 9772 "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 200 2637
+INFO 2025-07-02 15:29:10,947 basehttp 8752 21152 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62440
+INFO 2025-07-02 15:29:10,948 basehttp 8752 18100 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44244
+INFO 2025-07-02 15:29:10,951 basehttp 8752 21712 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-07-02 15:29:11,059 basehttp 8752 18100 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62440
+INFO 2025-07-02 15:29:11,063 basehttp 8752 21916 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-07-02 15:29:11,256 basehttp 8752 21712 "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+INFO 2025-07-02 15:29:13,195 basehttp 8752 21712 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-07-02 15:29:13,256 basehttp 8752 21712 "GET /admin/ HTTP/1.1" 200 13689
+INFO 2025-07-02 15:29:13,289 basehttp 8752 21712 "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2391
+INFO 2025-07-02 15:29:13,337 basehttp 8752 21712 "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+INFO 2025-07-02 15:29:13,602 basehttp 8752 21916 "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2391
+INFO 2025-07-02 15:29:17,291 basehttp 8752 21712 "GET /admin/auth/user/ HTTP/1.1" 200 18547
+INFO 2025-07-02 15:29:17,317 basehttp 8752 20404 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-07-02 15:29:17,317 basehttp 8752 15656 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-07-02 15:29:17,317 basehttp 8752 15264 "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2025-07-02 15:29:17,318 basehttp 8752 9772 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2025-07-02 15:29:17,318 basehttp 8752 21712 "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 200 16264
+INFO 2025-07-02 15:29:17,326 basehttp 8752 15656 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-07-02 15:29:17,330 basehttp 8752 20404 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-07-02 15:29:17,333 basehttp 8752 21916 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-07-02 15:29:17,334 basehttp 8752 9772 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-07-02 15:29:17,335 basehttp 8752 18100 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-07-02 15:29:17,336 basehttp 8752 6396 "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2025-07-02 15:29:17,338 basehttp 8752 9576 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2025-07-02 15:29:17,339 basehttp 8752 15416 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-07-02 15:29:17,340 basehttp 8752 21712 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+INFO 2025-07-02 15:29:17,342 basehttp 8752 20652 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-07-02 15:29:17,342 basehttp 8752 9772 "GET /static/jazzmin/js/change_list.js HTTP/1.1" 200 2252
+INFO 2025-07-02 15:29:17,344 basehttp 8752 15264 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-07-02 15:29:17,423 basehttp 8752 20652 "GET /static/jazzmin/js/change_list.js HTTP/1.1" 200 2252
+INFO 2025-07-02 15:29:17,424 basehttp 8752 15416 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+INFO 2025-07-02 15:29:17,426 basehttp 8752 9576 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-07-02 15:29:17,464 basehttp 8752 21152 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-02 15:29:17,977 basehttp 8752 9576 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-02 15:29:18,462 basehttp 8752 21152 "GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 12039
+INFO 2025-07-02 15:29:19,928 basehttp 8752 21152 "GET /admin/auth/user/ HTTP/1.1" 200 18547
+INFO 2025-07-02 15:29:20,109 basehttp 8752 21152 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-02 15:29:20,292 basehttp 8752 9576 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-02 15:29:21,338 basehttp 8752 21152 "GET /admin/auth/user/1/change/ HTTP/1.1" 200 30956
+INFO 2025-07-02 15:29:21,391 basehttp 8752 15656 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-07-02 15:29:21,392 basehttp 8752 15264 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-07-02 15:29:21,392 basehttp 8752 9772 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-07-02 15:29:21,392 basehttp 8752 20404 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15492
+INFO 2025-07-02 15:29:21,392 basehttp 8752 21712 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-07-02 15:29:21,405 basehttp 8752 20404 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-07-02 15:29:21,410 basehttp 8752 15656 "GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6052
+INFO 2025-07-02 15:29:21,419 basehttp 8752 21916 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-07-02 15:29:21,419 basehttp 8752 6396 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-07-02 15:29:21,420 basehttp 8752 9576 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-07-02 15:29:21,420 basehttp 8752 20652 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-07-02 15:29:21,420 basehttp 8752 15416 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15492
+INFO 2025-07-02 15:29:21,420 basehttp 8752 18100 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-07-02 15:29:21,426 basehttp 8752 15656 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-07-02 15:29:21,427 basehttp 8752 9576 "GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6052
+INFO 2025-07-02 15:29:21,446 basehttp 8752 21152 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-02 15:29:23,907 basehttp 8752 21152 "GET /static/jazzmin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2025-07-02 15:29:31,075 basehttp 8752 21152 "GET /admin/auth/user/ HTTP/1.1" 200 18547
+INFO 2025-07-02 15:29:31,131 basehttp 8752 21152 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-02 15:35:48,705 autoreload 1532 19100 Watching for file changes with StatReloader
+WARNING 2025-07-02 15:36:09,092 basehttp 1532 3600 "GET /swagger HTTP/1.1" 404 2096
+WARNING 2025-07-02 15:36:09,280 basehttp 1532 3600 "GET /favicon.ico HTTP/1.1" 404 2108
+INFO 2025-07-02 15:36:11,956 basehttp 1532 3600 "GET / HTTP/1.1" 200 10717
+WARNING 2025-07-02 15:36:15,109 basehttp 1532 3600 "GET /dashboard/ HTTP/1.1" 404 2105
+INFO 2025-07-02 15:37:21,734 autoreload 1532 19100 C:\Users\o.qosimov\Desktop\planshet\core\urls.py changed, reloading.
+INFO 2025-07-02 15:37:22,582 autoreload 18804 18188 Watching for file changes with StatReloader
+INFO 2025-07-02 15:38:01,079 autoreload 9040 21280 Watching for file changes with StatReloader
+WARNING 2025-07-02 15:38:04,522 basehttp 9040 16420 "GET /dashboard/ HTTP/1.1" 404 2530
+INFO 2025-07-02 15:38:09,388 basehttp 9040 16420 "GET /swagger HTTP/1.1" 301 0
+ERROR 2025-07-02 15:38:09,421 log 9040 9952 Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\drf_yasg\renderers.py", line 79, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2025-07-02 15:38:09,425 basehttp 9040 9952 "GET /swagger/ HTTP/1.1" 500 103256
+INFO 2025-07-02 15:39:12,942 autoreload 9040 21280 C:\Users\o.qosimov\Desktop\planshet\core\settings\base.py changed, reloading.
+INFO 2025-07-02 15:39:13,959 autoreload 11632 8308 Watching for file changes with StatReloader
+INFO 2025-07-02 15:39:15,889 autoreload 13344 20172 Watching for file changes with StatReloader
+INFO 2025-07-02 15:39:17,073 basehttp 13344 13748 "GET /swagger/ HTTP/1.1" 200 2213
+INFO 2025-07-02 15:39:17,237 basehttp 13344 13748 "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+INFO 2025-07-02 15:39:17,243 basehttp 13344 13748 "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+INFO 2025-07-02 15:39:17,243 basehttp 13344 6760 "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+INFO 2025-07-02 15:39:17,246 basehttp 13344 14564 "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+INFO 2025-07-02 15:39:17,247 basehttp 13344 18424 "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+INFO 2025-07-02 15:39:17,250 basehttp 13344 20156 "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+INFO 2025-07-02 15:39:17,254 basehttp 13344 6528 "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+INFO 2025-07-02 15:39:17,517 basehttp 13344 6528 "GET /swagger/?format=openapi HTTP/1.1" 200 476
+INFO 2025-07-02 15:39:17,567 basehttp 13344 6528 "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+WARNING 2025-07-02 15:39:21,615 basehttp 13344 6528 "GET /accounts/login/?next=/swagger/ HTTP/1.1" 404 2560
+INFO 2025-07-02 15:41:10,523 autoreload 13344 20172 C:\Users\o.qosimov\Desktop\planshet\core\urls.py changed, reloading.
+INFO 2025-07-02 15:41:11,403 autoreload 18884 19112 Watching for file changes with StatReloader
+WARNING 2025-07-02 15:41:23,108 basehttp 18884 7472 "GET /api/ HTTP/1.1" 404 2890
+INFO 2025-07-02 15:41:27,779 basehttp 18884 7472 "GET /api/schema HTTP/1.1" 301 0
+INFO 2025-07-02 15:41:27,795 basehttp 18884 21616 "GET /api/schema/ HTTP/1.1" 200 120
+WARNING 2025-07-02 15:41:39,612 basehttp 18884 21616 "GET /api/swagger HTTP/1.1" 404 2911
+INFO 2025-07-02 15:41:44,611 basehttp 18884 21616 "GET /api/docs HTTP/1.1" 301 0
+INFO 2025-07-02 15:41:44,622 basehttp 18884 14756 "GET /api/docs/ HTTP/1.1" 200 4269
+INFO 2025-07-02 15:41:46,132 basehttp 18884 14756 "GET /api/schema/ HTTP/1.1" 200 192
+INFO 2025-07-02 15:41:49,697 basehttp 18884 14756 "GET /api/schema/ HTTP/1.1" 200 120
+INFO 2025-07-02 15:54:44,743 autoreload 18884 19112 C:\Users\o.qosimov\Desktop\planshet\core\settings\base.py changed, reloading.
+INFO 2025-07-02 15:54:45,806 autoreload 9892 17124 Watching for file changes with StatReloader
+INFO 2025-07-02 15:55:41,241 autoreload 9892 17124 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 15:55:42,112 autoreload 18288 13032 Watching for file changes with StatReloader
+INFO 2025-07-02 15:56:01,063 autoreload 18288 13032 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 15:56:01,907 autoreload 21616 14244 Watching for file changes with StatReloader
+INFO 2025-07-02 15:56:26,185 autoreload 21616 14244 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 15:56:27,104 autoreload 10628 13224 Watching for file changes with StatReloader
+INFO 2025-07-02 15:57:25,881 autoreload 10628 13224 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 15:57:26,767 autoreload 6104 15416 Watching for file changes with StatReloader
+INFO 2025-07-02 15:57:51,003 autoreload 6104 15416 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 15:57:51,824 autoreload 22080 6152 Watching for file changes with StatReloader
+INFO 2025-07-02 15:58:16,020 autoreload 22080 6152 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 15:58:16,899 autoreload 8760 13528 Watching for file changes with StatReloader
+INFO 2025-07-02 15:59:31,651 autoreload 8760 13528 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 15:59:32,527 autoreload 6060 16504 Watching for file changes with StatReloader
+INFO 2025-07-02 15:59:56,870 autoreload 6060 16504 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 15:59:57,775 autoreload 18664 16064 Watching for file changes with StatReloader
+INFO 2025-07-02 16:01:14,729 autoreload 18664 16064 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:01:15,781 autoreload 19848 19132 Watching for file changes with StatReloader
+INFO 2025-07-02 16:02:01,912 autoreload 19848 19132 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:02:03,744 autoreload 22156 1448 Watching for file changes with StatReloader
+INFO 2025-07-02 16:02:18,505 autoreload 22156 1448 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:02:19,321 autoreload 11136 2588 Watching for file changes with StatReloader
+INFO 2025-07-02 16:03:00,749 autoreload 11136 2588 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:03:01,559 autoreload 13508 17280 Watching for file changes with StatReloader
+INFO 2025-07-02 16:04:40,141 autoreload 13508 17280 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:04:40,967 autoreload 9616 14876 Watching for file changes with StatReloader
+INFO 2025-07-02 16:06:01,681 autoreload 9616 14876 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:06:02,529 autoreload 12492 10452 Watching for file changes with StatReloader
+INFO 2025-07-02 16:06:17,178 autoreload 12492 10452 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:06:18,032 autoreload 15692 2132 Watching for file changes with StatReloader
+INFO 2025-07-02 16:06:47,893 autoreload 15692 2132 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:06:48,787 autoreload 5344 19176 Watching for file changes with StatReloader
+INFO 2025-07-02 16:07:06,905 autoreload 5344 19176 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:07:07,694 autoreload 16508 19340 Watching for file changes with StatReloader
+INFO 2025-07-02 16:09:48,871 autoreload 16508 19340 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:09:49,670 autoreload 14020 8124 Watching for file changes with StatReloader
+INFO 2025-07-02 16:10:22,449 autoreload 14020 8124 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:10:23,249 autoreload 2596 15116 Watching for file changes with StatReloader
+INFO 2025-07-02 16:10:38,873 autoreload 2596 15116 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:10:39,841 autoreload 9432 15080 Watching for file changes with StatReloader
+INFO 2025-07-02 16:12:59,201 autoreload 9432 15080 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:13:00,208 autoreload 16524 22288 Watching for file changes with StatReloader
+INFO 2025-07-02 16:13:18,122 autoreload 16524 22288 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:13:19,127 autoreload 21376 20172 Watching for file changes with StatReloader
+INFO 2025-07-02 16:13:30,485 autoreload 21376 20172 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:13:31,298 autoreload 16824 8200 Watching for file changes with StatReloader
+INFO 2025-07-02 16:13:58,707 autoreload 16824 8200 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:13:59,509 autoreload 6228 6036 Watching for file changes with StatReloader
+INFO 2025-07-02 16:14:24,988 autoreload 6228 6036 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:14:25,879 autoreload 17712 6708 Watching for file changes with StatReloader
+INFO 2025-07-02 16:14:36,411 autoreload 17712 6708 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:14:37,264 autoreload 21964 15128 Watching for file changes with StatReloader
+INFO 2025-07-02 16:14:46,545 autoreload 21964 15128 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:14:47,377 autoreload 22156 18840 Watching for file changes with StatReloader
+INFO 2025-07-02 16:15:29,900 autoreload 22156 18840 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:15:30,855 autoreload 9280 6228 Watching for file changes with StatReloader
+INFO 2025-07-02 16:15:42,124 autoreload 9280 6228 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:15:43,068 autoreload 16176 7220 Watching for file changes with StatReloader
+INFO 2025-07-02 16:17:47,925 autoreload 16176 7220 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:17:48,822 autoreload 19872 10052 Watching for file changes with StatReloader
+INFO 2025-07-02 16:17:55,820 autoreload 19872 10052 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:17:56,599 autoreload 17560 13620 Watching for file changes with StatReloader
+INFO 2025-07-02 16:18:16,698 autoreload 17560 13620 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:18:17,563 autoreload 15312 5736 Watching for file changes with StatReloader
+INFO 2025-07-02 16:19:00,092 autoreload 15312 5736 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:19:01,036 autoreload 12676 14216 Watching for file changes with StatReloader
+INFO 2025-07-02 16:19:53,283 autoreload 12676 14216 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:19:54,083 autoreload 13592 13168 Watching for file changes with StatReloader
+INFO 2025-07-02 16:21:57,036 autoreload 13592 13168 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 16:21:58,387 autoreload 11800 8424 Watching for file changes with StatReloader
+INFO 2025-07-02 16:37:05,771 autoreload 11800 8424 C:\Users\o.qosimov\Desktop\planshet\apps\common\models.py changed, reloading.
+INFO 2025-07-02 16:37:06,703 autoreload 3916 16272 Watching for file changes with StatReloader
+INFO 2025-07-02 16:39:22,918 autoreload 3916 16272 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:39:23,744 autoreload 10560 11916 Watching for file changes with StatReloader
+INFO 2025-07-02 16:40:18,050 autoreload 10560 11916 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:40:18,756 autoreload 15024 1976 Watching for file changes with StatReloader
+INFO 2025-07-02 16:40:34,512 autoreload 15024 1976 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:40:35,309 autoreload 5736 22432 Watching for file changes with StatReloader
+INFO 2025-07-02 16:40:47,911 autoreload 5736 22432 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:40:48,695 autoreload 2704 11976 Watching for file changes with StatReloader
+INFO 2025-07-02 16:41:21,729 autoreload 2704 11976 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:41:22,607 autoreload 11992 11964 Watching for file changes with StatReloader
+INFO 2025-07-02 16:42:53,468 autoreload 11992 11964 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:42:54,282 autoreload 16604 9352 Watching for file changes with StatReloader
+INFO 2025-07-02 16:43:12,233 autoreload 16604 9352 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:43:13,072 autoreload 3636 4364 Watching for file changes with StatReloader
+INFO 2025-07-02 16:43:50,254 autoreload 3636 4364 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:43:51,037 autoreload 16708 5848 Watching for file changes with StatReloader
+INFO 2025-07-02 16:45:03,697 autoreload 16708 5848 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:45:04,597 autoreload 17160 12172 Watching for file changes with StatReloader
+INFO 2025-07-02 16:48:18,954 autoreload 17160 12172 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-02 16:48:20,221 autoreload 12188 19368 Watching for file changes with StatReloader
+INFO 2025-07-02 17:05:18,863 autoreload 19716 11936 Watching for file changes with StatReloader
+INFO 2025-07-02 17:06:52,753 autoreload 9616 8644 Watching for file changes with StatReloader
+INFO 2025-07-02 17:09:24,885 autoreload 16320 9884 Watching for file changes with StatReloader
+INFO 2025-07-02 17:10:40,662 autoreload 16320 9884 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 17:10:41,557 autoreload 19248 19260 Watching for file changes with StatReloader
+INFO 2025-07-02 17:10:47,486 autoreload 19248 19260 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-02 17:10:48,309 autoreload 10268 11572 Watching for file changes with StatReloader
+INFO 2025-07-02 17:11:40,614 autoreload 3168 15976 Watching for file changes with StatReloader
+INFO 2025-07-02 17:12:24,150 autoreload 3168 15976 C:\Users\o.qosimov\Desktop\planshet\core\settings\base.py changed, reloading.
+INFO 2025-07-07 17:10:16,876 autoreload 11488 15140 Watching for file changes with StatReloader
+INFO 2025-07-07 17:12:42,239 autoreload 11488 15140 C:\Users\o.qosimov\Desktop\planshet\core\settings\base.py changed, reloading.
+INFO 2025-07-07 17:12:43,077 autoreload 26752 5840 Watching for file changes with StatReloader
+INFO 2025-07-07 17:13:42,166 autoreload 26752 5840 C:\Users\o.qosimov\Desktop\planshet\core\settings\base.py changed, reloading.
+INFO 2025-07-07 17:13:43,399 autoreload 26964 16696 Watching for file changes with StatReloader
+INFO 2025-07-07 17:13:43,399 autoreload 26964 16696 Watching for file changes with StatReloader
+INFO 2025-07-07 17:14:02,838 kobo_import 28524 16876 KoBoToolbox ma'lumotlarini import qilish boshlandi
+INFO 2025-07-07 17:14:03,583 kobo_import 28524 16876 KoBoToolbox dan 2 ta yozuv olindi
+INFO 2025-07-07 17:14:03,626 kobo_import 28524 16876 Duplicate record topildi: 1
+INFO 2025-07-07 17:14:03,630 kobo_import 28524 16876 Duplicate record topildi: 2
+INFO 2025-07-07 17:14:03,633 kobo_import 28524 16876 Duplicate record topildi: 1
+INFO 2025-07-07 17:14:03,637 kobo_import 28524 16876 Duplicate record topildi: 2
+INFO 2025-07-07 17:14:03,637 kobo_import 28524 16876 Import yakunlandi: {'total_submissions': 2, 'processed_products': 4, 'saved_products': 0, 'errors': 4}
+INFO 2025-07-07 17:14:17,190 basehttp 26964 26620 "GET /admin/form/tochkaproducthistory/?created_at__month=7&created_at__year=2025 HTTP/1.1" 200 99331
+INFO 2025-07-07 17:14:17,190 basehttp 26964 26620 "GET /admin/form/tochkaproducthistory/?created_at__month=7&created_at__year=2025 HTTP/1.1" 200 99331
+WARNING 2025-07-07 17:14:17,294 basehttp 26964 19360 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:14:17,294 basehttp 26964 19360 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:14:17,357 basehttp 26964 26620 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:14:17,357 basehttp 26964 26620 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:14:17,382 basehttp 26964 24000 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-07-07 17:14:17,382 basehttp 26964 28388 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-07-07 17:14:17,382 basehttp 26964 24000 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-07-07 17:14:17,382 basehttp 26964 28388 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-07-07 17:14:17,418 basehttp 26964 24000 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-07-07 17:14:17,418 basehttp 26964 24000 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-07-07 17:14:17,432 basehttp 26964 23252 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-07-07 17:14:17,432 basehttp 26964 23252 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-07-07 17:14:17,437 basehttp 26964 27864 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-07-07 17:14:17,437 basehttp 26964 27864 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-07-07 17:14:17,440 basehttp 26964 27764 "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2025-07-07 17:14:17,440 basehttp 26964 27764 "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2025-07-07 17:14:17,444 basehttp 26964 19832 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2025-07-07 17:14:17,444 basehttp 26964 19832 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2025-07-07 17:14:17,910 basehttp 26964 19832 "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2391
+INFO 2025-07-07 17:14:17,910 basehttp 26964 24000 "GET /static/jazzmin/js/change_list.js HTTP/1.1" 200 2252
+INFO 2025-07-07 17:14:17,910 basehttp 26964 19832 "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2391
+INFO 2025-07-07 17:14:17,910 basehttp 26964 24000 "GET /static/jazzmin/js/change_list.js HTTP/1.1" 200 2252
+INFO 2025-07-07 17:14:17,915 basehttp 26964 27764 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+INFO 2025-07-07 17:14:17,915 basehttp 26964 27764 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+INFO 2025-07-07 17:14:17,950 basehttp 26964 27864 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:14:17,950 basehttp 26964 27864 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:14:20,933 basehttp 26964 26620 "POST /admin/form/tochkaproducthistory/?created_at__month=7&created_at__year=2025 HTTP/1.1" 200 26109
+INFO 2025-07-07 17:14:20,933 basehttp 26964 26620 "POST /admin/form/tochkaproducthistory/?created_at__month=7&created_at__year=2025 HTTP/1.1" 200 26109
+WARNING 2025-07-07 17:14:20,979 basehttp 26964 26620 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:14:20,979 basehttp 26964 26620 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:14:22,445 basehttp 26964 14388 "POST /admin/form/tochkaproducthistory/?created_at__month=7&created_at__year=2025 HTTP/1.1" 302 0
+INFO 2025-07-07 17:14:22,445 basehttp 26964 14388 "POST /admin/form/tochkaproducthistory/?created_at__month=7&created_at__year=2025 HTTP/1.1" 302 0
+INFO 2025-07-07 17:14:22,600 basehttp 26964 14388 "GET /admin/form/tochkaproducthistory/?created_at__month=7&created_at__year=2025 HTTP/1.1" 200 92904
+INFO 2025-07-07 17:14:22,600 basehttp 26964 14388 "GET /admin/form/tochkaproducthistory/?created_at__month=7&created_at__year=2025 HTTP/1.1" 200 92904
+WARNING 2025-07-07 17:14:22,633 basehttp 26964 25024 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:14:22,633 basehttp 26964 25024 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:14:22,774 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:14:22,774 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:14:26,764 kobo_import 22268 28240 KoBoToolbox ma'lumotlarini import qilish boshlandi
+INFO 2025-07-07 17:14:29,211 kobo_import 22268 28240 KoBoToolbox dan 2 ta yozuv olindi
+INFO 2025-07-07 17:14:29,256 kobo_import 22268 28240 Yangi yozuv saqlandi: 3 - Product: 1, Miqdor: 21.0, Narx: 12.0
+INFO 2025-07-07 17:14:29,261 kobo_import 22268 28240 Yangi yozuv saqlandi: 4 - Product: 2, Miqdor: 1000.0, Narx: 2212.0
+INFO 2025-07-07 17:14:29,264 kobo_import 22268 28240 Duplicate record topildi: 3
+INFO 2025-07-07 17:14:29,267 kobo_import 22268 28240 Duplicate record topildi: 4
+INFO 2025-07-07 17:14:29,267 kobo_import 22268 28240 Import yakunlandi: {'total_submissions': 2, 'processed_products': 4, 'saved_products': 2, 'errors': 2}
+INFO 2025-07-07 17:17:42,016 kobo_import 10156 28508 KoBoToolbox ma'lumotlarini import qilish boshlandi
+INFO 2025-07-07 17:17:42,864 kobo_import 10156 28508 KoBoToolbox dan 2 ta yozuv olindi
+INFO 2025-07-07 17:17:42,902 kobo_import 10156 28508 Yangi yozuv saqlandi: 5 - Product: 1, Miqdor: 21.0, Narx: 12.0
+INFO 2025-07-07 17:17:42,906 kobo_import 10156 28508 Yangi yozuv saqlandi: 6 - Product: 2, Miqdor: 1000.0, Narx: 2212.0
+INFO 2025-07-07 17:17:42,909 kobo_import 10156 28508 Yangi yozuv saqlandi: 7 - Product: 1, Miqdor: 13.0, Narx: 15.0
+INFO 2025-07-07 17:17:42,912 kobo_import 10156 28508 Yangi yozuv saqlandi: 8 - Product: 2, Miqdor: 12.0, Narx: 48.0
+INFO 2025-07-07 17:17:42,912 kobo_import 10156 28508 Import yakunlandi: {'total_submissions': 2, 'processed_products': 4, 'saved_products': 4, 'errors': 0}
+INFO 2025-07-07 17:17:49,265 basehttp 26964 14388 "GET /admin/form/tochkaproducthistory/ HTTP/1.1" 200 101523
+INFO 2025-07-07 17:17:49,265 basehttp 26964 14388 "GET /admin/form/tochkaproducthistory/ HTTP/1.1" 200 101523
+WARNING 2025-07-07 17:17:49,324 basehttp 26964 12240 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:17:49,324 basehttp 26964 12240 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:17:49,352 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:17:49,352 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:19:26,948 basehttp 26964 14388 "GET /admin/home/tochka/ HTTP/1.1" 200 155318
+INFO 2025-07-07 17:19:26,948 basehttp 26964 14388 "GET /admin/home/tochka/ HTTP/1.1" 200 155318
+WARNING 2025-07-07 17:19:27,005 basehttp 26964 27296 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:19:27,005 basehttp 26964 27296 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:19:27,134 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:19:27,134 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:19:29,655 basehttp 26964 14388 "GET /admin/home/tochka/?o=-1 HTTP/1.1" 200 158365
+INFO 2025-07-07 17:19:29,655 basehttp 26964 14388 "GET /admin/home/tochka/?o=-1 HTTP/1.1" 200 158365
+WARNING 2025-07-07 17:19:29,703 basehttp 26964 24104 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:19:29,703 basehttp 26964 24104 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:19:29,836 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:19:29,836 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:19:30,792 basehttp 26964 14388 "GET /admin/home/tochka/?o=1 HTTP/1.1" 200 157900
+INFO 2025-07-07 17:19:30,792 basehttp 26964 14388 "GET /admin/home/tochka/?o=1 HTTP/1.1" 200 157900
+WARNING 2025-07-07 17:19:30,823 basehttp 26964 27788 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:19:30,823 basehttp 26964 27788 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:19:30,855 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:19:30,855 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:19:34,066 basehttp 26964 14388 "GET /admin/home/tochka/add/?_changelist_filters=o%3D1 HTTP/1.1" 200 62493
+INFO 2025-07-07 17:19:34,066 basehttp 26964 14388 "GET /admin/home/tochka/add/?_changelist_filters=o%3D1 HTTP/1.1" 200 62493
+WARNING 2025-07-07 17:19:34,102 basehttp 26964 22208 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:19:34,102 basehttp 26964 22208 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:19:34,132 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:19:34,132 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:20:04,281 basehttp 26964 14388 "GET /admin/home/tochka/ HTTP/1.1" 200 155318
+INFO 2025-07-07 17:20:04,281 basehttp 26964 14388 "GET /admin/home/tochka/ HTTP/1.1" 200 155318
+WARNING 2025-07-07 17:20:04,370 basehttp 26964 9004 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:20:04,370 basehttp 26964 9004 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:20:04,478 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:20:04,478 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:20:12,007 basehttp 26964 14388 "GET /admin/home/tochka/?district__id__exact=95&q= HTTP/1.1" 200 74459
+INFO 2025-07-07 17:20:12,007 basehttp 26964 14388 "GET /admin/home/tochka/?district__id__exact=95&q= HTTP/1.1" 200 74459
+WARNING 2025-07-07 17:20:12,035 basehttp 26964 19908 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:20:12,035 basehttp 26964 19908 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:20:12,067 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:20:12,067 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:20:13,331 basehttp 26964 14388 "GET /admin/home/tochka/500/change/?_changelist_filters=district__id__exact%3D95%26q%3D HTTP/1.1" 200 63404
+INFO 2025-07-07 17:20:13,331 basehttp 26964 14388 "GET /admin/home/tochka/500/change/?_changelist_filters=district__id__exact%3D95%26q%3D HTTP/1.1" 200 63404
+WARNING 2025-07-07 17:20:13,364 basehttp 26964 21332 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:20:13,364 basehttp 26964 21332 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:20:13,400 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:20:13,400 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:20:28,965 basehttp 26964 14388 "POST /admin/home/tochka/add/?_changelist_filters=o%3D1 HTTP/1.1" 200 62893
+INFO 2025-07-07 17:20:28,965 basehttp 26964 14388 "POST /admin/home/tochka/add/?_changelist_filters=o%3D1 HTTP/1.1" 200 62893
+WARNING 2025-07-07 17:20:28,996 basehttp 26964 27580 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:20:28,996 basehttp 26964 27580 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:20:29,026 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:20:29,026 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:20:40,244 basehttp 26964 14388 "POST /admin/home/tochka/add/?_changelist_filters=o%3D1 HTTP/1.1" 302 0
+INFO 2025-07-07 17:20:40,244 basehttp 26964 14388 "POST /admin/home/tochka/add/?_changelist_filters=o%3D1 HTTP/1.1" 302 0
+INFO 2025-07-07 17:20:40,449 basehttp 26964 14388 "GET /admin/home/tochka/?o=1 HTTP/1.1" 200 158649
+INFO 2025-07-07 17:20:40,449 basehttp 26964 14388 "GET /admin/home/tochka/?o=1 HTTP/1.1" 200 158649
+WARNING 2025-07-07 17:20:40,491 basehttp 26964 25132 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:20:40,491 basehttp 26964 25132 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:20:40,633 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:20:40,633 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:00,084 basehttp 26964 14388 "GET /admin/home/tochka/?district__id__exact=95&q=&o=1 HTTP/1.1" 200 75408
+INFO 2025-07-07 17:21:00,084 basehttp 26964 14388 "GET /admin/home/tochka/?district__id__exact=95&q=&o=1 HTTP/1.1" 200 75408
+WARNING 2025-07-07 17:21:00,117 basehttp 26964 1000 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:21:00,117 basehttp 26964 1000 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:21:00,147 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:00,147 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:15,887 basehttp 26964 14388 "GET /admin/home/ntochka/ HTTP/1.1" 200 28967
+INFO 2025-07-07 17:21:15,887 basehttp 26964 14388 "GET /admin/home/ntochka/ HTTP/1.1" 200 28967
+WARNING 2025-07-07 17:21:15,914 basehttp 26964 2012 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:21:15,914 basehttp 26964 2012 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:21:16,059 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:16,059 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:32,029 basehttp 26964 14388 "GET /admin/form/product/ HTTP/1.1" 200 59574
+INFO 2025-07-07 17:21:32,029 basehttp 26964 14388 "GET /admin/form/product/ HTTP/1.1" 200 59574
+WARNING 2025-07-07 17:21:32,064 basehttp 26964 23140 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:21:32,064 basehttp 26964 23140 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:21:32,198 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:32,198 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:37,859 basehttp 26964 14388 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 95684
+INFO 2025-07-07 17:21:37,859 basehttp 26964 14388 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 95684
+WARNING 2025-07-07 17:21:37,896 basehttp 26964 27028 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:21:37,896 basehttp 26964 27028 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:21:37,922 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:37,922 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:39,275 basehttp 26964 14388 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+INFO 2025-07-07 17:21:39,275 basehttp 26964 14388 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+WARNING 2025-07-07 17:21:39,319 basehttp 26964 11812 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:21:39,319 basehttp 26964 11812 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:21:39,351 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:39,351 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:51,815 basehttp 26964 14388 "POST /admin/form/tochkaproduct/add/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:21:51,815 basehttp 26964 14388 "POST /admin/form/tochkaproduct/add/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:21:51,964 basehttp 26964 14388 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96897
+INFO 2025-07-07 17:21:51,964 basehttp 26964 14388 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96897
+WARNING 2025-07-07 17:21:52,004 basehttp 26964 22536 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:21:52,004 basehttp 26964 22536 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:21:52,034 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:52,034 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:53,984 basehttp 26964 14388 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+INFO 2025-07-07 17:21:53,984 basehttp 26964 14388 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+WARNING 2025-07-07 17:21:54,016 basehttp 26964 28288 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:21:54,016 basehttp 26964 28288 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:21:54,157 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:21:54,157 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:22:05,959 basehttp 26964 14388 "POST /admin/form/tochkaproduct/add/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:22:05,959 basehttp 26964 14388 "POST /admin/form/tochkaproduct/add/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:22:06,110 basehttp 26964 14388 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 97514
+INFO 2025-07-07 17:22:06,110 basehttp 26964 14388 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 97514
+WARNING 2025-07-07 17:22:06,147 basehttp 26964 24792 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:22:06,147 basehttp 26964 24792 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:22:06,177 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:22:06,177 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:22:12,404 basehttp 26964 14388 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+INFO 2025-07-07 17:22:12,404 basehttp 26964 14388 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+WARNING 2025-07-07 17:22:12,442 basehttp 26964 27644 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:22:12,442 basehttp 26964 27644 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:22:12,578 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:22:12,578 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:22:24,544 basehttp 26964 14388 "POST /admin/form/tochkaproduct/add/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:22:24,544 basehttp 26964 14388 "POST /admin/form/tochkaproduct/add/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:22:24,694 basehttp 26964 14388 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 98131
+INFO 2025-07-07 17:22:24,694 basehttp 26964 14388 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 98131
+WARNING 2025-07-07 17:22:24,731 basehttp 26964 21768 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:22:24,731 basehttp 26964 21768 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:22:24,762 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:22:24,762 basehttp 26964 14388 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:22:58,974 autoreload 26964 16696 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-07 17:22:58,974 autoreload 26964 16696 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-07 17:22:59,949 autoreload 26496 15140 Watching for file changes with StatReloader
+INFO 2025-07-07 17:22:59,949 autoreload 26496 15140 Watching for file changes with StatReloader
+INFO 2025-07-07 17:23:00,938 basehttp 26496 27480 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 97538
+INFO 2025-07-07 17:23:00,938 basehttp 26496 27480 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 97538
+WARNING 2025-07-07 17:23:00,978 basehttp 26496 28644 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:23:00,978 basehttp 26496 28644 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:23:01,117 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:01,117 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:02,317 basehttp 26496 27480 "GET /admin/form/tochkaproduct/5/change/ HTTP/1.1" 200 77908
+INFO 2025-07-07 17:23:02,317 basehttp 26496 27480 "GET /admin/form/tochkaproduct/5/change/ HTTP/1.1" 200 77908
+WARNING 2025-07-07 17:23:02,358 basehttp 26496 8292 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:23:02,358 basehttp 26496 8292 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:23:02,389 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:02,389 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:03,085 basehttp 26496 27480 "POST /admin/form/tochkaproduct/5/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:23:03,085 basehttp 26496 27480 "POST /admin/form/tochkaproduct/5/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:23:03,236 basehttp 26496 27480 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 98129
+INFO 2025-07-07 17:23:03,236 basehttp 26496 27480 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 98129
+WARNING 2025-07-07 17:23:03,272 basehttp 26496 15708 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:23:03,272 basehttp 26496 15708 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:23:03,309 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:03,309 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:19,788 basehttp 26496 27480 "GET /admin/form/tochkaproduct/5/change/ HTTP/1.1" 200 77908
+INFO 2025-07-07 17:23:19,788 basehttp 26496 27480 "GET /admin/form/tochkaproduct/5/change/ HTTP/1.1" 200 77908
+WARNING 2025-07-07 17:23:19,824 basehttp 26496 2292 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:23:19,824 basehttp 26496 2292 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:23:19,855 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:19,855 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:20,652 basehttp 26496 27480 "POST /admin/form/tochkaproduct/5/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:23:20,652 basehttp 26496 27480 "POST /admin/form/tochkaproduct/5/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:23:20,907 basehttp 26496 27480 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 98129
+INFO 2025-07-07 17:23:20,907 basehttp 26496 27480 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 98129
+WARNING 2025-07-07 17:23:20,942 basehttp 26496 624 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:23:20,942 basehttp 26496 624 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:23:21,082 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:21,082 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:22,336 basehttp 26496 27480 "GET /admin/form/tochkaproduct/5/change/ HTTP/1.1" 200 77908
+INFO 2025-07-07 17:23:22,336 basehttp 26496 27480 "GET /admin/form/tochkaproduct/5/change/ HTTP/1.1" 200 77908
+WARNING 2025-07-07 17:23:22,377 basehttp 26496 24804 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:23:22,377 basehttp 26496 24804 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:23:22,506 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:22,506 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:25,885 basehttp 26496 27480 "POST /admin/form/tochkaproduct/5/change/ HTTP/1.1" 200 78460
+INFO 2025-07-07 17:23:25,885 basehttp 26496 27480 "POST /admin/form/tochkaproduct/5/change/ HTTP/1.1" 200 78460
+WARNING 2025-07-07 17:23:25,914 basehttp 26496 27884 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:23:25,914 basehttp 26496 27884 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:23:25,944 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:25,944 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:33,660 basehttp 26496 27480 "POST /admin/form/tochkaproduct/5/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:23:33,660 basehttp 26496 27480 "POST /admin/form/tochkaproduct/5/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:23:33,813 basehttp 26496 27480 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 98129
+INFO 2025-07-07 17:23:33,813 basehttp 26496 27480 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 98129
+WARNING 2025-07-07 17:23:33,849 basehttp 26496 5536 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:23:33,849 basehttp 26496 5536 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:23:33,882 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:33,882 basehttp 26496 27480 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:23:48,468 autoreload 26496 15140 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-07 17:23:48,468 autoreload 26496 15140 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-07 17:23:49,868 autoreload 28196 21260 Watching for file changes with StatReloader
+INFO 2025-07-07 17:23:49,868 autoreload 28196 21260 Watching for file changes with StatReloader
+INFO 2025-07-07 17:24:02,467 autoreload 28196 21260 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-07 17:24:02,467 autoreload 28196 21260 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-07 17:24:03,354 autoreload 21816 18804 Watching for file changes with StatReloader
+INFO 2025-07-07 17:24:03,354 autoreload 21816 18804 Watching for file changes with StatReloader
+INFO 2025-07-07 17:24:22,781 basehttp 21816 27412 "POST /admin/form/tochkaproduct/ HTTP/1.1" 200 25807
+INFO 2025-07-07 17:24:22,781 basehttp 21816 27412 "POST /admin/form/tochkaproduct/ HTTP/1.1" 200 25807
+WARNING 2025-07-07 17:24:22,829 basehttp 21816 27412 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:24:22,829 basehttp 21816 27412 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:24:23,998 basehttp 21816 19728 "POST /admin/form/tochkaproduct/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:24:23,998 basehttp 21816 19728 "POST /admin/form/tochkaproduct/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:24:24,172 basehttp 21816 19728 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 97436
+INFO 2025-07-07 17:24:24,172 basehttp 21816 19728 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 97436
+WARNING 2025-07-07 17:24:24,229 basehttp 21816 23484 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:24:24,229 basehttp 21816 23484 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:24:24,261 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:24,261 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:30,632 basehttp 21816 19728 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+INFO 2025-07-07 17:24:30,632 basehttp 21816 19728 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+WARNING 2025-07-07 17:24:30,669 basehttp 21816 9852 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:24:30,669 basehttp 21816 9852 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:24:30,702 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:30,702 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:40,243 basehttp 21816 19728 "POST /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77712
+INFO 2025-07-07 17:24:40,243 basehttp 21816 19728 "POST /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77712
+WARNING 2025-07-07 17:24:40,280 basehttp 21816 6104 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:24:40,280 basehttp 21816 6104 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:24:40,308 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:40,308 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:44,547 basehttp 21816 19728 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+INFO 2025-07-07 17:24:44,547 basehttp 21816 19728 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+INFO 2025-07-07 17:24:46,864 basehttp 21816 19728 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+INFO 2025-07-07 17:24:46,864 basehttp 21816 19728 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+INFO 2025-07-07 17:24:49,536 basehttp 21816 19728 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+INFO 2025-07-07 17:24:49,536 basehttp 21816 19728 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+WARNING 2025-07-07 17:24:49,565 basehttp 21816 4576 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:24:49,565 basehttp 21816 4576 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:24:49,598 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:49,598 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:52,606 basehttp 21816 19728 "GET /admin/home/ntochka/ HTTP/1.1" 200 28967
+INFO 2025-07-07 17:24:52,606 basehttp 21816 19728 "GET /admin/home/ntochka/ HTTP/1.1" 200 28967
+WARNING 2025-07-07 17:24:52,635 basehttp 21816 28568 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:24:52,635 basehttp 21816 28568 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:24:52,772 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:52,772 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:53,137 basehttp 21816 19728 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-07 17:24:53,137 basehttp 21816 19728 "GET /admin/home/period/ HTTP/1.1" 200 30927
+WARNING 2025-07-07 17:24:53,166 basehttp 21816 12944 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:24:53,166 basehttp 21816 12944 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:24:53,303 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:53,303 basehttp 21816 19728 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:24:54,796 basehttp 21816 19728 "GET /admin/home/period/export-all-csv/ HTTP/1.1" 200 20825
+INFO 2025-07-07 17:24:54,796 basehttp 21816 19728 "GET /admin/home/period/export-all-csv/ HTTP/1.1" 200 20825
+INFO 2025-07-07 17:31:51,438 kobo_import 28596 6612 KoBoToolbox ma'lumotlarini import qilish boshlandi
+INFO 2025-07-07 17:31:52,113 kobo_import 28596 6612 KoBoToolbox dan 4 ta yozuv olindi
+INFO 2025-07-07 17:31:52,152 kobo_import 28596 6612 Yangi yozuv saqlandi: 9 - Product: 1, Miqdor: 21.0, Narx: 12.0
+INFO 2025-07-07 17:31:52,167 kobo_import 28596 6612 Yangi yozuv saqlandi: 10 - Product: 2, Miqdor: 1000.0, Narx: 2212.0
+INFO 2025-07-07 17:31:52,170 kobo_import 28596 6612 Yangi yozuv saqlandi: 11 - Product: 1, Miqdor: 13.0, Narx: 15.0
+INFO 2025-07-07 17:31:52,173 kobo_import 28596 6612 Yangi yozuv saqlandi: 12 - Product: 2, Miqdor: 12.0, Narx: 48.0
+INFO 2025-07-07 17:31:52,176 kobo_import 28596 6612 Yangi yozuv saqlandi: 13 - Product: 1, Miqdor: 900.0, Narx: 15000.0
+INFO 2025-07-07 17:31:52,179 kobo_import 28596 6612 Yangi yozuv saqlandi: 14 - Product: 2, Miqdor: 12.0, Narx: 1500.0
+WARNING 2025-07-07 17:31:52,179 kobo_import 28596 6612 Employee topilmadi: login=Omadbek0439, user_id=465
+WARNING 2025-07-07 17:31:52,180 kobo_import 28596 6612 Employee topilmadi: login=Omadbek0439, user_id=465
+INFO 2025-07-07 17:31:52,180 kobo_import 28596 6612 Import yakunlandi: {'total_submissions': 4, 'processed_products': 8, 'saved_products': 6, 'errors': 2}
+INFO 2025-07-07 17:32:44,904 kobo_import 14716 27380 KoBoToolbox ma'lumotlarini import qilish boshlandi
+INFO 2025-07-07 17:32:45,579 kobo_import 14716 27380 KoBoToolbox dan 4 ta yozuv olindi
+INFO 2025-07-07 17:32:45,729 kobo_import 14716 27380 Yangi yozuv saqlandi: 15 - Product: 1, Miqdor: 21.0, Narx: 12.0
+INFO 2025-07-07 17:32:45,743 kobo_import 14716 27380 Yangi yozuv saqlandi: 16 - Product: 2, Miqdor: 1000.0, Narx: 2212.0
+INFO 2025-07-07 17:32:45,746 kobo_import 14716 27380 Yangi yozuv saqlandi: 17 - Product: 1, Miqdor: 13.0, Narx: 15.0
+INFO 2025-07-07 17:32:45,749 kobo_import 14716 27380 Yangi yozuv saqlandi: 18 - Product: 2, Miqdor: 12.0, Narx: 48.0
+INFO 2025-07-07 17:32:45,752 kobo_import 14716 27380 Yangi yozuv saqlandi: 19 - Product: 1, Miqdor: 900.0, Narx: 15000.0
+INFO 2025-07-07 17:32:45,755 kobo_import 14716 27380 Yangi yozuv saqlandi: 20 - Product: 2, Miqdor: 12.0, Narx: 1500.0
+INFO 2025-07-07 17:32:45,757 kobo_import 14716 27380 Yangi yozuv saqlandi: 21 - Product: 1, Miqdor: 1600.0, Narx: 4040.0
+INFO 2025-07-07 17:32:45,760 kobo_import 14716 27380 Yangi yozuv saqlandi: 22 - Product: 2, Miqdor: 1300.0, Narx: 1000.0
+INFO 2025-07-07 17:32:45,760 kobo_import 14716 27380 Import yakunlandi: {'total_submissions': 4, 'processed_products': 8, 'saved_products': 8, 'errors': 0}
+INFO 2025-07-07 17:32:53,982 basehttp 21816 26844 "GET /admin/form/tochkaproducthistory/ HTTP/1.1" 200 111877
+INFO 2025-07-07 17:32:53,982 basehttp 21816 26844 "GET /admin/form/tochkaproducthistory/ HTTP/1.1" 200 111877
+WARNING 2025-07-07 17:32:54,032 basehttp 21816 28532 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:32:54,032 basehttp 21816 28532 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:32:54,061 basehttp 21816 26844 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:32:54,061 basehttp 21816 26844 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:45:24,668 basehttp 21816 27332 "GET /admin/home/perioddate/ HTTP/1.1" 200 33826
+INFO 2025-07-07 17:45:24,668 basehttp 21816 27332 "GET /admin/home/perioddate/ HTTP/1.1" 200 33826
+WARNING 2025-07-07 17:45:24,743 basehttp 21816 14816 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:45:24,743 basehttp 21816 14816 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:45:24,773 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:45:24,773 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:45:25,971 basehttp 21816 27332 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-07 17:45:25,971 basehttp 21816 27332 "GET /admin/home/period/ HTTP/1.1" 200 30927
+WARNING 2025-07-07 17:45:26,016 basehttp 21816 27108 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:45:26,016 basehttp 21816 27108 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:45:26,040 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:45:26,040 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:45:29,389 basehttp 21816 27332 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 17:45:29,389 basehttp 21816 27332 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+WARNING 2025-07-07 17:45:29,420 basehttp 21816 4184 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:45:29,420 basehttp 21816 4184 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:45:29,452 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:45:29,452 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:45:32,437 basehttp 21816 27332 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-07 17:45:32,437 basehttp 21816 27332 "GET /admin/home/period/ HTTP/1.1" 200 30927
+WARNING 2025-07-07 17:45:32,471 basehttp 21816 14716 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:45:32,471 basehttp 21816 14716 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:45:32,500 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:45:32,500 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:45:33,748 basehttp 21816 27332 "GET /admin/home/period/add/ HTTP/1.1" 200 34401
+INFO 2025-07-07 17:45:33,748 basehttp 21816 27332 "GET /admin/home/period/add/ HTTP/1.1" 200 34401
+WARNING 2025-07-07 17:45:33,781 basehttp 21816 24004 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:45:33,781 basehttp 21816 24004 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:45:33,911 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:45:33,911 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:47:09,972 basehttp 21816 27332 "GET /admin/home/perioddate/ HTTP/1.1" 200 33826
+INFO 2025-07-07 17:47:09,972 basehttp 21816 27332 "GET /admin/home/perioddate/ HTTP/1.1" 200 33826
+WARNING 2025-07-07 17:47:10,029 basehttp 21816 2896 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:47:10,029 basehttp 21816 2896 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:47:10,053 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:47:10,053 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:47:23,722 basehttp 21816 27332 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+INFO 2025-07-07 17:47:23,722 basehttp 21816 27332 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+WARNING 2025-07-07 17:47:23,771 basehttp 21816 25904 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:47:23,771 basehttp 21816 25904 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:47:23,801 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:47:23,801 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:47:32,113 basehttp 21816 27332 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+INFO 2025-07-07 17:47:32,113 basehttp 21816 27332 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+WARNING 2025-07-07 17:47:32,147 basehttp 21816 27232 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:47:32,147 basehttp 21816 27232 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:47:32,178 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:47:32,178 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:47:41,972 basehttp 21816 27332 "GET /admin/home/region/ HTTP/1.1" 200 38318
+INFO 2025-07-07 17:47:41,972 basehttp 21816 27332 "GET /admin/home/region/ HTTP/1.1" 200 38318
+WARNING 2025-07-07 17:47:42,008 basehttp 21816 27748 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:47:42,008 basehttp 21816 27748 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:47:42,039 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:47:42,039 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:47:46,457 basehttp 21816 27332 "GET /admin/home/district/ HTTP/1.1" 200 94821
+INFO 2025-07-07 17:47:46,457 basehttp 21816 27332 "GET /admin/home/district/ HTTP/1.1" 200 94821
+WARNING 2025-07-07 17:47:46,483 basehttp 21816 27752 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:47:46,483 basehttp 21816 27752 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:47:46,514 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:47:46,514 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:02,762 basehttp 21816 27332 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+INFO 2025-07-07 17:48:02,762 basehttp 21816 27332 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+WARNING 2025-07-07 17:48:02,800 basehttp 21816 5076 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:48:02,800 basehttp 21816 5076 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:48:02,830 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:02,830 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:04,893 basehttp 21816 27332 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+INFO 2025-07-07 17:48:04,893 basehttp 21816 27332 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+WARNING 2025-07-07 17:48:04,924 basehttp 21816 27032 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:48:04,924 basehttp 21816 27032 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:48:04,948 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:04,948 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:37,911 basehttp 21816 27332 "GET /admin/home/employee/ HTTP/1.1" 200 152417
+INFO 2025-07-07 17:48:37,911 basehttp 21816 27332 "GET /admin/home/employee/ HTTP/1.1" 200 152417
+WARNING 2025-07-07 17:48:37,959 basehttp 21816 27196 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:48:37,959 basehttp 21816 27196 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:48:37,990 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:37,990 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:51,158 basehttp 21816 27332 "GET /admin/home/employee/?o=1.2 HTTP/1.1" 200 158947
+INFO 2025-07-07 17:48:51,158 basehttp 21816 27332 "GET /admin/home/employee/?o=1.2 HTTP/1.1" 200 158947
+WARNING 2025-07-07 17:48:51,194 basehttp 21816 27840 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:48:51,194 basehttp 21816 27840 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:48:51,224 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:51,224 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:52,536 basehttp 21816 27332 "GET /admin/home/employee/?o=-1.2 HTTP/1.1" 200 159177
+INFO 2025-07-07 17:48:52,536 basehttp 21816 27332 "GET /admin/home/employee/?o=-1.2 HTTP/1.1" 200 159177
+WARNING 2025-07-07 17:48:52,586 basehttp 21816 22728 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:48:52,586 basehttp 21816 22728 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:48:52,616 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:52,616 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:59,386 basehttp 21816 27332 "GET /admin/home/employee/464/change/?_changelist_filters=o%3D-1.2 HTTP/1.1" 200 55440
+INFO 2025-07-07 17:48:59,386 basehttp 21816 27332 "GET /admin/home/employee/464/change/?_changelist_filters=o%3D-1.2 HTTP/1.1" 200 55440
+WARNING 2025-07-07 17:48:59,412 basehttp 21816 24016 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:48:59,412 basehttp 21816 24016 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:48:59,446 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:48:59,446 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:49:04,881 basehttp 21816 27332 "GET /admin/home/employee/?o=-1.2 HTTP/1.1" 200 159177
+INFO 2025-07-07 17:49:04,881 basehttp 21816 27332 "GET /admin/home/employee/?o=-1.2 HTTP/1.1" 200 159177
+INFO 2025-07-07 17:49:06,689 basehttp 21816 27332 "GET /admin/home/employee/465/change/?_changelist_filters=o%3D-1.2 HTTP/1.1" 200 55449
+INFO 2025-07-07 17:49:06,689 basehttp 21816 27332 "GET /admin/home/employee/465/change/?_changelist_filters=o%3D-1.2 HTTP/1.1" 200 55449
+WARNING 2025-07-07 17:49:06,724 basehttp 21816 26760 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:49:06,724 basehttp 21816 26760 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:49:06,865 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:49:06,865 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:49:44,828 basehttp 21816 27332 "GET /admin/home/employee/ HTTP/1.1" 200 152417
+INFO 2025-07-07 17:49:44,828 basehttp 21816 27332 "GET /admin/home/employee/ HTTP/1.1" 200 152417
+WARNING 2025-07-07 17:49:44,864 basehttp 21816 14764 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:49:44,864 basehttp 21816 14764 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:49:44,897 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:49:44,897 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:49:46,891 basehttp 21816 27332 "GET /admin/home/employee/457/change/ HTTP/1.1" 200 55317
+INFO 2025-07-07 17:49:46,891 basehttp 21816 27332 "GET /admin/home/employee/457/change/ HTTP/1.1" 200 55317
+WARNING 2025-07-07 17:49:46,936 basehttp 21816 27276 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:49:46,936 basehttp 21816 27276 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:49:47,064 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:49:47,064 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:03,488 basehttp 21816 27332 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+INFO 2025-07-07 17:50:03,488 basehttp 21816 27332 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+WARNING 2025-07-07 17:50:03,524 basehttp 21816 28096 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:50:03,524 basehttp 21816 28096 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:50:03,558 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:03,558 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:05,551 basehttp 21816 27332 "GET /admin/home/tochka/add/ HTTP/1.1" 200 62467
+INFO 2025-07-07 17:50:05,551 basehttp 21816 27332 "GET /admin/home/tochka/add/ HTTP/1.1" 200 62467
+WARNING 2025-07-07 17:50:05,589 basehttp 21816 26740 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:50:05,589 basehttp 21816 26740 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:50:05,726 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:05,726 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:08,710 basehttp 21816 27332 "GET /admin/form/birlik/ HTTP/1.1" 200 40499
+INFO 2025-07-07 17:50:08,710 basehttp 21816 27332 "GET /admin/form/birlik/ HTTP/1.1" 200 40499
+WARNING 2025-07-07 17:50:08,740 basehttp 21816 26840 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:50:08,740 basehttp 21816 26840 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:50:08,769 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:08,769 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:34,082 basehttp 21816 27332 "GET /admin/form/birlik/3/change/ HTTP/1.1" 200 31070
+INFO 2025-07-07 17:50:34,082 basehttp 21816 27332 "GET /admin/form/birlik/3/change/ HTTP/1.1" 200 31070
+WARNING 2025-07-07 17:50:34,118 basehttp 21816 20112 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:50:34,118 basehttp 21816 20112 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:50:34,147 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:34,147 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:38,009 basehttp 21816 27332 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+INFO 2025-07-07 17:50:38,009 basehttp 21816 27332 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+WARNING 2025-07-07 17:50:38,042 basehttp 21816 20488 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:50:38,042 basehttp 21816 20488 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:50:38,071 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:38,071 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:41,374 basehttp 21816 27332 "GET /admin/form/productcategory/ HTTP/1.1" 200 122491
+INFO 2025-07-07 17:50:41,374 basehttp 21816 27332 "GET /admin/form/productcategory/ HTTP/1.1" 200 122491
+WARNING 2025-07-07 17:50:41,415 basehttp 21816 28148 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:50:41,415 basehttp 21816 28148 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:50:41,445 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:41,445 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:50,066 basehttp 21816 27332 "GET /admin/form/product/ HTTP/1.1" 200 59574
+INFO 2025-07-07 17:50:50,066 basehttp 21816 27332 "GET /admin/form/product/ HTTP/1.1" 200 59574
+WARNING 2025-07-07 17:50:50,093 basehttp 21816 17776 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:50:50,093 basehttp 21816 17776 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:50:50,123 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:50,123 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:53,163 basehttp 21816 27332 "GET /admin/form/product/add/ HTTP/1.1" 200 40668
+INFO 2025-07-07 17:50:53,163 basehttp 21816 27332 "GET /admin/form/product/add/ HTTP/1.1" 200 40668
+WARNING 2025-07-07 17:50:53,201 basehttp 21816 5436 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:50:53,201 basehttp 21816 5436 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:50:53,232 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:50:53,232 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:51:31,017 basehttp 21816 27332 "GET /admin/form/product/ HTTP/1.1" 200 59574
+INFO 2025-07-07 17:51:31,017 basehttp 21816 27332 "GET /admin/form/product/ HTTP/1.1" 200 59574
+WARNING 2025-07-07 17:51:31,070 basehttp 21816 25164 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:51:31,070 basehttp 21816 25164 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:51:31,107 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:51:31,107 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:51:38,497 basehttp 21816 27332 "GET /admin/form/productcategory/ HTTP/1.1" 200 122491
+INFO 2025-07-07 17:51:38,497 basehttp 21816 27332 "GET /admin/form/productcategory/ HTTP/1.1" 200 122491
+WARNING 2025-07-07 17:51:38,548 basehttp 21816 22028 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:51:38,548 basehttp 21816 22028 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:51:38,577 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:51:38,577 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:51:50,271 basehttp 21816 27332 "GET /admin/form/product/ HTTP/1.1" 200 59574
+INFO 2025-07-07 17:51:50,271 basehttp 21816 27332 "GET /admin/form/product/ HTTP/1.1" 200 59574
+WARNING 2025-07-07 17:51:50,303 basehttp 21816 4776 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:51:50,303 basehttp 21816 4776 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:51:50,438 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:51:50,438 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:51:59,820 basehttp 21816 27332 "GET /admin/form/product/1/change/ HTTP/1.1" 200 41415
+INFO 2025-07-07 17:51:59,820 basehttp 21816 27332 "GET /admin/form/product/1/change/ HTTP/1.1" 200 41415
+WARNING 2025-07-07 17:51:59,856 basehttp 21816 5548 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:51:59,856 basehttp 21816 5548 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:51:59,994 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:51:59,994 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:52:02,032 basehttp 21816 27332 "GET /admin/form/productcategory/1/change/?_to_field=id HTTP/1.1" 200 38324
+INFO 2025-07-07 17:52:02,032 basehttp 21816 27332 "GET /admin/form/productcategory/1/change/?_to_field=id HTTP/1.1" 200 38324
+WARNING 2025-07-07 17:52:02,059 basehttp 21816 9740 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:52:02,059 basehttp 21816 9740 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:52:02,091 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:52:02,091 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:52:04,301 basehttp 21816 27332 "GET /admin/form/product/1/change/ HTTP/1.1" 200 41415
+INFO 2025-07-07 17:52:04,301 basehttp 21816 27332 "GET /admin/form/product/1/change/ HTTP/1.1" 200 41415
+INFO 2025-07-07 17:52:23,236 basehttp 21816 27332 "POST /admin/form/product/1/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:52:23,236 basehttp 21816 27332 "POST /admin/form/product/1/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 17:52:23,297 basehttp 21816 27332 "GET /admin/form/product/ HTTP/1.1" 200 60127
+INFO 2025-07-07 17:52:23,297 basehttp 21816 27332 "GET /admin/form/product/ HTTP/1.1" 200 60127
+WARNING 2025-07-07 17:52:23,334 basehttp 21816 10664 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:52:23,334 basehttp 21816 10664 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:52:23,468 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:52:23,468 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:52:35,457 basehttp 21816 27332 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+INFO 2025-07-07 17:52:35,457 basehttp 21816 27332 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+WARNING 2025-07-07 17:52:35,491 basehttp 21816 27584 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:52:35,491 basehttp 21816 27584 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:52:35,520 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:52:35,520 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:52:37,267 basehttp 21816 27332 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+INFO 2025-07-07 17:52:37,267 basehttp 21816 27332 "GET /admin/form/tochkaproduct/add/ HTTP/1.1" 200 77173
+WARNING 2025-07-07 17:52:37,304 basehttp 21816 5840 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 17:52:37,304 basehttp 21816 5840 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 17:52:37,335 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 17:52:37,335 basehttp 21816 27332 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:02:16,091 basehttp 21816 23884 "GET /admin/form/birlik/ HTTP/1.1" 200 40499
+INFO 2025-07-07 18:02:16,091 basehttp 21816 23884 "GET /admin/form/birlik/ HTTP/1.1" 200 40499
+WARNING 2025-07-07 18:02:16,147 basehttp 21816 21148 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:02:16,147 basehttp 21816 21148 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:02:16,183 basehttp 21816 23884 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:02:16,183 basehttp 21816 23884 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:02:30,157 basehttp 21816 23884 "GET /admin/form/product/ HTTP/1.1" 200 59568
+INFO 2025-07-07 18:02:30,157 basehttp 21816 23884 "GET /admin/form/product/ HTTP/1.1" 200 59568
+WARNING 2025-07-07 18:02:30,205 basehttp 21816 28652 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:02:30,205 basehttp 21816 28652 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:02:30,231 basehttp 21816 23884 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:02:30,231 basehttp 21816 23884 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:02:31,440 basehttp 21816 23884 "GET /admin/form/product/1/change/ HTTP/1.1" 200 41412
+INFO 2025-07-07 18:02:31,440 basehttp 21816 23884 "GET /admin/form/product/1/change/ HTTP/1.1" 200 41412
+WARNING 2025-07-07 18:02:31,483 basehttp 21816 4552 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:02:31,483 basehttp 21816 4552 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:02:31,624 basehttp 21816 23884 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:02:31,624 basehttp 21816 23884 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:04:21,955 basehttp 21816 23884 "GET /admin/form/birlik/5/change/?_to_field=id HTTP/1.1" 200 31119
+INFO 2025-07-07 18:04:21,955 basehttp 21816 23884 "GET /admin/form/birlik/5/change/?_to_field=id HTTP/1.1" 200 31119
+WARNING 2025-07-07 18:04:22,017 basehttp 21816 20440 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:04:22,017 basehttp 21816 20440 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:04:22,151 basehttp 21816 23884 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:04:22,151 basehttp 21816 23884 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:22:37,337 basehttp 21816 26972 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+INFO 2025-07-07 18:22:37,337 basehttp 21816 26972 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+WARNING 2025-07-07 18:22:37,398 basehttp 21816 24804 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:22:37,398 basehttp 21816 24804 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:22:37,524 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:22:37,524 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:22:39,700 basehttp 21816 26972 "GET /admin/form/product/ HTTP/1.1" 200 59568
+INFO 2025-07-07 18:22:39,700 basehttp 21816 26972 "GET /admin/form/product/ HTTP/1.1" 200 59568
+WARNING 2025-07-07 18:22:39,755 basehttp 21816 27708 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:22:39,755 basehttp 21816 27708 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:22:39,788 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:22:39,788 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:22:46,300 basehttp 21816 26972 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+INFO 2025-07-07 18:22:46,300 basehttp 21816 26972 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96921
+WARNING 2025-07-07 18:22:46,326 basehttp 21816 2524 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:22:46,326 basehttp 21816 2524 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:22:46,357 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:22:46,357 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:22:52,858 basehttp 21816 26972 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+INFO 2025-07-07 18:22:52,858 basehttp 21816 26972 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+WARNING 2025-07-07 18:22:52,895 basehttp 21816 28032 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:22:52,895 basehttp 21816 28032 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:22:52,925 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:22:52,925 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:22:55,046 basehttp 21816 26972 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+INFO 2025-07-07 18:22:55,046 basehttp 21816 26972 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+WARNING 2025-07-07 18:22:55,075 basehttp 21816 7016 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:22:55,075 basehttp 21816 7016 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:22:55,108 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:22:55,108 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:23:17,661 basehttp 21816 26972 "GET /admin/home/employee/465/change/?_to_field=id HTTP/1.1" 200 55411
+INFO 2025-07-07 18:23:17,661 basehttp 21816 26972 "GET /admin/home/employee/465/change/?_to_field=id HTTP/1.1" 200 55411
+WARNING 2025-07-07 18:23:17,700 basehttp 21816 28616 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:23:17,700 basehttp 21816 28616 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:23:17,725 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:23:17,725 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:08,012 basehttp 21816 26972 "GET /admin/home/employee/465/change/?_to_field=id HTTP/1.1" 200 55411
+INFO 2025-07-07 18:25:08,012 basehttp 21816 26972 "GET /admin/home/employee/465/change/?_to_field=id HTTP/1.1" 200 55411
+WARNING 2025-07-07 18:25:08,063 basehttp 21816 8352 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:08,063 basehttp 21816 8352 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:08,092 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:08,092 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:12,941 basehttp 21816 26972 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+INFO 2025-07-07 18:25:12,941 basehttp 21816 26972 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+INFO 2025-07-07 18:25:15,288 basehttp 21816 26972 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+INFO 2025-07-07 18:25:15,288 basehttp 21816 26972 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+WARNING 2025-07-07 18:25:15,324 basehttp 21816 27120 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:15,324 basehttp 21816 27120 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:15,463 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:15,463 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:23,942 basehttp 21816 26972 "GET /admin/home/tochka/?district__id__exact=95&q= HTTP/1.1" 200 75306
+INFO 2025-07-07 18:25:23,942 basehttp 21816 26972 "GET /admin/home/tochka/?district__id__exact=95&q= HTTP/1.1" 200 75306
+WARNING 2025-07-07 18:25:23,982 basehttp 21816 27676 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:23,982 basehttp 21816 27676 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:24,007 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:24,007 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:25,647 basehttp 21816 26972 "GET /admin/home/tochka/500/change/?_changelist_filters=district__id__exact%3D95%26q%3D HTTP/1.1" 200 63404
+INFO 2025-07-07 18:25:25,647 basehttp 21816 26972 "GET /admin/home/tochka/500/change/?_changelist_filters=district__id__exact%3D95%26q%3D HTTP/1.1" 200 63404
+WARNING 2025-07-07 18:25:25,673 basehttp 21816 27560 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:25,673 basehttp 21816 27560 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:25,702 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:25,702 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:30,426 basehttp 21816 26972 "POST /admin/home/tochka/500/change/?_changelist_filters=district__id__exact%3D95%26q%3D HTTP/1.1" 302 0
+INFO 2025-07-07 18:25:30,426 basehttp 21816 26972 "POST /admin/home/tochka/500/change/?_changelist_filters=district__id__exact%3D95%26q%3D HTTP/1.1" 302 0
+INFO 2025-07-07 18:25:30,570 basehttp 21816 26972 "GET /admin/home/tochka/?district__id__exact=95 HTTP/1.1" 200 75766
+INFO 2025-07-07 18:25:30,570 basehttp 21816 26972 "GET /admin/home/tochka/?district__id__exact=95 HTTP/1.1" 200 75766
+WARNING 2025-07-07 18:25:30,608 basehttp 21816 5888 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:30,608 basehttp 21816 5888 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:30,640 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:30,640 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:31,871 basehttp 21816 26972 "GET /admin/home/tochka/501/change/?_changelist_filters=district__id__exact%3D95 HTTP/1.1" 200 63424
+INFO 2025-07-07 18:25:31,871 basehttp 21816 26972 "GET /admin/home/tochka/501/change/?_changelist_filters=district__id__exact%3D95 HTTP/1.1" 200 63424
+WARNING 2025-07-07 18:25:31,908 basehttp 21816 26720 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:31,908 basehttp 21816 26720 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:32,048 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:32,048 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:36,906 basehttp 21816 26972 "POST /admin/home/tochka/501/change/?_changelist_filters=district__id__exact%3D95 HTTP/1.1" 302 0
+INFO 2025-07-07 18:25:36,906 basehttp 21816 26972 "POST /admin/home/tochka/501/change/?_changelist_filters=district__id__exact%3D95 HTTP/1.1" 302 0
+INFO 2025-07-07 18:25:37,056 basehttp 21816 26972 "GET /admin/home/tochka/?district__id__exact=95 HTTP/1.1" 200 75768
+INFO 2025-07-07 18:25:37,056 basehttp 21816 26972 "GET /admin/home/tochka/?district__id__exact=95 HTTP/1.1" 200 75768
+WARNING 2025-07-07 18:25:37,100 basehttp 21816 5076 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:37,100 basehttp 21816 5076 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:37,230 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:37,230 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:41,579 basehttp 21816 26972 "GET /admin/form/product/ HTTP/1.1" 200 59568
+INFO 2025-07-07 18:25:41,579 basehttp 21816 26972 "GET /admin/form/product/ HTTP/1.1" 200 59568
+WARNING 2025-07-07 18:25:41,610 basehttp 21816 9908 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:41,610 basehttp 21816 9908 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:41,641 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:41,641 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:42,784 basehttp 21816 26972 "GET /admin/form/product/1/change/ HTTP/1.1" 200 41412
+INFO 2025-07-07 18:25:42,784 basehttp 21816 26972 "GET /admin/form/product/1/change/ HTTP/1.1" 200 41412
+WARNING 2025-07-07 18:25:42,824 basehttp 21816 8352 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:42,824 basehttp 21816 8352 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:42,972 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:42,972 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:48,637 basehttp 21816 26972 "POST /admin/form/product/1/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 18:25:48,637 basehttp 21816 26972 "POST /admin/form/product/1/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 18:25:48,697 basehttp 21816 26972 "GET /admin/form/product/ HTTP/1.1" 200 60133
+INFO 2025-07-07 18:25:48,697 basehttp 21816 26972 "GET /admin/form/product/ HTTP/1.1" 200 60133
+WARNING 2025-07-07 18:25:48,735 basehttp 21816 27404 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:48,735 basehttp 21816 27404 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:48,765 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:48,765 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:50,239 basehttp 21816 26972 "GET /admin/form/product/2/change/ HTTP/1.1" 200 41409
+INFO 2025-07-07 18:25:50,239 basehttp 21816 26972 "GET /admin/form/product/2/change/ HTTP/1.1" 200 41409
+WARNING 2025-07-07 18:25:50,275 basehttp 21816 9928 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:50,275 basehttp 21816 9928 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:50,306 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:50,306 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:54,730 basehttp 21816 26972 "POST /admin/form/product/2/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 18:25:54,730 basehttp 21816 26972 "POST /admin/form/product/2/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 18:25:54,894 basehttp 21816 26972 "GET /admin/form/product/ HTTP/1.1" 200 60139
+INFO 2025-07-07 18:25:54,894 basehttp 21816 26972 "GET /admin/form/product/ HTTP/1.1" 200 60139
+WARNING 2025-07-07 18:25:54,924 basehttp 21816 28112 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:54,924 basehttp 21816 28112 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:55,063 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:55,063 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:57,819 basehttp 21816 26972 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96941
+INFO 2025-07-07 18:25:57,819 basehttp 21816 26972 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96941
+WARNING 2025-07-07 18:25:57,855 basehttp 21816 16584 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:25:57,855 basehttp 21816 16584 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:25:57,997 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:25:57,997 basehttp 21816 26972 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:26:08,657 basehttp 21816 26972 "POST /admin/form/tochkaproduct/ HTTP/1.1" 200 25810
+INFO 2025-07-07 18:26:08,657 basehttp 21816 26972 "POST /admin/form/tochkaproduct/ HTTP/1.1" 200 25810
+WARNING 2025-07-07 18:26:08,688 basehttp 21816 26972 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:26:08,688 basehttp 21816 26972 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:26:10,109 basehttp 21816 28328 "POST /admin/form/tochkaproduct/ HTTP/1.1" 302 0
+INFO 2025-07-07 18:26:10,109 basehttp 21816 28328 "POST /admin/form/tochkaproduct/ HTTP/1.1" 302 0
+INFO 2025-07-07 18:26:10,370 basehttp 21816 28328 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96832
+INFO 2025-07-07 18:26:10,370 basehttp 21816 28328 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96832
+WARNING 2025-07-07 18:26:10,407 basehttp 21816 20668 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:26:10,407 basehttp 21816 20668 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:26:10,437 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:26:10,437 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:26:15,359 basehttp 21816 28328 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-07 18:26:15,359 basehttp 21816 28328 "GET /admin/home/period/ HTTP/1.1" 200 30927
+WARNING 2025-07-07 18:26:15,391 basehttp 21816 10272 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:26:15,391 basehttp 21816 10272 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:26:15,535 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:26:15,535 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:26:16,960 basehttp 21816 28328 "GET /admin/home/period/export-all-csv/ HTTP/1.1" 200 20823
+INFO 2025-07-07 18:26:16,960 basehttp 21816 28328 "GET /admin/home/period/export-all-csv/ HTTP/1.1" 200 20823
+INFO 2025-07-07 18:29:39,752 kobo_import 5932 28136 KoBoToolbox ma'lumotlarini import qilish boshlandi
+INFO 2025-07-07 18:29:40,399 kobo_import 5932 28136 KoBoToolbox dan 7 ta yozuv olindi
+INFO 2025-07-07 18:29:40,438 kobo_import 5932 28136 Yangi yozuv saqlandi: 23 - Product: 1, Miqdor: 21.0, Narx: 12.0
+INFO 2025-07-07 18:29:40,466 kobo_import 5932 28136 Yangi yozuv saqlandi: 24 - Product: 2, Miqdor: 1000.0, Narx: 2212.0
+INFO 2025-07-07 18:29:40,469 kobo_import 5932 28136 Yangi yozuv saqlandi: 25 - Product: 1, Miqdor: 13.0, Narx: 15.0
+INFO 2025-07-07 18:29:40,472 kobo_import 5932 28136 Yangi yozuv saqlandi: 26 - Product: 2, Miqdor: 12.0, Narx: 48.0
+INFO 2025-07-07 18:29:40,475 kobo_import 5932 28136 Yangi yozuv saqlandi: 27 - Product: 1, Miqdor: 900.0, Narx: 15000.0
+INFO 2025-07-07 18:29:40,478 kobo_import 5932 28136 Yangi yozuv saqlandi: 28 - Product: 2, Miqdor: 12.0, Narx: 1500.0
+INFO 2025-07-07 18:29:40,480 kobo_import 5932 28136 Yangi yozuv saqlandi: 29 - Product: 1, Miqdor: 1600.0, Narx: 4040.0
+INFO 2025-07-07 18:29:40,483 kobo_import 5932 28136 Yangi yozuv saqlandi: 30 - Product: 2, Miqdor: 1300.0, Narx: 1000.0
+INFO 2025-07-07 18:29:40,486 kobo_import 5932 28136 Yangi yozuv saqlandi: 31 - Product: 1, Miqdor: 1000.0, Narx: 5000.0
+INFO 2025-07-07 18:29:40,489 kobo_import 5932 28136 Yangi yozuv saqlandi: 32 - Product: 2, Miqdor: 336.0, Narx: 66.0
+INFO 2025-07-07 18:29:40,491 kobo_import 5932 28136 Yangi yozuv saqlandi: 33 - Product: 1, Miqdor: 12.0, Narx: 12.0
+INFO 2025-07-07 18:29:40,494 kobo_import 5932 28136 Yangi yozuv saqlandi: 34 - Product: 2, Miqdor: 12.0, Narx: 15.0
+INFO 2025-07-07 18:29:40,496 kobo_import 5932 28136 Yangi yozuv saqlandi: 35 - Product: 1, Miqdor: 12.0, Narx: 15.0
+INFO 2025-07-07 18:29:40,497 kobo_import 5932 28136 Import yakunlandi: {'total_submissions': 7, 'processed_products': 13, 'saved_products': 13, 'errors': 0}
+INFO 2025-07-07 18:30:19,019 basehttp 21816 28328 "GET /admin/form/tochkaproducthistory/ HTTP/1.1" 200 121641
+INFO 2025-07-07 18:30:19,019 basehttp 21816 28328 "GET /admin/form/tochkaproducthistory/ HTTP/1.1" 200 121641
+WARNING 2025-07-07 18:30:19,070 basehttp 21816 28608 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:30:19,070 basehttp 21816 28608 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:30:19,103 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:19,103 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:25,130 basehttp 21816 28328 "GET /admin/form/tochkaproducthistory/35/change/ HTTP/1.1" 200 94115
+INFO 2025-07-07 18:30:25,130 basehttp 21816 28328 "GET /admin/form/tochkaproducthistory/35/change/ HTTP/1.1" 200 94115
+WARNING 2025-07-07 18:30:25,177 basehttp 21816 10068 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:30:25,177 basehttp 21816 10068 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:30:25,204 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:25,204 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:49,975 basehttp 21816 28328 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-07 18:30:49,975 basehttp 21816 28328 "GET /admin/home/period/ HTTP/1.1" 200 30927
+WARNING 2025-07-07 18:30:50,005 basehttp 21816 28508 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:30:50,005 basehttp 21816 28508 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:30:50,036 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:50,036 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:54,696 basehttp 21816 28328 "GET /admin/home/perioddate/ HTTP/1.1" 200 33826
+INFO 2025-07-07 18:30:54,696 basehttp 21816 28328 "GET /admin/home/perioddate/ HTTP/1.1" 200 33826
+WARNING 2025-07-07 18:30:54,732 basehttp 21816 20264 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:30:54,732 basehttp 21816 20264 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:30:54,763 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:54,763 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:55,894 basehttp 21816 28328 "GET /admin/home/perioddate/11/change/ HTTP/1.1" 200 29772
+INFO 2025-07-07 18:30:55,894 basehttp 21816 28328 "GET /admin/home/perioddate/11/change/ HTTP/1.1" 200 29772
+WARNING 2025-07-07 18:30:55,922 basehttp 21816 19832 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:30:55,922 basehttp 21816 19832 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:30:55,956 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:55,956 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:58,278 basehttp 21816 28328 "GET /admin/home/perioddate/ HTTP/1.1" 200 33826
+INFO 2025-07-07 18:30:58,278 basehttp 21816 28328 "GET /admin/home/perioddate/ HTTP/1.1" 200 33826
+WARNING 2025-07-07 18:30:58,312 basehttp 21816 21752 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:30:58,312 basehttp 21816 21752 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:30:58,344 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:58,344 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:58,655 basehttp 21816 28328 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-07 18:30:58,655 basehttp 21816 28328 "GET /admin/home/period/ HTTP/1.1" 200 30927
+WARNING 2025-07-07 18:30:58,685 basehttp 21816 21140 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:30:58,685 basehttp 21816 21140 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:30:58,716 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:30:58,716 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:31:00,281 basehttp 21816 28328 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 18:31:00,281 basehttp 21816 28328 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+WARNING 2025-07-07 18:31:00,318 basehttp 21816 27292 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:31:00,318 basehttp 21816 27292 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:31:00,347 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:31:00,347 basehttp 21816 28328 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:31:38,623 autoreload 21816 18804 C:\Users\o.qosimov\Desktop\planshet\apps\home\admin.py changed, reloading.
+INFO 2025-07-07 18:31:38,623 autoreload 21816 18804 C:\Users\o.qosimov\Desktop\planshet\apps\home\admin.py changed, reloading.
+INFO 2025-07-07 18:31:40,195 autoreload 27732 15880 Watching for file changes with StatReloader
+INFO 2025-07-07 18:31:40,195 autoreload 27732 15880 Watching for file changes with StatReloader
+INFO 2025-07-07 18:31:41,083 basehttp 27732 10156 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 18:31:41,083 basehttp 27732 10156 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 18:31:41,158 basehttp 27732 10156 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:31:41,158 basehttp 27732 10156 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+WARNING 2025-07-07 18:31:41,180 basehttp 27732 10156 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:31:41,180 basehttp 27732 10156 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:31:42,875 basehttp 27732 27548 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 18:31:42,875 basehttp 27732 27548 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+WARNING 2025-07-07 18:31:42,903 basehttp 27732 16632 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:31:42,903 basehttp 27732 16632 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:31:42,933 basehttp 27732 27548 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:31:42,933 basehttp 27732 27548 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:31:45,419 basehttp 27732 27548 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 18:31:45,419 basehttp 27732 27548 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 18:31:45,557 basehttp 27732 27548 "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103009
+INFO 2025-07-07 18:31:45,557 basehttp 27732 27548 "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103009
+INFO 2025-07-07 18:31:45,559 basehttp 27732 9872 "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 200 16264
+INFO 2025-07-07 18:31:45,559 basehttp 27732 9872 "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 200 16264
+INFO 2025-07-07 18:31:45,561 basehttp 27732 27564 "GET /static/jazzmin/css/main.css HTTP/1.1" 200 16969
+INFO 2025-07-07 18:31:45,561 basehttp 27732 27564 "GET /static/jazzmin/css/main.css HTTP/1.1" 200 16969
+INFO 2025-07-07 18:31:45,566 basehttp 27732 9872 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-07-07 18:31:45,566 basehttp 27732 9872 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-07-07 18:31:45,570 basehttp 27732 27548 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-07-07 18:31:45,570 basehttp 27732 27548 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-07-07 18:31:45,573 basehttp 27732 9872 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-07-07 18:31:45,573 basehttp 27732 9872 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-07-07 18:31:45,575 basehttp 27732 27564 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-07-07 18:31:45,575 basehttp 27732 27564 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-07-07 18:31:45,578 basehttp 27732 27548 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO 2025-07-07 18:31:45,578 basehttp 27732 27548 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO 2025-07-07 18:31:45,579 basehttp 27732 9872 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2025-07-07 18:31:45,579 basehttp 27732 9872 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2025-07-07 18:31:45,581 basehttp 27732 27564 "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2025-07-07 18:31:45,581 basehttp 27732 27564 "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2025-07-07 18:31:45,585 basehttp 27732 9872 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-07-07 18:31:45,585 basehttp 27732 9872 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-07-07 18:31:45,587 basehttp 27732 27548 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-07-07 18:31:45,587 basehttp 27732 27548 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-07-07 18:31:45,597 basehttp 27732 27564 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-07-07 18:31:45,597 basehttp 27732 27564 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-07-07 18:31:45,598 basehttp 27732 9872 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-07-07 18:31:45,598 basehttp 27732 9872 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+WARNING 2025-07-07 18:31:45,604 basehttp 27732 27548 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:31:45,604 basehttp 27732 27548 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:31:45,606 basehttp 27732 28424 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-07-07 18:31:45,606 basehttp 27732 28424 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-07-07 18:31:45,608 basehttp 27732 9872 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-07-07 18:31:45,608 basehttp 27732 9872 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-07-07 18:31:45,615 basehttp 27732 28028 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:31:45,615 basehttp 27732 28028 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:31:45,620 basehttp 27732 26696 "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382975
+INFO 2025-07-07 18:31:45,620 basehttp 27732 26696 "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382975
+INFO 2025-07-07 18:31:45,625 basehttp 27732 9872 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44244
+INFO 2025-07-07 18:31:45,625 basehttp 27732 9872 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44244
+INFO 2025-07-07 18:31:45,627 basehttp 27732 7248 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62440
+INFO 2025-07-07 18:31:45,627 basehttp 27732 7248 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62440
+INFO 2025-07-07 18:31:45,649 basehttp 27732 7248 "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2391
+INFO 2025-07-07 18:31:45,649 basehttp 27732 7248 "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2391
+INFO 2025-07-07 18:31:45,652 basehttp 27732 9872 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+INFO 2025-07-07 18:31:45,652 basehttp 27732 9872 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+INFO 2025-07-07 18:31:45,660 basehttp 27732 7248 "GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6052
+INFO 2025-07-07 18:31:45,660 basehttp 27732 7248 "GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6052
+INFO 2025-07-07 18:31:45,680 basehttp 27732 9872 "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+INFO 2025-07-07 18:31:45,680 basehttp 27732 9872 "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+INFO 2025-07-07 18:31:45,682 basehttp 27732 7248 "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+INFO 2025-07-07 18:31:45,682 basehttp 27732 7248 "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+WARNING 2025-07-07 18:31:45,963 basehttp 27732 9872 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:31:45,963 basehttp 27732 9872 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:31:46,079 basehttp 27732 7248 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 18:31:46,079 basehttp 27732 7248 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 18:31:46,109 basehttp 27732 27564 "GET /static/jazzmin/css/main.css HTTP/1.1" 200 16969
+INFO 2025-07-07 18:31:46,110 basehttp 27732 26696 "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 200 16264
+INFO 2025-07-07 18:31:46,109 basehttp 27732 27564 "GET /static/jazzmin/css/main.css HTTP/1.1" 200 16969
+INFO 2025-07-07 18:31:46,110 basehttp 27732 26696 "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 200 16264
+INFO 2025-07-07 18:31:46,112 basehttp 27732 7248 "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103009
+INFO 2025-07-07 18:31:46,112 basehttp 27732 7248 "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103009
+INFO 2025-07-07 18:31:46,121 basehttp 27732 27564 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-07-07 18:31:46,121 basehttp 27732 26696 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-07-07 18:31:46,121 basehttp 27732 27564 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-07-07 18:31:46,121 basehttp 27732 26696 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-07-07 18:31:46,123 basehttp 27732 12692 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-07-07 18:31:46,123 basehttp 27732 12692 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-07-07 18:31:46,130 basehttp 27732 7248 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-07-07 18:31:46,130 basehttp 27732 7248 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-07-07 18:31:46,131 basehttp 27732 26696 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-07-07 18:31:46,131 basehttp 27732 26696 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-07-07 18:31:46,132 basehttp 27732 27564 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO 2025-07-07 18:31:46,132 basehttp 27732 27564 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO 2025-07-07 18:31:46,134 basehttp 27732 28424 "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382975
+INFO 2025-07-07 18:31:46,134 basehttp 27732 28424 "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382975
+INFO 2025-07-07 18:31:46,138 basehttp 27732 7248 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2025-07-07 18:31:46,138 basehttp 27732 7248 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2025-07-07 18:31:46,142 basehttp 27732 26696 "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2025-07-07 18:31:46,142 basehttp 27732 26696 "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2025-07-07 18:31:46,143 basehttp 27732 27564 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-07-07 18:31:46,143 basehttp 27732 28424 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-07-07 18:31:46,143 basehttp 27732 27564 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-07-07 18:31:46,143 basehttp 27732 28424 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-07-07 18:31:46,149 basehttp 27732 7248 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-07-07 18:31:46,149 basehttp 27732 7248 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-07-07 18:31:46,154 basehttp 27732 12692 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-07-07 18:31:46,154 basehttp 27732 12692 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+WARNING 2025-07-07 18:31:46,159 basehttp 27732 28424 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:31:46,159 basehttp 27732 28424 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:31:46,166 basehttp 27732 12692 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-07-07 18:31:46,166 basehttp 27732 12692 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-07-07 18:31:46,166 basehttp 27732 26696 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62440
+INFO 2025-07-07 18:31:46,166 basehttp 27732 26696 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62440
+INFO 2025-07-07 18:31:46,173 basehttp 27732 12692 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44244
+INFO 2025-07-07 18:31:46,173 basehttp 27732 12692 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44244
+INFO 2025-07-07 18:31:46,180 basehttp 27732 28028 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:31:46,180 basehttp 27732 28028 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:31:46,181 basehttp 27732 26696 "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2391
+INFO 2025-07-07 18:31:46,181 basehttp 27732 26696 "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2391
+INFO 2025-07-07 18:31:46,187 basehttp 27732 12692 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+INFO 2025-07-07 18:31:46,187 basehttp 27732 12692 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+INFO 2025-07-07 18:31:46,189 basehttp 27732 28028 "GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6052
+INFO 2025-07-07 18:31:46,189 basehttp 27732 28028 "GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6052
+INFO 2025-07-07 18:31:46,226 basehttp 27732 28028 "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+INFO 2025-07-07 18:31:46,226 basehttp 27732 28028 "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+INFO 2025-07-07 18:31:46,227 basehttp 27732 12692 "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+INFO 2025-07-07 18:31:46,227 basehttp 27732 12692 "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+INFO 2025-07-07 18:32:00,552 autoreload 27732 15880 C:\Users\o.qosimov\Desktop\planshet\apps\home\admin.py changed, reloading.
+INFO 2025-07-07 18:32:00,552 autoreload 27732 15880 C:\Users\o.qosimov\Desktop\planshet\apps\home\admin.py changed, reloading.
+INFO 2025-07-07 18:32:01,986 autoreload 7624 20888 Watching for file changes with StatReloader
+INFO 2025-07-07 18:32:01,986 autoreload 7624 20888 Watching for file changes with StatReloader
+INFO 2025-07-07 18:32:02,677 basehttp 7624 22708 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 18:32:02,677 basehttp 7624 22708 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+WARNING 2025-07-07 18:32:02,706 basehttp 7624 17320 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:32:02,706 basehttp 7624 17320 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:32:02,843 basehttp 7624 22708 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:32:02,843 basehttp 7624 22708 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:47:00,804 basehttp 7624 11868 "GET /admin/form/product/ HTTP/1.1" 200 59578
+INFO 2025-07-07 18:47:00,804 basehttp 7624 11868 "GET /admin/form/product/ HTTP/1.1" 200 59578
+WARNING 2025-07-07 18:47:00,857 basehttp 7624 9456 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:47:00,857 basehttp 7624 9456 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:47:00,987 basehttp 7624 11868 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:47:00,987 basehttp 7624 11868 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:49:52,391 basehttp 7624 11868 "GET /admin/form/tochkaproducthistory/ HTTP/1.1" 200 121641
+INFO 2025-07-07 18:49:52,391 basehttp 7624 11868 "GET /admin/form/tochkaproducthistory/ HTTP/1.1" 200 121641
+WARNING 2025-07-07 18:49:52,444 basehttp 7624 24432 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:49:52,444 basehttp 7624 24432 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:49:52,574 basehttp 7624 11868 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:49:52,574 basehttp 7624 11868 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:49:54,042 basehttp 7624 11868 "GET /admin/form/tochkaproducthistory/35/change/ HTTP/1.1" 200 94115
+INFO 2025-07-07 18:49:54,042 basehttp 7624 11868 "GET /admin/form/tochkaproducthistory/35/change/ HTTP/1.1" 200 94115
+WARNING 2025-07-07 18:49:54,119 basehttp 7624 22116 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:49:54,119 basehttp 7624 22116 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:49:54,259 basehttp 7624 11868 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:49:54,259 basehttp 7624 11868 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:50:07,949 basehttp 7624 11868 "POST /admin/form/tochkaproducthistory/35/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 18:50:07,949 basehttp 7624 11868 "POST /admin/form/tochkaproducthistory/35/change/ HTTP/1.1" 302 0
+INFO 2025-07-07 18:50:08,220 basehttp 7624 11868 "GET /admin/form/tochkaproducthistory/ HTTP/1.1" 200 122256
+INFO 2025-07-07 18:50:08,220 basehttp 7624 11868 "GET /admin/form/tochkaproducthistory/ HTTP/1.1" 200 122256
+WARNING 2025-07-07 18:50:08,257 basehttp 7624 23004 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 18:50:08,257 basehttp 7624 23004 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 18:50:08,287 basehttp 7624 11868 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 18:50:08,287 basehttp 7624 11868 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:02:21,238 basehttp 7624 2520 "GET /admin/form/product/ HTTP/1.1" 200 59578
+INFO 2025-07-07 19:02:21,238 basehttp 7624 2520 "GET /admin/form/product/ HTTP/1.1" 200 59578
+WARNING 2025-07-07 19:02:21,349 basehttp 7624 9748 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 19:02:21,349 basehttp 7624 9748 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 19:02:21,452 basehttp 7624 2520 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:02:21,452 basehttp 7624 2520 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:12:19,727 basehttp 7624 5436 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96317
+INFO 2025-07-07 19:12:19,727 basehttp 7624 5436 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 96317
+WARNING 2025-07-07 19:12:19,782 basehttp 7624 24016 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 19:12:19,782 basehttp 7624 24016 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 19:12:19,915 basehttp 7624 5436 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:12:19,915 basehttp 7624 5436 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:13:33,484 autoreload 7624 20888 C:\Users\o.qosimov\Desktop\planshet\apps\form\admin.py changed, reloading.
+INFO 2025-07-07 19:13:33,484 autoreload 7624 20888 C:\Users\o.qosimov\Desktop\planshet\apps\form\admin.py changed, reloading.
+INFO 2025-07-07 19:13:35,528 autoreload 26920 21984 Watching for file changes with StatReloader
+INFO 2025-07-07 19:13:35,528 autoreload 26920 21984 Watching for file changes with StatReloader
+INFO 2025-07-07 19:13:37,820 basehttp 26920 20960 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 195703
+INFO 2025-07-07 19:13:37,820 basehttp 26920 20960 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 195703
+WARNING 2025-07-07 19:13:37,899 basehttp 26920 11612 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 19:13:37,899 basehttp 26920 11612 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 19:13:37,918 basehttp 26920 20960 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:13:37,918 basehttp 26920 20960 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:13:50,018 basehttp 26920 20960 "GET /admin/form/tochkaproduct/?hudud__id__exact=500&q= HTTP/1.1" 200 195729
+INFO 2025-07-07 19:13:50,018 basehttp 26920 20960 "GET /admin/form/tochkaproduct/?hudud__id__exact=500&q= HTTP/1.1" 200 195729
+WARNING 2025-07-07 19:13:50,070 basehttp 26920 21824 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 19:13:50,070 basehttp 26920 21824 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 19:13:50,096 basehttp 26920 20960 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:13:50,096 basehttp 26920 20960 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:13:55,785 basehttp 26920 20960 "POST /admin/form/tochkaproduct/?hudud__id__exact=500&q= HTTP/1.1" 200 26040
+INFO 2025-07-07 19:13:55,785 basehttp 26920 20960 "POST /admin/form/tochkaproduct/?hudud__id__exact=500&q= HTTP/1.1" 200 26040
+WARNING 2025-07-07 19:13:55,815 basehttp 26920 20960 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 19:13:55,815 basehttp 26920 20960 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 19:14:04,255 basehttp 26920 26612 "GET /admin/form/tochkaproduct/?hudud__id__exact=500&q= HTTP/1.1" 200 195729
+INFO 2025-07-07 19:14:04,255 basehttp 26920 26612 "GET /admin/form/tochkaproduct/?hudud__id__exact=500&q= HTTP/1.1" 200 195729
+INFO 2025-07-07 19:58:45,714 basehttp 26920 27756 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-07 19:58:45,714 basehttp 26920 27756 "GET /admin/home/period/ HTTP/1.1" 200 30927
+WARNING 2025-07-07 19:58:45,764 basehttp 26920 27936 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 19:58:45,764 basehttp 26920 27936 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 19:58:45,794 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:58:45,794 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:58:49,518 basehttp 26920 27756 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 19:58:49,518 basehttp 26920 27756 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+WARNING 2025-07-07 19:58:49,567 basehttp 26920 10888 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 19:58:49,567 basehttp 26920 10888 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 19:58:49,696 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:58:49,696 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:59:01,756 basehttp 26920 27756 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-07 19:59:01,756 basehttp 26920 27756 "GET /admin/home/period/ HTTP/1.1" 200 30927
+WARNING 2025-07-07 19:59:01,795 basehttp 26920 18388 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 19:59:01,795 basehttp 26920 18388 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 19:59:01,938 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:59:01,938 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:59:07,976 basehttp 26920 27756 "GET /admin/home/perioddate/ HTTP/1.1" 200 33826
+INFO 2025-07-07 19:59:07,976 basehttp 26920 27756 "GET /admin/home/perioddate/ HTTP/1.1" 200 33826
+WARNING 2025-07-07 19:59:08,009 basehttp 26920 27744 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 19:59:08,009 basehttp 26920 27744 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 19:59:08,039 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:59:08,039 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:59:15,071 basehttp 26920 27756 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-07 19:59:15,071 basehttp 26920 27756 "GET /admin/home/period/ HTTP/1.1" 200 30927
+WARNING 2025-07-07 19:59:15,107 basehttp 26920 26740 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 19:59:15,107 basehttp 26920 26740 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 19:59:15,242 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:59:15,242 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:59:16,145 basehttp 26920 27756 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+INFO 2025-07-07 19:59:16,145 basehttp 26920 27756 "GET /admin/home/period/11/change/ HTTP/1.1" 200 45826
+WARNING 2025-07-07 19:59:16,184 basehttp 26920 7380 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 19:59:16,184 basehttp 26920 7380 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 19:59:16,219 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 19:59:16,219 basehttp 26920 27756 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:34:24,964 basehttp 26920 24792 "GET /admin/form/product/ HTTP/1.1" 200 59578
+INFO 2025-07-07 20:34:24,964 basehttp 26920 24792 "GET /admin/form/product/ HTTP/1.1" 200 59578
+WARNING 2025-07-07 20:34:25,017 basehttp 26920 26712 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 20:34:25,017 basehttp 26920 26712 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 20:34:25,049 basehttp 26920 24792 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:34:25,049 basehttp 26920 24792 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:34:27,809 basehttp 26920 24792 "GET /admin/form/product/1/change/ HTTP/1.1" 200 41416
+INFO 2025-07-07 20:34:27,809 basehttp 26920 24792 "GET /admin/form/product/1/change/ HTTP/1.1" 200 41416
+WARNING 2025-07-07 20:34:27,855 basehttp 26920 21496 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 20:34:27,855 basehttp 26920 21496 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 20:34:27,883 basehttp 26920 24792 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:34:27,883 basehttp 26920 24792 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:36:44,391 basehttp 26920 23248 "GET /admin/form/productcategory/1/change/?_to_field=id HTTP/1.1" 200 38324
+INFO 2025-07-07 20:36:44,391 basehttp 26920 23248 "GET /admin/form/productcategory/1/change/?_to_field=id HTTP/1.1" 200 38324
+WARNING 2025-07-07 20:36:44,446 basehttp 26920 10068 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 20:36:44,446 basehttp 26920 10068 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 20:36:44,485 basehttp 26920 23248 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:36:44,485 basehttp 26920 23248 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:36:53,573 basehttp 26920 23248 "GET /admin/form/productcategory/ HTTP/1.1" 200 122491
+INFO 2025-07-07 20:36:53,573 basehttp 26920 23248 "GET /admin/form/productcategory/ HTTP/1.1" 200 122491
+WARNING 2025-07-07 20:36:53,620 basehttp 26920 24016 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 20:36:53,620 basehttp 26920 24016 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 20:36:53,650 basehttp 26920 23248 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:36:53,650 basehttp 26920 23248 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:36:59,077 basehttp 26920 23248 "GET /admin/form/productcategory/add/ HTTP/1.1" 200 37456
+INFO 2025-07-07 20:36:59,077 basehttp 26920 23248 "GET /admin/form/productcategory/add/ HTTP/1.1" 200 37456
+WARNING 2025-07-07 20:36:59,104 basehttp 26920 28408 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 20:36:59,104 basehttp 26920 28408 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 20:36:59,138 basehttp 26920 23248 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:36:59,138 basehttp 26920 23248 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:37:10,067 basehttp 26920 23248 "GET /admin/form/product/ HTTP/1.1" 200 59578
+INFO 2025-07-07 20:37:10,067 basehttp 26920 23248 "GET /admin/form/product/ HTTP/1.1" 200 59578
+WARNING 2025-07-07 20:37:10,105 basehttp 26920 25168 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 20:37:10,105 basehttp 26920 25168 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 20:37:10,245 basehttp 26920 23248 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:37:10,245 basehttp 26920 23248 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:37:24,132 basehttp 26920 23248 "GET /admin/form/product/add/ HTTP/1.1" 200 40668
+INFO 2025-07-07 20:37:24,132 basehttp 26920 23248 "GET /admin/form/product/add/ HTTP/1.1" 200 40668
+WARNING 2025-07-07 20:37:24,167 basehttp 26920 20208 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-07 20:37:24,167 basehttp 26920 20208 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-07 20:37:24,191 basehttp 26920 23248 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-07 20:37:24,191 basehttp 26920 23248 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 09:33:18,454 autoreload 17744 24420 Watching for file changes with StatReloader
+INFO 2025-07-08 09:33:18,454 autoreload 17744 24420 Watching for file changes with StatReloader
+INFO 2025-07-08 09:34:20,098 basehttp 17744 22068 "GET /admin/ HTTP/1.1" 200 52522
+INFO 2025-07-08 09:34:20,098 basehttp 17744 22068 "GET /admin/ HTTP/1.1" 200 52522
+INFO 2025-07-08 09:34:20,123 basehttp 17744 22068 "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,123 basehttp 17744 22068 "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,124 basehttp 17744 25224 "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,124 basehttp 17744 25224 "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,124 basehttp 17744 26832 "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,124 basehttp 17744 26832 "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,171 basehttp 17744 25224 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,171 basehttp 17744 25224 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,194 basehttp 17744 25224 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,194 basehttp 17744 25224 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+WARNING 2025-07-08 09:34:20,194 basehttp 17744 26832 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 09:34:20,194 basehttp 17744 26832 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 09:34:20,196 basehttp 17744 22068 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,196 basehttp 17744 22068 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,214 basehttp 17744 22068 "GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,214 basehttp 17744 22068 "GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,286 basehttp 17744 22068 "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,287 basehttp 17744 25224 "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,286 basehttp 17744 22068 "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:20,287 basehttp 17744 25224 "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+WARNING 2025-07-08 09:34:20,977 basehttp 17744 22068 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 09:34:20,977 basehttp 17744 22068 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 09:34:23,366 basehttp 17744 25224 "GET /admin/home/ntochka/ HTTP/1.1" 200 28967
+INFO 2025-07-08 09:34:23,366 basehttp 17744 25224 "GET /admin/home/ntochka/ HTTP/1.1" 200 28967
+INFO 2025-07-08 09:34:23,389 basehttp 17744 25224 "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,389 basehttp 17744 25224 "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,420 basehttp 17744 12440 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,420 basehttp 17744 26172 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,421 basehttp 17744 25224 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,421 basehttp 17744 8 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,420 basehttp 17744 12440 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,421 basehttp 17744 25240 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,420 basehttp 17744 26172 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,421 basehttp 17744 25224 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,421 basehttp 17744 8 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,421 basehttp 17744 25240 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,424 basehttp 17744 12440 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,424 basehttp 17744 12440 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,424 basehttp 17744 26172 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,424 basehttp 17744 26172 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+WARNING 2025-07-08 09:34:23,431 basehttp 17744 25240 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 09:34:23,431 basehttp 17744 25240 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 09:34:23,436 basehttp 17744 9744 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 09:34:23,436 basehttp 17744 9744 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 09:34:23,448 basehttp 17744 9744 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,448 basehttp 17744 9744 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,475 basehttp 17744 9744 "GET /static/jazzmin/js/change_list.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:23,475 basehttp 17744 9744 "GET /static/jazzmin/js/change_list.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:24,555 basehttp 17744 9744 "GET /admin/home/ntochka/2/change/ HTTP/1.1" 200 30061
+INFO 2025-07-08 09:34:24,555 basehttp 17744 9744 "GET /admin/home/ntochka/2/change/ HTTP/1.1" 200 30061
+INFO 2025-07-08 09:34:24,587 basehttp 17744 12440 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:24,587 basehttp 17744 12440 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+WARNING 2025-07-08 09:34:24,592 basehttp 17744 26172 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 09:34:24,592 basehttp 17744 26172 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 09:34:24,592 basehttp 17744 12440 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:24,592 basehttp 17744 12440 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:24,597 basehttp 17744 12440 "GET /static/jazzmin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:24,597 basehttp 17744 12440 "GET /static/jazzmin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-07-08 09:34:24,622 basehttp 17744 9744 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 09:34:24,622 basehttp 17744 9744 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 09:34:27,749 basehttp 17744 9744 "GET /admin/home/ntochka/ HTTP/1.1" 200 28967
+INFO 2025-07-08 09:34:27,749 basehttp 17744 9744 "GET /admin/home/ntochka/ HTTP/1.1" 200 28967
+WARNING 2025-07-08 09:34:27,776 basehttp 17744 12440 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 09:34:27,776 basehttp 17744 12440 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 09:34:27,924 basehttp 17744 9744 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 09:34:27,924 basehttp 17744 9744 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 09:48:02,727 autoreload 17744 24420 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-08 09:48:02,727 autoreload 17744 24420 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-08 09:48:03,773 autoreload 6196 15624 Watching for file changes with StatReloader
+INFO 2025-07-08 09:48:03,773 autoreload 6196 15624 Watching for file changes with StatReloader
+INFO 2025-07-08 10:19:51,397 basehttp 6196 12400 "POST /admin/home/ntochka/ HTTP/1.1" 302 0
+INFO 2025-07-08 10:19:51,397 basehttp 6196 12400 "POST /admin/home/ntochka/ HTTP/1.1" 302 0
+INFO 2025-07-08 10:19:51,508 basehttp 6196 12400 "GET /admin/home/ntochka/ HTTP/1.1" 200 29537
+INFO 2025-07-08 10:19:51,508 basehttp 6196 12400 "GET /admin/home/ntochka/ HTTP/1.1" 200 29537
+INFO 2025-07-08 10:19:51,580 basehttp 6196 12400 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 10:19:51,580 basehttp 6196 12400 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+WARNING 2025-07-08 10:19:51,612 basehttp 6196 1440 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 10:19:51,612 basehttp 6196 1440 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 10:59:16,239 autoreload 6196 15624 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-08 10:59:16,239 autoreload 6196 15624 C:\Users\o.qosimov\Desktop\planshet\apps\form\models.py changed, reloading.
+INFO 2025-07-08 10:59:18,765 autoreload 19284 4428 Watching for file changes with StatReloader
+INFO 2025-07-08 10:59:18,765 autoreload 19284 4428 Watching for file changes with StatReloader
+INFO 2025-07-08 11:00:23,032 autoreload 20520 19796 Watching for file changes with StatReloader
+INFO 2025-07-08 11:00:23,032 autoreload 20520 19796 Watching for file changes with StatReloader
+INFO 2025-07-08 11:00:36,803 autoreload 20520 19796 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-08 11:00:36,803 autoreload 20520 19796 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-08 11:00:38,120 autoreload 5096 26976 Watching for file changes with StatReloader
+INFO 2025-07-08 11:00:38,120 autoreload 5096 26976 Watching for file changes with StatReloader
+INFO 2025-07-08 11:01:07,194 basehttp 5096 4628 "GET /admin/home/ntochka/ HTTP/1.1" 200 28967
+INFO 2025-07-08 11:01:07,194 basehttp 5096 4628 "GET /admin/home/ntochka/ HTTP/1.1" 200 28967
+INFO 2025-07-08 11:01:07,245 basehttp 5096 13784 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,245 basehttp 5096 13784 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,248 basehttp 5096 3696 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,249 basehttp 5096 9960 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,248 basehttp 5096 3696 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,249 basehttp 5096 9960 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,250 basehttp 5096 1896 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,250 basehttp 5096 26984 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,250 basehttp 5096 1896 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,250 basehttp 5096 26984 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,253 basehttp 5096 13784 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,253 basehttp 5096 13784 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+WARNING 2025-07-08 11:01:07,255 basehttp 5096 19300 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 11:01:07,255 basehttp 5096 19300 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 11:01:07,267 basehttp 5096 9960 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,267 basehttp 5096 3696 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,267 basehttp 5096 9960 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,267 basehttp 5096 3696 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,305 basehttp 5096 4704 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-07-08 11:01:07,305 basehttp 5096 4704 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-07-08 11:01:07,368 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:01:07,368 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:01:07,839 basehttp 5096 4704 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:07,839 basehttp 5096 4704 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:08,600 basehttp 5096 4628 "GET /admin/home/ntochka/3/change/ HTTP/1.1" 200 72961
+INFO 2025-07-08 11:01:08,600 basehttp 5096 4628 "GET /admin/home/ntochka/3/change/ HTTP/1.1" 200 72961
+WARNING 2025-07-08 11:01:08,642 basehttp 5096 22244 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 11:01:08,642 basehttp 5096 22244 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 11:01:08,659 basehttp 5096 6020 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:08,659 basehttp 5096 6020 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:08,663 basehttp 5096 6020 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:08,663 basehttp 5096 6020 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:08,667 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:01:08,667 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:01:08,667 basehttp 5096 6020 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:08,667 basehttp 5096 6020 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-07-08 11:01:15,057 basehttp 5096 4628 "GET /admin/form/product/ HTTP/1.1" 200 60458
+INFO 2025-07-08 11:01:15,057 basehttp 5096 4628 "GET /admin/form/product/ HTTP/1.1" 200 60458
+WARNING 2025-07-08 11:01:15,092 basehttp 5096 6020 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 11:01:15,092 basehttp 5096 6020 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 11:01:15,124 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:01:15,124 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:01:47,973 basehttp 5096 4628 "GET /admin/form/product/1/change/ HTTP/1.1" 200 43243
+INFO 2025-07-08 11:01:47,973 basehttp 5096 4628 "GET /admin/form/product/1/change/ HTTP/1.1" 200 43243
+WARNING 2025-07-08 11:01:48,002 basehttp 5096 436 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 11:01:48,002 basehttp 5096 436 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 11:01:48,137 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:01:48,137 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:02:10,857 basehttp 5096 4628 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 157582
+INFO 2025-07-08 11:02:10,857 basehttp 5096 4628 "GET /admin/form/tochkaproduct/ HTTP/1.1" 200 157582
+WARNING 2025-07-08 11:02:10,890 basehttp 5096 18604 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 11:02:10,890 basehttp 5096 18604 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 11:02:10,920 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:02:10,920 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:02:12,355 basehttp 5096 4628 "GET /admin/form/tochkaproduct/3/change/ HTTP/1.1" 200 35009
+INFO 2025-07-08 11:02:12,355 basehttp 5096 4628 "GET /admin/form/tochkaproduct/3/change/ HTTP/1.1" 200 35009
+WARNING 2025-07-08 11:02:12,381 basehttp 5096 20928 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 11:02:12,381 basehttp 5096 20928 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 11:02:12,412 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:02:12,412 basehttp 5096 4628 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:02:28,684 autoreload 5096 26976 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-08 11:02:28,684 autoreload 5096 26976 C:\Users\o.qosimov\Desktop\planshet\apps\home\models.py changed, reloading.
+INFO 2025-07-08 11:02:30,546 autoreload 9600 25104 Watching for file changes with StatReloader
+INFO 2025-07-08 11:02:30,546 autoreload 9600 25104 Watching for file changes with StatReloader
+INFO 2025-07-08 11:02:32,486 basehttp 9600 21692 "GET /admin/form/tochkaproduct/3/change/ HTTP/1.1" 200 35126
+INFO 2025-07-08 11:02:32,486 basehttp 9600 21692 "GET /admin/form/tochkaproduct/3/change/ HTTP/1.1" 200 35126
+WARNING 2025-07-08 11:02:32,569 basehttp 9600 10452 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 11:02:32,569 basehttp 9600 10452 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 11:02:32,584 basehttp 9600 21692 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 11:02:32,584 basehttp 9600 21692 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 15:12:39,176 autoreload 17196 26460 Watching for file changes with StatReloader
+INFO 2025-07-08 15:12:39,176 autoreload 17196 26460 Watching for file changes with StatReloader
+INFO 2025-07-08 15:12:41,202 basehttp 17196 17548 "GET /admin/auth/user/1/change/ HTTP/1.1" 200 49740
+INFO 2025-07-08 15:12:41,202 basehttp 17196 17548 "GET /admin/auth/user/1/change/ HTTP/1.1" 200 49740
+INFO 2025-07-08 15:12:41,274 basehttp 17196 18948 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-07-08 15:12:41,274 basehttp 17196 9832 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-07-08 15:12:41,274 basehttp 17196 18948 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-07-08 15:12:41,274 basehttp 17196 9832 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+WARNING 2025-07-08 15:12:41,315 basehttp 17196 9832 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 15:12:41,315 basehttp 17196 9832 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 15:12:41,328 basehttp 17196 17548 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 15:12:41,328 basehttp 17196 17548 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 15:12:41,339 basehttp 17196 7376 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-07-08 15:12:41,339 basehttp 17196 7376 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-07-08 15:12:41,339 basehttp 17196 28136 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15492
+INFO 2025-07-08 15:12:41,339 basehttp 17196 28136 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15492
+WARNING 2025-07-08 15:12:41,731 basehttp 17196 7376 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 15:12:41,731 basehttp 17196 7376 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 15:12:44,078 basehttp 17196 28136 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+INFO 2025-07-08 15:12:44,078 basehttp 17196 28136 "GET /admin/home/tochka/ HTTP/1.1" 200 155491
+WARNING 2025-07-08 15:12:44,133 basehttp 17196 17548 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 15:12:44,133 basehttp 17196 17548 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 15:12:44,168 basehttp 17196 28136 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 15:12:44,168 basehttp 17196 28136 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 15:12:46,360 basehttp 17196 28136 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+INFO 2025-07-08 15:12:46,360 basehttp 17196 28136 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+WARNING 2025-07-08 15:12:46,408 basehttp 17196 18948 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 15:12:46,408 basehttp 17196 18948 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 15:12:46,562 basehttp 17196 28136 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 15:12:46,562 basehttp 17196 28136 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 15:13:06,306 basehttp 17196 28136 "GET /admin/home/employee/464/change/?_to_field=id HTTP/1.1" 200 55402
+INFO 2025-07-08 15:13:06,306 basehttp 17196 28136 "GET /admin/home/employee/464/change/?_to_field=id HTTP/1.1" 200 55402
+WARNING 2025-07-08 15:13:06,339 basehttp 17196 6672 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 15:13:06,339 basehttp 17196 6672 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 15:13:06,370 basehttp 17196 28136 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 15:13:06,370 basehttp 17196 28136 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 15:13:12,259 basehttp 17196 28136 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+INFO 2025-07-08 15:13:12,259 basehttp 17196 28136 "GET /admin/home/tochka/2/change/ HTTP/1.1" 200 63331
+INFO 2025-07-08 15:25:31,199 basehttp 17196 21896 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-08 15:25:31,199 basehttp 17196 21896 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-08 15:25:31,245 basehttp 17196 8948 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-07-08 15:25:31,245 basehttp 17196 8948 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+WARNING 2025-07-08 15:25:31,250 basehttp 17196 18408 "GET /static/images/logo.png HTTP/1.1" 404 1905
+WARNING 2025-07-08 15:25:31,250 basehttp 17196 18408 "GET /static/images/logo.png HTTP/1.1" 404 1905
+INFO 2025-07-08 15:25:31,283 basehttp 17196 21896 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+INFO 2025-07-08 15:25:31,283 basehttp 17196 21896 "GET /admin/jsi18n/ HTTP/1.1" 200 6253
+ERROR 2025-07-08 15:25:32,652 log 17196 21896 Internal Server Error: /admin/home/period/export-all-csv/
+Traceback (most recent call last):
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\apps\common\views.py", line 38, in export_all_csv_zip
+    for tochka_product in TochkaProduct.objects.select_related('product', 'hudud', 'product__unit',
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\query.py", line 1926, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1549, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 736, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 84, in pre_sql_setup
+    self.setup_query(with_col_aliases=with_col_aliases)
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 73, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select(
+                                                            ^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 279, in get_select
+    related_klass_infos = self.get_related_selections(select, select_mask)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1367, in get_related_selections
+    raise FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'hudud'. Choices are: product, ntochka
+ERROR 2025-07-08 15:25:32,652 log 17196 21896 Internal Server Error: /admin/home/period/export-all-csv/
+Traceback (most recent call last):
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\apps\common\views.py", line 38, in export_all_csv_zip
+    for tochka_product in TochkaProduct.objects.select_related('product', 'hudud', 'product__unit',
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\query.py", line 1926, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1549, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 736, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 84, in pre_sql_setup
+    self.setup_query(with_col_aliases=with_col_aliases)
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 73, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select(
+                                                            ^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 279, in get_select
+    related_klass_infos = self.get_related_selections(select, select_mask)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.qosimov\Desktop\planshet\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1367, in get_related_selections
+    raise FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'hudud'. Choices are: product, ntochka
+ERROR 2025-07-08 15:25:32,660 basehttp 17196 21896 "GET /admin/home/period/export-all-csv/ HTTP/1.1" 500 140273
+ERROR 2025-07-08 15:25:32,660 basehttp 17196 21896 "GET /admin/home/period/export-all-csv/ HTTP/1.1" 500 140273
+WARNING 2025-07-08 15:25:32,841 basehttp 17196 21896 "GET /favicon.ico HTTP/1.1" 404 3308
+WARNING 2025-07-08 15:25:32,841 basehttp 17196 21896 "GET /favicon.ico HTTP/1.1" 404 3308
+INFO 2025-07-08 15:25:43,552 basehttp 17196 21896 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-08 15:25:43,552 basehttp 17196 21896 "GET /admin/home/period/ HTTP/1.1" 200 30927
+INFO 2025-07-08 15:28:25,935 autoreload 17196 26460 C:\Users\o.qosimov\Desktop\planshet\apps\common\views.py changed, reloading.
+INFO 2025-07-08 15:28:25,935 autoreload 17196 26460 C:\Users\o.qosimov\Desktop\planshet\apps\common\views.py changed, reloading.
+INFO 2025-07-08 15:28:28,798 autoreload 15400 15800 Watching for file changes with StatReloader
+INFO 2025-07-08 15:28:28,798 autoreload 15400 15800 Watching for file changes with StatReloader

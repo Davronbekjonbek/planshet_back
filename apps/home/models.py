@@ -1,0 +1,119 @@
+from django.db import models
+from django.utils.translation import gettext_lazy as _
+
+from apps.common.models import BaseModel
+
+
+class Region(BaseModel):
+    name = models.CharField(max_length=100, unique=True, verbose_name=_("Viloyatning nomi"))
+    code = models.CharField(max_length=10, unique=True, verbose_name=_("Viloyatning kodi"))
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = _("Viloyat")
+        verbose_name_plural = _("Viloyatlar")
+        ordering = ['name']
+
+
+class District(BaseModel):
+    name = models.CharField(max_length=100, verbose_name=_("Tumanning nomi"))
+    region = models.ForeignKey(Region, on_delete=models.CASCADE, related_name='districts', verbose_name=_("Viloyat"))
+    code = models.CharField(max_length=10, verbose_name=_("Tumanning kodi"))
+
+
+    def __str__(self):
+        return f"{self.region.code}{self.code} - {self.name}"
+
+    class Meta:
+        verbose_name = "Tuman"
+        verbose_name_plural = "Tumanlar"
+        ordering = ['name']
+        unique_together = ('code', 'region')
+
+
+class Period(BaseModel):
+    name = models.CharField(max_length=100, unique=True, verbose_name=_("Davrning nomi"))
+    period_type = models.CharField(max_length=50, choices=(('weekly', 'Haftalik'), ('monthly', 'Oylik')), default='monthly', verbose_name=_("Davr turi"))
+    is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Davr"
+        verbose_name_plural = "Davrlar"
+
+
+class PeriodDate(BaseModel):
+    period = models.ForeignKey(Period, on_delete=models.CASCADE, related_name='period_dates', verbose_name=_("Davr"))
+    date = models.DateField(verbose_name=_("Sana"))
+
+    def __str__(self):
+        return f"{self.period.name} - {self.date}"
+
+    class Meta:
+        verbose_name = "Davr sanasi"
+        verbose_name_plural = "Davr sanalari"
+
+
+
+class Tochka(BaseModel):
+    name = models.CharField(max_length=100, unique=True, verbose_name=_("Tochkaning nomi"))
+    district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='tochkas', verbose_name=_("Tuman"))
+    inn = models.CharField(max_length=20, default=0, blank=True,  verbose_name=_("INN kodi"))
+    address = models.CharField(max_length=255, verbose_name=_("Manzil"), blank=True, null=True)
+    plan = models.IntegerField(verbose_name=_("Plan id"), default=0)
+    lat = models.FloatField(verbose_name=_("Lat"), default=0.0)
+    lon = models.FloatField(verbose_name=_("Lon"), default=0.0)
+    employee = models.ForeignKey('home.Employee', on_delete=models.CASCADE, related_name='tochkas', verbose_name=_("Xodim"))
+    is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
+
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Tochka"
+        verbose_name_plural = "Tochkalar"
+        ordering = ['name']
+
+
+class NTochka(BaseModel):
+    name = models.CharField(max_length=100, verbose_name=_("Kichik tochkaning nomi"))
+    hudud = models.ForeignKey(Tochka, on_delete=models.CASCADE, related_name='ntochkas', verbose_name=_("Tochka"))
+    is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
+
+    def __str__(self):
+        return f"{self.hudud.name} - {self.name}"
+
+
+
+class Employee(BaseModel):
+    full_name = models.CharField(max_length=200, verbose_name=_("F.I.Sh"))
+    login = models.CharField(max_length=100, unique=True, verbose_name=_("Login"))
+    password = models.CharField(max_length=100, verbose_name=_("Parol"))
+    district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='employees', verbose_name=_("Tuman"))
+    status = models.FloatField(verbose_name=_("Status"), default=1.0)
+
+    permission1 = models.BooleanField(default=True, verbose_name=_("Ruxsat 1"))
+    permission2 = models.BooleanField(default=True, verbose_name=_("Ruxsat 2"))
+    permission3 = models.BooleanField(default=True, verbose_name=_("Ruxsat 3"))
+    permission4 = models.BooleanField(default=False, verbose_name=_("Ruxsat 4"))
+    permission5 = models.BooleanField(default=False, verbose_name=_("Ruxsat 5"))
+
+    phone1 = models.CharField(max_length=20, blank=True, null=True, verbose_name=_("Telefon 1  (mtel)"))
+    phone2 = models.CharField(max_length=20, blank=True, null=True, verbose_name=_("Telefon 2  (otel)"))
+
+    permission_plov = models.BooleanField(default=False, verbose_name=_("Palov uchun ruxsat"))
+    gps_permission = models.BooleanField(default=True, verbose_name=_("GPS ruxsat"))
+    lang = models.CharField(max_length=10, default='uz', verbose_name=_("Til"), choices=(('uz', 'Uzbek'), ('ru', 'Rus')), blank=True)
+
+    def __str__(self):
+        return f"{self.full_name}"
+
+    class Meta:
+        verbose_name = "Xodim"
+        verbose_name_plural = "Xodimlar"
+
