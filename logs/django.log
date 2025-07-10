@@ -1580,3 +1580,16 @@ INFO 2025-07-08 15:28:25,935 autoreload 17196 26460 C:\Users\o.qosimov\Desktop\p
 INFO 2025-07-08 15:28:25,935 autoreload 17196 26460 C:\Users\o.qosimov\Desktop\planshet\apps\common\views.py changed, reloading.
 INFO 2025-07-08 15:28:28,798 autoreload 15400 15800 Watching for file changes with StatReloader
 INFO 2025-07-08 15:28:28,798 autoreload 15400 15800 Watching for file changes with StatReloader
+INFO 2025-07-09 19:49:37,579 kobo_import 25632 17904 KoBoToolbox ma'lumotlarini import qilish boshlandi
+INFO 2025-07-09 19:49:38,427 kobo_import 25632 17904 KoBoToolbox dan 1 ta yozuv olindi
+WARNING 2025-07-09 19:49:38,428 kobo_import 25632 17904 Submission 513549699 da mahsulot ma'lumotlari topilmadi
+INFO 2025-07-09 19:49:38,428 kobo_import 25632 17904 Import yakunlandi: {'total_submissions': 1, 'processed_products': 0, 'saved_products': 0, 'errors': 0}
+INFO 2025-07-10 12:16:00,614 kobo_import 16264 3228 KoBoToolbox ma'lumotlarini import qilish boshlandi
+INFO 2025-07-10 12:16:01,449 kobo_import 16264 3228 KoBoToolbox dan 2 ta yozuv olindi
+WARNING 2025-07-10 12:16:01,449 kobo_import 16264 3228 Submission 513549699 da mahsulot ma'lumotlari topilmadi
+WARNING 2025-07-10 12:16:01,449 kobo_import 16264 3228 Submission 513594544 da mahsulot ma'lumotlari topilmadi
+INFO 2025-07-10 12:16:01,449 kobo_import 16264 3228 Import yakunlandi: {'total_submissions': 2, 'processed_products': 0, 'saved_products': 0, 'errors': 0}
+INFO 2025-07-10 12:16:32,537 kobo_import 9792 12400 KoBoToolbox ma'lumotlarini import qilish boshlandi
+INFO 2025-07-10 12:16:33,238 kobo_import 9792 12400 KoBoToolbox dan 1 ta yozuv olindi
+WARNING 2025-07-10 12:16:33,238 kobo_import 9792 12400 Submission 513976890 da mahsulot ma'lumotlari topilmadi
+INFO 2025-07-10 12:16:33,238 kobo_import 9792 12400 Import yakunlandi: {'total_submissions': 1, 'processed_products': 0, 'saved_products': 0, 'errors': 0}
