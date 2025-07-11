@@ -15,14 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from apps.common.views import export_all_csv_zip
 from .schema import swagger_urlpatterns
 from django.conf import settings
 from django.conf.urls.static import static
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
-
 
 urlpatterns = [
     path('admin/export-all-csv/', export_all_csv_zip, name='export_all_csv'),
@@ -36,6 +35,11 @@ urlpatterns += [
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 ]
+
+urlpatterns += [
+    path('api/home/', include('apps.home.urls', namespace='home')),
+]
+
 
 urlpatterns += swagger_urlpatterns
 

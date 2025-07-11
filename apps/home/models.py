@@ -1,8 +1,30 @@
+import  uuid
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from apps.common.models import BaseModel
 
+ICON_COLORS = {
+    'restaurant': '#FF7043',       # Kafe oshxona – iliq
+    'water': '#039BE5',            # Suv xizmatlari – moviy
+    'flash': '#FDD835',            # Elektr – sariq
+    'shirt': '#BA68C8',            # Kiyim – binafsha
+    'bed': '#8D6E63',              # Mebel – jigar rang
+    'cart': '#4CAF50',             # Do‘kon – yashil
+    'eye': '#00ACC1',              # Optika – havorang
+    'leaf': '#558B2F',             # Qishloq xo‘jaligi – tabiiy yashil
+    'construct': '#FFA000',        # Ta’mirlash – to'q sariq
+    'home': '#43A047',             # Oilaviy biznes – yashil
+    'briefcase': '#546E7A',        # Xizmat joyi – to'q kulrang
+    'storefront': '#8E24AA',       # Savdo markazi – binafsha
+    'car': '#616161',              # Avto – kulrang
+    'tv': '#3949AB',               # Texnika – ko‘k
+    'school': '#1E88E5',           # O‘quv markazi – moviy
+    'person': '#F06292',           # Uyda ishlovchi – pushti
+    'people': '#6D4C41',           # Xususiy shaxs – jigarrang
+    'nutrition': '#66BB6A',        # Oziq-ovqat – och yashil
+    'location': '#BDBDBD',         # Boshqa – neytral kulrang
+}
 
 class Region(BaseModel):
     name = models.CharField(max_length=100, unique=True, verbose_name=_("Viloyatning nomi"))
@@ -60,7 +82,31 @@ class PeriodDate(BaseModel):
 
 
 class Tochka(BaseModel):
-    name = models.CharField(max_length=100, unique=True, verbose_name=_("Tochkaning nomi"))
+    ICON_CHOICES = (
+        ('restaurant', 'Kafe oshxona'),
+        ('water', 'Suv xizmatlari'),
+        ('flash', 'Elektr ustasi'),
+        ('shirt', 'Kiyim do‘koni'),
+        ('bed', 'Uy mebellari'),
+        ('cart', 'Mahsulot do‘koni'),
+        ('eye', 'Ko‘zoynak optika'),
+        ('leaf', 'Qishloq xo‘jaligi'),
+        ('construct', 'Ta’mirlash ishlari'),
+        ('home', 'Oilaviy Biznes'),
+        ('briefcase', 'Xizmat joyi'),
+        ('storefront', 'Savdo markazi'),
+        ('car', 'Avto do‘kon'),
+        ('tv', 'Elektronika texnika'),
+        ('school', 'O‘quv markazi'),
+        ('person', 'Uyda ishlovchi'),
+        ('people', 'Xususiy shaxs'),
+        ('nutrition', 'Oziq ovqat mahsulotlari'),
+        ('location', 'Boshqa'),
+    )
+
+    name = models.CharField(max_length=100, verbose_name=_("Tochkaning nomi"))
+    icon = models.CharField(max_length=10, choices=ICON_CHOICES, default='nutrition', verbose_name=_("Icon"))
+    uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
     district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='tochkas', verbose_name=_("Tuman"))
     inn = models.CharField(max_length=20, default=0, blank=True,  verbose_name=_("INN kodi"))
     address = models.CharField(max_length=255, verbose_name=_("Manzil"), blank=True, null=True)
@@ -70,6 +116,13 @@ class Tochka(BaseModel):
     employee = models.ForeignKey('home.Employee', on_delete=models.CASCADE, related_name='tochkas', verbose_name=_("Xodim"))
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
 
+    @property
+    def icon_color(self):
+        return ICON_COLORS.get(self.icon, '#BDBDBD')
+
+    @property
+    def icon_display(self):
+        return  self.get_icon_display()
 
     def __str__(self):
         return self.name
@@ -81,6 +134,7 @@ class Tochka(BaseModel):
 
 
 class NTochka(BaseModel):
+    uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
     name = models.CharField(max_length=100, verbose_name=_("Kichik tochkaning nomi"))
     hudud = models.ForeignKey(Tochka, on_delete=models.CASCADE, related_name='ntochkas', verbose_name=_("Tochka"))
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
@@ -92,6 +146,7 @@ class NTochka(BaseModel):
 
 class Employee(BaseModel):
     full_name = models.CharField(max_length=200, verbose_name=_("F.I.Sh"))
+    uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
     login = models.CharField(max_length=100, unique=True, verbose_name=_("Login"))
     password = models.CharField(max_length=100, verbose_name=_("Parol"))
     district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='employees', verbose_name=_("Tuman"))

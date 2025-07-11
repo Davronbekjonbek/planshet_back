@@ -100,19 +100,8 @@ class TochkaAdmin(BaseAdmin):
     list_filter = ('district__region', 'district', 'created_at')
     search_fields = ('name', 'inn', 'address', 'district__name')
     ordering = ('district__region__name', 'district__name', 'name')
-    readonly_fields = ('created_at', 'updated_at')
-    # fieldsets = (
-    #     ('Asosiy ma\'lumotlar', {
-    #         'fields': ('name', 'district', 'inn', 'address')
-    #     }),
-    #     ('Plan va joylashuv', {
-    #         'fields': ('plan', 'lat', 'lon')
-    #     }),
-    #     ('Vaqt ma\'lumotlari', {
-    #         'fields': ('created_at', 'updated_at'),
-    #         'classes': ('collapse',)
-    #     })
-    # )
+    readonly_fields = ('uuid', 'created_at', 'updated_at')
+    exclude = ('uuid',)
 
     def location(self, obj):
         if obj.lat and obj.lon:
@@ -126,7 +115,7 @@ class TochkaAdmin(BaseAdmin):
 
 @admin.register(NTochka)
 class NTochkaAdmin(BaseAdmin):
-    pass
+    readonly_fields = ('uuid',)
 
 
 @admin.register(Employee)
@@ -136,7 +125,7 @@ class EmployeeAdmin(BaseAdmin):
     list_display_links = ('id', 'full_name')
     search_fields = ('full_name', 'login', 'district__name')
     ordering = ('full_name',)
-    readonly_fields = ('created_at', 'updated_at')
+    readonly_fields = ('uuid', 'created_at', 'updated_at')
 
     # fieldsets = (
     #     ('Shaxsiy ma\'lumotlar', {
