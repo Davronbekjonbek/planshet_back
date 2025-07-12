@@ -38,6 +38,7 @@ urlpatterns += [
 
 urlpatterns += [
     path('api/home/', include('apps.home.urls', namespace='home')),
+    path('api/form/', include('apps.form.urls', namespace='form')),
 ]
 
 

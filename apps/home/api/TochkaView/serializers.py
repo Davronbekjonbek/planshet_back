@@ -45,5 +45,5 @@ class TochkaSerializer(serializers.ModelSerializer):
         return 10
 
     def get_finished(self, obj):
-        return 9
+        return 0
 

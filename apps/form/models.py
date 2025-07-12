@@ -1,7 +1,18 @@
+from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-
+from django.core.exceptions import ValidationError
 from apps.common.models import BaseModel
+
+def validate_file_size(value):
+    """Validate file size is not greater than 50KB"""
+    max_size = 50 * 1024  # 50KB
+    if value.size > max_size:
+        size_kb = max_size / 1024
+        raise ValidationError(
+            _(f'Faylning hajmi {size_kb} kbdan katta bo\'lishi mumkin emas'),
+            params={'max_size': max_size},
+        )
 
 
 class Birlik(BaseModel):
@@ -18,6 +29,7 @@ class Birlik(BaseModel):
         ordering = ['name']
 
 
+
 class ProductCategory(BaseModel):
     name = models.CharField(max_length=400, unique=True, verbose_name=_("Kategoriyaning nomi"))
     name_ru = models.CharField(max_length=400, unique=True, null=True,blank=True, verbose_name=_("Kategoriyaning nomi (Ruscha)"))
@@ -26,7 +38,13 @@ class ProductCategory(BaseModel):
     union = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='categories', verbose_name=_("Birlik"))
     rasfas = models.BooleanField(default=False, verbose_name=_("Rasfas"))
     is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
-
+    logo = models.ImageField(
+        upload_to='product_category_logos/', null=True, blank=True, verbose_name=_("Logo"),
+        validators=[
+            FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png']),
+            validate_file_size
+        ],
+    )
     def __str__(self):
         return self.name
 
@@ -44,6 +62,7 @@ class Product(BaseModel):
     top = models.IntegerField(default=0, verbose_name=_("Yuqori"))
     bottom = models.IntegerField(default=0, verbose_name=_("Quyi"))
     unit = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='products', verbose_name=_("O'lchov birligi"))
+    is_import = models.BooleanField(default=True, verbose_name=_("Import qilingan"))
 
     def __str__(self):
         return self.name
@@ -56,8 +75,8 @@ class Product(BaseModel):
 
 class TochkaProduct(BaseModel):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='huds', verbose_name=_("Mahsulot"))
-    # hudud = models.ForeignKey('home.Tochka', on_delete=models.CASCADE, related_name='products', verbose_name=_("Hudud"))
     ntochka = models.ForeignKey('home.NTochka', on_delete=models.CASCADE, related_name='products', verbose_name=_("Kichik hudud"))
+    hudud = models.ForeignKey('home.Tochka', on_delete=models.CASCADE, related_name='products', verbose_name=_("Hudud"))
     last_price = models.FloatField(verbose_name=_("Oxirgi Narxi"), default=0.0)
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     is_udalen = models.BooleanField(default=True, verbose_name=_("Udalen"))
@@ -75,6 +94,7 @@ class TochkaProduct(BaseModel):
 
 class TochkaProductHistory(BaseModel):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='history', verbose_name=_("Mahsulot"))
+    ntochka = models.ForeignKey('home.NTochka', on_delete=models.CASCADE, related_name='product_history', verbose_name=_("Hudud"))
     hudud = models.ForeignKey('home.Tochka', on_delete=models.CASCADE, related_name='product_history', verbose_name=_("Hudud"))
     price = models.FloatField(verbose_name=_("Narxi"), default=0.0)
     unit_miqdor = models.FloatField(verbose_name=_("Birlik miqdori"), default=0.0)
@@ -85,9 +105,9 @@ class TochkaProductHistory(BaseModel):
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
 
     def __str__(self):
-        return f"{self.product.name} - {self.hudud.name} - {self.price}"
+        return f"{self.product.name} - {self.ntochka.name} - {self.price}"
 
     class Meta:
         verbose_name = "Mahsulot Narx Tarixi"
         verbose_name_plural = "Mahsulot Narx Tarixlari"
-        ordering = ['product__name', 'hudud__name', '-created_at']
+        ordering = ['product__name']
