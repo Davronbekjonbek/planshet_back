@@ -33,7 +33,6 @@ class TochkaListView(ListAPIView):
     )
     def get(self, request, *args, **kwargs):
         queryset = self.get_queryset()
-        print(queryset)
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 

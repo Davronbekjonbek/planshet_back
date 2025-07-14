@@ -52,7 +52,7 @@ class ProductAdmin(BaseAdmin):
     list_filter = ('category__union', 'category', 'unit', 'created_at')
     search_fields = ('name', 'name_ru', 'code')
     ordering = ('category__name', 'name')
-    readonly_fields = ('created_at', 'updated_at')
+    readonly_fields = ('uuid', 'created_at', 'updated_at')
 
     # fieldsets = (
     #     ('Asosiy ma\'lumotlar', {

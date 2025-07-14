@@ -1,5 +1,7 @@
 from rest_framework import serializers
 
+from apps.form.api.utils import get_period_by_type_today
+from apps.form.models import TochkaProductHistory
 from ...models import Tochka, Employee, NTochka
 
 class RastaSerializer(serializers.ModelSerializer):
@@ -11,14 +13,19 @@ class RastaSerializer(serializers.ModelSerializer):
         model = NTochka
         fields = ['id','uuid', 'name', 'hudud', 'is_active', 'is_checked', 'all_count', 'finished']
 
-    def get_is_checked(self, obj):
-        return False
-
     def get_all_count(self, obj):
-        return 10
+        return obj.products.all().count()
 
     def get_finished(self, obj):
-        return 9
+        period = get_period_by_type_today()
+        if not period:
+            return 0
+        return TochkaProductHistory.objects.filter(ntochka=obj, period=period).count()
+
+    def get_is_checked(self, obj):
+        all_count = self.get_all_count(obj)
+        finished = self.get_finished(obj)
+        return all_count > 0 and all_count == finished
 
 class TochkaSerializer(serializers.ModelSerializer):
     """
@@ -39,11 +46,24 @@ class TochkaSerializer(serializers.ModelSerializer):
         ]
 
     def get_is_checked(self, obj):
-        return False
+        all_count = self.get_all_count(obj)
+        finished = self.get_finished(obj)
+        return all_count > 0 and finished == all_count
 
     def get_all_count(self, obj):
-        return 10
+        return obj.ntochkas.all().count()
 
     def get_finished(self, obj):
-        return 0
+        finished = 0
+        for rasta in obj.ntochkas.all():
+            total = rasta.products.count()
+            if total == 0:
+                continue
+            period = get_period_by_type_today()
+            if not period:
+                continue
+            completed = TochkaProductHistory.objects.filter(ntochka=rasta, period=period).count()
+            if completed == total:
+                finished += 1
+        return finished
 

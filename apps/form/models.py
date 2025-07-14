@@ -1,3 +1,5 @@
+import uuid
+
 from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -55,6 +57,7 @@ class ProductCategory(BaseModel):
 
 
 class Product(BaseModel):
+    uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
     name = models.CharField(max_length=400, verbose_name=_("Mahsulotning nomi"))
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, related_name='products', verbose_name=_("Kategoriyasi"))
     code = models.CharField(max_length=10, unique=True, verbose_name=_("Mahsulot kodi"))
@@ -62,7 +65,7 @@ class Product(BaseModel):
     top = models.IntegerField(default=0, verbose_name=_("Yuqori"))
     bottom = models.IntegerField(default=0, verbose_name=_("Quyi"))
     unit = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='products', verbose_name=_("O'lchov birligi"))
-    is_import = models.BooleanField(default=True, verbose_name=_("Import qilingan"))
+    is_import = models.BooleanField(default=False, verbose_name=_("Import qilingan"))
 
     def __str__(self):
         return self.name
@@ -78,6 +81,7 @@ class TochkaProduct(BaseModel):
     ntochka = models.ForeignKey('home.NTochka', on_delete=models.CASCADE, related_name='products', verbose_name=_("Kichik hudud"))
     hudud = models.ForeignKey('home.Tochka', on_delete=models.CASCADE, related_name='products', verbose_name=_("Hudud"))
     last_price = models.FloatField(verbose_name=_("Oxirgi Narxi"), default=0.0)
+    previous_price = models.FloatField(verbose_name=_("Oldingi Narxi"), default=0.0)
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     is_udalen = models.BooleanField(default=True, verbose_name=_("Udalen"))
 
@@ -93,14 +97,23 @@ class TochkaProduct(BaseModel):
 
 
 class TochkaProductHistory(BaseModel):
+    PRODUCT_STATUS_CHOICES = [
+        ('mavjud', 'Mahsulot mavjud'),
+        ('chegirma', 'Mahsulot chegirma asosida sotilayabdi'),
+        ('mavsumiy', 'Mavjud emas (Mavsumiy mahsulot)'),
+        ('vaqtinchalik', 'Mavjud emas (Vaqtincha mavjud emas)'),
+        ('sotilmayapti', 'Mavjud emas (Mahsulot sotilmayabdi)'),
+        ('obyekt_yopilgan', 'Mavjud emas (Obyekt yopilgan)'),
+    ]
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='history', verbose_name=_("Mahsulot"))
-    ntochka = models.ForeignKey('home.NTochka', on_delete=models.CASCADE, related_name='product_history', verbose_name=_("Hudud"))
+    ntochka = models.ForeignKey('home.NTochka', on_delete=models.CASCADE, related_name='product_history', verbose_name=_("Ntochka"))
     hudud = models.ForeignKey('home.Tochka', on_delete=models.CASCADE, related_name='product_history', verbose_name=_("Hudud"))
     price = models.FloatField(verbose_name=_("Narxi"), default=0.0)
     unit_miqdor = models.FloatField(verbose_name=_("Birlik miqdori"), default=0.0)
     unit_price = models.FloatField(verbose_name=_("Birlik narxi"), default=0.0)
     employee = models.ForeignKey('home.Employee', on_delete=models.CASCADE, related_name='product_history', verbose_name=_("Xodim"))
     period = models.ForeignKey('home.PeriodDate', on_delete=models.CASCADE, related_name='product_history', verbose_name=_("Davr"))
+    status = models.CharField(max_length=15, verbose_name=_("Status"), default='mavjud', choices=PRODUCT_STATUS_CHOICES)
     is_checked = models.BooleanField(default=False, verbose_name=_("Tekshirilgan"))
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
 
@@ -111,3 +124,4 @@ class TochkaProductHistory(BaseModel):
         verbose_name = "Mahsulot Narx Tarixi"
         verbose_name_plural = "Mahsulot Narx Tarixlari"
         ordering = ['product__name']
+        unique_together = ('product', 'ntochka', 'period')

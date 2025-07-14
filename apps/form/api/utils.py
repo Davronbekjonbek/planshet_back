@@ -1,6 +1,10 @@
-from ..models import TochkaProduct
+from datetime import datetime
 
-def get_tochka_product_by_uuid(uuid):
+from ..models import Product, TochkaProductHistory
+from apps.home.models import PeriodDate
+
+
+def get_product_by_uuid(uuid):
     """
     Retrieve a TochkaProduct instance by its UUID.
 
@@ -8,6 +12,45 @@ def get_tochka_product_by_uuid(uuid):
     :return: TochkaProduct instance or None if not found.
     """
     try:
-        return TochkaProduct.objects.get(uuid=uuid, is_active=True)
-    except TochkaProduct.DoesNotExist:
+        return Product.objects.get(uuid=uuid)
+    except Product.DoesNotExist:
         return None
+
+
+def get_period_by_today():
+    """
+    Get the current period based on today's date.
+
+    :return: Period string in the format 'YYYY-MM'.
+    """
+    today = datetime.today().date()
+    try:
+        return PeriodDate.objects.get(date=today)
+    except PeriodDate.DoesNotExist:
+        return None
+
+
+def get_period_by_type_today(period_type:str = 'weekly'):
+    """
+    Get the current period based on today's date.
+
+    :return: Period string in the format 'YYYY-MM'.
+    """
+    today = datetime.today().date()
+    try:
+        return PeriodDate.objects.get(date=today, period__period_type=period_type)
+    except PeriodDate.DoesNotExist:
+        return None
+
+
+def get_tochka_product_history(ntochka, product):
+    today = datetime.today().date()
+    try:
+        return TochkaProductHistory.objects.get(
+            ntochka=ntochka,
+            product=product,
+            period__date=today
+        )
+    except TochkaProductHistory.DoesNotExist:
+        return None
+
