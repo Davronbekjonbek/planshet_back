@@ -3,7 +3,7 @@ from random import choices
 from django.conf import settings
 from rest_framework import serializers
 
-from apps.form.api.utils import get_period_by_today, get_tochka_product_history
+from apps.form.api.utils import get_period_by_today, get_tochka_product_history, get_period_by_type_today
 from apps.form.models import ProductCategory, Product, TochkaProduct, TochkaProductHistory
 
 
@@ -40,6 +40,7 @@ class TochkaProductSerializer(serializers.ModelSerializer):
         product_history = get_tochka_product_history(
             ntochka=obj.ntochka,
             product=obj.product,
+            period=get_period_by_type_today().period,
         )
         if product_history is None:
             return 'unknown'
@@ -54,6 +55,7 @@ class TochkaProductSerializer(serializers.ModelSerializer):
         product_history = get_tochka_product_history(
             ntochka=obj.ntochka,
             product=obj.product,
+            period=get_period_by_type_today().period,
         )
         return product_history.status if product_history else None
 

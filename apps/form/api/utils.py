@@ -43,13 +43,12 @@ def get_period_by_type_today(period_type:str = 'weekly'):
         return None
 
 
-def get_tochka_product_history(ntochka, product):
-    today = datetime.today().date()
+def get_tochka_product_history(ntochka, product, period):
     try:
         return TochkaProductHistory.objects.get(
             ntochka=ntochka,
             product=product,
-            period__date=today
+            period__period=period,
         )
     except TochkaProductHistory.DoesNotExist:
         return None

@@ -75,8 +75,9 @@ class ProductAdmin(BaseAdmin):
 
 @admin.register(TochkaProduct)
 class TochkaProductAdmin(BaseAdmin):
-    list_display = ('product', 'ntochka', 'last_price', 'price_display', 'created_at')
-    list_filter = ('product__category', 'created_at','ntochka__hudud')
+    list_display = ('product', 'ntochka', 'last_price', 'price_display', 'created_at','is_udalen')
+    list_filter = ('product__category', 'created_at','ntochka__hudud','ntochka')
+    # list_editable = ('is_udalen',)
     search_fields = ('product__name', 'hudud__name')
     ordering = ('-created_at',)
     readonly_fields = ('created_at', 'updated_at')
