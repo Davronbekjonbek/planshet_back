@@ -59,9 +59,6 @@ class PeriodDateForm(ModelForm):
     class Meta:
         model = PeriodDate
         fields = '__all__'
-        widgets = {
-            'date': AdminDateWidget(attrs={'type': 'date'}),
-        }
 
 
 class PeriodDateInline(admin.TabularInline):
@@ -86,12 +83,6 @@ class PeriodDateAdmin(admin.ModelAdmin):
     list_filter = ['period', 'date']
     date_hierarchy = 'date'
 
-    # Kalendar widget uchun media qo'shish
-    class Media:
-        css = {
-            'all': ('admin/css/widgets.css',)
-        }
-        js = ('admin/js/calendar.js', 'admin/js/admin/DateTimeShortcuts.js')
 
 
 @admin.register(Tochka)

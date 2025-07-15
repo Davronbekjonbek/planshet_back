@@ -84,21 +84,6 @@ JAZZMIN_SETTINGS = {
     # List of apps (and/or models) to base side menu ordering off of (does not need to contain all apps/models)
     "order_with_respect_to": ["auth", "home", "form"],
 
-    # Custom links to append to app groups, keyed on app name
-    "custom_links": {
-        "home": [{
-            "name": "Yangi Tochka Qo'shish",
-            "url": "admin:home_tochka_add",
-            "icon": "fas fa-plus",
-            "permissions": ["home.add_tochka"]
-        }],
-        "form": [{
-            "name": "Yangi Mahsulot Qo'shish",
-            "url": "admin:form_product_add",
-            "icon": "fas fa-plus",
-            "permissions": ["form.add_product"]
-        }]
-    },
 
     # Custom icons for side menu apps/models See https://fontawesome.com/icons?d=gallery&m=free&v=5.0.0,5.0.1,5.0.10,5.0.11,5.0.12,5.0.13,5.0.2,5.0.3,5.0.4,5.0.5,5.0.6,5.0.7,5.0.8,5.0.9,5.1.0,5.1.1,5.2.0,5.3.0,5.3.1,5.4.0,5.4.1,5.4.2,5.5.0,5.6.0,5.6.1,5.6.3,5.7.0,5.7.1,5.7.2,5.8.0,5.8.1,5.8.2,5.9.0,5.10.0,5.10.1,5.10.2,5.11.0,5.11.1,5.11.2,5.12.0,5.12.1,5.13.0,5.13.1,5.14.0,5.15.0,5.15.1,5.15.2,5.15.3,5.15.4&s=solid
     "icons": {
@@ -113,6 +98,7 @@ JAZZMIN_SETTINGS = {
         "home.Period": "fas fa-calendar-alt",
         "home.PeriodDate": "fas fa-calendar-day",
         "home.Tochka": "fas fa-map-marker-alt",
+        "home.NTochka": "fas fa-map-pin",
         "home.Employee": "fas fa-user-tie",
         "home.EmployeeTochka": "fas fa-user-check",
 
@@ -169,6 +155,31 @@ JAZZMIN_SETTINGS = {
 
     # Add a language dropdown into the admin
     "language_chooser": False,
+    "order_with_respect_to": [
+        # Eng muhim modellar birinchi
+        "home.Tochka",  # Tochkalar
+        "home.NTochka",
+        "home.Period",  # Davrlar
+        "home.PeriodDate",  # Davr sanalari
+        "home.Employee",  # Xodimlar
+        "home.Region",  # Viloyatlar
+        "home.District",  # Tumanlar
+
+        # Mahsulot bilan bog'liq
+        "form.TochkaProductHistory",  # Narx Tarixi
+        "form.ProductCategory",  # Kategoriyalar
+        "form.Product",  # Mahsulotlar
+        "form.TochkaProduct",  # Tochka Mahsulotlari
+
+        # Yordamchi modellar
+        "home.EmployeeTochka",  # Xodim Tochkalari
+        "form.Birlik",  # Birliklar
+
+        # Oxirida auth
+        "auth.User",  # Foydalanuvchilar
+        "auth.Group",  # Guruhlar
+    ],
+    "order_with_respect_to": ["home", "form", "auth"],
 }
 
 JAZZMIN_UI_TWEAKS = {

@@ -1,7 +1,10 @@
 from rest_framework import serializers
 
+from django.db.models import  Q
+
 from apps.form.api.utils import get_period_by_type_today
 from apps.form.models import TochkaProductHistory
+
 from ...models import Tochka, Employee, NTochka
 
 class RastaSerializer(serializers.ModelSerializer):
@@ -14,13 +17,19 @@ class RastaSerializer(serializers.ModelSerializer):
         fields = ['id','uuid', 'name', 'hudud', 'is_active', 'is_checked', 'all_count', 'finished']
 
     def get_all_count(self, obj):
-        return obj.products.all().count()
+        return obj.products.filter(is_udalen=False).count()
 
     def get_finished(self, obj):
-        period = get_period_by_type_today()
-        if not period:
+        period_date = get_period_by_type_today()
+        if not period_date:
             return 0
-        return TochkaProductHistory.objects.filter(ntochka=obj, period=period).count()
+
+        excluded_statuses = ['sotilmayapti', 'vaqtinchalik', 'obyekt_yopilgan', 'mavsumiy', 'chegirma']
+
+        return obj.product_history.filter(
+            period__period=period_date.period,
+            ntochka=obj,
+        ).exclude(status__in=excluded_statuses).count()
 
     def get_is_checked(self, obj):
         all_count = self.get_all_count(obj)
@@ -55,14 +64,15 @@ class TochkaSerializer(serializers.ModelSerializer):
 
     def get_finished(self, obj):
         finished = 0
+        excluded_statuses = ['sotilmayapti', 'vaqtinchalik', 'obyekt_yopilgan', 'mavsumiy', 'chegirma']
         for rasta in obj.ntochkas.all():
-            total = rasta.products.count()
+            total = rasta.products.filter(is_udalen=False).count()
             if total == 0:
                 continue
-            period = get_period_by_type_today()
-            if not period:
+            period_date = get_period_by_type_today()
+            if not period_date:
                 continue
-            completed = TochkaProductHistory.objects.filter(ntochka=rasta, period=period).count()
+            completed = TochkaProductHistory.objects.filter(ntochka=rasta, period__period=period_date.period).exclude(status__in=excluded_statuses).count()
             if completed == total:
                 finished += 1
         return finished

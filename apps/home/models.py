@@ -37,6 +37,7 @@ class Region(BaseModel):
         verbose_name = _("Viloyat")
         verbose_name_plural = _("Viloyatlar")
         ordering = ['name']
+        db_table = 'region'
 
 
 class District(BaseModel):
@@ -53,6 +54,7 @@ class District(BaseModel):
         verbose_name_plural = "Tumanlar"
         ordering = ['name']
         unique_together = ('code', 'region')
+        db_table = 'district'
 
 
 class Period(BaseModel):
@@ -66,6 +68,7 @@ class Period(BaseModel):
     class Meta:
         verbose_name = "Davr"
         verbose_name_plural = "Davrlar"
+        db_table = 'period'
 
 
 class PeriodDate(BaseModel):
@@ -78,6 +81,7 @@ class PeriodDate(BaseModel):
     class Meta:
         verbose_name = "Davr sanasi"
         verbose_name_plural = "Davr sanalari"
+        db_table = 'period_date'
 
 
 
@@ -104,7 +108,7 @@ class Tochka(BaseModel):
         ('location', 'Boshqa'),
     )
 
-    name = models.CharField(max_length=100, verbose_name=_("Tochkaning nomi"))
+    name = models.CharField(max_length=100, verbose_name=_("Obyekt nomi"))
     icon = models.CharField(max_length=10, choices=ICON_CHOICES, default='nutrition', verbose_name=_("Icon"))
     uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
     district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='tochkas', verbose_name=_("Tuman"))
@@ -128,20 +132,26 @@ class Tochka(BaseModel):
         return self.name
 
     class Meta:
-        verbose_name = "Tochka"
-        verbose_name_plural = "Tochkalar"
+        verbose_name = "Obyekt"
+        verbose_name_plural = "Obyektlar"
         ordering = ['name']
+        db_table = 'obyekt'
 
 
 class NTochka(BaseModel):
     uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
-    name = models.CharField(max_length=100, verbose_name=_("Kichik tochkaning nomi"))
-    hudud = models.ForeignKey(Tochka, on_delete=models.CASCADE, related_name='ntochkas', verbose_name=_("Tochka"))
+    name = models.CharField(max_length=100, verbose_name=_("Rasta nomi"))
+    hudud = models.ForeignKey(Tochka, on_delete=models.CASCADE, related_name='ntochkas', verbose_name=_("Obyekt"))
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
 
     def __str__(self):
         return f"{self.hudud.name} - {self.name}"
 
+    class Meta:
+        verbose_name = "Rasta"
+        verbose_name_plural = "Rastalar"
+        ordering = ['name']
+        db_table = 'rasta'
 
 
 class Employee(BaseModel):
@@ -171,4 +181,5 @@ class Employee(BaseModel):
     class Meta:
         verbose_name = "Xodim"
         verbose_name_plural = "Xodimlar"
+        db_table = 'employee'
 
