@@ -1,0 +1,5570 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-07-16T01:22:55.000Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "8",
+    "object_repr": "Milliy statistika qo'mitasi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Icon\", \"Tuman\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-07-16T01:30:02.459Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "8",
+    "object_repr": "Milliy statistika qo'mitasi",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-07-16T01:30:02.462Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "7",
+    "object_repr": "Arzon apteka ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-07-16T01:30:02.465Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "2",
+    "object_repr": "DARVOZA SAVDO MCHJ MAKRO SUPERMARKETI",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-07-16T01:30:02.467Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "6",
+    "object_repr": "Komunal xizmat Yangi Mirobod obod servis MChJ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-07-16T01:30:02.470Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "MIROBOD DEHQON BOZORI MCHJ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-07-16T01:30:02.472Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "5",
+    "object_repr": "MIROBOD GAZ (Metan)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-07-16T01:30:02.474Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "4",
+    "object_repr": "POYTAXT OIL 2 SONLI AYOQSH ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-07-16T01:30:02.476Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "3",
+    "object_repr": "Yoshlik savdosi MCHJ ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-07-16T01:47:55.308Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Arpa",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-07-16T01:47:55.311Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Bug'doy",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-07-16T01:47:55.313Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Jo'hori",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-07-16T01:47:55.315Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Kepak",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-07-16T01:47:55.319Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "Kombikorm",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-07-16T01:47:55.322Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Kunjara",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-07-16T01:47:55.325Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Manniy yormasi",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-07-16T01:47:55.327Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Shrot",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-07-16T01:47:55.330Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Shulha",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-07-16T01:47:55.332Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Uzun boshoqli guruch",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-07-16T01:47:55.335Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Yumaloq boshoqli guruch",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add kobo form",
+    "content_type": 7,
+    "codename": "add_koboform"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change kobo form",
+    "content_type": 7,
+    "codename": "change_koboform"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete kobo form",
+    "content_type": 7,
+    "codename": "delete_koboform"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view kobo form",
+    "content_type": 7,
+    "codename": "view_koboform"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Birlik",
+    "content_type": 8,
+    "codename": "add_birlik"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Birlik",
+    "content_type": 8,
+    "codename": "change_birlik"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Birlik",
+    "content_type": 8,
+    "codename": "delete_birlik"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Birlik",
+    "content_type": 8,
+    "codename": "view_birlik"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Mahsulot Kategoriyasi",
+    "content_type": 9,
+    "codename": "add_productcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Mahsulot Kategoriyasi",
+    "content_type": 9,
+    "codename": "change_productcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Mahsulot Kategoriyasi",
+    "content_type": 9,
+    "codename": "delete_productcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Mahsulot Kategoriyasi",
+    "content_type": 9,
+    "codename": "view_productcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add Mahsulot",
+    "content_type": 10,
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change Mahsulot",
+    "content_type": 10,
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete Mahsulot",
+    "content_type": 10,
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view Mahsulot",
+    "content_type": 10,
+    "codename": "view_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Rasta mahsulot",
+    "content_type": 11,
+    "codename": "add_tochkaproduct"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Rasta mahsulot",
+    "content_type": 11,
+    "codename": "change_tochkaproduct"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Rasta mahsulot",
+    "content_type": 11,
+    "codename": "delete_tochkaproduct"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Rasta mahsulot",
+    "content_type": 11,
+    "codename": "view_tochkaproduct"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add Mahsulot marx tarixi",
+    "content_type": 12,
+    "codename": "add_tochkaproducthistory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change Mahsulot marx tarixi",
+    "content_type": 12,
+    "codename": "change_tochkaproducthistory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete Mahsulot marx tarixi",
+    "content_type": 12,
+    "codename": "delete_tochkaproducthistory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Mahsulot marx tarixi",
+    "content_type": 12,
+    "codename": "view_tochkaproducthistory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add Tuman",
+    "content_type": 13,
+    "codename": "add_district"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change Tuman",
+    "content_type": 13,
+    "codename": "change_district"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete Tuman",
+    "content_type": 13,
+    "codename": "delete_district"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view Tuman",
+    "content_type": 13,
+    "codename": "view_district"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add Davr",
+    "content_type": 14,
+    "codename": "add_period"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change Davr",
+    "content_type": 14,
+    "codename": "change_period"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete Davr",
+    "content_type": 14,
+    "codename": "delete_period"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view Davr",
+    "content_type": 14,
+    "codename": "view_period"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add Viloyat",
+    "content_type": 15,
+    "codename": "add_region"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change Viloyat",
+    "content_type": 15,
+    "codename": "change_region"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete Viloyat",
+    "content_type": 15,
+    "codename": "delete_region"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view Viloyat",
+    "content_type": 15,
+    "codename": "view_region"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add Xodim",
+    "content_type": 16,
+    "codename": "add_employee"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change Xodim",
+    "content_type": 16,
+    "codename": "change_employee"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete Xodim",
+    "content_type": 16,
+    "codename": "delete_employee"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view Xodim",
+    "content_type": 16,
+    "codename": "view_employee"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add Davr sanasi",
+    "content_type": 17,
+    "codename": "add_perioddate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change Davr sanasi",
+    "content_type": 17,
+    "codename": "change_perioddate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete Davr sanasi",
+    "content_type": 17,
+    "codename": "delete_perioddate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view Davr sanasi",
+    "content_type": 17,
+    "codename": "view_perioddate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add Obyekt",
+    "content_type": 18,
+    "codename": "add_tochka"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change Obyekt",
+    "content_type": 18,
+    "codename": "change_tochka"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete Obyekt",
+    "content_type": 18,
+    "codename": "delete_tochka"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view Obyekt",
+    "content_type": 18,
+    "codename": "view_tochka"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add Rasta",
+    "content_type": 19,
+    "codename": "add_ntochka"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change Rasta",
+    "content_type": 19,
+    "codename": "change_ntochka"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete Rasta",
+    "content_type": 19,
+    "codename": "delete_ntochka"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view Rasta",
+    "content_type": 19,
+    "codename": "view_ntochka"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$PVBcCBfmQa74kDkrjFfGed$qD0HcxZNxbR12RVIvI9AA8DASE2kuA4CC2BdYMvbrlQ=",
+    "last_login": "2025-07-16T00:53:23.806Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-07-16T00:52:50.310Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "common",
+    "model": "koboform"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "form",
+    "model": "birlik"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "form",
+    "model": "productcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "form",
+    "model": "product"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "form",
+    "model": "tochkaproduct"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "form",
+    "model": "tochkaproducthistory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "home",
+    "model": "district"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "home",
+    "model": "period"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "home",
+    "model": "region"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "home",
+    "model": "employee"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "home",
+    "model": "perioddate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "home",
+    "model": "tochka"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "home",
+    "model": "ntochka"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nzy3nuh4rt07sorvkhd2c5anqmuunodz",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCGFhhcuvcMBJipVA0kpV0Z765NutDtf-_9lwhxW0vYOi9hJnEWIE6_W4r5wXUHdI_11mRudV3mJHdFHrTLayN-Xg7376DEXr61AvYONXEyypmcGIdovJ3QKUI_AWSNA48Io46WKDmNTD57sIm1YRDvD9gnN7g:1ubqOh:SkLWpm5V9A4IRaABApMuNiQoUEdmn7ZI5f7y0U5Xyi4",
+    "expire_date": "2025-07-30T00:53:23.813Z"
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T01:39:27.268Z",
+    "updated_at": "2025-07-16T01:39:27.268Z",
+    "name": "gr",
+    "code": "gr",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.491Z",
+    "updated_at": "2025-07-16T01:51:40.491Z",
+    "name": "dona",
+    "code": "dona",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.498Z",
+    "updated_at": "2025-07-16T01:51:40.498Z",
+    "name": "ml",
+    "code": "ml",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.606Z",
+    "updated_at": "2025-07-16T01:51:40.606Z",
+    "name": "kv.m",
+    "code": "kv.m",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.615Z",
+    "updated_at": "2025-07-16T01:51:40.615Z",
+    "name": "kub.m",
+    "code": "kub.m",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.653Z",
+    "updated_at": "2025-07-16T01:51:40.653Z",
+    "name": "quti",
+    "code": "quti",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.659Z",
+    "updated_at": "2025-07-16T01:51:40.659Z",
+    "name": "komplekt",
+    "code": "komplekt",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 8,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.669Z",
+    "updated_at": "2025-07-16T01:51:40.669Z",
+    "name": "juft",
+    "code": "juft",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 9,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.707Z",
+    "updated_at": "2025-07-16T01:51:40.707Z",
+    "name": "tabletka",
+    "code": "tabletka",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 10,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.712Z",
+    "updated_at": "2025-07-16T01:51:40.712Z",
+    "name": "litr",
+    "code": "litr",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 11,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.725Z",
+    "updated_at": "2025-07-16T01:51:40.725Z",
+    "name": "marta",
+    "code": "marta",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.birlik",
+  "pk": 12,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.735Z",
+    "updated_at": "2025-07-16T01:51:40.735Z",
+    "name": "1 kishi uchun kompleks tushlik",
+    "code": "1 kishi uc",
+    "miqdor": 0.0
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 12,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.406Z",
+    "updated_at": "2025-07-16T01:51:40.406Z",
+    "name": "Uzun boshoqli guruch",
+    "number": 0,
+    "code": "11111013",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 13,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.411Z",
+    "updated_at": "2025-07-16T01:51:40.411Z",
+    "name": "Yumaloq boshoqli guruch",
+    "number": 0,
+    "code": "11111014",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 14,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.415Z",
+    "updated_at": "2025-07-16T01:51:40.415Z",
+    "name": "Arpa",
+    "number": 0,
+    "code": "31001018",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 15,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.417Z",
+    "updated_at": "2025-07-16T01:51:40.417Z",
+    "name": "Bug'doy",
+    "number": 0,
+    "code": "31001017",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 16,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.421Z",
+    "updated_at": "2025-07-16T01:51:40.421Z",
+    "name": "Jo'hori",
+    "number": 0,
+    "code": "31001019",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 17,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.425Z",
+    "updated_at": "2025-07-16T01:51:40.425Z",
+    "name": "Kepak",
+    "number": 0,
+    "code": "31001020",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 18,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.428Z",
+    "updated_at": "2025-07-16T01:51:40.428Z",
+    "name": "Kunjara",
+    "number": 0,
+    "code": "31001021",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 19,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.432Z",
+    "updated_at": "2025-07-16T01:51:40.432Z",
+    "name": "Shrot",
+    "number": 0,
+    "code": "31001022",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 20,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.435Z",
+    "updated_at": "2025-07-16T01:51:40.435Z",
+    "name": "Shulha",
+    "number": 0,
+    "code": "31001023",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 21,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.438Z",
+    "updated_at": "2025-07-16T01:51:40.438Z",
+    "name": "Kombikorm",
+    "number": 0,
+    "code": "31001024",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 22,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.441Z",
+    "updated_at": "2025-07-16T01:51:40.441Z",
+    "name": "Oliy navli bug'doy uni",
+    "number": 0,
+    "code": "11111200",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 23,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.445Z",
+    "updated_at": "2025-07-16T01:51:40.445Z",
+    "name": "Birinchi navli bug'doy uni",
+    "number": 0,
+    "code": "11111300",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 24,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.448Z",
+    "updated_at": "2025-07-16T01:51:40.448Z",
+    "name": "1-navli bug'doy unidan non",
+    "number": 0,
+    "code": "11114005",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 25,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.452Z",
+    "updated_at": "2025-07-16T01:51:40.452Z",
+    "name": "Obi(tandir) non",
+    "number": 0,
+    "code": "11113002",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 26,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.456Z",
+    "updated_at": "2025-07-16T01:51:40.456Z",
+    "name": "Makaron",
+    "number": 0,
+    "code": "11116009",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 27,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.459Z",
+    "updated_at": "2025-07-16T01:51:40.459Z",
+    "name": "Mol go'shti (suyaksiz go'shtdan tashqari)",
+    "number": 0,
+    "code": "11121014",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 28,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.462Z",
+    "updated_at": "2025-07-16T01:51:40.462Z",
+    "name": "Mol go'shti (suyaksiz)",
+    "number": 0,
+    "code": "11121018",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 29,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.465Z",
+    "updated_at": "2025-07-16T01:51:40.465Z",
+    "name": "Qo'y go'shti",
+    "number": 0,
+    "code": "11121016",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 30,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.468Z",
+    "updated_at": "2025-07-16T01:51:40.468Z",
+    "name": "Tovuq go'shti (sonlardan tashqari)",
+    "number": 0,
+    "code": "11122018",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 31,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.472Z",
+    "updated_at": "2025-07-16T01:51:40.472Z",
+    "name": "Tovuq boldiri, son qismlari",
+    "number": 0,
+    "code": "11122019",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 32,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.475Z",
+    "updated_at": "2025-07-16T01:51:40.475Z",
+    "name": "Tirik, yangi, sovutilgan baliq",
+    "number": 0,
+    "code": "11121024",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 33,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.479Z",
+    "updated_at": "2025-07-16T01:51:40.479Z",
+    "name": "Muzlatilgan baliq",
+    "number": 0,
+    "code": "11121025",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 34,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.483Z",
+    "updated_at": "2025-07-16T01:51:40.483Z",
+    "name": "Yangi sog'ilgan sut",
+    "number": 0,
+    "code": "11131027",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 35,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.486Z",
+    "updated_at": "2025-07-16T01:51:40.486Z",
+    "name": "Qatiq",
+    "number": 0,
+    "code": "11132028",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 36,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.494Z",
+    "updated_at": "2025-07-16T01:51:40.494Z",
+    "name": "Tuxum",
+    "number": 0,
+    "code": "11141035",
+    "union": 2,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 37,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.501Z",
+    "updated_at": "2025-07-16T01:51:40.501Z",
+    "name": "Paxta yog'i",
+    "number": 0,
+    "code": "11154040",
+    "union": 3,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 38,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.504Z",
+    "updated_at": "2025-07-16T01:51:40.504Z",
+    "name": "Kungaboqar yog'i",
+    "number": 0,
+    "code": "11154039",
+    "union": 3,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 39,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.508Z",
+    "updated_at": "2025-07-16T01:51:40.508Z",
+    "name": "Sariyog'",
+    "number": 0,
+    "code": "11151036",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 40,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.511Z",
+    "updated_at": "2025-07-16T01:51:40.511Z",
+    "name": "Limon",
+    "number": 0,
+    "code": "11163042",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 41,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.514Z",
+    "updated_at": "2025-07-16T01:51:40.514Z",
+    "name": "Olma",
+    "number": 0,
+    "code": "11161040",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 42,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.517Z",
+    "updated_at": "2025-07-16T01:51:40.517Z",
+    "name": "Nok",
+    "number": 0,
+    "code": "11161041",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 43,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.522Z",
+    "updated_at": "2025-07-16T01:51:40.522Z",
+    "name": "Gilos",
+    "number": 0,
+    "code": "11161101",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 44,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.525Z",
+    "updated_at": "2025-07-16T01:51:40.525Z",
+    "name": "Shaftoli",
+    "number": 0,
+    "code": "11161042",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 45,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.529Z",
+    "updated_at": "2025-07-16T01:51:40.529Z",
+    "name": "O'rik",
+    "number": 0,
+    "code": "11161103",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 46,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.532Z",
+    "updated_at": "2025-07-16T01:51:40.532Z",
+    "name": "Bexi",
+    "number": 0,
+    "code": "11161105",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 47,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.536Z",
+    "updated_at": "2025-07-16T01:51:40.536Z",
+    "name": "Qulupnay",
+    "number": 0,
+    "code": "11161107",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 48,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.539Z",
+    "updated_at": "2025-07-16T01:51:40.540Z",
+    "name": "Uzum",
+    "number": 0,
+    "code": "11162041",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 49,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.543Z",
+    "updated_at": "2025-07-16T01:51:40.543Z",
+    "name": "Tarvuz",
+    "number": 0,
+    "code": "11161047",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 50,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.546Z",
+    "updated_at": "2025-07-16T01:51:40.546Z",
+    "name": "Qovun",
+    "number": 0,
+    "code": "11162048",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 51,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.550Z",
+    "updated_at": "2025-07-16T01:51:40.550Z",
+    "name": "Kishmish",
+    "number": 0,
+    "code": "11163045",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 52,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.553Z",
+    "updated_at": "2025-07-16T01:51:40.553Z",
+    "name": "Karam",
+    "number": 0,
+    "code": "11161049",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 53,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.556Z",
+    "updated_at": "2025-07-16T01:51:40.556Z",
+    "name": "Bodring",
+    "number": 0,
+    "code": "11163054",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 54,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.559Z",
+    "updated_at": "2025-07-16T01:51:40.560Z",
+    "name": "Pomidor",
+    "number": 0,
+    "code": "11163056",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 55,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.563Z",
+    "updated_at": "2025-07-16T01:51:40.563Z",
+    "name": "Baqlajon",
+    "number": 0,
+    "code": "11163310",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 56,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.566Z",
+    "updated_at": "2025-07-16T01:51:40.566Z",
+    "name": "Bulg'or qalampiri",
+    "number": 0,
+    "code": "11163059",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 57,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.569Z",
+    "updated_at": "2025-07-16T01:51:40.569Z",
+    "name": "Qovoq",
+    "number": 0,
+    "code": "11162050",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 58,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.572Z",
+    "updated_at": "2025-07-16T01:51:40.572Z",
+    "name": "Xo'raki lavlagi",
+    "number": 0,
+    "code": "11162052",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 59,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.576Z",
+    "updated_at": "2025-07-16T01:51:40.576Z",
+    "name": "Sabzi",
+    "number": 0,
+    "code": "11162053",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 60,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.579Z",
+    "updated_at": "2025-07-16T01:51:40.579Z",
+    "name": "Sarimsoq",
+    "number": 0,
+    "code": "11164058",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 61,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.583Z",
+    "updated_at": "2025-07-16T01:51:40.583Z",
+    "name": "Piyoz",
+    "number": 0,
+    "code": "11162051",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 62,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.586Z",
+    "updated_at": "2025-07-16T01:51:40.586Z",
+    "name": "Kartoshka",
+    "number": 0,
+    "code": "11169063",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 63,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.590Z",
+    "updated_at": "2025-07-16T01:51:40.590Z",
+    "name": "Loviya",
+    "number": 0,
+    "code": "11112012",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 64,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.593Z",
+    "updated_at": "2025-07-16T01:51:40.593Z",
+    "name": "Noxat",
+    "number": 0,
+    "code": "11112011",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 65,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.597Z",
+    "updated_at": "2025-07-16T01:51:40.597Z",
+    "name": "Mosh",
+    "number": 0,
+    "code": "11112013",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 66,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.600Z",
+    "updated_at": "2025-07-16T01:51:40.600Z",
+    "name": "Shakar",
+    "number": 0,
+    "code": "11171064",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 67,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.604Z",
+    "updated_at": "2025-07-16T01:51:40.604Z",
+    "name": "Sement",
+    "number": 0,
+    "code": "12504178",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 68,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.609Z",
+    "updated_at": "2025-07-16T01:51:40.609Z",
+    "name": "Oynalar",
+    "number": 0,
+    "code": "12504177",
+    "union": 4,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 69,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.612Z",
+    "updated_at": "2025-07-16T01:51:40.612Z",
+    "name": "Pishgan g'isht",
+    "number": 0,
+    "code": "12501172",
+    "union": 2,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 70,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.625Z",
+    "updated_at": "2025-07-16T01:51:40.625Z",
+    "name": "Yog'och materiali",
+    "number": 0,
+    "code": "12503174",
+    "union": 5,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 71,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.628Z",
+    "updated_at": "2025-07-16T01:51:40.628Z",
+    "name": "Qadoqlangan sut",
+    "number": 0,
+    "code": "11131031",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 72,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.633Z",
+    "updated_at": "2025-07-16T01:51:40.633Z",
+    "name": "Pishirilgan kolbasa",
+    "number": 0,
+    "code": "11123019",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 73,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.636Z",
+    "updated_at": "2025-07-16T01:51:40.636Z",
+    "name": "Dulangan va yarim dudlangan kolbasa",
+    "number": 0,
+    "code": "11123020",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 74,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.639Z",
+    "updated_at": "2025-07-16T01:51:40.639Z",
+    "name": "Suzma",
+    "number": 0,
+    "code": "11133032",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 75,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.643Z",
+    "updated_at": "2025-07-16T01:51:40.643Z",
+    "name": "Margarin",
+    "number": 0,
+    "code": "11152037",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 76,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.646Z",
+    "updated_at": "2025-07-16T01:51:40.646Z",
+    "name": "Karamel konfetlar",
+    "number": 0,
+    "code": "11177071",
+    "union": 1,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 77,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.649Z",
+    "updated_at": "2025-07-16T01:51:40.649Z",
+    "name": "Aroq",
+    "number": 0,
+    "code": "11201088",
+    "union": 3,
+    "rasfas": true,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 78,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.656Z",
+    "updated_at": "2025-07-16T01:51:40.656Z",
+    "name": "Sigaretlar",
+    "number": 0,
+    "code": "12961236",
+    "union": 6,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 79,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.662Z",
+    "updated_at": "2025-07-16T01:51:40.662Z",
+    "name": "Erkaklar uchun kostyum-shim",
+    "number": 0,
+    "code": "12113097",
+    "union": 7,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 80,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.666Z",
+    "updated_at": "2025-07-16T01:51:40.666Z",
+    "name": "Erkaklar uchun ko'ylaklar",
+    "number": 0,
+    "code": "12116103",
+    "union": 2,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 81,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.672Z",
+    "updated_at": "2025-07-16T01:51:40.673Z",
+    "name": "Erkaklar paypog'i",
+    "number": 0,
+    "code": "12117104",
+    "union": 8,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 82,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.676Z",
+    "updated_at": "2025-07-16T01:51:40.676Z",
+    "name": "Qiz bolalar uchun paypoq, kolgotka, chulki-paypoq mahsulotlari",
+    "number": 0,
+    "code": "12135130",
+    "union": 8,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 83,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.680Z",
+    "updated_at": "2025-07-16T01:51:40.680Z",
+    "name": "Ayollar uchun kolgotkalar, chulki-paypoq mahsulotlari",
+    "number": 0,
+    "code": "12127120",
+    "union": 2,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 84,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.683Z",
+    "updated_at": "2025-07-16T01:51:40.683Z",
+    "name": "Erkaklar uchun shimlar, djinsi shimlar",
+    "number": 0,
+    "code": "12115101",
+    "union": 2,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 85,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.688Z",
+    "updated_at": "2025-07-16T01:51:40.688Z",
+    "name": "Erkaklar uchun tuflilar",
+    "number": 0,
+    "code": "12414156",
+    "union": 8,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 86,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.691Z",
+    "updated_at": "2025-07-16T01:51:40.691Z",
+    "name": "Ayollar uchun tuflilar",
+    "number": 0,
+    "code": "12422161",
+    "union": 8,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 87,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.694Z",
+    "updated_at": "2025-07-16T01:51:40.694Z",
+    "name": "Yosh bolalar uchun krossovkalar va shu kabi poyafzallar",
+    "number": 0,
+    "code": "12434170",
+    "union": 8,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 88,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.697Z",
+    "updated_at": "2025-07-16T01:51:40.697Z",
+    "name": "Sovuq suv va kanalizatsiya uchun haq to'lash",
+    "number": 0,
+    "code": "22101259",
+    "union": 5,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 89,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.701Z",
+    "updated_at": "2025-07-16T01:51:40.701Z",
+    "name": "Ko'p xonadonli uylarda ko'rsatilgan xizmatlarga xaq to'lash",
+    "number": 0,
+    "code": "22001258",
+    "union": 4,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 90,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.704Z",
+    "updated_at": "2025-07-16T01:51:40.704Z",
+    "name": "Xo'jalik sovuni",
+    "number": 0,
+    "code": "12801202",
+    "union": 1,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 91,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.710Z",
+    "updated_at": "2025-07-16T01:51:40.710Z",
+    "name": "Shamollashga qarshi dori vositalari",
+    "number": 0,
+    "code": "12905207",
+    "union": 9,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 92,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.715Z",
+    "updated_at": "2025-07-16T01:51:40.715Z",
+    "name": "Benzin",
+    "number": 0,
+    "code": "12914202",
+    "union": 10,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 93,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.718Z",
+    "updated_at": "2025-07-16T01:51:40.719Z",
+    "name": "Shaxsiy transport vositalari uchun propan",
+    "number": 0,
+    "code": "12914203",
+    "union": 10,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 94,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.722Z",
+    "updated_at": "2025-07-16T01:51:40.723Z",
+    "name": "Shaxsiy transport vositalari uchun metan",
+    "number": 0,
+    "code": "12914204",
+    "union": 5,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 95,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.728Z",
+    "updated_at": "2025-07-16T01:51:40.728Z",
+    "name": "Shahar avtobusida yo'l haqi",
+    "number": 0,
+    "code": "23101266",
+    "union": 11,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 96,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.732Z",
+    "updated_at": "2025-07-16T01:51:40.732Z",
+    "name": "Televizor",
+    "number": 0,
+    "code": "12921214",
+    "union": 2,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 97,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.738Z",
+    "updated_at": "2025-07-16T01:51:40.738Z",
+    "name": "Oshxonadagi tayyor taomlar",
+    "number": 0,
+    "code": "11193086",
+    "union": 12,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.productcategory",
+  "pk": 98,
+  "fields": {
+    "created_at": "2025-07-16T01:51:40.741Z",
+    "updated_at": "2025-07-16T01:51:40.741Z",
+    "name": "Soch uchun shampunlar",
+    "number": 0,
+    "code": "12951229",
+    "union": 1,
+    "rasfas": false,
+    "logo": ""
+  }
+},
+{
+  "model": "form.product",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T01:54:06.372Z",
+    "updated_at": "2025-07-16T01:54:06.372Z",
+    "uuid": "34edb648-6aea-4f82-ad3f-ebce596c1d43",
+    "name": "131 dokon baliq mahsulotlari",
+    "category": 32,
+    "code": "370881",
+    "price": 50000.0,
+    "top": 60000,
+    "bottom": 40000,
+    "is_weekly": true,
+    "unit": 1,
+    "is_import": true
+  }
+},
+{
+  "model": "form.product",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T01:54:06.377Z",
+    "updated_at": "2025-07-16T01:54:06.377Z",
+    "uuid": "d5ded2dc-b841-440b-ba3e-f7a3c660a24e",
+    "name": "131 dokon baliq mahsulotlari",
+    "category": 32,
+    "code": "370882",
+    "price": 60000.0,
+    "top": 72000,
+    "bottom": 48000,
+    "is_weekly": true,
+    "unit": 1,
+    "is_import": true
+  }
+},
+{
+  "model": "form.product",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-16T01:54:06.381Z",
+    "updated_at": "2025-07-16T01:54:06.381Z",
+    "uuid": "ee02fdca-bef5-4aff-a8af-e142fcc074c6",
+    "name": "131 dokon baliq mahsulotlari",
+    "category": 32,
+    "code": "370883",
+    "price": 50000.0,
+    "top": 60000,
+    "bottom": 40000,
+    "is_weekly": true,
+    "unit": 1,
+    "is_import": true
+  }
+},
+{
+  "model": "form.product",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-16T01:54:06.384Z",
+    "updated_at": "2025-07-16T01:54:06.384Z",
+    "uuid": "0f7ad48f-fb06-4be4-b0ca-08dec86049ff",
+    "name": "131 dokon baliq mahsulotlari",
+    "category": 33,
+    "code": "370884",
+    "price": 47000.0,
+    "top": 56400,
+    "bottom": 37600,
+    "is_weekly": true,
+    "unit": 1,
+    "is_import": true
+  }
+},
+{
+  "model": "form.tochkaproduct",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T01:59:57.223Z",
+    "updated_at": "2025-07-16T01:59:57.223Z",
+    "product": 1,
+    "ntochka": 1,
+    "hudud": 1,
+    "last_price": 50000.0,
+    "previous_price": 50000.0,
+    "is_active": true,
+    "is_udalen": false
+  }
+},
+{
+  "model": "form.tochkaproduct",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T01:59:57.229Z",
+    "updated_at": "2025-07-16T01:59:57.229Z",
+    "product": 2,
+    "ntochka": 2,
+    "hudud": 1,
+    "last_price": 60000.0,
+    "previous_price": 60000.0,
+    "is_active": true,
+    "is_udalen": false
+  }
+},
+{
+  "model": "home.region",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.699Z",
+    "updated_at": "2025-07-16T00:52:28.699Z",
+    "name": "╥Ü╨╛╤Ç╨░╥¢╨░╨╗╨┐╨╛╥ô╨╕╤ü╤é╨╛╨╜ ╨á╨╡╤ü╨┐╤â╨▒╨╗╨╕╨║╨░╤ü╨╕",
+    "code": "1735"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.762Z",
+    "updated_at": "2025-07-16T00:52:28.762Z",
+    "name": "╨Ñ╨╛╤Ç╨░╨╖╨╝ ╨▓.",
+    "code": "1733"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.811Z",
+    "updated_at": "2025-07-16T00:52:28.811Z",
+    "name": "╨ñ╨░╤Ç╥ô╨╛╨╜╨░ ╨▓.",
+    "code": "1730"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.891Z",
+    "updated_at": "2025-07-16T00:52:28.891Z",
+    "name": "╨ó╨╛╤ê╨║╨╡╨╜╤é ╨▓.",
+    "code": "1727"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.997Z",
+    "updated_at": "2025-07-16T00:52:28.997Z",
+    "name": "╨ó╨╛╤ê╨║╨╡╨╜╤é ╤ê.",
+    "code": "1726"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.066Z",
+    "updated_at": "2025-07-16T00:52:29.066Z",
+    "name": "╨í╨╕╤Ç╨┤╨░╤Ç╤æ ╨▓.",
+    "code": "1724"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.109Z",
+    "updated_at": "2025-07-16T00:52:29.110Z",
+    "name": "╨í╨░╨╝╨░╤Ç╥¢╨░╨╜╨┤ ╨▓.",
+    "code": "1718"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 8,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.172Z",
+    "updated_at": "2025-07-16T00:52:29.172Z",
+    "name": "╨í╤â╤Ç╤à╨╛╨╜╨┤╨░╤Ç╤æ ╨▓.",
+    "code": "1722"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 9,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.228Z",
+    "updated_at": "2025-07-16T00:52:29.228Z",
+    "name": "╨¥╨░╨╝╨░╨╜╨│╨░╨╜ ╨▓.",
+    "code": "1714"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 10,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.274Z",
+    "updated_at": "2025-07-16T00:52:29.275Z",
+    "name": "╨¥╨░╨▓╨╛╨╕╨╣ ╨▓.",
+    "code": "1712"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 11,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.315Z",
+    "updated_at": "2025-07-16T00:52:29.315Z",
+    "name": "╥Ü╨░╤ê╥¢╨░╨┤╨░╤Ç╤æ ╨▓.",
+    "code": "1710"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 12,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.413Z",
+    "updated_at": "2025-07-16T00:52:29.413Z",
+    "name": "╨û╨╕╨╖╨╖╨░╤à ╨▓.",
+    "code": "1708"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 13,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.482Z",
+    "updated_at": "2025-07-16T00:52:29.482Z",
+    "name": "╨æ╤â╤à╨╛╤Ç╨╛ ╨▓.",
+    "code": "1706"
+  }
+},
+{
+  "model": "home.region",
+  "pk": 14,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.534Z",
+    "updated_at": "2025-07-16T00:52:29.534Z",
+    "name": "╨É╨╜╨┤╨╕╨╢╨╛╨╜ ╨▓.",
+    "code": "1703"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.703Z",
+    "updated_at": "2025-07-16T00:52:28.703Z",
+    "name": "╨¥╤â╨║╤â╤ü ╤ê.",
+    "region": 1,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.708Z",
+    "updated_at": "2025-07-16T00:52:28.708Z",
+    "name": "╨º╨╕╨╝╨▒╨╛╨╣ ╤é.",
+    "region": 1,
+    "code": "240"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.712Z",
+    "updated_at": "2025-07-16T00:52:28.712Z",
+    "name": "╨É╨╝╤â╨┤╨░╤Ç╤æ ╤é.",
+    "region": 1,
+    "code": "204"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.715Z",
+    "updated_at": "2025-07-16T00:52:28.715Z",
+    "name": "╨æ╨╡╤Ç╤â╨╜╨╕╨╣ ╤é.",
+    "region": 1,
+    "code": "207"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.718Z",
+    "updated_at": "2025-07-16T00:52:28.718Z",
+    "name": "╨Ü╨╡╨│╨╡╨╣╨╗╨╕ ╤é.",
+    "region": 1,
+    "code": "212"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.721Z",
+    "updated_at": "2025-07-16T00:52:28.721Z",
+    "name": "╨ó╤₧╤Ç╤é╨║╤₧╨╗ ╤é.",
+    "region": 1,
+    "code": "233"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.725Z",
+    "updated_at": "2025-07-16T00:52:28.725Z",
+    "name": "╨Ñ╤₧╨╢╨░╨╣╨╗╨╕ ╤é.",
+    "region": 1,
+    "code": "236"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 8,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.728Z",
+    "updated_at": "2025-07-16T00:52:28.728Z",
+    "name": "╥Ü╤₧╨╜╥ô╨╕╤Ç╨╛╤é ╤é.",
+    "region": 1,
+    "code": "215"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 9,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.731Z",
+    "updated_at": "2025-07-16T00:52:28.731Z",
+    "name": "╨¡╨╗╨╗╨╕╨║╥¢╨░╨╗╨░ ╤é.",
+    "region": 1,
+    "code": "250"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 10,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.735Z",
+    "updated_at": "2025-07-16T00:52:28.735Z",
+    "name": "╨¿╤â╨╝╨░╨╜╨░╨╣ ╤é.",
+    "region": 1,
+    "code": "243"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 11,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.738Z",
+    "updated_at": "2025-07-16T00:52:28.738Z",
+    "name": "╨ó╨░╤à╤é╨░╨║╤₧╨┐╨╕╤Ç ╤é.",
+    "region": 1,
+    "code": "230"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 12,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.742Z",
+    "updated_at": "2025-07-16T00:52:28.742Z",
+    "name": "╨ó╨░╤à╨╕╨░╤é╨╛╤ê ╤é.",
+    "region": 1,
+    "code": "228"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 13,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.746Z",
+    "updated_at": "2025-07-16T00:52:28.746Z",
+    "name": "╨¥╤â╨║╤â╤ü ╤é.",
+    "region": 1,
+    "code": "225"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 14,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.749Z",
+    "updated_at": "2025-07-16T00:52:28.749Z",
+    "name": "╨£╤₧╨╣╨╜╨╛╥¢ ╤é.",
+    "region": 1,
+    "code": "222"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 15,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.752Z",
+    "updated_at": "2025-07-16T00:52:28.752Z",
+    "name": "╥Ü╨╛╨╜╨╗╨╕╨║╤₧╨╗ ╤é.",
+    "region": 1,
+    "code": "218"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 16,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.755Z",
+    "updated_at": "2025-07-16T00:52:28.755Z",
+    "name": "╥Ü╨╛╤Ç╨░╤₧╨╖╨░╨║ ╤é.",
+    "region": 1,
+    "code": "211"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 17,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.758Z",
+    "updated_at": "2025-07-16T00:52:28.758Z",
+    "name": "╨æ╨╛╨╖╨░╤é╨╛╨▓ ╤é.",
+    "region": 1,
+    "code": "209"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 18,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.765Z",
+    "updated_at": "2025-07-16T00:52:28.765Z",
+    "name": "╨æ╨╛╥ô╨╛╤é ╤é.",
+    "region": 2,
+    "code": "204"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 19,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.769Z",
+    "updated_at": "2025-07-16T00:52:28.769Z",
+    "name": "╨ô╤â╤Ç╨╗╨░╨╜ ╤é.",
+    "region": 2,
+    "code": "208"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 20,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.772Z",
+    "updated_at": "2025-07-16T00:52:28.772Z",
+    "name": "╥Ü╤₧╤ê╨║╤₧╨┐╤Ç╨╕╨║ ╤é.",
+    "region": 2,
+    "code": "212"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 21,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.777Z",
+    "updated_at": "2025-07-16T00:52:28.777Z",
+    "name": "╨Ñ╨░╨╖╨╛╤Ç╨░╤ü╨┐ ╤é.",
+    "region": 2,
+    "code": "220"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 22,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.780Z",
+    "updated_at": "2025-07-16T00:52:28.780Z",
+    "name": "╨¿╨╛╨▓╨╛╤é ╤é.",
+    "region": 2,
+    "code": "230"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 23,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.784Z",
+    "updated_at": "2025-07-16T00:52:28.784Z",
+    "name": "╨»╨╜╨│╨╕╨░╤Ç╨╕╥¢ ╤é.",
+    "region": 2,
+    "code": "233"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 24,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.787Z",
+    "updated_at": "2025-07-16T00:52:28.787Z",
+    "name": "╨ú╤Ç╨│╨░╨╜╤ç ╤ê.",
+    "region": 2,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 25,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.790Z",
+    "updated_at": "2025-07-16T00:52:28.790Z",
+    "name": "╨Ñ╨╕╨▓╨░ ╤ê.",
+    "region": 2,
+    "code": "406"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 26,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.793Z",
+    "updated_at": "2025-07-16T00:52:28.793Z",
+    "name": "╨»╨╜╨│╨╕╨▒╨╛╨╖╨╛╤Ç ╤é.",
+    "region": 2,
+    "code": "236"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 27,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.797Z",
+    "updated_at": "2025-07-16T00:52:28.797Z",
+    "name": "╨Ñ╨╕╨▓╨░ ╤é.",
+    "region": 2,
+    "code": "226"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 28,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.800Z",
+    "updated_at": "2025-07-16T00:52:28.800Z",
+    "name": "╨Ñ╨╛╨╜╨║╨░ ╤é.",
+    "region": 2,
+    "code": "223"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 29,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.805Z",
+    "updated_at": "2025-07-16T00:52:28.805Z",
+    "name": "╨ó╤â╨┐╤Ç╨╛╥¢╥¢╨░╨╗╨░ ╤é.",
+    "region": 2,
+    "code": "221"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 30,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.808Z",
+    "updated_at": "2025-07-16T00:52:28.808Z",
+    "name": "╨ú╤Ç╨│╨░╨╜╤ç ╤é.",
+    "region": 2,
+    "code": "217"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 31,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.814Z",
+    "updated_at": "2025-07-16T00:52:28.814Z",
+    "name": "╨₧╨╗╤é╨╕╨░╤Ç╨╕╥¢ ╤é.",
+    "region": 3,
+    "code": "203"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 32,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.817Z",
+    "updated_at": "2025-07-16T00:52:28.817Z",
+    "name": "╨æ╤â╨▓╨░╨╣╨┤╨░ ╤é.",
+    "region": 3,
+    "code": "212"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 33,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.819Z",
+    "updated_at": "2025-07-16T00:52:28.819Z",
+    "name": "╨æ╨╡╤ê╨░╤Ç╨╕╥¢ ╤é.",
+    "region": 3,
+    "code": "215"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 34,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.824Z",
+    "updated_at": "2025-07-16T00:52:28.824Z",
+    "name": "╥Ü╤â╨▓╨░ ╤é.",
+    "region": 3,
+    "code": "218"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 35,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.828Z",
+    "updated_at": "2025-07-16T00:52:28.828Z",
+    "name": "╨Ä╨╖╨▒╨╡╨║╨╕╤ü╤é╨╛╨╜ ╤é.",
+    "region": 3,
+    "code": "230"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 36,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.834Z",
+    "updated_at": "2025-07-16T00:52:28.834Z",
+    "name": "╨ñ╨░╤Ç╥ô╨╛╨╜╨░ ╤é.",
+    "region": 3,
+    "code": "233"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 37,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.837Z",
+    "updated_at": "2025-07-16T00:52:28.837Z",
+    "name": "╨ü╨╖╤æ╨▓╨╛╨╜ ╤é.",
+    "region": 3,
+    "code": "242"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 38,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.840Z",
+    "updated_at": "2025-07-16T00:52:28.840Z",
+    "name": "╨ñ╨░╤Ç╥ô╨╛╨╜╨░ ╤ê.",
+    "region": 3,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 39,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.847Z",
+    "updated_at": "2025-07-16T00:52:28.847Z",
+    "name": "╥Ü╤₧╥¢╨╛╨╜ ╤ê.",
+    "region": 3,
+    "code": "405"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 40,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.852Z",
+    "updated_at": "2025-07-16T00:52:28.852Z",
+    "name": "╨£╨░╤Ç╥ô╨╕╨╗╨╛╨╜ ╤ê.",
+    "region": 3,
+    "code": "412"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 41,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.856Z",
+    "updated_at": "2025-07-16T00:52:28.856Z",
+    "name": "╥Ü╤â╨▓╨░╤ü╨╛╨╣ ╤ê.",
+    "region": 3,
+    "code": "408"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 42,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.860Z",
+    "updated_at": "2025-07-16T00:52:28.860Z",
+    "name": "╨ñ╤â╤Ç╥¢╨░╤é ╤é.",
+    "region": 3,
+    "code": "238"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 43,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.864Z",
+    "updated_at": "2025-07-16T00:52:28.864Z",
+    "name": "╨ö╨░╨╜╥ô╨░╤Ç╨░ ╤é.",
+    "region": 3,
+    "code": "236"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 44,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.868Z",
+    "updated_at": "2025-07-16T00:52:28.868Z",
+    "name": "╨ó╨╛╤ê╨╗╨╛╥¢ ╤é.",
+    "region": 3,
+    "code": "227"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 45,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.871Z",
+    "updated_at": "2025-07-16T00:52:28.871Z",
+    "name": "╨í╨╛╤à ╤é.",
+    "region": 3,
+    "code": "226"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 46,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.876Z",
+    "updated_at": "2025-07-16T00:52:28.876Z",
+    "name": "╨á╨╕╤ê╤é╨╛╨╜ ╤é.",
+    "region": 3,
+    "code": "224"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 47,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.880Z",
+    "updated_at": "2025-07-16T00:52:28.880Z",
+    "name": "╨ú╤ç╨║╤₧╨┐╤Ç╨╕╨║ ╤é.",
+    "region": 3,
+    "code": "221"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 48,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.883Z",
+    "updated_at": "2025-07-16T00:52:28.883Z",
+    "name": "╨æ╨░╥ô╨┤╨╛╨┤ ╤é.",
+    "region": 3,
+    "code": "209"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 49,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.888Z",
+    "updated_at": "2025-07-16T00:52:28.888Z",
+    "name": "╥Ü╤₧╤ê╤é╨╡╨┐╨░ ╤é.",
+    "region": 3,
+    "code": "206"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 50,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.894Z",
+    "updated_at": "2025-07-16T00:52:28.895Z",
+    "name": "╨»╨╜╨│╨╕╨╣╤₧╨╗ ╤ê.",
+    "region": 4,
+    "code": "424"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 51,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.897Z",
+    "updated_at": "2025-07-16T00:52:28.897Z",
+    "name": "╨º╨╕╤Ç╤ç╨╕╥¢ ╤ê.",
+    "region": 4,
+    "code": "419"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 52,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.901Z",
+    "updated_at": "2025-07-16T00:52:28.901Z",
+    "name": "╨æ╨╡╨║╨╛╨▒╨╛╨┤ ╤ê.",
+    "region": 4,
+    "code": "413"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 53,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.904Z",
+    "updated_at": "2025-07-16T00:52:28.904Z",
+    "name": "╨É╨╜╨│╤Ç╨╡╨╜ ╤ê.",
+    "region": 4,
+    "code": "407"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 54,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.909Z",
+    "updated_at": "2025-07-16T00:52:28.909Z",
+    "name": "╨₧╨╗╨╝╨░╨╗╨╕╥¢ ╤ê.",
+    "region": 4,
+    "code": "404"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 55,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.912Z",
+    "updated_at": "2025-07-16T00:52:28.912Z",
+    "name": "╨¥╤â╤Ç╨░╤ä╤ê╨╛╨╜ ╤ê.",
+    "region": 4,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 56,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.917Z",
+    "updated_at": "2025-07-16T00:52:28.917Z",
+    "name": "╨º╨╕╨╜╨╛╨╖ ╤é.",
+    "region": 4,
+    "code": "256"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 57,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.922Z",
+    "updated_at": "2025-07-16T00:52:28.922Z",
+    "name": "╨ƒ╨╕╤ü╨║╨╡╨╜╤é ╤é.",
+    "region": 4,
+    "code": "250"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 58,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.927Z",
+    "updated_at": "2025-07-16T00:52:28.928Z",
+    "name": "╨ƒ╨░╤Ç╨║╨╡╨╜╤é ╤é.",
+    "region": 4,
+    "code": "249"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 59,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.932Z",
+    "updated_at": "2025-07-16T00:52:28.932Z",
+    "name": "╨ù╨░╨╜╨│╨╕╨╛╤é╨░ ╤é.",
+    "region": 4,
+    "code": "237"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 60,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.936Z",
+    "updated_at": "2025-07-16T00:52:28.936Z",
+    "name": "╨æ╤₧╤ü╤é╨╛╨╜╨╗╨╕╥¢ ╤é.",
+    "region": 4,
+    "code": "224"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 61,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.939Z",
+    "updated_at": "2025-07-16T00:52:28.939Z",
+    "name": "╨æ╤₧╨║╨░ ╤é╤â╨╝╨░╨╜╨╕",
+    "region": 4,
+    "code": "228"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 62,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.944Z",
+    "updated_at": "2025-07-16T00:52:28.944Z",
+    "name": "╨₧╤à╨░╨╜╨│╨░╤Ç╨╛╨╜ ╤ê.",
+    "region": 4,
+    "code": "415"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 63,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.952Z",
+    "updated_at": "2025-07-16T00:52:28.952Z",
+    "name": "╨ó╨╛╤ê╨║╨╡╨╜╤é ╤é.",
+    "region": 4,
+    "code": "265"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 64,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.956Z",
+    "updated_at": "2025-07-16T00:52:28.956Z",
+    "name": "╨»╨╜╨│╨╕╨╣╤₧╨╗ ╤é.",
+    "region": 4,
+    "code": "259"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 65,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.963Z",
+    "updated_at": "2025-07-16T00:52:28.963Z",
+    "name": "╨Ä╤Ç╤é╨░╤ç╨╕╤Ç╤ç╨╕╥¢ ╤é.",
+    "region": 4,
+    "code": "253"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 66,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.966Z",
+    "updated_at": "2025-07-16T00:52:28.966Z",
+    "name": "╥Ü╨╕╨▒╤Ç╨░╨╣ ╤é.",
+    "region": 4,
+    "code": "248"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 67,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.972Z",
+    "updated_at": "2025-07-16T00:52:28.972Z",
+    "name": "╨«╥¢╨╛╤Ç╨╕╤ç╨╕╤Ç╤ç╨╕╥¢ ╤é.",
+    "region": 4,
+    "code": "239"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 68,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.977Z",
+    "updated_at": "2025-07-16T00:52:28.977Z",
+    "name": "╥Ü╤â╨╣╨╕╤ç╨╕╤Ç╤ç╨╕╥¢ ╤é.",
+    "region": 4,
+    "code": "233"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 69,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.983Z",
+    "updated_at": "2025-07-16T00:52:28.983Z",
+    "name": "Bekobod t.",
+    "region": 4,
+    "code": "220"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 70,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.988Z",
+    "updated_at": "2025-07-16T00:52:28.988Z",
+    "name": "╨₧╤à╨░╨╜╨│╨░╤Ç╨╛╨╜ ╤é.",
+    "region": 4,
+    "code": "212"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 71,
+  "fields": {
+    "created_at": "2025-07-16T00:52:28.992Z",
+    "updated_at": "2025-07-16T00:52:28.992Z",
+    "name": "╨₧╥¢╥¢╤₧╤Ç╥ô╨╛╨╜ ╤é.",
+    "region": 4,
+    "code": "206"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 72,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.003Z",
+    "updated_at": "2025-07-16T00:52:29.003Z",
+    "name": "╨ú╤ç╤é╨╡╨┐╨░ ╤é.",
+    "region": 5,
+    "code": "262"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 73,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.007Z",
+    "updated_at": "2025-07-16T00:52:29.007Z",
+    "name": "╨æ╨╡╨║╤é╨╡╨╝╨╕╤Ç ╤é.",
+    "region": 5,
+    "code": "264"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 74,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.010Z",
+    "updated_at": "2025-07-16T00:52:29.010Z",
+    "name": "╨«╨╜╤â╤ü╨╛╨▒╨╛╨┤ ╤é.",
+    "region": 5,
+    "code": "266"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 75,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.015Z",
+    "updated_at": "2025-07-16T00:52:29.016Z",
+    "name": "╨£╨╕╤Ç╨╖╨╛ ╨ú╨╗╤â╥ô╨▒╨╡╨║ ╤é.",
+    "region": 5,
+    "code": "269"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 76,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.020Z",
+    "updated_at": "2025-07-16T00:52:29.020Z",
+    "name": "╨£╨╕╤Ç╨╛╨▒╨╛╨┤ ╤é.",
+    "region": 5,
+    "code": "273"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 77,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.023Z",
+    "updated_at": "2025-07-16T00:52:29.023Z",
+    "name": "╨¿╨░╨╣╤à╨╛╨╜╤é╨╛╤à╤â╤Ç ╤é.",
+    "region": 5,
+    "code": "277"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 78,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.027Z",
+    "updated_at": "2025-07-16T00:52:29.027Z",
+    "name": "╨í╨╡╤Ç╨│╨╡╨╗╨╕ ╤é.",
+    "region": 5,
+    "code": "283"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 79,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.030Z",
+    "updated_at": "2025-07-16T00:52:29.030Z",
+    "name": "╨₧╨╗╨╝╨░╨╖╨╛╤Ç ╤é.",
+    "region": 5,
+    "code": "280"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 80,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.034Z",
+    "updated_at": "2025-07-16T00:52:29.034Z",
+    "name": "╨»╨║╨║╨░╤ü╨░╤Ç╨╛╨╣ ╤é.",
+    "region": 5,
+    "code": "287"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 81,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.037Z",
+    "updated_at": "2025-07-16T00:52:29.037Z",
+    "name": "╨»╤ê╨╜╨░╨▒╨╛╨┤ ╤é.",
+    "region": 5,
+    "code": "290"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 82,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.040Z",
+    "updated_at": "2025-07-16T00:52:29.040Z",
+    "name": "╨º╨╕╨╗╨╛╨╜╨╖╨╛╤Ç ╤é.",
+    "region": 5,
+    "code": "294"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 83,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.044Z",
+    "updated_at": "2025-07-16T00:52:29.044Z",
+    "name": "1-hudud",
+    "region": 5,
+    "code": "111"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 84,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.048Z",
+    "updated_at": "2025-07-16T00:52:29.048Z",
+    "name": "2-hudud",
+    "region": 5,
+    "code": "112"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 85,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.052Z",
+    "updated_at": "2025-07-16T00:52:29.052Z",
+    "name": "3-hudud",
+    "region": 5,
+    "code": "113"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 86,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.055Z",
+    "updated_at": "2025-07-16T00:52:29.055Z",
+    "name": "4-hudud",
+    "region": 5,
+    "code": "114"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 87,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.058Z",
+    "updated_at": "2025-07-16T00:52:29.058Z",
+    "name": "5-hudud",
+    "region": 5,
+    "code": "115"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 88,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.062Z",
+    "updated_at": "2025-07-16T00:52:29.062Z",
+    "name": "Yangi hayot t.",
+    "region": 5,
+    "code": "292"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 89,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.070Z",
+    "updated_at": "2025-07-16T00:52:29.070Z",
+    "name": "╨»╨╜╨│╨╕╨╡╤Ç ╤ê.",
+    "region": 6,
+    "code": "413"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 90,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.074Z",
+    "updated_at": "2025-07-16T00:52:29.074Z",
+    "name": "╨ô╤â╨╗╨╕╤ü╤é╨╛╨╜ ╤ê.",
+    "region": 6,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 91,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.077Z",
+    "updated_at": "2025-07-16T00:52:29.077Z",
+    "name": "╨Ñ╨╛╨▓╨╛╤ü ╤é.",
+    "region": 6,
+    "code": "235"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 92,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.081Z",
+    "updated_at": "2025-07-16T00:52:29.081Z",
+    "name": "╨í╨╕╤Ç╨┤╨░╤Ç╤æ ╤é.",
+    "region": 6,
+    "code": "231"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 93,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.084Z",
+    "updated_at": "2025-07-16T00:52:29.084Z",
+    "name": "╨í╨░╤Ç╨┤╨╛╨▒╨░ ╤é.",
+    "region": 6,
+    "code": "226"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 94,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.088Z",
+    "updated_at": "2025-07-16T00:52:29.088Z",
+    "name": "╨ô╤â╨╗╨╕╤ü╤é╨╛╨╜ ╤é.",
+    "region": 6,
+    "code": "220"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 95,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.092Z",
+    "updated_at": "2025-07-16T00:52:29.092Z",
+    "name": "╨æ╨░╤æ╨▓╤â╤é ╤é.",
+    "region": 6,
+    "code": "212"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 96,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.095Z",
+    "updated_at": "2025-07-16T00:52:29.095Z",
+    "name": "╨¿╨╕╤Ç╨╕╨╜ ╤ê.",
+    "region": 6,
+    "code": "410"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 97,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.098Z",
+    "updated_at": "2025-07-16T00:52:29.098Z",
+    "name": "╨£╨╕╤Ç╨╖╨░╨╛╨▒╨╛╨┤ ╤é.",
+    "region": 6,
+    "code": "228"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 98,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.101Z",
+    "updated_at": "2025-07-16T00:52:29.101Z",
+    "name": "╨í╨░╨╣╤à╤â╨╜╨╛╨▒╨╛╨┤ ╤é.",
+    "region": 6,
+    "code": "216"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 99,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.104Z",
+    "updated_at": "2025-07-16T00:52:29.104Z",
+    "name": "╨₧╥¢╨╛╨╗╤é╨╕╨╜ ╤é.",
+    "region": 6,
+    "code": "206"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 100,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.113Z",
+    "updated_at": "2025-07-16T00:52:29.113Z",
+    "name": "╨Ü╨░╤é╤é╨░╥¢╤₧╤Ç╥ô╨╛╨╜ ╤ê.",
+    "region": 7,
+    "code": "406"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 101,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.118Z",
+    "updated_at": "2025-07-16T00:52:29.118Z",
+    "name": "╨í╨░╨╝╨░╤Ç╥¢╨░╨╜╨┤ ╤ê.",
+    "region": 7,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 102,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.122Z",
+    "updated_at": "2025-07-16T00:52:29.122Z",
+    "name": "╨ú╤Ç╨│╤â╤é ╤é.",
+    "region": 7,
+    "code": "236"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 103,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.125Z",
+    "updated_at": "2025-07-16T00:52:29.125Z",
+    "name": "╨¥╤â╤Ç╨╛╨▒╨╛╨┤ ╤é.",
+    "region": 7,
+    "code": "235"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 104,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.129Z",
+    "updated_at": "2025-07-16T00:52:29.129Z",
+    "name": "╨ƒ╨░╤ü╤é╨┤╨░╤Ç╥ô╨╛╨╝ ╤é.",
+    "region": 7,
+    "code": "227"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 105,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.132Z",
+    "updated_at": "2025-07-16T00:52:29.132Z",
+    "name": "╨ƒ╨░╤Å╤Ç╨╕╥¢ ╤é.",
+    "region": 7,
+    "code": "224"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 106,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.136Z",
+    "updated_at": "2025-07-16T00:52:29.136Z",
+    "name": "╨¥╨░╤Ç╨┐╨░╨╣ ╤é.",
+    "region": 7,
+    "code": "218"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 107,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.140Z",
+    "updated_at": "2025-07-16T00:52:29.140Z",
+    "name": "╨ÿ╤ê╤é╨╕╤à╨╛╨╜ ╤é.",
+    "region": 7,
+    "code": "212"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 108,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.145Z",
+    "updated_at": "2025-07-16T00:52:29.145Z",
+    "name": "╨æ╤â╨╗╤â╨╜╥ô╤â╤Ç ╤é.",
+    "region": 7,
+    "code": "206"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 109,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.148Z",
+    "updated_at": "2025-07-16T00:52:29.148Z",
+    "name": "╨ó╨░╨╣╨╗╨╛╥¢ ╤é.",
+    "region": 7,
+    "code": "238"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 110,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.151Z",
+    "updated_at": "2025-07-16T00:52:29.151Z",
+    "name": "╨í╨░╨╝╨░╤Ç╥¢╨░╨╜╨┤ ╤é.",
+    "region": 7,
+    "code": "233"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 111,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.155Z",
+    "updated_at": "2025-07-16T00:52:29.155Z",
+    "name": "╨ƒ╨░╤à╤é╨░╤ç╨╕ ╤é.",
+    "region": 7,
+    "code": "230"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 112,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.158Z",
+    "updated_at": "2025-07-16T00:52:29.158Z",
+    "name": "╥Ü╤₧╤ê╤Ç╨░╨▒╨╛╤é ╤é.",
+    "region": 7,
+    "code": "216"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 113,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.161Z",
+    "updated_at": "2025-07-16T00:52:29.161Z",
+    "name": "╨Ü╨░╤é╤é╨░╥¢╤₧╤Ç╥ô╨╛╨╜ ╤é.",
+    "region": 7,
+    "code": "215"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 114,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.165Z",
+    "updated_at": "2025-07-16T00:52:29.165Z",
+    "name": "╨û╨╛╨╝╨▒╨╛╨╣ ╤é.",
+    "region": 7,
+    "code": "209"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 115,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.168Z",
+    "updated_at": "2025-07-16T00:52:29.168Z",
+    "name": "╨₧╥¢╨┤╨░╤Ç╤æ ╤é.",
+    "region": 7,
+    "code": "203"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 116,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.175Z",
+    "updated_at": "2025-07-16T00:52:29.175Z",
+    "name": "╨ó╨╡╤Ç╨╝╨╕╨╖ ╤ê.",
+    "region": 8,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 117,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.179Z",
+    "updated_at": "2025-07-16T00:52:29.179Z",
+    "name": "╨¿╤₧╤Ç╤ç╨╕ ╤é.",
+    "region": 8,
+    "code": "226"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 118,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.183Z",
+    "updated_at": "2025-07-16T00:52:29.183Z",
+    "name": "╨¿╨╡╤Ç╨░╨▒╨╛╨┤ ╤é.",
+    "region": 8,
+    "code": "223"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 119,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.186Z",
+    "updated_at": "2025-07-16T00:52:29.186Z",
+    "name": "╨í╨░╤Ç╨╕╨╛╤ü╨╕╤æ ╤é.",
+    "region": 8,
+    "code": "217"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 120,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.189Z",
+    "updated_at": "2025-07-16T00:52:29.189Z",
+    "name": "╥Ü╤â╨╝╥¢╤₧╤Ç╥ô╨╛╨╜ ╤é.",
+    "region": 8,
+    "code": "214"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 121,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.192Z",
+    "updated_at": "2025-07-16T00:52:29.192Z",
+    "name": "╨ö╨╢╨░╤Ç╥¢╤₧╤Ç╥ô╨╛╨╜ ╤é.",
+    "region": 8,
+    "code": "212"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 122,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.195Z",
+    "updated_at": "2025-07-16T00:52:29.195Z",
+    "name": "╨ö╨╡╨╜╨╛╨▓ ╤é.",
+    "region": 8,
+    "code": "210"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 123,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.200Z",
+    "updated_at": "2025-07-16T00:52:29.200Z",
+    "name": "╨æ╨╛╨╣╤ü╤â╨╜ ╤é.",
+    "region": 8,
+    "code": "204"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 124,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.203Z",
+    "updated_at": "2025-07-16T00:52:29.203Z",
+    "name": "╨É╨╜╨│╨╛╤Ç ╤é.",
+    "region": 8,
+    "code": "202"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 125,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.207Z",
+    "updated_at": "2025-07-16T00:52:29.207Z",
+    "name": "╨ú╨╖╤â╨╜ ╤é.",
+    "region": 8,
+    "code": "221"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 126,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.210Z",
+    "updated_at": "2025-07-16T00:52:29.210Z",
+    "name": "╨ó╨╡╤Ç╨╝╨╕╨╖ ╤é.",
+    "region": 8,
+    "code": "220"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 127,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.214Z",
+    "updated_at": "2025-07-16T00:52:29.214Z",
+    "name": "╥Ü╨╕╨╖╨╕╤Ç╨╕╥¢ ╤é.",
+    "region": 8,
+    "code": "215"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 128,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.217Z",
+    "updated_at": "2025-07-16T00:52:29.217Z",
+    "name": "╨£╤â╨╖╤Ç╨░╨▒╨╛╨┤ ╤é.",
+    "region": 8,
+    "code": "207"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 129,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.221Z",
+    "updated_at": "2025-07-16T00:52:29.221Z",
+    "name": "╨æ╨░╨╜╨┤╨╕╤à╨╛╨╜ ╤é.",
+    "region": 8,
+    "code": "203"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 130,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.224Z",
+    "updated_at": "2025-07-16T00:52:29.224Z",
+    "name": "╨₧╨╗╤é╨╕╨╜╤ü╨╛╨╣ ╤é.",
+    "region": 8,
+    "code": "201"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 131,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.231Z",
+    "updated_at": "2025-07-16T00:52:29.231Z",
+    "name": "╨¥╨░╨╝╨░╨╜╨│╨░╨╜ ╤ê.",
+    "region": 9,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 132,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.235Z",
+    "updated_at": "2025-07-16T00:52:29.235Z",
+    "name": "╨º╤â╤ü╤é ╤é.",
+    "region": 9,
+    "code": "237"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 133,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.238Z",
+    "updated_at": "2025-07-16T00:52:29.238Z",
+    "name": "╨ú╤ç╥¢╤₧╤Ç╥ô╨╛╨╜ ╤é.",
+    "region": 9,
+    "code": "234"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 134,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.242Z",
+    "updated_at": "2025-07-16T00:52:29.242Z",
+    "name": "╨ú╨╣╤ç╨╕ ╤é.",
+    "region": 9,
+    "code": "229"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 135,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.245Z",
+    "updated_at": "2025-07-16T00:52:29.245Z",
+    "name": "╨ó╤₧╤Ç╨░╥¢╤₧╤Ç╥ô╨╛╨╜ ╤é.",
+    "region": 9,
+    "code": "224"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 136,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.248Z",
+    "updated_at": "2025-07-16T00:52:29.248Z",
+    "name": "╨ƒ╨╛╨┐ ╤é.",
+    "region": 9,
+    "code": "219"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 137,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.251Z",
+    "updated_at": "2025-07-16T00:52:29.251Z",
+    "name": "╨¥╨╛╤Ç╨╕╨╜ ╤é.",
+    "region": 9,
+    "code": "216"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 138,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.255Z",
+    "updated_at": "2025-07-16T00:52:29.255Z",
+    "name": "╨Ü╨╛╤ü╨╛╨╜╤ü╨╛╨╣ ╤é.",
+    "region": 9,
+    "code": "207"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 139,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.258Z",
+    "updated_at": "2025-07-16T00:52:29.258Z",
+    "name": "╨»╨╜╨│╨╕╥¢╤₧╤Ç╥ô╨╛╨╜ ╤é.",
+    "region": 9,
+    "code": "242"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 140,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.263Z",
+    "updated_at": "2025-07-16T00:52:29.263Z",
+    "name": "╨º╨╛╤Ç╤é╨╛╥¢ ╤é.",
+    "region": 9,
+    "code": "236"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 141,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.266Z",
+    "updated_at": "2025-07-16T00:52:29.266Z",
+    "name": "╨¥╨░╨╝╨░╨╜╨│╨░╨╜ ╤é.",
+    "region": 9,
+    "code": "212"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 142,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.270Z",
+    "updated_at": "2025-07-16T00:52:29.270Z",
+    "name": "╨£╨╕╨╜╨│╨▒╤â╨╗╨╛╥¢ ╤é.",
+    "region": 9,
+    "code": "204"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 143,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.277Z",
+    "updated_at": "2025-07-16T00:52:29.277Z",
+    "name": "╨ù╨░╤Ç╨░╤ä╤ê╨╛╨╜ ╤ê.",
+    "region": 10,
+    "code": "408"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 144,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.280Z",
+    "updated_at": "2025-07-16T00:52:29.280Z",
+    "name": "╨¥╨░╨▓╨╛╨╕╨╣ ╤ê.",
+    "region": 10,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 145,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.283Z",
+    "updated_at": "2025-07-16T00:52:29.283Z",
+    "name": "╨Ñ╨░╤é╨╕╤Ç╤ç╨╕ ╤é.",
+    "region": 10,
+    "code": "251"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 146,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.286Z",
+    "updated_at": "2025-07-16T00:52:29.286Z",
+    "name": "╨ú╤ç╥¢╤â╨┤╤â╥¢ ╤é.",
+    "region": 10,
+    "code": "248"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 147,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.290Z",
+    "updated_at": "2025-07-16T00:52:29.290Z",
+    "name": "╨¥╤â╤Ç╨╛╤é╨░ ╤é.",
+    "region": 10,
+    "code": "238"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 148,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.293Z",
+    "updated_at": "2025-07-16T00:52:29.293Z",
+    "name": "╥Ü╨╕╨╖╨╕╨╗╤é╨╡╨┐╨░ ╤é.",
+    "region": 10,
+    "code": "216"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 149,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.296Z",
+    "updated_at": "2025-07-16T00:52:29.296Z",
+    "name": "╨ó╨╛╨╝╨┤╨╕ ╤é.",
+    "region": 10,
+    "code": "244"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 150,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.299Z",
+    "updated_at": "2025-07-16T00:52:29.299Z",
+    "name": "╨Ü╨░╤Ç╨╝╨░╨╜╨░ ╤é.",
+    "region": 10,
+    "code": "234"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 151,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.304Z",
+    "updated_at": "2025-07-16T00:52:29.304Z",
+    "name": "╨¥╨░╨▓╨▒╨░╤à╨╛╤Ç ╤é.",
+    "region": 10,
+    "code": "230"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 152,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.307Z",
+    "updated_at": "2025-07-16T00:52:29.307Z",
+    "name": "╨Ü╨╛╨╜╨╕╨╝╨╡╤à ╤é.",
+    "region": 10,
+    "code": "211"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 153,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.311Z",
+    "updated_at": "2025-07-16T00:52:29.311Z",
+    "name": "Gazgon t.",
+    "region": 10,
+    "code": "412"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 154,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.319Z",
+    "updated_at": "2025-07-16T00:52:29.319Z",
+    "name": "╨¿╨░╤à╤Ç╨╕╤ü╨░╨▒╨╖ ╤é.",
+    "region": 11,
+    "code": "405"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 155,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.324Z",
+    "updated_at": "2025-07-16T00:52:29.324Z",
+    "name": "╥Ü╨░╤Ç╤ê╨╕ ╤ê.",
+    "region": 11,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 156,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.328Z",
+    "updated_at": "2025-07-16T00:52:29.328Z",
+    "name": "╨»╨║╨║╨░╨▒╨╛╥ô ╤é.",
+    "region": 11,
+    "code": "250"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 157,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.334Z",
+    "updated_at": "2025-07-16T00:52:29.334Z",
+    "name": "╨º╨╕╤Ç╨╛╥¢╤ç╨╕ ╤é.",
+    "region": 11,
+    "code": "242"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 158,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.342Z",
+    "updated_at": "2025-07-16T00:52:29.342Z",
+    "name": "╨Ü╨╕╤é╨╛╨▒ ╤é.",
+    "region": 11,
+    "code": "232"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 159,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.347Z",
+    "updated_at": "2025-07-16T00:52:29.347Z",
+    "name": "╨¥╨╕╤ê╨╛╨╜ ╤é.",
+    "region": 11,
+    "code": "235"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 160,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.354Z",
+    "updated_at": "2025-07-16T00:52:29.354Z",
+    "name": "╨Ü╨╛╤ü╨╛╨╜ ╤é.",
+    "region": 11,
+    "code": "229"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 161,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.361Z",
+    "updated_at": "2025-07-16T00:52:29.361Z",
+    "name": "╥Ü╨░╨╝╨░╤ê╨╕ ╤é.",
+    "region": 11,
+    "code": "220"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 162,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.369Z",
+    "updated_at": "2025-07-16T00:52:29.369Z",
+    "name": "╨¿╨░╤à╤Ç╨╕╤ü╨░╨▒╨╖ ╤é.",
+    "region": 11,
+    "code": "245"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 163,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.375Z",
+    "updated_at": "2025-07-16T00:52:29.375Z",
+    "name": "╨Ü╨░╤ü╨▒╨╕ ╤é.",
+    "region": 11,
+    "code": "237"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 164,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.382Z",
+    "updated_at": "2025-07-16T00:52:29.382Z",
+    "name": "╨£╤â╨▒╨╛╤Ç╨░╨║ ╤é.",
+    "region": 11,
+    "code": "234"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 165,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.391Z",
+    "updated_at": "2025-07-16T00:52:29.391Z",
+    "name": "╨£╨╕╤Ç╨╕╤ê╨║╨╛╤Ç ╤é.",
+    "region": 11,
+    "code": "233"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 166,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.398Z",
+    "updated_at": "2025-07-16T00:52:29.398Z",
+    "name": "╥Ü╨░╤Ç╤ê╨╕ ╤é.",
+    "region": 11,
+    "code": "224"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 167,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.402Z",
+    "updated_at": "2025-07-16T00:52:29.402Z",
+    "name": "╨ö╨╡╤à╥¢╨╛╨╜╨╛╨▒╨╛╨┤ ╤é.",
+    "region": 11,
+    "code": "212"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 168,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.406Z",
+    "updated_at": "2025-07-16T00:52:29.406Z",
+    "name": "╥Æ╤â╨╖╨╛╤Ç ╤é.",
+    "region": 11,
+    "code": "207"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 169,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.409Z",
+    "updated_at": "2025-07-16T00:52:29.409Z",
+    "name": "╨Ü╤â╨║╨┤╨░╨╗╨░ ╤é.",
+    "region": 11,
+    "code": "240"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 170,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.416Z",
+    "updated_at": "2025-07-16T00:52:29.416Z",
+    "name": "╨æ╨░╤à╨╝╨░╨╗ ╤é.",
+    "region": 12,
+    "code": "204"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 171,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.420Z",
+    "updated_at": "2025-07-16T00:52:29.420Z",
+    "name": "╥Æ╨░╨╗╨╗╨░╨╛╤Ç╨╛╨╗ ╤é.",
+    "region": 12,
+    "code": "209"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 172,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.424Z",
+    "updated_at": "2025-07-16T00:52:29.424Z",
+    "name": "╨ö╤₧╤ü╤é╨╗╨╕╨║ ╤é.",
+    "region": 12,
+    "code": "215"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 173,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.429Z",
+    "updated_at": "2025-07-16T00:52:29.429Z",
+    "name": "╨ù╨╛╨╝╨╕╨╜ ╤é.",
+    "region": 12,
+    "code": "218"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 174,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.436Z",
+    "updated_at": "2025-07-16T00:52:29.436Z",
+    "name": "╨ù╨░╤Ç╨▒╨┤╨╛╤Ç ╤é.",
+    "region": 12,
+    "code": "220"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 175,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.443Z",
+    "updated_at": "2025-07-16T00:52:29.443Z",
+    "name": "╨ƒ╨░╤à╤é╨░╨║╨╛╤Ç ╤é.",
+    "region": 12,
+    "code": "228"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 176,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.449Z",
+    "updated_at": "2025-07-16T00:52:29.449Z",
+    "name": "╨ñ╨╛╤Ç╨╕╤ê ╤é.",
+    "region": 12,
+    "code": "235"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 177,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.458Z",
+    "updated_at": "2025-07-16T00:52:29.458Z",
+    "name": "╨û╨╕╨╖╨╖╨░╤à ╤é.",
+    "region": 12,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 178,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.462Z",
+    "updated_at": "2025-07-16T00:52:29.462Z",
+    "name": "╨»╨╜╨│╨╕╨╛╨▒╨╛╨┤ ╤é.",
+    "region": 12,
+    "code": "237"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 179,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.466Z",
+    "updated_at": "2025-07-16T00:52:29.466Z",
+    "name": "╨ù╨░╤ä╨░╤Ç╨╛╨▒╨╛╨┤ ╤é.",
+    "region": 12,
+    "code": "225"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 180,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.470Z",
+    "updated_at": "2025-07-16T00:52:29.470Z",
+    "name": "╨£╨╕╤Ç╨╖╨░╤ç╤₧╨╗ ╤é.",
+    "region": 12,
+    "code": "223"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 181,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.474Z",
+    "updated_at": "2025-07-16T00:52:29.474Z",
+    "name": "╨¿╨░╤Ç╨╛╤ä ╨á╨░╤ê╨╕╨┤╨╛╨▓ ╤é.",
+    "region": 12,
+    "code": "212"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 182,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.478Z",
+    "updated_at": "2025-07-16T00:52:29.478Z",
+    "name": "╨É╤Ç╨╜╨░╤ü╨╛╨╣ ╤é.",
+    "region": 12,
+    "code": "201"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 183,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.487Z",
+    "updated_at": "2025-07-16T00:52:29.487Z",
+    "name": "╨æ╤â╤à╨╛╤Ç╨╛ ╤é.",
+    "region": 13,
+    "code": "207"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 184,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.492Z",
+    "updated_at": "2025-07-16T00:52:29.492Z",
+    "name": "╨Æ╨╛╨▒╨║╨╡╨╜╤é ╤é.",
+    "region": 13,
+    "code": "212"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 185,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.496Z",
+    "updated_at": "2025-07-16T00:52:29.496Z",
+    "name": "╥Æ╨╕╨╢╨┤╤â╨▓╨╛╨╜ ╤é.",
+    "region": 13,
+    "code": "215"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 186,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.499Z",
+    "updated_at": "2025-07-16T00:52:29.499Z",
+    "name": "╥Ü╨╛╤Ç╨░╨║╤₧╨╗ ╤é.",
+    "region": 13,
+    "code": "230"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 187,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.502Z",
+    "updated_at": "2025-07-16T00:52:29.503Z",
+    "name": "╨á╨╛╨╝╨╕╤é╨░╨╜ ╤é.",
+    "region": 13,
+    "code": "242"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 188,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.506Z",
+    "updated_at": "2025-07-16T00:52:29.506Z",
+    "name": "╨û╨╛╨╜╨┤╨╛╤Ç ╤é.",
+    "region": 13,
+    "code": "246"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 189,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.510Z",
+    "updated_at": "2025-07-16T00:52:29.510Z",
+    "name": "╨¿╨╛╤ä╨╕╤Ç╨║╨╛╨╜ ╤é.",
+    "region": 13,
+    "code": "258"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 190,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.513Z",
+    "updated_at": "2025-07-16T00:52:29.513Z",
+    "name": "╨æ╤â╤à╨╛╤Ç╨╛ ╤ê.",
+    "region": 13,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 191,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.517Z",
+    "updated_at": "2025-07-16T00:52:29.517Z",
+    "name": "╨Ü╨╛╨│╨╛╨╜ ╤ê.",
+    "region": 13,
+    "code": "403"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 192,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.520Z",
+    "updated_at": "2025-07-16T00:52:29.520Z",
+    "name": "╨ƒ╨╡╤ê╨║╤₧ ╤é.",
+    "region": 13,
+    "code": "240"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 193,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.523Z",
+    "updated_at": "2025-07-16T00:52:29.523Z",
+    "name": "╥Ü╨╛╤Ç╨╛╨▓╤â╨╗╨▒╨╛╨╖╨╛╤Ç ╤é.",
+    "region": 13,
+    "code": "232"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 194,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.527Z",
+    "updated_at": "2025-07-16T00:52:29.527Z",
+    "name": "╨Ü╨╛╨│╨╛╨╜ ╤é.",
+    "region": 13,
+    "code": "219"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 195,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.530Z",
+    "updated_at": "2025-07-16T00:52:29.530Z",
+    "name": "╨₧╨╗╨╛╤é ╤é.",
+    "region": 13,
+    "code": "204"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 196,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.537Z",
+    "updated_at": "2025-07-16T00:52:29.537Z",
+    "name": "╨É╨╜╨┤╨╕╨╢╨╛╨╜ ╤ê.",
+    "region": 14,
+    "code": "401"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 197,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.541Z",
+    "updated_at": "2025-07-16T00:52:29.541Z",
+    "name": "╨ƒ╨░╤à╤é╨░╨╛╨▒╨╛╨┤ ╤é.",
+    "region": 14,
+    "code": "232"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 198,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.544Z",
+    "updated_at": "2025-07-16T00:52:29.544Z",
+    "name": "╨¿╨░╥│╤Ç╨╕╤à╨╛╨╜ ╤é.",
+    "region": 14,
+    "code": "230"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 199,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.548Z",
+    "updated_at": "2025-07-16T00:52:29.548Z",
+    "name": "╨É╤ü╨░╨║╨░ ╤é.",
+    "region": 14,
+    "code": "224"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 200,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.552Z",
+    "updated_at": "2025-07-16T00:52:29.552Z",
+    "name": "╥Ü╤₧╤Ç╥ô╨╛╨╜╤é╨╡╨┐╨░ ╤é.",
+    "region": 14,
+    "code": "220"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 201,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.554Z",
+    "updated_at": "2025-07-16T00:52:29.554Z",
+    "name": "╨ÿ╨╖╨▒╨╛╤ü╨║╨░╨╜ ╤é.",
+    "region": 14,
+    "code": "214"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 202,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.558Z",
+    "updated_at": "2025-07-16T00:52:29.558Z",
+    "name": "╨û╨░╨╗╨░╥¢╤â╨┤╤â╥¢ ╤é.",
+    "region": 14,
+    "code": "211"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 203,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.562Z",
+    "updated_at": "2025-07-16T00:52:29.562Z",
+    "name": "╨æ╤â╨╗╨╛╥¢╨▒╨╛╤ê╨╕ ╤é.",
+    "region": 14,
+    "code": "210"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 204,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.566Z",
+    "updated_at": "2025-07-16T00:52:29.566Z",
+    "name": "╨æ╨░╨╗╨╕╥¢╤ç╨╕ ╤é.",
+    "region": 14,
+    "code": "206"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 205,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.569Z",
+    "updated_at": "2025-07-16T00:52:29.569Z",
+    "name": "╨₧╨╗╤é╨╕╨╜╨║╤₧╨╗ ╤é.",
+    "region": 14,
+    "code": "202"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 206,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.572Z",
+    "updated_at": "2025-07-16T00:52:29.572Z",
+    "name": "╨Ñ╨╛╨╜╨╛╨▒╨╛╨┤ ╤ê.",
+    "region": 14,
+    "code": "408"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 207,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.575Z",
+    "updated_at": "2025-07-16T00:52:29.575Z",
+    "name": "╨Ñ╤₧╨╢╨░╨╛╨▒╨╛╨┤ ╤é.",
+    "region": 14,
+    "code": "236"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 208,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.578Z",
+    "updated_at": "2025-07-16T00:52:29.578Z",
+    "name": "╨£╨░╤Ç╤à╨░╨╝╨░╤é ╤é.",
+    "region": 14,
+    "code": "227"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 209,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.582Z",
+    "updated_at": "2025-07-16T00:52:29.582Z",
+    "name": "╨ú╨╗╤â╥ô╨╜╨╛╤Ç ╤é.",
+    "region": 14,
+    "code": "217"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 210,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.586Z",
+    "updated_at": "2025-07-16T00:52:29.586Z",
+    "name": "╨æ╤₧╨╖ ╤é.",
+    "region": 14,
+    "code": "209"
+  }
+},
+{
+  "model": "home.district",
+  "pk": 211,
+  "fields": {
+    "created_at": "2025-07-16T00:52:29.589Z",
+    "updated_at": "2025-07-16T00:52:29.589Z",
+    "name": "╨É╨╜╨┤╨╕╨╢╨╛╨╜ ╤é.",
+    "region": 14,
+    "code": "203"
+  }
+},
+{
+  "model": "home.tochka",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T01:30:47.521Z",
+    "updated_at": "2025-07-16T01:30:47.521Z",
+    "name": "MIROBOD DEHQON BOZORI MCHJ",
+    "icon": "nutrition",
+    "uuid": "c7c7bf5b-e59c-4959-b000-c900463d9cce",
+    "district": 76,
+    "code": "2020",
+    "inn": "0",
+    "address": "Nukus kuchasi",
+    "plan": 0,
+    "lat": 41.29148645,
+    "lon": 69.27524576,
+    "employee": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.tochka",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T01:30:47.526Z",
+    "updated_at": "2025-07-16T01:30:47.526Z",
+    "name": "DARVOZA SAVDO MCHJ MAKRO SUPERMARKETI",
+    "icon": "nutrition",
+    "uuid": "9f55527c-e0c4-41b5-ab3c-c72cebf7a738",
+    "district": 76,
+    "code": "2022",
+    "inn": "0",
+    "address": "Fargona yuli 4 uy",
+    "plan": 0,
+    "lat": 41.28669,
+    "lon": 69.271236,
+    "employee": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.tochka",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-16T01:30:47.531Z",
+    "updated_at": "2025-07-16T01:30:47.531Z",
+    "name": "Yoshlik savdosi MCHJ ",
+    "icon": "nutrition",
+    "uuid": "3453f43c-8d8c-493f-bb9a-b4cd15052257",
+    "district": 76,
+    "code": "2023",
+    "inn": "0",
+    "address": "Mirobod t. Avliyo ota kuchasi 65 uy",
+    "plan": 0,
+    "lat": 41.29178019,
+    "lon": 69.27599623,
+    "employee": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.tochka",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-16T01:30:47.534Z",
+    "updated_at": "2025-07-16T01:30:47.534Z",
+    "name": "POYTAXT OIL 2 SONLI AYOQSH ",
+    "icon": "nutrition",
+    "uuid": "3fe9e644-28de-46d4-95ec-c6f7fd0ebb37",
+    "district": 76,
+    "code": "2026",
+    "inn": "0",
+    "address": "Turkiston kuchasi",
+    "plan": 0,
+    "lat": 41.29615993,
+    "lon": 69.28447432,
+    "employee": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.tochka",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-16T01:30:47.539Z",
+    "updated_at": "2025-07-16T01:30:47.539Z",
+    "name": "MIROBOD GAZ (Metan)",
+    "icon": "nutrition",
+    "uuid": "551b83ae-7955-4076-a9a0-664620c34727",
+    "district": 76,
+    "code": "2027",
+    "inn": "0",
+    "address": null,
+    "plan": 0,
+    "lat": 41.29615993,
+    "lon": 69.28447432,
+    "employee": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.tochka",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-16T01:30:47.543Z",
+    "updated_at": "2025-07-16T01:30:47.543Z",
+    "name": "Komunal xizmat Yangi Mirobod obod servis MChJ",
+    "icon": "nutrition",
+    "uuid": "d37b0381-6caf-4e28-ba17-dd08ba11c41c",
+    "district": 76,
+    "code": "3927",
+    "inn": "0",
+    "address": null,
+    "plan": 0,
+    "lat": 41.29623,
+    "lon": 69.28441,
+    "employee": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.tochka",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-16T01:30:47.547Z",
+    "updated_at": "2025-07-16T01:30:47.547Z",
+    "name": "Arzon apteka ",
+    "icon": "nutrition",
+    "uuid": "db89a843-766a-475b-a85f-1796f07a1431",
+    "district": 76,
+    "code": "3949",
+    "inn": "0",
+    "address": "Avliyo ota kuchasi 13-uy",
+    "plan": 0,
+    "lat": 41.29182,
+    "lon": 69.27375,
+    "employee": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.tochka",
+  "pk": 8,
+  "fields": {
+    "created_at": "2025-07-16T01:30:47.551Z",
+    "updated_at": "2025-07-16T01:30:47.551Z",
+    "name": "Milliy statistika qo'mitasi",
+    "icon": "nutrition",
+    "uuid": "bd6c6aa5-6762-494e-b2fa-aa3c07017fab",
+    "district": 76,
+    "code": "3963",
+    "inn": "0",
+    "address": null,
+    "plan": 0,
+    "lat": 41.29615993,
+    "lon": 69.28447432,
+    "employee": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.076Z",
+    "updated_at": "2025-07-16T01:32:25.076Z",
+    "uuid": "1176c9c3-ab3e-4896-9a79-a764ce2c1b18",
+    "name": "131 dokon baliq mahsulotlari",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.081Z",
+    "updated_at": "2025-07-16T01:32:25.081Z",
+    "uuid": "68726379-f8e9-4240-aece-04b1327c7d1c",
+    "name": "146-147 oziq-ovqat dokoni",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.085Z",
+    "updated_at": "2025-07-16T01:32:25.085Z",
+    "uuid": "9b25d8ee-c4a7-479a-9b6e-0a961418126f",
+    "name": "150 dokon qolipli non",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.088Z",
+    "updated_at": "2025-07-16T01:32:25.088Z",
+    "uuid": "d0ba2c6d-e691-4c28-822a-4ba3f898e302",
+    "name": "262-267 sabzavotlar rastasi",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.091Z",
+    "updated_at": "2025-07-16T01:32:25.091Z",
+    "uuid": "503c87e7-f3a0-4e84-b14e-40772e526801",
+    "name": "288-291 dukkakli mahsulotlar rastasi",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.096Z",
+    "updated_at": "2025-07-16T01:32:25.096Z",
+    "uuid": "0897fd83-20e1-4ec4-bfe3-0cd2c8ff4cdb",
+    "name": "294 Guruch mahsulotlari rastasi",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.100Z",
+    "updated_at": "2025-07-16T01:32:25.100Z",
+    "uuid": "fd6dd718-aa37-45c5-84de-33dba2ddd49d",
+    "name": "505 Poliz mahsulotlar rastasi",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 8,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.103Z",
+    "updated_at": "2025-07-16T01:32:25.103Z",
+    "uuid": "a52fcebe-1899-4bd8-8259-9eaed4a8c7cf",
+    "name": "618 rasta Non mahsulotlari",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 9,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.107Z",
+    "updated_at": "2025-07-16T01:32:25.107Z",
+    "uuid": "cf07f9a6-ee7d-4e09-b412-478054104eaa",
+    "name": "B",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 10,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.110Z",
+    "updated_at": "2025-07-16T01:32:25.110Z",
+    "uuid": "f4a9e065-2a35-468c-95ee-174458a0dd69",
+    "name": "Benzin",
+    "hudud": 4,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 11,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.114Z",
+    "updated_at": "2025-07-16T01:32:25.114Z",
+    "uuid": "fec52990-2f24-4cb5-aa6a-d8ab430c3b15",
+    "name": "D",
+    "hudud": 2,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 12,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.117Z",
+    "updated_at": "2025-07-16T01:32:25.117Z",
+    "uuid": "8ec7ea81-a859-4f9a-be1e-050ffd704a05",
+    "name": "Dorixona",
+    "hudud": 7,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 13,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.121Z",
+    "updated_at": "2025-07-16T01:32:25.121Z",
+    "uuid": "8e014ad0-5fe6-49c3-a781-5e950098bf17",
+    "name": "Elga xizmat",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 14,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.125Z",
+    "updated_at": "2025-07-16T01:32:25.125Z",
+    "uuid": "92b4396d-122f-4ec8-9b17-e20c974e824f",
+    "name": "Ginyal Invest MCHJ",
+    "hudud": 8,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 15,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.130Z",
+    "updated_at": "2025-07-16T01:32:25.130Z",
+    "uuid": "21935405-b703-47c2-a673-de534674dfe6",
+    "name": "Gusht paviloni",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 16,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.133Z",
+    "updated_at": "2025-07-16T01:32:25.133Z",
+    "uuid": "371b7811-0d59-4287-af98-3cc65d7acaf6",
+    "name": "Gusht paviloni 1-rasta",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 17,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.137Z",
+    "updated_at": "2025-07-16T01:32:25.137Z",
+    "uuid": "923266a9-486f-4cd4-9038-c2a06f119442",
+    "name": "Gusht paviloni 2-rasta",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 18,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.141Z",
+    "updated_at": "2025-07-16T01:32:25.141Z",
+    "uuid": "af3d1b08-ad65-4ca6-8a6e-308b93ea47b8",
+    "name": "HD",
+    "hudud": 2,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 19,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.144Z",
+    "updated_at": "2025-07-16T01:32:25.144Z",
+    "uuid": "c61ea6c0-c987-4487-9a2f-b8130d3ca97d",
+    "name": "MIROBOD GAZ (Metan)",
+    "hudud": 5,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 20,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.148Z",
+    "updated_at": "2025-07-16T01:32:25.148Z",
+    "uuid": "98470582-2b3d-440b-9fe5-62c762b67d75",
+    "name": "Mustang Benzin shahobchasi",
+    "hudud": 8,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 21,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.151Z",
+    "updated_at": "2025-07-16T01:32:25.151Z",
+    "uuid": "3a99af8a-fe59-4d75-8af0-577623daa212",
+    "name": "Octan Petrol MCHJ",
+    "hudud": 8,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 22,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.156Z",
+    "updated_at": "2025-07-16T01:32:25.156Z",
+    "uuid": "f7f8de09-40da-4ae0-b37c-c90ed4435c3b",
+    "name": "Oshxonadagi tayyor taomlar",
+    "hudud": 3,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 23,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.160Z",
+    "updated_at": "2025-07-16T01:32:25.160Z",
+    "uuid": "76346851-0835-47d7-bd98-811268ebef5d",
+    "name": "Parfumeriya 123 dukon",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 24,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.165Z",
+    "updated_at": "2025-07-16T01:32:25.166Z",
+    "uuid": "401e468c-a4fa-4045-8df9-949abf3f6943",
+    "name": "SEG Tasco (benzin zapravka)",
+    "hudud": 8,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 25,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.170Z",
+    "updated_at": "2025-07-16T01:32:25.170Z",
+    "uuid": "e99608dd-3583-4316-807e-c71959ce621b",
+    "name": "Sut va sut mahsulotlari paviloni",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 26,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.174Z",
+    "updated_at": "2025-07-16T01:32:25.174Z",
+    "uuid": "32368a49-844b-474f-834b-46a7870b063c",
+    "name": "Tamaki mahsulotlari",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 27,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.178Z",
+    "updated_at": "2025-07-16T01:32:25.178Z",
+    "uuid": "618637dd-1431-4655-a117-8a660ee289e4",
+    "name": "THCHSJ YANGI MIROBOD OBOD SERVIS MCHJ",
+    "hudud": 6,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 28,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.182Z",
+    "updated_at": "2025-07-16T01:32:25.182Z",
+    "uuid": "7c938bf0-e3dc-4296-b298-a889c63c4504",
+    "name": "Turon Toyna Shota Rustavelli",
+    "hudud": 8,
+    "is_active": true
+  }
+},
+{
+  "model": "home.ntochka",
+  "pk": 29,
+  "fields": {
+    "created_at": "2025-07-16T01:32:25.192Z",
+    "updated_at": "2025-07-16T01:32:25.192Z",
+    "uuid": "2023dd6b-fe64-4b4b-a44e-1b96d801693a",
+    "name": "Tuxum rastasi",
+    "hudud": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "home.employee",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T01:16:33.343Z",
+    "updated_at": "2025-07-16T01:16:33.343Z",
+    "full_name": "Sobitov Abbos Bahodir o'gli",
+    "uuid": "e6a0372b-349a-4768-bba6-e1d46e83bf5a",
+    "login": "32404986770026",
+    "password": "123123123",
+    "district": 76,
+    "status": 1.0,
+    "pinfl": "32404986770026",
+    "permission1": true,
+    "permission2": true,
+    "permission3": true,
+    "permission4": false,
+    "permission5": false,
+    "phone1": "998942197545",
+    "phone2": null,
+    "permission_plov": false,
+    "gps_permission": true,
+    "lang": "uz"
+  }
+}
+]

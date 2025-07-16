@@ -1,0 +1,16 @@
+Webmin da  PHP file larni ko'rsa bo'ladi, o'zgartirsa bo'ladi+
+https://172.16.8.28:10000
+Login: root
+Password: s1n0vm@yd0n
+
+ssh login
+ssh osiyo@172.16.8.28 -p 22
+password: Tav@kKA1
+
+
+Ma'lumotlar bazasiga kirish uchun
+https://planshet.stat.uz/oraliqkorsatkich/index.php
+
+Mariadb
+login: root
+password: b9c2af25dd@!
