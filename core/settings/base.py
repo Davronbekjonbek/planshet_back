@@ -1,5 +1,3 @@
-# settings.py
-import os
 from pathlib import Path
 from decouple import config
 from datetime import timedelta

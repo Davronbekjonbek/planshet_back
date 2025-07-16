@@ -7,6 +7,7 @@ from apps.form.models import TochkaProductHistory
 
 from ...models import Tochka, Employee, NTochka
 
+
 class RastaSerializer(serializers.ModelSerializer):
     is_checked = serializers.SerializerMethodField()
     all_count = serializers.SerializerMethodField()
@@ -14,38 +15,32 @@ class RastaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NTochka
-        fields = ['id','uuid', 'name', 'hudud', 'is_active', 'is_checked', 'all_count', 'finished']
+        fields = ['id', 'uuid', 'name', 'hudud', 'is_active', 'is_checked', 'all_count', 'finished']
 
     def get_all_count(self, obj):
-        return obj.products.filter(is_udalen=False).count()
+        # Use prefetched data instead of database query
+        return len(getattr(obj, 'active_products', []))
 
     def get_finished(self, obj):
-        period_date = get_period_by_type_today()
-        if not period_date:
-            return 0
-
-        excluded_statuses = ['sotilmayapti', 'vaqtinchalik', 'obyekt_yopilgan', 'mavsumiy', 'chegirma']
-
-        return obj.product_history.filter(
-            period__period=period_date.period,
-            ntochka=obj,
-        ).exclude(status__in=excluded_statuses).count()
+        # Use prefetched data instead of database query
+        return len(getattr(obj, 'completed_history', []))
 
     def get_is_checked(self, obj):
         all_count = self.get_all_count(obj)
         finished = self.get_finished(obj)
         return all_count > 0 and all_count == finished
 
+
 class TochkaSerializer(serializers.ModelSerializer):
     """
-    Serializer for Tochka model.
+    Optimized Serializer for Tochka model.
     """
     icon_display = serializers.ReadOnlyField()
     icon_color = serializers.ReadOnlyField()
     is_checked = serializers.SerializerMethodField()
     all_count = serializers.SerializerMethodField()
     finished = serializers.SerializerMethodField()
-    ntochkas = RastaSerializer(many=True, read_only=True)
+    ntochkas = RastaSerializer(many=True, read_only=True, source='active_ntochkas')
 
     class Meta:
         model = Tochka
@@ -60,20 +55,21 @@ class TochkaSerializer(serializers.ModelSerializer):
         return all_count > 0 and finished == all_count
 
     def get_all_count(self, obj):
-        return obj.ntochkas.all().count()
+        # Use prefetched data instead of database query
+        return len(getattr(obj, 'active_ntochkas', []))
 
     def get_finished(self, obj):
+        # Use prefetched data and avoid nested loops
         finished = 0
-        excluded_statuses = ['sotilmayapti', 'vaqtinchalik', 'obyekt_yopilgan', 'mavsumiy', 'chegirma']
-        for rasta in obj.ntochkas.all():
-            total = rasta.products.filter(is_udalen=False).count()
+        ntochkas = getattr(obj, 'active_ntochkas', [])
+
+        for rasta in ntochkas:
+            total = len(getattr(rasta, 'active_products', []))
             if total == 0:
                 continue
-            period_date = get_period_by_type_today()
-            if not period_date:
-                continue
-            completed = TochkaProductHistory.objects.filter(ntochka=rasta, period__period=period_date.period).exclude(status__in=excluded_statuses).count()
+
+            completed = len(getattr(rasta, 'completed_history', []))
             if completed == total:
                 finished += 1
-        return finished
 
+        return finished

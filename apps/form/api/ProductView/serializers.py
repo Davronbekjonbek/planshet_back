@@ -30,21 +30,19 @@ class ProductSerializer(serializers.ModelSerializer):
 
 class TochkaProductSerializer(serializers.ModelSerializer):
     """
-    Serializer for TochkaProduct model.
+    Optimized Serializer for TochkaProduct model.
     """
     product = ProductSerializer(read_only=True)
     status = serializers.SerializerMethodField(read_only=True)
     product_status = serializers.SerializerMethodField(read_only=True)
 
     def get_status(self, obj):
-        product_history = get_tochka_product_history(
-            ntochka=obj.ntochka,
-            product=obj.product,
-            period=get_period_by_type_today().period,
-        )
-        if product_history is None:
+        # Prefetch qilingan ma'lumotlardan foydalanish
+        history = getattr(obj.product, 'current_history', [])
+        if not history:
             return 'unknown'
-        elif obj.last_price > obj.previous_price:
+
+        if obj.last_price > obj.previous_price:
             return 'increased'
         elif obj.last_price < obj.previous_price:
             return 'decreased'
@@ -52,17 +50,16 @@ class TochkaProductSerializer(serializers.ModelSerializer):
             return 'unchanged'
 
     def get_product_status(self, obj):
-        product_history = get_tochka_product_history(
-            ntochka=obj.ntochka,
-            product=obj.product,
-            period=get_period_by_type_today().period,
-        )
-        return product_history.status if product_history else None
+        # Prefetch qilingan ma'lumotlardan foydalanish
+        history = getattr(obj.product, 'current_history', [])
+        return history[0].status if history else None
 
     class Meta:
         model = TochkaProduct
         fields = [
-            'id', 'product', 'ntochka', 'last_price', 'previous_price', 'status', 'product_status', 'is_active', 'is_udalen'
+            'id', 'product', 'ntochka', 'last_price',
+            'previous_price', 'status', 'product_status',
+            'is_active', 'is_udalen'
         ]
 
 class TochkaProductHistorySerializer(serializers.ModelSerializer):

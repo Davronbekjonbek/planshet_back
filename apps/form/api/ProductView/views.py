@@ -1,12 +1,13 @@
 from rest_framework.generics import ListAPIView, CreateAPIView
 from rest_framework.response import Response
 from rest_framework import status
-
+from django.db import connection
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
+from django.db.models import Prefetch
 
 from ..utils import get_product_by_uuid, get_period_by_type_today
-from ...models import TochkaProduct, Product
+from ...models import TochkaProduct, Product, TochkaProductHistory
 
 from .serializers import TochkaProductSerializer, TochkaProductHistorySerializer, ProductSerializer
 
@@ -47,12 +48,34 @@ class TochkaProductListView(ListAPIView):
         req = self.request
         uuid = req.META.get('HTTP_X_USER_UUID')
         rasta_uuid = req.META.get('HTTP_X_RASTA_UUID')
-        print(uuid, rasta_uuid)
+
         employee = get_employee_by_uuid(uuid)
         ntochka = get_ntochka_by_uuid(rasta_uuid)
+        qs = None
         if employee and ntochka:
-            return TochkaProduct.objects.filter(ntochka=ntochka)
-        return TochkaProduct.objects.none()
+            current_period = get_period_by_type_today()
+            history_prefetch = Prefetch(
+                'product__history',
+                queryset=TochkaProductHistory.objects.filter(
+                    ntochka=ntochka,
+                    period=current_period
+                ).select_related('product', 'ntochka', 'period', 'employee'),
+                to_attr='current_history'
+            )
+
+            qs =  TochkaProduct.objects.filter(
+                ntochka=ntochka
+            ).select_related(
+                'product',
+                'ntochka',
+                'hudud',
+                'product__category',
+                'product__unit'
+            ).prefetch_related(
+                history_prefetch
+            )
+        print(f"Query count: {len(connection.queries)}")
+        return qs
 
 
 class TochkaProductHistoryCreateView(CreateAPIView):
