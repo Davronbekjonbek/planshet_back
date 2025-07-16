@@ -199,6 +199,7 @@ class TochkaProductHistoryCreateView(CreateAPIView):
 
 class AlternativeProductListView(ListAPIView):
     pagination_class = None
+    serializer_class = ProductSerializer
 
     @swagger_auto_schema(
         manual_parameters=[

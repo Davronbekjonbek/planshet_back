@@ -1,4 +1,5 @@
 from .base import *  # noqa
+from ..jazzmin_conf import *
 
 ###################################################################
 # General

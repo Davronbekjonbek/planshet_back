@@ -24,6 +24,7 @@ CSRF_TRUSTED_ORIGINS = [
 
 # Application definition
 DJANGO_APPS = [
+    'debug_toolbar',
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -32,6 +33,7 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
 
 THIRD_PARTY_APPS = [
     'rest_framework',
@@ -42,6 +44,8 @@ THIRD_PARTY_APPS = [
     'drf_spectacular',
     'drf_yasg'
 ]
+
+
 
 LOCAL_APPS = [
     'apps.common',
@@ -61,6 +65,23 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+if DEBUG:
+    MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
+
+# Debug Toolbar sozlamalari
+if DEBUG:
+    INTERNAL_IPS = [
+        '127.0.0.1',
+        'localhost',
+    ]
+
+    # Debug Toolbar konfiguratsiyasi
+    DEBUG_TOOLBAR_CONFIG = {
+        'SHOW_TOOLBAR_CALLBACK': lambda request: DEBUG,
+        'HIDE_DJANGO_SQL': False,
+        'SHOW_TEMPLATE_CONTEXT': True,
+    }
 
 ROOT_URLCONF = 'core.urls'
 
