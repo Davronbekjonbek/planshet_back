@@ -29,22 +29,23 @@ class Command(BaseCommand):
 
                 # Xodimni yaratish yoki yangilash
                 employee, created = Employee.objects.get_or_create(
-                    login=_data['name'],
+                    login=_data['login'],
                     defaults={
                         'full_name': _data['fio'],
-                        'password': _data['parol'],
+                        'password': _data['password'],
                         'district': district,
                         'status': float(_data['status']),
-                        'permission1': _data['ruxsat1'].lower() == 'yes',
-                        'permission2': _data['ruxsat2'].lower() == 'yes',
-                        'permission3': _data['ruxsat3'].lower() == 'yes',
-                        'permission4': _data['ruxsat4'].lower() == 'yes' if _data['ruxsat4'] else False,
-                        'permission5': _data['ruxsat5'].lower() == 'yes' if _data['ruxsat5'] else False,
-                        'phone1': _data['mtel'] if _data['mtel'] else None,
-                        'phone2': _data['otel'] if _data['otel'] else None,
-                        'permission_plov': _data['palov'].lower() == 'yes' if _data['palov'] else False,
-                        'gps_permission': _data['gpsruxsat'].lower() == 'yes',
+                        'permission1': _data['permission1'],
+                        'permission2': _data['permission2'],
+                        'permission3': _data['permission3'],
+                        'permission4': _data['permission4'] if _data['permission4'] else False,
+                        'permission5': _data['permission5'] if _data['permission5'] else False,
+                        'phone1': _data['phone1'] if _data['phone1'] else None,
+                        'phone2': _data['phone2'] if _data['phone2'] else None,
+                        'permission_plov': _data['permission_plov'] if _data['permission_plov'] else False,
+                        'gps_permission': _data['gps_permission'],
                         'lang': _data['lang'],
+                        'pinfl': _data.get('pinfl', ''),
                     }
                 )
 

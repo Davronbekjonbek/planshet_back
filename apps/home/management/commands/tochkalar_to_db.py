@@ -37,6 +37,8 @@ class Command(BaseCommand):
                         is_active=True,
                         lat=_data['lat'] if _data['lat'] else 0.0,
                         lon=_data['lon'] if _data['lon'] else 0.0,
+                        employee=Employee.objects.get(pinfl=_data['pinfl']),
+                        code = _data['code']
                     )
                 if created:
                     self.stdout.write(

@@ -112,6 +112,7 @@ class Tochka(BaseModel):
     icon = models.CharField(max_length=10, choices=ICON_CHOICES, default='nutrition', verbose_name=_("Icon"))
     uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
     district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='tochkas', verbose_name=_("Tuman"))
+    code = models.CharField(max_length=20, unique=True, verbose_name=_("Obyekt kodi"))
     inn = models.CharField(max_length=20, default=0, blank=True,  verbose_name=_("INN kodi"))
     address = models.CharField(max_length=255, verbose_name=_("Manzil"), blank=True, null=True)
     plan = models.IntegerField(verbose_name=_("Plan id"), default=0)
@@ -161,6 +162,7 @@ class Employee(BaseModel):
     password = models.CharField(max_length=100, verbose_name=_("Parol"))
     district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='employees', verbose_name=_("Tuman"))
     status = models.FloatField(verbose_name=_("Status"), default=1.0)
+    pinfl = models.CharField(max_length=14, blank=True, null=True, verbose_name=_("PINFL"), unique=True)
 
     permission1 = models.BooleanField(default=True, verbose_name=_("Ruxsat 1"))
     permission2 = models.BooleanField(default=True, verbose_name=_("Ruxsat 2"))

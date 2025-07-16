@@ -35,12 +35,10 @@ class Birlik(BaseModel):
 
 class ProductCategory(BaseModel):
     name = models.CharField(max_length=400, unique=True, verbose_name=_("Kategoriyaning nomi"))
-    name_ru = models.CharField(max_length=400, unique=True, null=True,blank=True, verbose_name=_("Kategoriyaning nomi (Ruscha)"))
     number = models.IntegerField(default=0, verbose_name=_("Kategoriyaning tartib raqami (nt)"))
     code = models.CharField(max_length=10, unique=True, verbose_name=_("Kategoriyaning kodi"))
     union = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='categories', verbose_name=_("Birlik"))
     rasfas = models.BooleanField(default=False, verbose_name=_("Rasfas"))
-    is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
     logo = models.ImageField(
         upload_to='product_category_logos/', null=True, blank=True, verbose_name=_("Logo"),
         validators=[
@@ -66,6 +64,7 @@ class Product(BaseModel):
     price = models.FloatField(verbose_name=_("Narxi"), default=0.0)
     top = models.IntegerField(default=0, verbose_name=_("Yuqori"))
     bottom = models.IntegerField(default=0, verbose_name=_("Quyi"))
+    is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
     unit = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='products', verbose_name=_("O'lchov birligi"))
     is_import = models.BooleanField(default=False, verbose_name=_("Import qilinganmi?"))
 

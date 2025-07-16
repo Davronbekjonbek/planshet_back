@@ -1,0 +1,42 @@
+[
+    {
+        "code": "370881",
+        "name": "131 dokon baliq mahsulotlari",
+        "category_code": "11121024",
+        "top": "20%",
+        "bottom": "20%",
+        "is_import": true,
+        "is_weekly": true,
+        "price": 50000.00
+    },
+    {
+        "code": "370882",
+        "name": "131 dokon baliq mahsulotlari",
+        "category_code": "11121024",
+        "top": "20%",
+        "bottom": "20%",
+        "is_import": true,
+        "is_weekly": true,
+        "price": 60000.00
+    },
+    {
+        "code": "370883",
+        "name": "131 dokon baliq mahsulotlari",
+        "category_code": "11121024",
+        "top": "20%",
+        "bottom": "20%",
+        "is_import": true,
+        "is_weekly": true,
+        "price": 50000.00
+    },
+    {
+        "code": "370884",
+        "name": "131 dokon baliq mahsulotlari",
+        "category_code": "11121025",
+        "top": "20%",
+        "bottom": "20%",
+        "is_import": true,
+        "is_weekly": true,
+        "price": 47000.00
+    }
+]

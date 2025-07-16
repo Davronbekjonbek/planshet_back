@@ -18,26 +18,22 @@ class Command(BaseCommand):
 
         for _data in data:
             try:
-                # Birlikni topish yoki yaratish (edizm bo'yicha)
+                # Birlikni topish yoki yaratish (birligi bo'yicha)
                 birlik, birlik_created = Birlik.objects.get_or_create(
-                    name=_data.get('edizm', 'дона'),
+                    name=_data.get('birligi', 'дона'),
                     defaults={
-                        'code': _data.get('edizm', 'дона')[:10]  # Birlik uchun kod
+                        'code': _data.get('birligi', 'дона')[:10]  # Birlik uchun kod
                     }
                 )
 
                 # ProductCategory yaratish
                 category, created = ProductCategory.objects.get_or_create(
-                    code=_data['kod'],
+                    code=_data['kod8'],
                     defaults={
-                        'name': _data['nomuz'],
-                        'name_ru': _data.get('nomrus', ''),
-                        'number': int(_data.get('nt', 0)),
+                        'name': _data['nomi'],
+                        'number': int(_data.get('kode3', 0)),
                         'union': birlik,
-                        'top': int(_data.get('yuqori', 0)),
-                        'bottom': int(_data.get('quyi', 0)),
                         'rasfas': _data.get('rasfas') == '1000',  # '1000' bo'lsa True
-                        'is_weekly': _data.get('haftalik') == '1',  # '1' bo'lsa True
                     }
                 )
 
