@@ -1,42 +1,6212 @@
 [
     {
         "code": "370881",
-        "name": "131 dokon baliq mahsulotlari",
+        "name": "Dung peshona",
         "category_code": "11121024",
-        "top": "20%",
-        "bottom": "20%",
+        "top": 0.2,
+        "bottom": 0.2,
         "is_import": true,
         "is_weekly": true,
-        "price": 50000.00
+        "price": 50000.0
     },
     {
         "code": "370882",
-        "name": "131 dokon baliq mahsulotlari",
+        "name": "Sviji Sazan",
         "category_code": "11121024",
-        "top": "20%",
-        "bottom": "20%",
+        "top": 0.2,
+        "bottom": 0.2,
         "is_import": true,
         "is_weekly": true,
-        "price": 60000.00
+        "price": 60000.0
     },
     {
         "code": "370883",
-        "name": "131 dokon baliq mahsulotlari",
+        "name": "tolistolop baliq",
         "category_code": "11121024",
-        "top": "20%",
-        "bottom": "20%",
+        "top": 0.2,
+        "bottom": 0.2,
         "is_import": true,
         "is_weekly": true,
-        "price": 50000.00
+        "price": 50000.0
     },
     {
         "code": "370884",
-        "name": "131 dokon baliq mahsulotlari",
+        "name": "Muzlatilgan seld baligi PELAGIA",
         "category_code": "11121025",
-        "top": "20%",
-        "bottom": "20%",
+        "top": 0.2,
+        "bottom": 0.2,
         "is_import": true,
         "is_weekly": true,
-        "price": 47000.00
+        "price": 47000.0
+    },
+    {
+        "code": "372317",
+        "name": "Muzlatilgan baliq Pangasius",
+        "category_code": "11121025",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 44000.0
+    },
+    {
+        "code": "370880",
+        "name": "Shirin ekstra",
+        "category_code": "11123019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 84000.0
+    },
+    {
+        "code": "370885",
+        "name": "Kefir Bio Sut 2 5%",
+        "category_code": "11132028",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 17777.0
+    },
+    {
+        "code": "370890",
+        "name": "Makfa spagetti makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 30000.0
+    },
+    {
+        "code": "371778",
+        "name": "Andalus doktorskiy",
+        "category_code": "11123019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 80000.0
+    },
+    {
+        "code": "371779",
+        "name": "Ruzmetov molochniy",
+        "category_code": "11123019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 80000.0
+    },
+    {
+        "code": "371780",
+        "name": "Ruzmetov Asl Farxod",
+        "category_code": "11123020",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 130000.0
+    },
+    {
+        "code": "371781",
+        "name": "Sherin Arqon",
+        "category_code": "11123020",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 65000.0
+    },
+    {
+        "code": "371782",
+        "name": "Shaxskaya TIM dudlangan kolbasa",
+        "category_code": "11123020",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 55000.0
+    },
+    {
+        "code": "371783",
+        "name": "Birinchi navli bugdoy unidan qolibli non 600gr",
+        "category_code": "11114005",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "371784",
+        "name": "Tovuq goshti file",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 38900.0
+    },
+    {
+        "code": "371785",
+        "name": "Tovuq goshti qanoti",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 33900.0
+    },
+    {
+        "code": "371786",
+        "name": "Tovuq goshti boldir",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 36900.0
+    },
+    {
+        "code": "371787",
+        "name": "Tovuq goshti son qismi",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 33900.0
+    },
+    {
+        "code": "371788",
+        "name": "Margarin APPETITO 72% 200gr",
+        "category_code": "11152037",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 45000.0
+    },
+    {
+        "code": "371789",
+        "name": "Toffix karamel",
+        "category_code": "11177071",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 70000.0
+    },
+    {
+        "code": "371790",
+        "name": "Kungaboqar yogi Zateya",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 28000.0
+    },
+    {
+        "code": "371791",
+        "name": "Kungaboqar yogi Zolotaya semechka",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 24000.0
+    },
+    {
+        "code": "372050",
+        "name": "Shedroy leto 200gr",
+        "category_code": "11152037",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 60000.0
+    },
+    {
+        "code": "372311",
+        "name": "Birinchi navli un Turon",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "372312",
+        "name": "Birinchi navli un Olti don",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "372313",
+        "name": "Birinchi navli un Turon",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "372314",
+        "name": "Yopgan non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12121.0
+    },
+    {
+        "code": "372315",
+        "name": "Makiz spagetti makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "372316",
+        "name": "Tolibjon spagetti makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 30000.0
+    },
+    {
+        "code": "372318",
+        "name": "KEFIR 2.5% 900GR MUSAFFO",
+        "category_code": "11132028",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 16000.0
+    },
+    {
+        "code": "372319",
+        "name": "KEFIR SOF-SUT 2.5% 900GR",
+        "category_code": "11132028",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 16000.0
+    },
+    {
+        "code": "372325",
+        "name": "Kungaboqar yogi Zateya",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 28000.0
+    },
+    {
+        "code": "372326",
+        "name": "Kungaboqar yogi Oleyna",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 24000.0
+    },
+    {
+        "code": "372327",
+        "name": "SARIYOG 82% 200GR PRESIDENT",
+        "category_code": "11151036",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 210000.0
+    },
+    {
+        "code": "372328",
+        "name": "SARIYOG 82.9% 200GR ANCHOR",
+        "category_code": "11151036",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 185000.0
+    },
+    {
+        "code": "372329",
+        "name": "Margarin Shedroy leto 200gr",
+        "category_code": "11152037",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 60000.0
+    },
+    {
+        "code": "372332",
+        "name": "Roshen Sweet Drop",
+        "category_code": "11177071",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 60000.0
+    },
+    {
+        "code": "370407",
+        "name": "buxanka obichnaya formovaya",
+        "category_code": "11114005",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "371770",
+        "name": "Kartoshka qizil",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "371771",
+        "name": "Kartoshka oq",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "371772",
+        "name": "Sabzi qizil",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "371773",
+        "name": "Piyoz mayda",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 4000.0
+    },
+    {
+        "code": "371774",
+        "name": "Piyoz yirigi",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "371775",
+        "name": "Pomidor",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 18000.0
+    },
+    {
+        "code": "371776",
+        "name": "Bodring rava",
+        "category_code": "11163054",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "371777",
+        "name": "Karom",
+        "category_code": "11161049",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "371764",
+        "name": "Super Lazer",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 40000.0
+    },
+    {
+        "code": "371765",
+        "name": "Lazer",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 35000.0
+    },
+    {
+        "code": "371766",
+        "name": "Mosh",
+        "category_code": "11112013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "371767",
+        "name": "Loviya oq",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "371768",
+        "name": "Loviya qizil",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "371769",
+        "name": "Noxat eron",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 30000.0
+    },
+    {
+        "code": "372331",
+        "name": "Noxat Mahalliy",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "370679",
+        "name": "Noxat yirigi",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 35000.0
+    },
+    {
+        "code": "371222",
+        "name": "Super lazer",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 38000.0
+    },
+    {
+        "code": "371223",
+        "name": "Alanga",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 24000.0
+    },
+    {
+        "code": "371224",
+        "name": "Mosh",
+        "category_code": "11112013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "371236",
+        "name": "Avangard",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 23000.0
+    },
+    {
+        "code": "371237",
+        "name": "Nukus",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 22000.0
+    },
+    {
+        "code": "371350",
+        "name": "Lazer xorazm",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 35000.0
+    },
+    {
+        "code": "371226",
+        "name": "Pamidor",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 18000.0
+    },
+    {
+        "code": "371227",
+        "name": "Bodring Orzu",
+        "category_code": "11163054",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "371228",
+        "name": "Bodring Rava",
+        "category_code": "11163054",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "371229",
+        "name": "Karam",
+        "category_code": "11161049",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6000.0
+    },
+    {
+        "code": "370415",
+        "name": "Qaymoqli non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14285.0
+    },
+    {
+        "code": "370416",
+        "name": "Sutli non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "370417",
+        "name": "Kulcha non oddiy",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 16071.0
+    },
+    {
+        "code": "307291",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307292",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307293",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 26000.0
+    },
+    {
+        "code": "307294",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307295",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 26000.0
+    },
+    {
+        "code": "307296",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 26000.0
+    },
+    {
+        "code": "307297",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307298",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307299",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "307301",
+        "name": "Guruch",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 17000.0
+    },
+    {
+        "code": "307302",
+        "name": "Guruch",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 16000.0
+    },
+    {
+        "code": "307303",
+        "name": "Guruch",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 24000.0
+    },
+    {
+        "code": "307304",
+        "name": "Guruch",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 17000.0
+    },
+    {
+        "code": "307305",
+        "name": "Guruch",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307306",
+        "name": "Guruch",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307307",
+        "name": "Guruch",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307343",
+        "name": "Noxat",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 28000.0
+    },
+    {
+        "code": "307344",
+        "name": "Noxat",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 30000.0
+    },
+    {
+        "code": "307345",
+        "name": "Noxat",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 35000.0
+    },
+    {
+        "code": "307346",
+        "name": "Noxat",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 22000.0
+    },
+    {
+        "code": "307347",
+        "name": "Noxat",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "307348",
+        "name": "Noxat",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307349",
+        "name": "Noxat",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307350",
+        "name": "Noxat",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307353",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 22000.0
+    },
+    {
+        "code": "307354",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 21000.0
+    },
+    {
+        "code": "307355",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 23000.0
+    },
+    {
+        "code": "307356",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 23000.0
+    },
+    {
+        "code": "307357",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "307358",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307359",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307360",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307363",
+        "name": "Mosh",
+        "category_code": "11112013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 22000.0
+    },
+    {
+        "code": "307364",
+        "name": "Mosh",
+        "category_code": "11112013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 23000.0
+    },
+    {
+        "code": "307365",
+        "name": "Mosh",
+        "category_code": "11112013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "307366",
+        "name": "Mosh",
+        "category_code": "11112013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307367",
+        "name": "Mosh",
+        "category_code": "11112013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 22000.0
+    },
+    {
+        "code": "307368",
+        "name": "Mosh",
+        "category_code": "11112013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 23000.0
+    },
+    {
+        "code": "307369",
+        "name": "Mosh",
+        "category_code": "11112013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307373",
+        "name": "Obi(tandir) non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14000.0
+    },
+    {
+        "code": "307374",
+        "name": "Obi(tandir) non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14000.0
+    },
+    {
+        "code": "307375",
+        "name": "Obi(tandir) non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "307376",
+        "name": "Obi(tandir) non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 16000.0
+    },
+    {
+        "code": "307377",
+        "name": "Obi(tandir) non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 17000.0
+    },
+    {
+        "code": "307378",
+        "name": "Obi(tandir) non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307379",
+        "name": "Obi(tandir) non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307388",
+        "name": "1-navli bugdoy unidan non",
+        "category_code": "11114005",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "307389",
+        "name": "1-navli bugdoy unidan non",
+        "category_code": "11114005",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "307391",
+        "name": "1-navli bugdoy unidan non",
+        "category_code": "11114005",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307398",
+        "name": "Makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "307399",
+        "name": "Makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13000.0
+    },
+    {
+        "code": "307400",
+        "name": "Makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14000.0
+    },
+    {
+        "code": "307401",
+        "name": "Makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "307402",
+        "name": "Makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 16000.0
+    },
+    {
+        "code": "307403",
+        "name": "Makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 18000.0
+    },
+    {
+        "code": "307404",
+        "name": "Makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307405",
+        "name": "Makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307406",
+        "name": "Makaron",
+        "category_code": "11116009",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307408",
+        "name": "Mol goshti  (suyakli)",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 70000.0
+    },
+    {
+        "code": "307409",
+        "name": "Mol goshti  (suyakli)",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 85000.0
+    },
+    {
+        "code": "307410",
+        "name": "Mol goshti  (suyakli)",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 70000.0
+    },
+    {
+        "code": "307411",
+        "name": "Mol goshti  (suyakli)",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 70000.0
+    },
+    {
+        "code": "307412",
+        "name": "Tadbirkor rastasidagi eng arzon suyakli mol goshti",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 100000.0
+    },
+    {
+        "code": "307413",
+        "name": "Mol goshti  (suyakli)",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 105000.0
+    },
+    {
+        "code": "307418",
+        "name": "Qoy goshti",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 75000.0
+    },
+    {
+        "code": "307419",
+        "name": "Tadbirkor rastasidagi eng arzon qoy goshti",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 110000.0
+    },
+    {
+        "code": "307420",
+        "name": "Qoy goshti",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 110000.0
+    },
+    {
+        "code": "307421",
+        "name": "Qoy goshti",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 120000.0
+    },
+    {
+        "code": "307422",
+        "name": "Qoy goshti",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 110000.0
+    },
+    {
+        "code": "307423",
+        "name": "Qoy goshti",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 130000.0
+    },
+    {
+        "code": "307428",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 120000.0
+    },
+    {
+        "code": "307429",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 120000.0
+    },
+    {
+        "code": "307430",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 125000.0
+    },
+    {
+        "code": "307431",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 120000.0
+    },
+    {
+        "code": "307432",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 115000.0
+    },
+    {
+        "code": "307433",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 120000.0
+    },
+    {
+        "code": "307434",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 115000.0
+    },
+    {
+        "code": "307435",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 125000.0
+    },
+    {
+        "code": "307436",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307438",
+        "name": "Tirik, yangi, sovutilgan  baliq ",
+        "category_code": "11121024",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307439",
+        "name": "Tirik, yangi, sovutilgan  baliq ",
+        "category_code": "11121024",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307440",
+        "name": "Tirik, yangi, sovutilgan  baliq ",
+        "category_code": "11121024",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307441",
+        "name": "Tirik, yangi, sovutilgan  baliq ",
+        "category_code": "11121024",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307442",
+        "name": "Tirik, yangi, sovutilgan  baliq ",
+        "category_code": "11121024",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307443",
+        "name": "Tirik, yangi, sovutilgan  baliq ",
+        "category_code": "11121024",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307444",
+        "name": "Tirik, yangi, sovutilgan  baliq ",
+        "category_code": "11121024",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307450",
+        "name": "Muzlatilgan baliq",
+        "category_code": "11121025",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 50000.0
+    },
+    {
+        "code": "307451",
+        "name": "Muzlatilgan baliq",
+        "category_code": "11121025",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 40000.0
+    },
+    {
+        "code": "307452",
+        "name": "Muzlatilgan baliq",
+        "category_code": "11121025",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 55000.0
+    },
+    {
+        "code": "307463",
+        "name": "Tovuq goshti (butun)",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 24000.0
+    },
+    {
+        "code": "307464",
+        "name": "Tovuq goshti (butun)",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 24000.0
+    },
+    {
+        "code": "307465",
+        "name": "Tovuq goshti (butun)",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 28000.0
+    },
+    {
+        "code": "307466",
+        "name": "Tovuq goshti (butun)",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 30000.0
+    },
+    {
+        "code": "307467",
+        "name": "Tovuq goshti (butun)",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 35000.0
+    },
+    {
+        "code": "307468",
+        "name": "Tovuq goshti (butun)",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 32000.0
+    },
+    {
+        "code": "307469",
+        "name": "Tovuq goshti (butun)",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307470",
+        "name": "Tovuq goshti (butun)",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 40000.0
+    },
+    {
+        "code": "307473",
+        "name": "Tovuq boldiri, son va boshqa qismlari",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 35000.0
+    },
+    {
+        "code": "307474",
+        "name": "Tovuq boldiri, son va boshqa qismlari",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 36000.0
+    },
+    {
+        "code": "307475",
+        "name": "Tovuq boldiri, son va boshqa qismlari",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 37000.0
+    },
+    {
+        "code": "307476",
+        "name": "Tovuq boldiri, son va boshqa qismlari",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 38000.0
+    },
+    {
+        "code": "307477",
+        "name": "Tovuq boldiri, son va boshqa qismlari",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307478",
+        "name": "Tovuq boldiri, son va boshqa qismlari",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307479",
+        "name": "Tovuq boldiri, son va boshqa qismlari",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307491",
+        "name": "Yangi sogilgan sut",
+        "category_code": "11131027",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "307492",
+        "name": "Yangi sogilgan sut",
+        "category_code": "11131027",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "307511",
+        "name": "Qatiq",
+        "category_code": "11132028",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "307519",
+        "name": "Qatiq",
+        "category_code": "11132028",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 17000.0
+    },
+    {
+        "code": "307548",
+        "name": "Kichkina  elga  xizmata",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 9000.0
+    },
+    {
+        "code": "307549",
+        "name": "Tuxum",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13000.0
+    },
+    {
+        "code": "307550",
+        "name": "Tuxum",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14000.0
+    },
+    {
+        "code": "307551",
+        "name": "Tuxum",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "307552",
+        "name": "Ortacha  elga  xizmata",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 11000.0
+    },
+    {
+        "code": "307553",
+        "name": "Yirik   elga  xizmata",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13000.0
+    },
+    {
+        "code": "307563",
+        "name": "Sariyog",
+        "category_code": "11151036",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 80000.0
+    },
+    {
+        "code": "307569",
+        "name": "Kungaboqar yogi (mahalliy)",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 19000.0
+    },
+    {
+        "code": "307570",
+        "name": "Kungaboqar yogi (mahalliy)",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 19000.0
+    },
+    {
+        "code": "307571",
+        "name": "Kungaboqar yogi (mahalliy)",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307572",
+        "name": "Kungaboqar yogi (mahalliy)",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307573",
+        "name": "Kungaboqar yogi (mahalliy)",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307574",
+        "name": "Nejinskoe elga  xizmat rastasi",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307575",
+        "name": "Milter elga  xizmat rastasi",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307576",
+        "name": "Yelena elga  xizmat rastasi",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 18000.0
+    },
+    {
+        "code": "307579",
+        "name": "Paxta yogi (mahalliy)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307580",
+        "name": "Paxta yogi (mahalliy)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307581",
+        "name": "Paxta yogi (mahalliy)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307582",
+        "name": "Paxta yogi (import)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 21000.0
+    },
+    {
+        "code": "307583",
+        "name": "Paxta yogi (import)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307584",
+        "name": "Paxta yogi (import)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307585",
+        "name": "Paxta yogi (import)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307586",
+        "name": "Paxta yogi (import)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307589",
+        "name": "Olma",
+        "category_code": "11161040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "307590",
+        "name": "Olma",
+        "category_code": "11161040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "307591",
+        "name": "Olma",
+        "category_code": "11161040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "307592",
+        "name": "Olma",
+        "category_code": "11161040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "307593",
+        "name": "Olma",
+        "category_code": "11161040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14000.0
+    },
+    {
+        "code": "307594",
+        "name": "Olma",
+        "category_code": "11161040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "307599",
+        "name": "Nok",
+        "category_code": "11161041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307600",
+        "name": "Nok",
+        "category_code": "11161041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307601",
+        "name": "Nok",
+        "category_code": "11161041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 18000.0
+    },
+    {
+        "code": "307602",
+        "name": "Nok",
+        "category_code": "11161041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307603",
+        "name": "Nok",
+        "category_code": "11161041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "307609",
+        "name": "Shaftoli",
+        "category_code": "11161042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 30000.0
+    },
+    {
+        "code": "307610",
+        "name": "Shaftoli",
+        "category_code": "11161042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 40000.0
+    },
+    {
+        "code": "307611",
+        "name": "Shaftoli",
+        "category_code": "11161042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "307617",
+        "name": "Shaftoli",
+        "category_code": "11161042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307618",
+        "name": "Shaftoli",
+        "category_code": "11161042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307629",
+        "name": "Tarvuz",
+        "category_code": "11161047",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 2000.0
+    },
+    {
+        "code": "307630",
+        "name": "Tarvuz",
+        "category_code": "11161047",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 2000.0
+    },
+    {
+        "code": "307631",
+        "name": "Tarvuz",
+        "category_code": "11161047",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 3000.0
+    },
+    {
+        "code": "307632",
+        "name": "Tarvuz",
+        "category_code": "11161047",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307633",
+        "name": "Tarvuz",
+        "category_code": "11161047",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307642",
+        "name": "Karam",
+        "category_code": "11161049",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 4000.0
+    },
+    {
+        "code": "307643",
+        "name": "Karam",
+        "category_code": "11161049",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 3000.0
+    },
+    {
+        "code": "307660",
+        "name": "Gilos",
+        "category_code": "11161101",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307661",
+        "name": "Gilos",
+        "category_code": "11161101",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307664",
+        "name": "Gilos",
+        "category_code": "11161101",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307665",
+        "name": "Gilos",
+        "category_code": "11161101",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307666",
+        "name": "Gilos",
+        "category_code": "11161101",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307679",
+        "name": "Orik",
+        "category_code": "11161103",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307680",
+        "name": "Orik",
+        "category_code": "11161103",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307681",
+        "name": "Orik",
+        "category_code": "11161103",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307682",
+        "name": "Orik",
+        "category_code": "11161103",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307683",
+        "name": "Orik",
+        "category_code": "11161103",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "307699",
+        "name": "Bexi",
+        "category_code": "11161105",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307700",
+        "name": "Bexi",
+        "category_code": "11161105",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307701",
+        "name": "Bexi",
+        "category_code": "11161105",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307707",
+        "name": "Bexi",
+        "category_code": "11161105",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307708",
+        "name": "Bexi",
+        "category_code": "11161105",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307713",
+        "name": "Qulupnay",
+        "category_code": "11161107",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307714",
+        "name": "Qulupnay",
+        "category_code": "11161107",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307715",
+        "name": "Qulupnay",
+        "category_code": "11161107",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307716",
+        "name": "Qulupnay",
+        "category_code": "11161107",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307717",
+        "name": "Qulupnay",
+        "category_code": "11161107",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307719",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 18000.0
+    },
+    {
+        "code": "307720",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307721",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307722",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307723",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307724",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307725",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307726",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307727",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307728",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307729",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "307730",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6000.0
+    },
+    {
+        "code": "307731",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307732",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307733",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307734",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307735",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307736",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307737",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307738",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307739",
+        "name": "Qovoq",
+        "category_code": "11162050",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "307740",
+        "name": "Qovoq",
+        "category_code": "11162050",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "307741",
+        "name": "Qovoq",
+        "category_code": "11162050",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307742",
+        "name": "Qovoq",
+        "category_code": "11162050",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307748",
+        "name": "Qovoq",
+        "category_code": "11162050",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307749",
+        "name": "Piyoz sariq mayda",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307750",
+        "name": "Piyoz sariq katta",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "307751",
+        "name": "Piyoz sariq ortacha",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307752",
+        "name": "Piyoz",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 4000.0
+    },
+    {
+        "code": "307753",
+        "name": "Piyoz",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 4000.0
+    },
+    {
+        "code": "307754",
+        "name": "Piyoz",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "307759",
+        "name": "Xoraki lavlagi",
+        "category_code": "11162052",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "307760",
+        "name": "Xoraki lavlagi",
+        "category_code": "11162052",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6000.0
+    },
+    {
+        "code": "307761",
+        "name": "Xoraki lavlagi",
+        "category_code": "11162052",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6000.0
+    },
+    {
+        "code": "307762",
+        "name": "Xoraki lavlagi",
+        "category_code": "11162052",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307763",
+        "name": "Xoraki lavlagi",
+        "category_code": "11162052",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307764",
+        "name": "Sariq  orta",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 2500.0
+    },
+    {
+        "code": "307765",
+        "name": "Qizil kichik elga  xizmat rastasi ",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "307766",
+        "name": "Sariq kichik",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 2500.0
+    },
+    {
+        "code": "307767",
+        "name": " Sariq katta sabzi",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 2500.0
+    },
+    {
+        "code": "307768",
+        "name": "Qizil    katta xizmat rastasi",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "307774",
+        "name": "Limon",
+        "category_code": "11163042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307775",
+        "name": "Limon",
+        "category_code": "11163042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307776",
+        "name": "Limon",
+        "category_code": "11163042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307777",
+        "name": "Limon",
+        "category_code": "11163042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307784",
+        "name": "Kishmish",
+        "category_code": "11163045",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 52000.0
+    },
+    {
+        "code": "307786",
+        "name": "Kishmish",
+        "category_code": "11163045",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 55000.0
+    },
+    {
+        "code": "307787",
+        "name": "Kishmish",
+        "category_code": "11163045",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 60000.0
+    },
+    {
+        "code": "307789",
+        "name": "Kishmish",
+        "category_code": "11163045",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 70000.0
+    },
+    {
+        "code": "307790",
+        "name": "Kishmish",
+        "category_code": "11163045",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 80000.0
+    },
+    {
+        "code": "307794",
+        "name": "Bodring",
+        "category_code": "11163054",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "307795",
+        "name": "Bodring",
+        "category_code": "11163054",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "307796",
+        "name": "Bodring",
+        "category_code": "11163054",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 18000.0
+    },
+    {
+        "code": "307797",
+        "name": "Bodring",
+        "category_code": "11163054",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 11000.0
+    },
+    {
+        "code": "307798",
+        "name": "Bodring",
+        "category_code": "11163054",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "307799",
+        "name": "Bodring",
+        "category_code": "11163054",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "307804",
+        "name": "Pomidor",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "307805",
+        "name": "Pomidor",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13000.0
+    },
+    {
+        "code": "307806",
+        "name": "Pomidor",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307807",
+        "name": "Pomidor",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 18000.0
+    },
+    {
+        "code": "307808",
+        "name": "Pomidor",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "307814",
+        "name": "Bulgor qalampiri",
+        "category_code": "11163059",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "307815",
+        "name": "Bulgor qalampiri",
+        "category_code": "11163059",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "307816",
+        "name": "Bulgor qalampiri",
+        "category_code": "11163059",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "307818",
+        "name": "Bulgor qalampiri",
+        "category_code": "11163059",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "307819",
+        "name": "Bulgor qalampiri",
+        "category_code": "11163059",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "307834",
+        "name": "Baqlajon",
+        "category_code": "11163310",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "307835",
+        "name": "Baqlajon",
+        "category_code": "11163310",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6000.0
+    },
+    {
+        "code": "307836",
+        "name": "Baqlajon",
+        "category_code": "11163310",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "307837",
+        "name": "Baqlajon",
+        "category_code": "11163310",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "307838",
+        "name": "Baqlajon",
+        "category_code": "11163310",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "307859",
+        "name": "Sarimsoq",
+        "category_code": "11164058",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 30000.0
+    },
+    {
+        "code": "307860",
+        "name": "Sarimsoq",
+        "category_code": "11164058",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 26000.0
+    },
+    {
+        "code": "307861",
+        "name": "Sarimsoq",
+        "category_code": "11164058",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 35000.0
+    },
+    {
+        "code": "307862",
+        "name": "Sarimsoq",
+        "category_code": "11164058",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 35000.0
+    },
+    {
+        "code": "307863",
+        "name": "Sarimsoq",
+        "category_code": "11164058",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "307874",
+        "name": "Kartoshka",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 4000.0
+    },
+    {
+        "code": "307875",
+        "name": "Orta   kartoshka  qora elga  xizmata",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 4000.0
+    },
+    {
+        "code": "307876",
+        "name": "Kichik kartoshka qora  bozor rastasi ",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "307877",
+        "name": "Katta kartoshka qora bozor rastasi ",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "307878",
+        "name": "Kartoshka",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6000.0
+    },
+    {
+        "code": "307879",
+        "name": "Kartoshka",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "307889",
+        "name": "bozor dokonlaridagi Xorazm Shakar ",
+        "category_code": "11171064",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13500.0
+    },
+    {
+        "code": "307890",
+        "name": "Shakar",
+        "category_code": "11171064",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13000.0
+    },
+    {
+        "code": "328491",
+        "name": "Bugdoy",
+        "category_code": "31001017",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5500.0
+    },
+    {
+        "code": "328492",
+        "name": "Bugdoy",
+        "category_code": "31001017",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6500.0
+    },
+    {
+        "code": "328493",
+        "name": "Bugdoy",
+        "category_code": "31001017",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "328494",
+        "name": "Johori",
+        "category_code": "31001019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "328495",
+        "name": "Johori",
+        "category_code": "31001019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "328496",
+        "name": "Johori",
+        "category_code": "31001019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "339066",
+        "name": "Oliy navli bugdoy uni (mahalliy)",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "339067",
+        "name": "Oliy navli bugdoy uni (mahalliy)",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "339068",
+        "name": "Oliy navli bugdoy uni (mahalliy)",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "339069",
+        "name": "Oliy navli bugdoy uni (mahalliy)",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "339070",
+        "name": "Oliy navli bugdoy uni (mahalliy)",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "339071",
+        "name": "Oliy navli bugdoy uni (import)",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "339072",
+        "name": "Oliy navli bugdoy uni (import)",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "339073",
+        "name": "Oliy navli bugdoy uni (import)",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "339074",
+        "name": "Oliy navli bugdoy uni (import)",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "339075",
+        "name": "Oliy navli bugdoy uni (import)",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "339076",
+        "name": "Birinchi navli bugdoy uni (mahalliy)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "339077",
+        "name": "Birinchi navli bugdoy uni (mahalliy)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "339078",
+        "name": "Birinchi navli bugdoy uni (mahalliy)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "339079",
+        "name": "Birinchi navli bugdoy uni (mahalliy)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "339080",
+        "name": "Birinchi navli bugdoy uni (mahalliy)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "339081",
+        "name": "Birinchi navli bugdoy uni (import)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "339082",
+        "name": "Birinchi navli bugdoy uni (import)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "339083",
+        "name": "Birinchi navli bugdoy uni (import)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "339084",
+        "name": "Birinchi navli bugdoy uni (import)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "339085",
+        "name": "Birinchi navli bugdoy uni (import)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "339086",
+        "name": "Qadoqlangan sut",
+        "category_code": "11131031",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "339087",
+        "name": "Qadoqlangan sut",
+        "category_code": "11131031",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13000.0
+    },
+    {
+        "code": "339088",
+        "name": "Qadoqlangan sut",
+        "category_code": "11131031",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "339089",
+        "name": "Qadoqlangan sut",
+        "category_code": "11131031",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14000.0
+    },
+    {
+        "code": "339090",
+        "name": "Qadoqlangan sut",
+        "category_code": "11131031",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "370760",
+        "name": "AI 80",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8500.0
+    },
+    {
+        "code": "370761",
+        "name": "AI 92",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10500.0
+    },
+    {
+        "code": "372053",
+        "name": "AI 95",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12500.0
+    },
+    {
+        "code": "307954",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 23995.0
+    },
+    {
+        "code": "307955",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 23995.0
+    },
+    {
+        "code": "307956",
+        "name": "Guruch",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 23995.0
+    },
+    {
+        "code": "307964",
+        "name": "Guruch",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14995.0
+    },
+    {
+        "code": "307965",
+        "name": "Guruch",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14995.0
+    },
+    {
+        "code": "308044",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 24495.0
+    },
+    {
+        "code": "308045",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308046",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308047",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308048",
+        "name": "Loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308064",
+        "name": "Obi(tandir) non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "308067",
+        "name": "Obi(tandir) non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308068",
+        "name": "Obi(tandir) non",
+        "category_code": "11113002",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308080",
+        "name": "1-navli bugdoy unidan non",
+        "category_code": "11114005",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "308084",
+        "name": "1-navli bugdoy unidan non",
+        "category_code": "11114005",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308121",
+        "name": "Mol goshti  (suyakli)",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 84990.0
+    },
+    {
+        "code": "308134",
+        "name": "Qoy goshti",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 115990.0
+    },
+    {
+        "code": "308145",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 127950.0
+    },
+    {
+        "code": "308182",
+        "name": "Tovuq goshti (butun)",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308185",
+        "name": "Tovuq goshti (butun)",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308192",
+        "name": "Tovuq boldiri, son va boshqa qismlari",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 41990.0
+    },
+    {
+        "code": "308339",
+        "name": "Paxta yogi (mahalliy)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308341",
+        "name": "Paxta yogi (mahalliy)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20990.0
+    },
+    {
+        "code": "308346",
+        "name": "Paxta yogi (import)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308347",
+        "name": "Paxta yogi (import)",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308373",
+        "name": "Shaftoli",
+        "category_code": "11161042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 26990.0
+    },
+    {
+        "code": "308374",
+        "name": "Shaftoli",
+        "category_code": "11161042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 26990.0
+    },
+    {
+        "code": "308375",
+        "name": "Shaftoli",
+        "category_code": "11161042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13990.0
+    },
+    {
+        "code": "308376",
+        "name": "Shaftoli",
+        "category_code": "11161042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308377",
+        "name": "Shaftoli",
+        "category_code": "11161042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308393",
+        "name": "Tarvuz",
+        "category_code": "11161047",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 1590.0
+    },
+    {
+        "code": "308394",
+        "name": "Tarvuz",
+        "category_code": "11161047",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 1590.0
+    },
+    {
+        "code": "308395",
+        "name": "Tarvuz",
+        "category_code": "11161047",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308396",
+        "name": "Tarvuz",
+        "category_code": "11161047",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308397",
+        "name": "Tarvuz",
+        "category_code": "11161047",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308403",
+        "name": "Karam",
+        "category_code": "11161049",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 3590.0
+    },
+    {
+        "code": "308404",
+        "name": "Karam",
+        "category_code": "11161049",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 3590.0
+    },
+    {
+        "code": "308423",
+        "name": "Gilos",
+        "category_code": "11161101",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308424",
+        "name": "Gilos",
+        "category_code": "11161101",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308425",
+        "name": "Gilos",
+        "category_code": "11161101",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308426",
+        "name": "Gilos",
+        "category_code": "11161101",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308427",
+        "name": "Gilos",
+        "category_code": "11161101",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308443",
+        "name": "Orik",
+        "category_code": "11161103",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308444",
+        "name": "Orik",
+        "category_code": "11161103",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308445",
+        "name": "Orik",
+        "category_code": "11161103",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308446",
+        "name": "Orik",
+        "category_code": "11161103",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308447",
+        "name": "Orik",
+        "category_code": "11161103",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308463",
+        "name": "Bexi",
+        "category_code": "11161105",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308464",
+        "name": "Bexi",
+        "category_code": "11161105",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308465",
+        "name": "Bexi",
+        "category_code": "11161105",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308466",
+        "name": "Bexi",
+        "category_code": "11161105",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308467",
+        "name": "Bexi",
+        "category_code": "11161105",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308473",
+        "name": "Qulupnay",
+        "category_code": "11161107",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308474",
+        "name": "Qulupnay",
+        "category_code": "11161107",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308475",
+        "name": "Qulupnay",
+        "category_code": "11161107",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308476",
+        "name": "Qulupnay",
+        "category_code": "11161107",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308477",
+        "name": "Qulupnay",
+        "category_code": "11161107",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308483",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13990.0
+    },
+    {
+        "code": "308484",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308485",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308486",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308487",
+        "name": "Uzum",
+        "category_code": "11162041",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308493",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6190.0
+    },
+    {
+        "code": "308494",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6190.0
+    },
+    {
+        "code": "308495",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308496",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308497",
+        "name": "Qovun",
+        "category_code": "11162048",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308503",
+        "name": "Qovoq",
+        "category_code": "11162050",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308504",
+        "name": "Qovoq",
+        "category_code": "11162050",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308505",
+        "name": "Qovoq",
+        "category_code": "11162050",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308506",
+        "name": "Qovoq",
+        "category_code": "11162050",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308507",
+        "name": "Qovoq",
+        "category_code": "11162050",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308513",
+        "name": "Piyoz",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7990.0
+    },
+    {
+        "code": "308514",
+        "name": "Piyoz",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5490.0
+    },
+    {
+        "code": "308521",
+        "name": "Xoraki lavlagi",
+        "category_code": "11162052",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8990.0
+    },
+    {
+        "code": "308522",
+        "name": "Xoraki lavlagi",
+        "category_code": "11162052",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308523",
+        "name": "Xoraki lavlagi",
+        "category_code": "11162052",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308529",
+        "name": "Sabzi",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 9490.0
+    },
+    {
+        "code": "308530",
+        "name": "Sabzi",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 9990.0
+    },
+    {
+        "code": "308531",
+        "name": "Sabzi",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308539",
+        "name": "Limon",
+        "category_code": "11163042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308540",
+        "name": "Limon",
+        "category_code": "11163042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308541",
+        "name": "Limon",
+        "category_code": "11163042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308542",
+        "name": "Limon",
+        "category_code": "11163042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308571",
+        "name": "Pomidor",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 9990.0
+    },
+    {
+        "code": "308572",
+        "name": "Pomidor",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 16490.0
+    },
+    {
+        "code": "308573",
+        "name": "Pomidor",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308603",
+        "name": "Baqlajon",
+        "category_code": "11163310",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308604",
+        "name": "Baqlajon",
+        "category_code": "11163310",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6990.0
+    },
+    {
+        "code": "308605",
+        "name": "Baqlajon",
+        "category_code": "11163310",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308606",
+        "name": "Baqlajon",
+        "category_code": "11163310",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308607",
+        "name": "Baqlajon",
+        "category_code": "11163310",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308629",
+        "name": "Sarimsoq",
+        "category_code": "11164058",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 26490.0
+    },
+    {
+        "code": "308630",
+        "name": "Sarimsoq",
+        "category_code": "11164058",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308631",
+        "name": "Sarimsoq",
+        "category_code": "11164058",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308632",
+        "name": "Sarimsoq",
+        "category_code": "11164058",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308633",
+        "name": "Sarimsoq",
+        "category_code": "11164058",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308645",
+        "name": "Kartoshka",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "308646",
+        "name": "Kartoshka",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7490.0
+    },
+    {
+        "code": "308647",
+        "name": "Kartoshka",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6990.0
+    },
+    {
+        "code": "308655",
+        "name": "Shakar",
+        "category_code": "11171064",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13745.0
+    },
+    {
+        "code": "308656",
+        "name": "Shakar",
+        "category_code": "11171064",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13745.0
+    },
+    {
+        "code": "308657",
+        "name": "Shakar",
+        "category_code": "11171064",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13745.0
+    },
+    {
+        "code": "339101",
+        "name": "Birinchi navli bugdoy uni (mahalliy)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "339106",
+        "name": "Birinchi navli bugdoy uni (import)",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 0.0
+    },
+    {
+        "code": "370323",
+        "name": "Qoy goshti",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 142990.0
+    },
+    {
+        "code": "371799",
+        "name": "Antigrippin efervesan 10tab Polsha",
+        "category_code": "12905207",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 51000.0
+    },
+    {
+        "code": "371800",
+        "name": "Ergoferon 20tab Ross",
+        "category_code": "12905207",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 32000.0
+    },
+    {
+        "code": "371801",
+        "name": "Gerpiver 200mg 20tab Ukraina",
+        "category_code": "12905207",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 21000.0
+    },
+    {
+        "code": "370374",
+        "name": "Lazer Xorazm",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 22000.0
+    },
+    {
+        "code": "370389",
+        "name": "Nukus Xorazm",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13000.0
+    },
+    {
+        "code": "370390",
+        "name": "Alanga Xorazm",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 18000.0
+    },
+    {
+        "code": "370391",
+        "name": "Avangard Xorazm",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 16000.0
+    },
+    {
+        "code": "370398",
+        "name": "Mutabar  Uzbekiston ",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "370399",
+        "name": "Oltin don  Uzbekiston",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 9000.0
+    },
+    {
+        "code": "370403",
+        "name": "Birinchi navli un Turon",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6500.0
+    },
+    {
+        "code": "370404",
+        "name": "Birinchi navli un Motabar",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "370528",
+        "name": "Paxta yogi",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 21000.0
+    },
+    {
+        "code": "370542",
+        "name": "Zateya Rossiya ",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 26000.0
+    },
+    {
+        "code": "370543",
+        "name": "Oleyna  Rossiya ",
+        "category_code": "11154039",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 24000.0
+    },
+    {
+        "code": "370560",
+        "name": "Limon katta",
+        "category_code": "11163042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 55000.0
+    },
+    {
+        "code": "370582",
+        "name": "Golden",
+        "category_code": "11161040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 16000.0
+    },
+    {
+        "code": "370584",
+        "name": "Besh Yulduz",
+        "category_code": "11161040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "370585",
+        "name": "Olma Semerenka",
+        "category_code": "11161040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "370594",
+        "name": "Karam",
+        "category_code": "11161049",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 3000.0
+    },
+    {
+        "code": "370607",
+        "name": "Bodring maydasi",
+        "category_code": "11163054",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 11000.0
+    },
+    {
+        "code": "370608",
+        "name": "Bodring yirigi",
+        "category_code": "11163054",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "370616",
+        "name": "Yangi uzilgan pomidorlar mayda",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8000.0
+    },
+    {
+        "code": "370618",
+        "name": "Yangi uzilgan pomidorlar yirik",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13000.0
+    },
+    {
+        "code": "370631",
+        "name": "Qizil sabzi",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "370632",
+        "name": "Sabzi sariq",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "370645",
+        "name": "Piyoz",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 4000.0
+    },
+    {
+        "code": "370646",
+        "name": "Katta piyoz",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "370647",
+        "name": "Mayda piyoz",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 2000.0
+    },
+    {
+        "code": "370661",
+        "name": "Kartoshka katta",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6000.0
+    },
+    {
+        "code": "370663",
+        "name": "Qora kartoshka",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 4000.0
+    },
+    {
+        "code": "370671",
+        "name": "Qizil loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "370672",
+        "name": "Oq loviya",
+        "category_code": "11112012",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "370678",
+        "name": "Noxat mayda",
+        "category_code": "11112011",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 26000.0
+    },
+    {
+        "code": "370683",
+        "name": "Mosh",
+        "category_code": "11112013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 23000.0
+    },
+    {
+        "code": "370693",
+        "name": "Shakar ",
+        "category_code": "11171064",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13500.0
+    },
+    {
+        "code": "370694",
+        "name": "Shakar (Xorazm)",
+        "category_code": "11171064",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14000.0
+    },
+    {
+        "code": "370695",
+        "name": "Shakar (Angren )",
+        "category_code": "11171064",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13000.0
+    },
+    {
+        "code": "370886",
+        "name": "Tovuq tuxumlari  oq yirik",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "370887",
+        "name": "Tovuq tuxumlari  oq  mayda",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 9000.0
+    },
+    {
+        "code": "370888",
+        "name": "saralangan katta sariq tuxum",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "370889",
+        "name": "ortacha kattalikdagi sariq tuxum",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 11000.0
+    },
+    {
+        "code": "371304",
+        "name": "Mol goshti suyakli",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 70000.0
+    },
+    {
+        "code": "371315",
+        "name": "Qoy goshti",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 75000.0
+    },
+    {
+        "code": "371322",
+        "name": "Yuvilmagan sabzi",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 2500.0
+    },
+    {
+        "code": "371352",
+        "name": "Lazer pokiston",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "371763",
+        "name": "Alanga qozogiston",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13000.0
+    },
+    {
+        "code": "372048",
+        "name": "Sariyog Kak ranshe 82.5foiz 500gr",
+        "category_code": "11151036",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 86000.0
+    },
+    {
+        "code": "372049",
+        "name": "Sariyog 7 utra 82.5foiz 500gr",
+        "category_code": "11151036",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 60000.0
+    },
+    {
+        "code": "372305",
+        "name": "Turon oliy navli",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "372306",
+        "name": "Turon",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "372307",
+        "name": "Oliy navli un Makfa",
+        "category_code": "11111200",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "372309",
+        "name": "Birinchi navli un Oltin don",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7000.0
+    },
+    {
+        "code": "372310",
+        "name": "Birinchi navli un Mahalliy",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5000.0
+    },
+    {
+        "code": "372323",
+        "name": "Paxta yogi Poytaxt",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 21000.0
+    },
+    {
+        "code": "372324",
+        "name": "Paxta yogi Lazzat",
+        "category_code": "11154040",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 21000.0
+    },
+    {
+        "code": "372341",
+        "name": "metan",
+        "category_code": "12914204",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5200.0
+    },
+    {
+        "code": "370478",
+        "name": "Tovuq gushti",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 32000.0
+    },
+    {
+        "code": "370479",
+        "name": "Tovuq gushti broler",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 36000.0
+    },
+    {
+        "code": "370492",
+        "name": "Tovuq sonlari broler Mahalliy",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 36000.0
+    },
+    {
+        "code": "372348",
+        "name": "Tovuq soni lyashka Yangiyol",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 37000.0
+    },
+    {
+        "code": "370440",
+        "name": "Mol gushti son",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 120000.0
+    },
+    {
+        "code": "370441",
+        "name": "Mol gushti tosh",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 105000.0
+    },
+    {
+        "code": "370442",
+        "name": "Mol gushti qul",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 115000.0
+    },
+    {
+        "code": "370443",
+        "name": "Mol gushti biqin",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 120000.0
+    },
+    {
+        "code": "370452",
+        "name": "Mol gushti lahm",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 130000.0
+    },
+    {
+        "code": "370459",
+        "name": "Quy gushti qovurga",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 130000.0
+    },
+    {
+        "code": "370460",
+        "name": "Quy gushti biqin",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 130000.0
+    },
+    {
+        "code": "370461",
+        "name": "Quy gushti qul",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 130000.0
+    },
+    {
+        "code": "370462",
+        "name": "Quy gushti son",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 130000.0
+    },
+    {
+        "code": "371401",
+        "name": "Mol gushti tosh",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 105000.0
+    },
+    {
+        "code": "371402",
+        "name": "Mol gushti son",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 120000.0
+    },
+    {
+        "code": "371403",
+        "name": "Mol gushti biqin",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 120000.0
+    },
+    {
+        "code": "371407",
+        "name": "Mol gushti lahm",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 130000.0
+    },
+    {
+        "code": "371408",
+        "name": "Quy gushti qovurga",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 130000.0
+    },
+    {
+        "code": "371409",
+        "name": "Quy gushti qul",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 130000.0
+    },
+    {
+        "code": "371410",
+        "name": "Quy gushti son",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 130000.0
+    },
+    {
+        "code": "307958",
+        "name": "Ris lazer  kg",
+        "category_code": "11111013",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 23995.0
+    },
+    {
+        "code": "307966",
+        "name": "Ris  Oq alanga   1 kg",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14995.0
+    },
+    {
+        "code": "307967",
+        "name": "Ris  Nukus  UzRice  1000 gr ",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15495.0
+    },
+    {
+        "code": "307968",
+        "name": "Ris  Alanga   kg",
+        "category_code": "11111014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 14995.0
+    },
+    {
+        "code": "308028",
+        "name": "Muka Oltin don 1-j sort  1 kg",
+        "category_code": "11111300",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10995.0
+    },
+    {
+        "code": "308122",
+        "name": "Myaso govyadiny`  sheya",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 110990.0
+    },
+    {
+        "code": "308124",
+        "name": "Myaso govyadiny`  korejka  kg",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 105990.0
+    },
+    {
+        "code": "308125",
+        "name": "Mol goshti  (suyakli)",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 84990.0
+    },
+    {
+        "code": "308128",
+        "name": "Mol goshti  (suyakli)",
+        "category_code": "11121014",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 110990.0
+    },
+    {
+        "code": "308135",
+        "name": "Baran`ya lopatka  kg",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 145990.0
+    },
+    {
+        "code": "308136",
+        "name": "Baran`i ryobra  kg",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 119990.0
+    },
+    {
+        "code": "308137",
+        "name": "Baran`ya shejka  kg",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 142990.0
+    },
+    {
+        "code": "308138",
+        "name": "Baran`ya cpinka  kg",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 139990.0
+    },
+    {
+        "code": "308139",
+        "name": "Qoy goshti",
+        "category_code": "11121016",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 115990.0
+    },
+    {
+        "code": "308146",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 127950.0
+    },
+    {
+        "code": "308147",
+        "name": "Mol goshti suyaksiz",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 144990.0
+    },
+    {
+        "code": "308148",
+        "name": "Mol goshti suyaksiz",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 144990.0
+    },
+    {
+        "code": "308149",
+        "name": "Mol goshti (suyaksiz)",
+        "category_code": "11121018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 138990.0
+    },
+    {
+        "code": "308186",
+        "name": "Tovuq goshti (butun)",
+        "category_code": "11122018",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 38490.0
+    },
+    {
+        "code": "308193",
+        "name": "Okorochka  Sagban   kg",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 36990.0
+    },
+    {
+        "code": "308194",
+        "name": "Tovuq boldiri, son va boshqa qismlari",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 41990.0
+    },
+    {
+        "code": "308195",
+        "name": "Kurinoe bedro  kg",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 42990.0
+    },
+    {
+        "code": "308196",
+        "name": "Kurinoe file  kg",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 45990.0
+    },
+    {
+        "code": "308197",
+        "name": "Kuriny`e kry`l`ya  kg",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 38990.0
+    },
+    {
+        "code": "308198",
+        "name": "Kuriny`e okorochka  kg",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 34990.0
+    },
+    {
+        "code": "308199",
+        "name": "Tovuq boldiri, son va boshqa qismlari",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 41990.0
+    },
+    {
+        "code": "308200",
+        "name": "Tovuq boldiri, son va boshqa qismlari",
+        "category_code": "11122019",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 41990.0
+    },
+    {
+        "code": "308405",
+        "name": "Kapusta krasnaya  kg",
+        "category_code": "11161049",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5490.0
+    },
+    {
+        "code": "308406",
+        "name": "Kapusta  kg",
+        "category_code": "11161049",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 3590.0
+    },
+    {
+        "code": "308407",
+        "name": "Kapusta czvetnaya  sht",
+        "category_code": "11161049",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7490.0
+    },
+    {
+        "code": "308515",
+        "name": "Piyoz yirik",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6490.0
+    },
+    {
+        "code": "308516",
+        "name": "Luk krasny`j  kg",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7990.0
+    },
+    {
+        "code": "308517",
+        "name": "Luk novy`j  kg",
+        "category_code": "11162051",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5990.0
+    },
+    {
+        "code": "308532",
+        "name": "Krasnaya morkov`   kg",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 9990.0
+    },
+    {
+        "code": "308533",
+        "name": "ZHeltaya morkov`   kg",
+        "category_code": "11162053",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 9490.0
+    },
+    {
+        "code": "308543",
+        "name": "Limony`  kg",
+        "category_code": "11163042",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 56990.0
+    },
+    {
+        "code": "308574",
+        "name": "Teplichny`e pomidory`  kg",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 9990.0
+    },
+    {
+        "code": "308575",
+        "name": "Rozovy`e pomidory`  kg",
+        "category_code": "11163056",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 16490.0
+    },
+    {
+        "code": "308648",
+        "name": "Kartoshka belaya  kg",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6990.0
+    },
+    {
+        "code": "308649",
+        "name": "Kartoshka krasnaya   setka)  kg",
+        "category_code": "11169063",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7490.0
+    },
+    {
+        "code": "308658",
+        "name": "Saxar 2 kg",
+        "category_code": "11171064",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13745.0
+    },
+    {
+        "code": "308659",
+        "name": "Saxar  kg",
+        "category_code": "11171064",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 13745.0
+    },
+    {
+        "code": "370771",
+        "name": "metan",
+        "category_code": "12914204",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5300.0
+    },
+    {
+        "code": "372058",
+        "name": "AI 95",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12700.0
+    },
+    {
+        "code": "372059",
+        "name": "AI 92",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10500.0
+    },
+    {
+        "code": "372060",
+        "name": "AI 80",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8500.0
+    },
+    {
+        "code": "372346",
+        "name": "AI 80",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 8200.0
+    },
+    {
+        "code": "372347",
+        "name": "AI 92",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10500.0
+    },
+    {
+        "code": "370713",
+        "name": "1 portsiya osh 05 obinon va choy",
+        "category_code": "11193086",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 39000.0
+    },
+    {
+        "code": "371218",
+        "name": "Bifshteks",
+        "category_code": "11193086",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 32000.0
+    },
+    {
+        "code": "371219",
+        "name": "Qovurma Lagmon",
+        "category_code": "11193086",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 30000.0
+    },
+    {
+        "code": "371220",
+        "name": "Norin",
+        "category_code": "11193086",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 32000.0
+    },
+    {
+        "code": "371221",
+        "name": "Jiz",
+        "category_code": "11193086",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 47000.0
+    },
+    {
+        "code": "370743",
+        "name": "suyultirilgan hojalik sovuni 72%",
+        "category_code": "12801202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "370785",
+        "name": "Garnier Fructis Protiv perxoti 2v1(250ml)",
+        "category_code": "12951229",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 35000.0
+    },
+    {
+        "code": "372044",
+        "name": "Xojalik sovun yangiyol 60%",
+        "category_code": "12801202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 6000.0
+    },
+    {
+        "code": "372045",
+        "name": "Xojalik sovun Donya Uzb 300gr",
+        "category_code": "12801202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "372046",
+        "name": "Shampun Head and Shoulders 400gr",
+        "category_code": "12951229",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 34375.0
+    },
+    {
+        "code": "372047",
+        "name": "Shampun Clear Men ultra 380gr",
+        "category_code": "12951229",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 29605.0
+    },
+    {
+        "code": "372061",
+        "name": "AI 80",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 7950.0
+    },
+    {
+        "code": "372062",
+        "name": "AI 92",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10400.0
+    },
+    {
+        "code": "372063",
+        "name": "AI 95",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12900.0
+    },
+    {
+        "code": "372064",
+        "name": "AI 98",
+        "category_code": "12914202",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "307498",
+        "name": "Yangi sogilgan sut yogsiz",
+        "category_code": "11131027",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "307499",
+        "name": "Yangi sogilgan sut yogli",
+        "category_code": "11131027",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
+    },
+    {
+        "code": "307500",
+        "name": "Yangi sogilgan sut",
+        "category_code": "11131027",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 11000.0
+    },
+    {
+        "code": "370509",
+        "name": "Suzma yogsiz",
+        "category_code": "11133032",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 25000.0
+    },
+    {
+        "code": "370510",
+        "name": "Suzma yogli",
+        "category_code": "11133032",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 20000.0
+    },
+    {
+        "code": "370737",
+        "name": "Kent mode 4",
+        "category_code": "12961236",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 17510.0
+    },
+    {
+        "code": "370738",
+        "name": "Pall Mall SS blue",
+        "category_code": "12961236",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15610.0
+    },
+    {
+        "code": "370739",
+        "name": "Kent Mix",
+        "category_code": "12961236",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 17810.0
+    },
+    {
+        "code": "371230",
+        "name": "Kent 6",
+        "category_code": "12961236",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 17510.0
+    },
+    {
+        "code": "372042",
+        "name": "Dunhill Deluxe Click",
+        "category_code": "12961236",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 18860.0
+    },
+    {
+        "code": "372043",
+        "name": "Kent Mix Cool",
+        "category_code": "12961236",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 17810.0
+    },
+    {
+        "code": "370788",
+        "name": "4 qavatli uy uchun tolov",
+        "category_code": "22001258",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 1514.0
+    },
+    {
+        "code": "372055",
+        "name": "7 qavatli uy uchun tolov",
+        "category_code": "22001258",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 1705.0
+    },
+    {
+        "code": "372333",
+        "name": "metan",
+        "category_code": "12914204",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 5200.0
+    },
+    {
+        "code": "372320",
+        "name": "Tovuq tuxumlari yirik",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 15000.0
+    },
+    {
+        "code": "372321",
+        "name": "Tovuq tuxumlari orta",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 12000.0
+    },
+    {
+        "code": "372322",
+        "name": "Tovuq tuxumlari mayda",
+        "category_code": "11141035",
+        "top": 0.2,
+        "bottom": 0.2,
+        "is_import": true,
+        "is_weekly": true,
+        "price": 10000.0
     }
 ]
