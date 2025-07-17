@@ -106,6 +106,8 @@ class TochkaAdmin(BaseAdmin):
 
 @admin.register(NTochka)
 class NTochkaAdmin(BaseAdmin):
+    list_display = ('name', 'hudud', 'is_active')
+    list_filter = ('hudud','is_active')
     readonly_fields = ('uuid',)
 
 

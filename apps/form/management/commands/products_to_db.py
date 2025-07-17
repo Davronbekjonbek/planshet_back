@@ -1,69 +1,100 @@
-import json
 import os
+import pandas as pd
 from django.core.management.base import BaseCommand
 from django.conf import settings
 
-from apps.form.models import Product, ProductCategory, Birlik
+from apps.form.models import Product, ProductCategory
 
 
 class Command(BaseCommand):
-    help = "datas/products.json faylidan mahsulotlarni bazaga yuklaydi"
+    help = "Excel faylidan mahsulotlarni bazaga yuklaydi (datas papkadan)"
+
+    def add_arguments(self, parser):
+        parser.add_argument('excel_file', type=str, help='Excel fayl nomi (datas papkasida)')
 
     def handle(self, *args, **options):
         base_dir = settings.BASE_DIR
-        file_path = os.path.join(base_dir, 'datas', 'products.json')
+        excel_file = options['excel_file']
+        excel_path = os.path.join(base_dir, 'datas', excel_file)
 
-        with open(file_path, encoding='utf-8') as f:
-            data = json.load(f)
+        if not os.path.exists(excel_path):
+            self.stdout.write(
+                self.style.ERROR(f"Excel fayl topilmadi: {excel_path}")
+            )
+            return
 
-        for _data in data:
+        try:
+            self.import_products(excel_path)
+
+            self.stdout.write(
+                self.style.SUCCESS("Mahsulotlar muvaffaqiyatli yuklandi!")
+            )
+        except Exception as e:
+            self.stdout.write(
+                self.style.ERROR(f"Import jarayonida xatolik: {str(e)}")
+            )
+
+    def import_products(self, excel_path):
+        """Mahsulotlarni Excel fayldan bazaga yuklash"""
+        self.stdout.write("Mahsulotlarni yuklash boshlandi...")
+
+        df = pd.read_excel(excel_path, sheet_name='product')
+
+        imported_count = 0
+        existing_count = 0
+        errors_count = 0
+
+        for _, row in df.iterrows():
             try:
-                # Kategoriya bo'yicha topish
-                try:
-                    category = ProductCategory.objects.get(code=_data['category_code'])
-                except ProductCategory.DoesNotExist:
+                category_code = row['kod{8}.cat']
+                product_code = str(row['kod_product'])
+                product_name = row['nomi']
+                product_price = float(row['Narxi'])
+                is_import = bool(row['is_import'])
+                is_weekly = bool(row['is_weekly'])
+
+                # Kategoriya topish
+                category = ProductCategory.objects.filter(code=category_code).first()
+                if not category:
                     self.stdout.write(
-                        self.style.WARNING(f"Kategoriya topilmadi: {_data['category_code']} - {_data['name']}")
+                        self.style.WARNING(f"Kategoriya topilmadi: {category_code} - {product_name}")
                     )
                     continue
 
-                # O'lchov birligini kategoriya orqali olish
-                birlik = category.union
+                birlik = category.union  # O'lchov birligi
 
-                top = float(_data['price']) * 1.2
-                bottom = float(_data['price']) * 0.8
+                top = product_price * 1.2
+                bottom = product_price * 0.8
 
-
-                # Mahsulot yaratish yoki yangilash
                 product, created = Product.objects.get_or_create(
-                    code=_data['code'], 
+                    code=product_code,
                     defaults={
-                        'name': _data['name'],
+                        'name': product_name,
                         'category': category,
-                        'price': float(_data['price']),
+                        'price': product_price,
                         'top': top,
                         'bottom': bottom,
-                        'is_import': bool(_data['is_import']),
-                        'is_weekly': bool(_data['is_weekly']),
+                        'is_import': is_import,
+                        'is_weekly': is_weekly,
                         'unit': birlik
                     }
                 )
 
                 if created:
-                    self.stdout.write(
-                        self.style.SUCCESS(f"Mahsulot yaratildi: {product.name}")
-                    )
+                    imported_count += 1
                 else:
-                    self.stdout.write(
-                        self.style.WARNING(f"Mahsulot allaqachon mavjud: {product.name}")
-                    )
+                    existing_count += 1
 
             except Exception as e:
                 self.stdout.write(
-                    self.style.ERROR(f"Xato: {_data['name']} - {str(e)}")
+                    self.style.ERROR(f"Xato: {row.get('nomi', 'Noma\'lum')} - {str(e)}")
                 )
+                errors_count += 1
                 continue
 
         self.stdout.write(
-            self.style.SUCCESS('Mahsulotlar muvaffaqiyatli yuklandi!')
+            self.style.SUCCESS(
+                f"Mahsulotlar yuklandi: {imported_count} ta yangi, "
+                f"{existing_count} ta mavjud, {errors_count} ta xatolik"
+            )
         )
