@@ -1,9 +1,13 @@
 import uuid
 
+from django.contrib import auth
 from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.core.exceptions import ValidationError
+from django.contrib.auth import get_user_model
+
+from apps import home
 from apps.common.models import BaseModel
 
 def validate_file_size(value):
@@ -67,6 +71,7 @@ class Product(BaseModel):
     is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
     unit = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='products', verbose_name=_("O'lchov birligi"))
     is_import = models.BooleanField(default=False, verbose_name=_("Import qilinganmi?"))
+    is_special = models.BooleanField(default=False, verbose_name=_("Maxsus"))
 
     def __str__(self):
         return self.name
@@ -84,6 +89,7 @@ class TochkaProduct(BaseModel):
     hudud = models.ForeignKey('home.Tochka', on_delete=models.CASCADE, related_name='products', verbose_name=_("Obyekt"))
     last_price = models.FloatField(verbose_name=_("Oxirgi Narxi"), default=0.0)
     previous_price = models.FloatField(verbose_name=_("Oldingi Narxi"), default=0.0)
+    miqdor = models.FloatField(verbose_name=_("Birlik miqdori"), default=0.0)
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     is_udalen = models.BooleanField(default=False, verbose_name=_("Udalen"))
 
@@ -119,6 +125,7 @@ class TochkaProductHistory(BaseModel):
     is_checked = models.BooleanField(default=False, verbose_name=_("Tekshirilgan"))
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     is_alternative = models.BooleanField(default=False, verbose_name=_("Alternativ"))
+    is_from_application = models.BooleanField(default=False, verbose_name=_("Ariza tomonidan yaratilgan"))
     alternative_for = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name=_("Alternativ Product"), null=True, blank=True)
 
     def __str__(self):
@@ -130,3 +137,28 @@ class TochkaProductHistory(BaseModel):
         ordering = ['product__name']
         unique_together = ('product', 'ntochka', 'period')
         db_table = 'product_history'
+
+
+class Application(BaseModel):
+    APPLICATION_TYPE_CHOICES = (
+        ('for_close', 'Yopish uchun'),
+        ('for_open', 'Yaratish uchun'),
+    )
+    application_type = models.CharField(max_length=15, choices=APPLICATION_TYPE_CHOICES, verbose_name=_("Ariza turi"))
+    employee = models.ForeignKey('home.Employee', on_delete=models.CASCADE, related_name='applications', verbose_name=_("Xodim"))
+    checked_by = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='checked_applications',
+                                   null=True, blank=True, verbose_name=_("Tekshiruvchi"))
+    ntochkas = models.ManyToManyField('home.NTochka', related_name='huds', verbose_name=_("rastalar"), null=True, blank=True)
+    ntochka = models.ForeignKey('home.NTochka', on_delete=models.CASCADE, related_name='applications', verbose_name=_("Rasta"), null=True, blank=True)
+    products = models.JSONField(verbose_name=_("Mahsulotlar"), default=list, null=True, blank=True)
+    period = models.ForeignKey('home.PeriodDate', on_delete=models.CASCADE, related_name='applications', verbose_name=_("Davr"))
+    checked_at = models.DateTimeField(verbose_name=_("Tekshirilgan vaqt"), null=True, blank=True)
+    comment = models.CharField(max_length=255, verbose_name=_("Comment"), null=True, blank=True)
+    is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
+    is_checked = models.BooleanField(default=False, verbose_name=_("Tekshirilgan"))
+
+    class Meta:
+        verbose_name = "Ariza"
+        verbose_name_plural = "Arizalar"
+        ordering = ['-created_at']
+        db_table = 'application'

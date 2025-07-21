@@ -144,6 +144,7 @@ class NTochka(BaseModel):
     name = models.CharField(max_length=100, verbose_name=_("Rasta nomi"))
     hudud = models.ForeignKey(Tochka, on_delete=models.CASCADE, related_name='ntochkas', verbose_name=_("Obyekt"))
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
+    in_proccess = models.BooleanField(default=False, verbose_name=_("Ariza orqali yaratilgan"))
 
     def __str__(self):
         return f"{self.hudud.name} - {self.name}"

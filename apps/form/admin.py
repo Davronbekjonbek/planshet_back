@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import Birlik, ProductCategory, Product, TochkaProduct, TochkaProductHistory
+from .models import Birlik, ProductCategory, Product, TochkaProduct, TochkaProductHistory, Application
 from ..common.admin import BaseAdmin
 
 
@@ -113,5 +113,6 @@ class TochkaProductHistoryAdmin(BaseAdmin):
     price_display.short_description = 'Narx'
 
 
-
-
+@admin.register(Application)
+class ApplicationAdmin(BaseAdmin):
+    pass

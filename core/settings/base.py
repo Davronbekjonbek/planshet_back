@@ -40,7 +40,8 @@ THIRD_PARTY_APPS = [
     'corsheaders',
     'django_filters',
     'drf_spectacular',
-    'drf_yasg'
+    'drf_yasg',
+    'query_counter'
 ]
 
 
@@ -65,21 +66,24 @@ MIDDLEWARE = [
 ]
 
 if DEBUG:
-    MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
+    MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware',
+                   'query_counter.middleware.DjangoQueryCounterMiddleware'
+                   ]
 
 # Debug Toolbar sozlamalari
 if DEBUG:
     INTERNAL_IPS = [
         '127.0.0.1',
         'localhost',
+        '172.16.5.61'
     ]
 
     # Debug Toolbar konfiguratsiyasi
     DEBUG_TOOLBAR_CONFIG = {
         'SHOW_TOOLBAR_CALLBACK': lambda request: DEBUG,
-        'HIDE_DJANGO_SQL': False,
         'SHOW_TEMPLATE_CONTEXT': True,
     }
+
 
 ROOT_URLCONF = 'core.urls'
 
@@ -341,3 +345,20 @@ CELERY_TIMEZONE = TIME_ZONE
 KOBO_API_TOKEN = '28f417fc72d201c2cdfb3b6d65c4830c176e3675'
 # KOBO_FORM_ID = 'abuTTZJpsJ9ED9FW45ccy3'
 KOBO_FORM_ID = 'a3WMHNNSSxrN5k3sQ5rbRQ'
+
+QUERY_COUNT = {
+    'THRESHOLD': 50,
+    'DISPLAY_DUPLICATES': True,
+    'DQC_SLOWEST_COUNT': 5,
+    'DQC_TABULATE_FMT': 'pretty',
+    'DQC_SLOW_THRESHOLD': 1,  # seconds
+    'DQC_INDENT_SQL': True,
+    'DQC_PYGMENTS_STYLE': 'tango',
+    'DQC_PRINT_ALL_QUERIES': False,
+    'DQC_COUNT_QTY_MAP': {
+        5: 'green',
+        10: 'white',
+        20: 'yellow',
+        30: 'red',
+    },
+}
