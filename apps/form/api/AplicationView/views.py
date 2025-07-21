@@ -63,6 +63,7 @@ class ApplicationCreateView(CreateAPIView):
         if application_type == 'for_open':
             rasta_name = request.data.get('rasta_name')
             tochka_id = request.data.get('tochka_id')
+            print(tochka_id)
             ntochka = NTochka.objects.create(in_proccess=True, name=rasta_name, hudud_id=tochka_id)
             mutable_data['ntochka'] = ntochka.id
 

@@ -47,16 +47,15 @@ class ApplicationListSerializer(serializers.ModelSerializer):
             return ", ".join([ntochka.name for ntochka in obj.ntochkas.all()])
         return ""
 
+class ProductItemSerializer(serializers.Serializer):
+    product_id = serializers.IntegerField()
+
+
 class ApplicationCreateSerializer(serializers.ModelSerializer):
     """
     Application yaratish uchun serializer
     """
-    products = serializers.ListField(
-        child=serializers.IntegerField(),
-        required=False,
-        allow_null=True,
-        default=list
-    )
+    products = ProductItemSerializer(many=True, required=False, allow_null=True, default=list)
     period_type = serializers.CharField(write_only=True, max_length=10, default='weekly')
     rasta_name = serializers.CharField(write_only=True, max_length=100, required=False)
     tochka_id = serializers.IntegerField(write_only=True, required=True)
