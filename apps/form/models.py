@@ -154,7 +154,7 @@ class Application(BaseModel):
     employee = models.ForeignKey('home.Employee', on_delete=models.CASCADE, related_name='applications', verbose_name=_("Xodim"))
     checked_by = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='checked_applications',
                                    null=True, blank=True, verbose_name=_("Tekshiruvchi"))
-    ntochkas = models.ManyToManyField('home.NTochka', related_name='huds', verbose_name=_("rastalar"), null=True, blank=True)
+    ntochkas = models.ManyToManyField('home.NTochka', related_name='huds', verbose_name=_("rastalar"), blank=True)
     ntochka = models.ForeignKey('home.NTochka', on_delete=models.CASCADE, related_name='applications', verbose_name=_("Rasta"), null=True, blank=True)
     products = models.JSONField(verbose_name=_("Mahsulotlar"), default=list, null=True, blank=True)
     period = models.ForeignKey('home.PeriodDate', on_delete=models.CASCADE, related_name='applications', verbose_name=_("Davr"))
