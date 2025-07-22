@@ -98,7 +98,7 @@ class TochkaProduct(BaseModel):
     miqdor = models.FloatField(verbose_name=_("Birlik miqdori"), default=0.0)
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     is_udalen = models.BooleanField(default=False, verbose_name=_("Udalen"))
-
+    is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
 
     def __str__(self):
         return f"{self.product.name} - {self.ntochka.name}"
