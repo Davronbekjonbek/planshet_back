@@ -1,7 +1,7 @@
 import uuid
 
 from django.contrib import auth
-from django.core.validators import FileExtensionValidator
+from django.core.validators import FileExtensionValidator, MinValueValidator, MaxValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.core.exceptions import ValidationError
@@ -70,6 +70,12 @@ class Product(BaseModel):
     bottom = models.IntegerField(default=0, verbose_name=_("Quyi"))
     is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
     unit = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='products', verbose_name=_("O'lchov birligi"))
+    hbhd = models.PositiveSmallIntegerField(
+        verbose_name=_("HBHD   (1-B, 2-D, 3-HB, 4-HD)"),
+        default=1,
+        validators=[MinValueValidator(1), MaxValueValidator(4)]
+    )
+    is_index = models.BooleanField(default=False, verbose_name=_("Indeks"))
     is_import = models.BooleanField(default=False, verbose_name=_("Import qilinganmi?"))
     is_special = models.BooleanField(default=False, verbose_name=_("Maxsus"))
 

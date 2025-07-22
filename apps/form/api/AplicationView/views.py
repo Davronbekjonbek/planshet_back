@@ -26,6 +26,7 @@ from .serializers import (
 
 User = get_user_model()
 
+
 class ApplicationCreateView(CreateAPIView):
     """
     Application (ariza) yaratish uchun view
@@ -69,6 +70,7 @@ class ApplicationCreateView(CreateAPIView):
 
         elif application_type == 'for_close':
             mutable_data['ntochkas'] = request.data.get('ntochkas', [])
+
         print(mutable_data)
         serializer = self.get_serializer(data=mutable_data)
 
@@ -78,10 +80,8 @@ class ApplicationCreateView(CreateAPIView):
             logger.error(serializer.errors)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        serializer.is_valid(raise_exception=True)
         application = serializer.save()
-        detail_serializer = ApplicationDetailSerializer(application)
-        return Response(detail_serializer.data, status=status.HTTP_201_CREATED)
+        return Response({'message': 'success'}, status=status.HTTP_201_CREATED)
 
 
 class ApplicationListView(ListAPIView):

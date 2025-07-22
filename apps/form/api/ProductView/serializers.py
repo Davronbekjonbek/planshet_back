@@ -28,6 +28,12 @@ class ProductSerializer(serializers.ModelSerializer):
         ]
 
 
+class ProductListSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    category_name = serializers.CharField(source='category.name', read_only=True)
+    category_code = serializers.CharField(source='category.code', read_only=True)
+    name = serializers.CharField(read_only=True)
+
 class TochkaProductSerializer(serializers.ModelSerializer):
     """
     Optimized Serializer for TochkaProduct model.

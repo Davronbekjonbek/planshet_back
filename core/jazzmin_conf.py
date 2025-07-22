@@ -109,6 +109,7 @@ JAZZMIN_SETTINGS = {
         "form.Product": "fas fa-box",
         "form.TochkaProduct": "fas fa-shopping-cart",
         "form.TochkaProductHistory": "fas fa-history",
+        "form.Application": "fas fa-file-invoice",
     },
 
     # Icons that are used when one is not manually specified

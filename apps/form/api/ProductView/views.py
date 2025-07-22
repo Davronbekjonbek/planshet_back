@@ -9,7 +9,8 @@ from django.db.models import Prefetch
 from ..utils import get_product_by_uuid, get_period_by_type_today
 from ...models import TochkaProduct, Product, TochkaProductHistory
 
-from .serializers import TochkaProductSerializer, TochkaProductHistorySerializer, ProductSerializer
+from .serializers import TochkaProductSerializer, TochkaProductHistorySerializer, ProductSerializer, \
+    ProductListSerializer
 
 from apps.home.api.utils import get_employee_by_uuid, get_ntochka_by_uuid
 
@@ -276,3 +277,39 @@ class AlternativeProductListView(ListAPIView):
         serializer = ProductSerializer(missing_products, many=True)
         print(serializer.data)
         return Response(serializer.data, status=200)
+
+
+class ProductListView(ListAPIView):
+    serializer_class = ProductListSerializer
+    pagination_class = None
+
+    @swagger_auto_schema(
+        manual_parameters=[
+            openapi.Parameter(
+                'X-User-UUID',
+                openapi.IN_HEADER,
+                description="Xodim UUID raqami (header orqali)",
+                type=openapi.TYPE_STRING,
+                required=True
+            )
+        ]
+    )
+    def get(self, request, *args, **kwargs):
+        user_uuid = request.META.get('HTTP_X_USER_UUID')
+        employee = get_employee_by_uuid(user_uuid)
+        if not employee:
+            return Response({"detail": "Xodim yoki period topilmadi."}, status=status.HTTP_400_BAD_REQUEST)
+        queryset = self.get_queryset()
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def get_queryset(self):
+        return Product.objects.filter(
+            is_special=True
+        ).select_related(
+            'category'
+        ).only(
+            'id',
+            'name',
+            'category'
+        ).order_by('name')

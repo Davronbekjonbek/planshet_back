@@ -1,1 +1,1 @@
-from .views import TochkaProductHistoryCreateView, TochkaProductListView, AlternativeProductListView
+from .views import TochkaProductHistoryCreateView, TochkaProductListView, AlternativeProductListView, ProductListView
