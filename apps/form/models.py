@@ -42,7 +42,7 @@ class ProductCategory(BaseModel):
     number = models.IntegerField(default=0, verbose_name=_("Kategoriyaning tartib raqami (nt)"))
     code = models.CharField(max_length=10, unique=True, verbose_name=_("Kategoriyaning kodi"))
     union = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='categories', verbose_name=_("Birlik"))
-    rasfas = models.BooleanField(default=False, verbose_name=_("Rasfas"))
+    rasfas = models.PositiveIntegerField(default=1, verbose_name=_("Rasfas"))
     logo = models.ImageField(
         upload_to='product_category_logos/', null=True, blank=True, verbose_name=_("Logo"),
         validators=[

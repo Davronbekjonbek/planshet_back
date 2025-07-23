@@ -131,7 +131,7 @@ class Command(BaseCommand):
             code8 = row.get('kod{8}', None)
             code = code8
             birlik_nomi = (row.get('birligi') or '').strip()
-            rasfas = row.get('rasfas', False)
+            rasfas = row.get('rasfas', 1)
             number = code3
 
 
@@ -151,7 +151,7 @@ class Command(BaseCommand):
                     name=name,
                     code=code,
                     union=birligi,
-                    rasfas=bool(rasfas),
+                    rasfas=rasfas,
                     number=number,
                 )
                 imported_count += 1
@@ -289,26 +289,41 @@ class Command(BaseCommand):
 
         return result
 
+    def update_category(self, df):
+        imported_count = 0
+        existing_count = 0
+        errors_count = 0
+
+        for _, row in df.iterrows():
+            code8 = row.get('kod{8}', None)
+            code = code8
+            rasfas = row.get('rasfas', 1)
+            cat = ProductCategory.objects.get(code=code)
+            cat.rasfas = rasfas
+            cat.save()
+
+
     def handle(self, *args, **options):
         self.stdout.write("Excel fayl topilgan ma'lumotlarni bazaga yuklash boshlandi...")
 
-        obyekt_data = self.read_sheet('obyekt_oy')
-        self.import_obyekt(obyekt_data)
-
-        rasta_data = self.read_sheet('rasta')
-        self.import_ntochka(rasta_data)
-
+        # obyekt_data = self.read_sheet('obyekt_oy')
+        # self.import_obyekt(obyekt_data)
+        #
+        # rasta_data = self.read_sheet('rasta')
+        # self.import_ntochka(rasta_data)
+        #
         category_data = self.read_sheet('category_oy')
-        self.import_category(category_data)
-
-        product_data = self.read_sheet('product')
-        self.import_products(product_data)
-
-        rasta_hafta_product_data = self.read_sheet('rasta_hafta')
-        self.relate_rasta_hafta_product(rasta_hafta_product_data)
-
-        rasta_oy_product_data = self.read_sheet('rasta_oy')
-        self.relate_rasta_hafta_product(rasta_oy_product_data)
+        self.update_category(category_data)
+        # self.import_category(category_data)
+        #
+        # product_data = self.read_sheet('product')
+        # self.import_products(product_data)
+        #
+        # rasta_hafta_product_data = self.read_sheet('rasta_hafta')
+        # self.relate_rasta_hafta_product(rasta_hafta_product_data)
+        #
+        # rasta_oy_product_data = self.read_sheet('rasta_oy')
+        # self.relate_rasta_hafta_product(rasta_oy_product_data)
 
         self.stdout.write(self.style.SUCCESS("Import jarayoni muvaffaqiyatli yakunlandi!"))
 
