@@ -120,6 +120,7 @@ class Tochka(BaseModel):
     lon = models.FloatField(verbose_name=_("Lon"), default=0.0)
     employee = models.ForeignKey('home.Employee', on_delete=models.CASCADE, related_name='tochkas', verbose_name=_("Xodim"))
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
+    is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
 
     @property
     def icon_color(self):
@@ -145,6 +146,7 @@ class NTochka(BaseModel):
     hudud = models.ForeignKey(Tochka, on_delete=models.CASCADE, related_name='ntochkas', verbose_name=_("Obyekt"))
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     in_proccess = models.BooleanField(default=False, verbose_name=_("Ariza orqali yaratilgan"))
+    is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
 
     def __str__(self):
         return f"{self.hudud.name} - {self.name}"
