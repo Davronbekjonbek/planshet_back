@@ -10,9 +10,4 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='tochkaproduct',
-            name='miqdor',
-            field=models.FloatField(default=0.0, verbose_name='Birlik miqdori'),
-        ),
     ]
