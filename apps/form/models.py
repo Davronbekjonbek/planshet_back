@@ -68,7 +68,7 @@ class Product(BaseModel):
     price = models.FloatField(verbose_name=_("Narxi"), default=0.0)
     top = models.IntegerField(default=0, verbose_name=_("Yuqori"))
     bottom = models.IntegerField(default=0, verbose_name=_("Quyi"))
-    is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
+    weekly = models.PositiveSmallIntegerField(default=1, verbose_name=_("Haftalik"))
     unit = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='products', verbose_name=_("O'lchov birligi"))
     hbhd = models.PositiveSmallIntegerField(
         verbose_name=_("HBHD   (1-B, 2-D, 3-HB, 4-HD)"),
@@ -107,7 +107,7 @@ class TochkaProduct(BaseModel):
         verbose_name = "Rasta mahsulot"
         verbose_name_plural = "Rasta mahsulotlari"
         ordering = ['product__name']
-        unique_together = ('product', 'ntochka')  # Mahsulot, Hudud va Kichik hudud birgalikda unikalligi uchun
+        # unique_together = ('product', 'ntochka')  # Mahsulot, Hudud va Kichik hudud birgalikda unikalligi uchun
         db_table = 'rasta_product'
 
 class TochkaProductHistory(BaseModel):

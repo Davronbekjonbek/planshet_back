@@ -11,9 +11,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='application',
-            name='ntochkas',
-            field=models.ManyToManyField(related_name='huds', to='home.ntochka', verbose_name='rastalar'),
-        ),
+
     ]

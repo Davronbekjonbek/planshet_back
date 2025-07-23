@@ -48,9 +48,9 @@ class ProductCategoryAdmin(BaseAdmin):
 
 @admin.register(Product)
 class ProductAdmin(BaseAdmin):
-    list_display = ('name', 'category', 'code', 'price', 'unit', 'price_display',  'top', 'bottom', 'is_weekly')
-    list_filter = ('category__union', 'category', 'unit', 'is_weekly')
-    search_fields = ('name', 'name_ru', 'code')
+    list_display = ('name', 'category', 'code', 'price', 'unit', 'price_display',  'top', 'bottom')
+    list_filter = ('category__union', 'category', 'unit')
+    search_fields = ('name', 'code')
     ordering = ('category__name', 'name')
     readonly_fields = ('uuid', 'created_at', 'updated_at')
 

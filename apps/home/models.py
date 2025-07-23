@@ -147,6 +147,7 @@ class NTochka(BaseModel):
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     in_proccess = models.BooleanField(default=False, verbose_name=_("Ariza orqali yaratilgan"))
     is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
+    code = models.CharField(max_length=10, unique=True, verbose_name=_("Rasta kodi"))
 
     def __str__(self):
         return f"{self.hudud.name} - {self.name}"
