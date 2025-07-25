@@ -47,24 +47,20 @@ class TochkaListView(ListAPIView):
         if not employee:
             return Tochka.objects.none()
 
-        # Get current period once
         period_date = get_period_by_type_today()
         if not period_date:
             return Tochka.objects.none()
 
-        # Prefetch NTochka with all related data
         ntochka_prefetch = Prefetch(
             'ntochkas',
             queryset=NTochka.objects.filter(
                 is_active=True
             ).prefetch_related(
-                # Prefetch products count
                 Prefetch(
                     'products',
                     queryset=TochkaProduct.objects.filter(is_udalen=False),
                     to_attr='active_products'
                 ),
-                # Prefetch product history
                 Prefetch(
                     'product_history',
                     queryset=TochkaProductHistory.objects.filter(

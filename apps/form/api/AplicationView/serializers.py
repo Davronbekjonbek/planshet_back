@@ -10,107 +10,199 @@ from apps.form.api.utils import get_period_by_today, get_period_by_type_today
 User = get_user_model()
 
 
-class ApplicationListSerializer(serializers.ModelSerializer):
-    """
-    Application modelini ro'yxat ko'rish uchun serializer
-    """
-    employee_name = serializers.CharField(source='employee.full_name', read_only=True)
-    ntochka_name = serializers.CharField(source='ntochka.name', read_only=True)
-    checked_by_name = serializers.CharField(source='checked_by.username', read_only=True)
-    period_name = serializers.CharField(source='period.period.name', read_only=True)
-    application_type_display = serializers.CharField(source='get_application_type_display', read_only=True)
-    products_count = serializers.SerializerMethodField()
-    ntochkas_names = serializers.SerializerMethodField()  # ManyToMany field uchun
-
-    class Meta:
-        model = Application
-        fields = [
-            'id', 'application_type', 'application_type_display',
-            'employee', 'employee_name', 'checked_by', 'checked_by_name',
-            'ntochka', 'ntochka_name', 'ntochkas', 'ntochkas_names',
-            'products', 'products_count', 'period', 'period_name',
-            'comment', 'checked_at', 'is_active', 'is_checked',
-            'created_at', 'updated_at'
-        ]
-
-    def get_products_count(self, obj):
-        """Mahsulotlar sonini qaytaradi"""
-        return len(obj.products) if obj.products else 0
-
-    def get_ntochkas_names(self, obj):
-        """
-        ManyToMany ntochkas fieldidagi barcha rastalar nomlarini
-        vergul bilan ajratib qaytaradi
-        """
-        if obj.ntochkas.exists():
-            # prefetch_related ishlatganimiz uchun bu yerda DB ga qo'shimcha query bo'lmaydi
-            return ", ".join([ntochka.name for ntochka in obj.ntochkas.all()])
-        return ""
-
-class ProductItemSerializer(serializers.Serializer):
-    product_id = serializers.IntegerField()
-
-
 class ApplicationCreateSerializer(serializers.ModelSerializer):
     """
-    Application yaratish uchun serializer
+    Ariza yaratish uchun serializer
     """
-    products = ProductItemSerializer(many=True, required=False, allow_null=True, default=list)
-    period_type = serializers.CharField(write_only=True, max_length=10, default='weekly')
-    rasta_name = serializers.CharField(write_only=True, max_length=100, required=False)
-    tochka_id = serializers.IntegerField(write_only=True, required=True)
+    # Obyekt yaratish uchun ma'lumotlar (for_open_obyekt uchun)
+    obyekt_data = serializers.JSONField(required=False, write_only=True)
 
+    # Rasta nomi (for_open_rasta uchun)
+    rasta_name = serializers.CharField(required=False, write_only=True)
+
+    # Obyekt ID (for_open_rasta uchun)
+    tochka_id = serializers.IntegerField(required=False, write_only=True)
 
     class Meta:
         model = Application
         fields = [
-            'application_type', 'employee', 'ntochka', 'ntochkas', 'products', 'comment',
-            'rasta_name', 'tochka_id', 'period_type', 'period', 'is_active'
+            'id',
+            'application_type',
+            'employee',
+            'tochka',
+            'tochkas',
+            'ntochka',
+            'ntochkas',
+            'products',
+            'period',
+            'comment',
+            'detail',
+            'obyekt_data',
+            'rasta_name',
+            'tochka_id',
         ]
-        extra_kwargs = {
-            'period': {'required': False}
-        }
+        read_only_fields = ['id', 'checked_by', 'checked_at', 'is_checked']
 
-    # def validate_products(self, value):
-    #     """Mahsulotlar JSON formatini tekshiradi"""
-    #     if not isinstance(value, list):
-    #         raise serializers.ValidationError("Mahsulotlar ro'yxat ko'rinishida bo'lishi kerak")
-    #
-    #     for product_data in value:
-    #         if not isinstance(product_data, dict):
-    #             raise serializers.ValidationError("Har bir mahsulot ob'ekt ko'rinishida bo'lishi kerak")
-    #
-    #         required_fields = ['product_id', 'status']
-    #         for field in required_fields:
-    #             if field not in product_data:
-    #                 raise serializers.ValidationError(f"'{field}' maydoni majburiy")
-    #
-    #     return value
-    #
-    # def validate(self, attrs):
-    #     """Umumiy validatsiya"""
-    #     period_type = attrs.pop('period_type', 'weekly')
-    #
-    #     # Agar period berilmagan bo'lsa, avtomatik olish
-    #     if 'period' not in attrs or not attrs['period']:
-    #         if period_type == 'weekly':
-    #             period = get_period_by_type_today('weekly')
-    #         else:
-    #             period = get_period_by_today()
-    #
-    #         if not period:
-    #             raise serializers.ValidationError("Hozirgi davr topilmadi")
-    #         attrs['period'] = period
-    #
-    #     return attrs
+    def validate_application_type(self, value):
+        valid_types = ['for_close_rasta', 'for_open_rasta', 'for_close_obyekt', 'for_open_obyekt']
+        if value not in valid_types:
+            raise serializers.ValidationError(
+                f"Ariza turi quyidagilardan biri bo'lishi kerak: {', '.join(valid_types)}")
+        return value
+
+    def validate(self, attrs):
+        application_type = attrs.get('application_type')
+
+        # FOR_CLOSE_RASTA validatsiya
+        if application_type == 'for_close_rasta':
+            if not attrs.get('ntochkas'):
+                raise serializers.ValidationError({
+                    'ntochkas': 'Yopish uchun kamida bitta rasta tanlang.'
+                })
+
+        # FOR_OPEN_RASTA validatsiya
+        elif application_type == 'for_open_rasta':
+            if not attrs.get('products'):
+                raise serializers.ValidationError({
+                    'products': 'Kamida bitta mahsulot tanlang.'
+                })
+
+        # FOR_CLOSE_OBYEKT validatsiya
+        elif application_type == 'for_close_obyekt':
+            if not attrs.get('tochkas'):
+                raise serializers.ValidationError({
+                    'tochkas': 'Yopish uchun kamida bitta obyekt tanlang.'
+                })
+
+        # FOR_OPEN_OBYEKT validatsiya
+        elif application_type == 'for_open_obyekt':
+            if not attrs.get('products'):
+                raise serializers.ValidationError({
+                    'products': 'Kamida bitta mahsulot tanlang.'
+                })
+
+        return attrs
 
     def create(self, validated_data):
-        """Application yaratish"""
+        # Pop qo'shimcha maydonlar
+        validated_data.pop('obyekt_data', None)
         validated_data.pop('rasta_name', None)
         validated_data.pop('tochka_id', None)
-        validated_data.pop('period_type', None)
-        return super().create(validated_data)
 
+        # ManyToMany maydonlarni alohida saqlash
+        tochkas = validated_data.pop('tochkas', [])
+        ntochkas = validated_data.pop('ntochkas', [])
+
+        # Application yaratish
+        application = Application.objects.create(**validated_data)
+
+        # ManyToMany bog'lanishlarni o'rnatish
+        if tochkas:
+            application.tochkas.set(tochkas)
+        if ntochkas:
+            application.ntochkas.set(ntochkas)
+
+        return application
+
+
+class ApplicationListSerializer(serializers.ModelSerializer):
+    """
+    Arizalar ro'yxati uchun optimizatsiya qilingan serializer
+    """
+    employee_name = serializers.CharField(source='employee.full_name', read_only=True)
+    checked_by_name = serializers.CharField(source='checked_by.get_full_name', read_only=True, allow_null=True)
+    application_type_display = serializers.CharField(source='get_application_type_display', read_only=True)
+
+    # Related obyektlar - SerializerMethodField ishlatish
+    tochka_detail = serializers.SerializerMethodField()
+    tochkas_detail = serializers.SerializerMethodField()
+    ntochka_detail = serializers.SerializerMethodField()
+    ntochkas_detail = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Application
+        fields = [
+            'id',
+            'application_type',
+            'application_type_display',
+            'employee',
+            'employee_name',
+            'checked_by',
+            'checked_by_name',
+            'tochka',
+            'tochka_detail',
+            'tochkas',
+            'tochkas_detail',
+            'ntochka',
+            'ntochka_detail',
+            'ntochkas',
+            'ntochkas_detail',
+            'products',
+            'period',
+            'checked_at',
+            'comment',
+            'detail',
+            'is_active',
+            'is_checked',
+            'created_at',
+            'updated_at',
+        ]
+
+    def get_tochka_detail(self, obj):
+        # select_related bilan allaqachon yuklangan
+        if obj.tochka:
+            return {
+                'id': obj.tochka.id,
+                'name': obj.tochka.name,
+                'code': obj.tochka.code,
+                'address': obj.tochka.address,
+                'icon': obj.tochka.icon,
+                'icon_display': obj.tochka.icon_display,
+                'icon_color': obj.tochka.icon_color,
+                'district_name': obj.tochka.district.name if obj.tochka.district else None,
+            }
+        return None
+
+    def get_tochkas_detail(self, obj):
+        # prefetch_related bilan allaqachon yuklangan
+        return [
+            {
+                'id': t.id,
+                'name': t.name,
+                'code': t.code,
+                'address': t.address,
+                'icon': t.icon,
+                'icon_display': t.icon_display,
+                'icon_color': t.icon_color,
+                'district_name': t.district.name if t.district else None,
+            }
+            for t in obj.tochkas.all()
+        ]
+
+    def get_ntochka_detail(self, obj):
+        # select_related bilan allaqachon yuklangan
+        if obj.ntochka:
+            return {
+                'id': obj.ntochka.id,
+                'name': obj.ntochka.name,
+                'code': obj.ntochka.code,
+                'hudud_name': obj.ntochka.hudud.name if obj.ntochka.hudud else None,
+                'hudud_id': obj.ntochka.hudud.id if obj.ntochka.hudud else None,
+            }
+        return None
+
+    def get_ntochkas_detail(self, obj):
+        # prefetch_related bilan allaqachon yuklangan
+        return [
+            {
+                'id': n.id,
+                'name': n.name,
+                'code': n.code,
+                'hudud_name': n.hudud.name if n.hudud else None,
+                'hudud_id': n.hudud.id if n.hudud else None,
+            }
+            for n in obj.ntochkas.all()
+        ]
 
 class ApplicationUpdateSerializer(serializers.ModelSerializer):
     """

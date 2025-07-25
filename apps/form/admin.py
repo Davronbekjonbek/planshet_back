@@ -20,7 +20,7 @@ class BirlikAdmin(BaseAdmin):
 
 @admin.register(ProductCategory)
 class ProductCategoryAdmin(BaseAdmin):
-    list_display = ('name', 'code', 'union', 'number', 'rasfas', 'products_count',
+    list_display = ('id', 'name', 'code', 'union', 'number', 'rasfas', 'products_count',
                     'created_at')
     list_filter = ('union', 'rasfas', 'created_at')
     search_fields = ('name', 'code')
@@ -48,7 +48,7 @@ class ProductCategoryAdmin(BaseAdmin):
 
 @admin.register(Product)
 class ProductAdmin(BaseAdmin):
-    list_display = ('name', 'category', 'code', 'price', 'unit', 'price_display',  'top', 'bottom')
+    list_display = ('id', 'name', 'category', 'code', 'price', 'unit', 'price_display',  'top', 'bottom')
     list_filter = ('category__union', 'category', 'unit')
     search_fields = ('name', 'code')
     ordering = ('category__name', 'name')
@@ -75,7 +75,7 @@ class ProductAdmin(BaseAdmin):
 
 @admin.register(TochkaProduct)
 class TochkaProductAdmin(BaseAdmin):
-    list_display = ('product', 'ntochka', 'last_price', 'price_display', 'created_at','is_udalen')
+    list_display = ('id', 'product', 'ntochka', 'last_price', 'price_display', 'created_at','is_udalen')
     list_filter = ('product__category', 'created_at','ntochka__hudud','ntochka')
     # list_editable = ('is_udalen',)
     search_fields = ('product__name', 'hudud__name')
@@ -90,7 +90,7 @@ class TochkaProductAdmin(BaseAdmin):
 
 @admin.register(TochkaProductHistory)
 class TochkaProductHistoryAdmin(BaseAdmin):
-    list_display = ('product', 'hudud', 'price', 'employee', 'period', 'price_display', 'created_at')
+    list_display = ('id', 'product', 'hudud', 'price', 'employee', 'period', 'price_display', 'created_at')
     list_filter = ('period', 'hudud__district__region', 'hudud__district', 'product__category', 'created_at')
     search_fields = ('product__name', 'hudud__name', 'employee__full_name')
     ordering = ('-created_at',)
@@ -115,4 +115,4 @@ class TochkaProductHistoryAdmin(BaseAdmin):
 
 @admin.register(Application)
 class ApplicationAdmin(BaseAdmin):
-    pass
+    list_display = ('id',)

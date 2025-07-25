@@ -147,19 +147,25 @@ class TochkaProductHistory(BaseModel):
 
 class Application(BaseModel):
     APPLICATION_TYPE_CHOICES = (
-        ('for_close', 'Yopish uchun'),
-        ('for_open', 'Yaratish uchun'),
+        ('for_close_rasta', 'Rasta yopish uchun'),
+        ('for_open_rasta', 'Rasta yaratish uchun'),
+        ('for_close_obyekt', 'Obyekt yopish uchun'),
+        ('for_open_obyekt', 'Obyekt yaratish uchun'),
+
     )
-    application_type = models.CharField(max_length=15, choices=APPLICATION_TYPE_CHOICES, verbose_name=_("Ariza turi"))
+    application_type = models.CharField(max_length=20, choices=APPLICATION_TYPE_CHOICES, verbose_name=_("Ariza turi"))
     employee = models.ForeignKey('home.Employee', on_delete=models.CASCADE, related_name='applications', verbose_name=_("Xodim"))
     checked_by = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='checked_applications',
                                    null=True, blank=True, verbose_name=_("Tekshiruvchi"))
-    ntochkas = models.ManyToManyField('home.NTochka', related_name='huds', verbose_name=_("rastalar"), blank=True)
+    tochka = models.ForeignKey('home.Tochka', on_delete=models.CASCADE, verbose_name=_("Obyekt"), null=True, blank=True)
+    tochkas = models.ManyToManyField('home.Tochka', related_name='applications', verbose_name=_("Obyektlar"), blank=True)
     ntochka = models.ForeignKey('home.NTochka', on_delete=models.CASCADE, related_name='applications', verbose_name=_("Rasta"), null=True, blank=True)
+    ntochkas = models.ManyToManyField('home.NTochka', verbose_name=_("Rastalari"), blank=True)
     products = models.JSONField(verbose_name=_("Mahsulotlar"), default=list, null=True, blank=True)
     period = models.ForeignKey('home.PeriodDate', on_delete=models.CASCADE, related_name='applications', verbose_name=_("Davr"))
     checked_at = models.DateTimeField(verbose_name=_("Tekshirilgan vaqt"), null=True, blank=True)
     comment = models.CharField(max_length=255, verbose_name=_("Comment"), null=True, blank=True)
+    detail = models.JSONField(verbose_name=_("To'liq mahsulotlar"), default=list, null=True, blank=True)
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     is_checked = models.BooleanField(default=False, verbose_name=_("Tekshirilgan"))
 
@@ -168,3 +174,8 @@ class Application(BaseModel):
         verbose_name_plural = "Arizalar"
         ordering = ['-created_at']
         db_table = 'application'
+        indexes = [
+            models.Index(fields=['employee', '-created_at']),
+            models.Index(fields=['application_type', 'is_checked']),
+            models.Index(fields=['period', 'is_active']),
+        ]

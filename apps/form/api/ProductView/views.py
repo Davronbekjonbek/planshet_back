@@ -7,7 +7,7 @@ from drf_yasg.utils import swagger_auto_schema
 from django.db.models import Prefetch
 
 from ..utils import get_product_by_uuid, get_period_by_type_today
-from ...models import TochkaProduct, Product, TochkaProductHistory
+from ...models import Application, TochkaProduct, Product, TochkaProductHistory
 
 from .serializers import TochkaProductSerializer, TochkaProductHistorySerializer, ProductSerializer, \
     ProductListSerializer
@@ -49,10 +49,24 @@ class TochkaProductListView(ListAPIView):
         req = self.request
         uuid = req.META.get('HTTP_X_USER_UUID')
         rasta_uuid = req.META.get('HTTP_X_RASTA_UUID')
-
+        in_process = req.query_params.get('in_proccess', 'false').lower() == 'true'
+        period_type = req.query_params.get('period_type', 'weekly') == 'weekly'
+    
         employee = get_employee_by_uuid(uuid)
         ntochka = get_ntochka_by_uuid(rasta_uuid)
         qs = None
+        # if ntochka.in_proccess:
+        #     current_period = get_period_by_type_today(period_type)
+        #     app = Application.objects.get(
+        #         ntochka=ntochka,
+        #         application_type = 'for_open_rasta',
+        #     )
+        #     product_ids = [x['product_id'] for x in app.products]
+        #     qs = Product.objects.filter(
+        #         id__in=product_ids, is_special=True
+        #     ).select_related('category', 'unit').only(
+        #         'id', 'name', 'category', 'unit', 'is_special'
+        #     )
         if employee and ntochka:
             current_period = get_period_by_type_today()
             history_prefetch = Prefetch(
@@ -120,7 +134,7 @@ class TochkaProductHistoryCreateView(CreateAPIView):
         product = get_product_by_uuid(product_uuid)
         period_type = request.data.get('period_type')
         period = get_period_by_type_today(period_type)
-
+        print(employee, ntochka, product, period)
         if not employee or not ntochka or not product:
             return Response({"detail": "Xodim, NTochka yoki Mahsulot topilmadi."}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -133,7 +147,6 @@ class TochkaProductHistoryCreateView(CreateAPIView):
 
         # Get product status
         product_status = data.get('status')
-        print(data)
         # Handle alternative product if status is 'sotilmayapti'
         if product_status == 'sotilmayapti':
             alternative_data = data.get('alternative_product')
@@ -210,6 +223,7 @@ class TochkaProductHistoryCreateView(CreateAPIView):
 
         serializer = self.get_serializer(data=data)
         print(serializer.is_valid())
+
         if serializer.is_valid():
             serializer.save()
             data = serializer.data
@@ -217,7 +231,7 @@ class TochkaProductHistoryCreateView(CreateAPIView):
             ntochka_product.last_price = data['price']
             ntochka_product.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        print(4444444)
+        print(serializer.errors, 444)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 

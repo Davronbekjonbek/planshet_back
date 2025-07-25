@@ -15,7 +15,7 @@ class RastaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NTochka
-        fields = ['id', 'uuid', 'name', 'hudud', 'is_active', 'is_checked', 'all_count', 'finished']
+        fields = ['id', 'uuid', 'name', 'hudud', 'is_active', 'is_checked', 'all_count', 'finished', 'in_proccess', 'products']
 
     def get_all_count(self, obj):
         # Use prefetched data instead of database query
@@ -45,8 +45,8 @@ class TochkaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tochka
         fields = [
-            'id', 'uuid', 'name', 'icon', 'icon_display', 'icon_color', 'address', 'district',
-            'inn', 'plan', 'lat', 'lon', 'employee', 'is_active', 'is_checked', 'all_count', 'finished', 'ntochkas'
+            'id', 'uuid', 'name', 'icon', 'icon_display', 'icon_color', 'address', 'in_proccess',
+            'lat', 'lon', 'employee', 'is_active', 'is_checked', 'all_count', 'finished', 'ntochkas'
         ]
 
     def get_is_checked(self, obj):
