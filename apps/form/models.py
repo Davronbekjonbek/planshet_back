@@ -26,8 +26,6 @@ class Birlik(BaseModel):
     code = models.CharField(max_length=10, unique=True, verbose_name=_("Birlikning kodi"))
     miqdor = models.FloatField(verbose_name=_("Miqdor"), default=0.0)
 
-    def __str__(self):
-        return self.name
 
     class Meta:
         verbose_name = "Birlik"
@@ -51,7 +49,7 @@ class ProductCategory(BaseModel):
         ],
     )
     def __str__(self):
-        return self.name
+        return f'{self.id}'
 
     class Meta:
         verbose_name = "Mahsulot Kategoriyasi"
@@ -80,7 +78,7 @@ class Product(BaseModel):
     is_special = models.BooleanField(default=False, verbose_name=_("Maxsus"))
 
     def __str__(self):
-        return self.name
+        return f'{self.id}' 
 
     class Meta:
         verbose_name = "Mahsulot"
@@ -101,7 +99,7 @@ class TochkaProduct(BaseModel):
     is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
 
     def __str__(self):
-        return f"{self.product.name} - {self.ntochka.name}"
+        return f"{self.id}"
 
     class Meta:
         verbose_name = "Rasta mahsulot"
@@ -122,6 +120,7 @@ class TochkaProductHistory(BaseModel):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='history', verbose_name=_("Mahsulot"))
     ntochka = models.ForeignKey('home.NTochka', on_delete=models.CASCADE, related_name='product_history', verbose_name=_("Rasta"))
     hudud = models.ForeignKey('home.Tochka', on_delete=models.CASCADE, related_name='product_history', verbose_name=_("Obyekt"))
+    tochka_product = models.ForeignKey(TochkaProduct, on_delete=models.CASCADE, related_name='history', verbose_name=_("Rasta mahsulot"))
     price = models.FloatField(verbose_name=_("Narxi"), default=0.0)
     unit_miqdor = models.FloatField(verbose_name=_("Birlik miqdori"), default=0.0)
     unit_price = models.FloatField(verbose_name=_("Birlik narxi"), default=0.0)
@@ -132,16 +131,15 @@ class TochkaProductHistory(BaseModel):
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     is_alternative = models.BooleanField(default=False, verbose_name=_("Alternativ"))
     is_from_application = models.BooleanField(default=False, verbose_name=_("Ariza tomonidan yaratilgan"))
-    alternative_for = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name=_("Alternativ Product"), null=True, blank=True)
+    alternative_for = models.ForeignKey(TochkaProduct, on_delete=models.CASCADE, verbose_name=_("Alternativ Product"), null=True, blank=True)
 
     def __str__(self):
-        return f"{self.product.name} - {self.ntochka.name} - {self.price}"
+        return f"{self.tochka_product} - {self.price}"
 
     class Meta:
         verbose_name = "Mahsulot marx tarixi"
         verbose_name_plural = "Mahsulot narxlari tarixi"
-        ordering = ['product__name']
-        unique_together = ('product', 'ntochka', 'period')
+        unique_together = ('tochka_product', 'period')
         db_table = 'product_history'
 
 

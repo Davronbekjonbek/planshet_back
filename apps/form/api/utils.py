@@ -1,6 +1,6 @@
 from datetime import datetime, time, timedelta
 
-from ..models import Product, TochkaProductHistory
+from ..models import Product, TochkaProduct, TochkaProductHistory
 from apps.home.models import PeriodDate, Tochka, NTochka
 
 from django.core.cache import cache
@@ -100,3 +100,16 @@ def generate_ntochka_code(tochka):
         new_code = f"{tochka.code}-001"
 
     return new_code
+
+
+def get_tochka_product_by_id(tochka_product_id):
+    """
+    Get TochkaProduct by ID.
+
+    :param tochka_product_id: ID of the TochkaProduct
+    :return: TochkaProduct instance or None if not found
+    """
+    try:
+        return TochkaProduct.objects.get(id=tochka_product_id)
+    except TochkaProduct.DoesNotExist:
+        return None

@@ -55,10 +55,16 @@ class TochkaListView(ListAPIView):
             'ntochkas',
             queryset=NTochka.objects.filter(
                 is_active=True
+            ).only(
+                'id', 'uuid', 'name', 'hudud_id', 'is_active', 'in_proccess'
             ).prefetch_related(
                 Prefetch(
                     'products',
-                    queryset=TochkaProduct.objects.filter(is_udalen=False),
+                    queryset=TochkaProduct.objects.filter(
+                        is_udalen=False
+                    ).only(
+                        'id', 'product_id', 'ntochka_id', 'last_price', 'miqdor', 'is_active'
+                    ),
                     to_attr='active_products'
                 ),
                 Prefetch(
@@ -67,7 +73,7 @@ class TochkaListView(ListAPIView):
                         period__period=period_date.period
                     ).exclude(
                         status__in=['sotilmayapti', 'vaqtinchalik', 'obyekt_yopilgan', 'mavsumiy', 'chegirma']
-                    ),
+                    ).only('id', 'ntochka_id', 'status'),
                     to_attr='completed_history'
                 )
             ),
@@ -80,6 +86,9 @@ class TochkaListView(ListAPIView):
         ).select_related(
             'employee',
             'district'
+        ).only(
+            'id', 'uuid', 'name', 'icon', 'address', 'in_proccess',
+            'lat', 'lon', 'employee_id', 'district_id', 'is_active'
         ).prefetch_related(
             ntochka_prefetch
         )

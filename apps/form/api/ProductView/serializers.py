@@ -44,7 +44,7 @@ class TochkaProductSerializer(serializers.ModelSerializer):
 
     def get_status(self, obj):
         # Prefetch qilingan ma'lumotlardan foydalanish
-        history = getattr(obj.product, 'current_history', [])
+        history = getattr(obj, 'current_history', [])
         if not history:
             return 'unknown'
 
@@ -57,7 +57,7 @@ class TochkaProductSerializer(serializers.ModelSerializer):
 
     def get_product_status(self, obj):
         # Prefetch qilingan ma'lumotlardan foydalanish
-        history = getattr(obj.product, 'current_history', [])
+        history = getattr(obj, 'current_history', [])
         return history[0].status if history else None
 
     class Meta:
@@ -77,7 +77,7 @@ class TochkaProductHistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = TochkaProductHistory
         fields = [
-            'id', 'product', 'status', 'period_type', 'ntochka', 'employee', 'period', 'hudud', 'price', 'unit_miqdor', 'unit_price', 'is_checked', 'is_active'
+            'id', 'status', 'period_type', 'hudud', 'ntochka', 'product', 'tochka_product', 'employee', 'period', 'price', 'unit_miqdor', 'unit_price', 'is_checked', 'is_active'
         ]
         read_only_fields = ['unit_miqdor', 'unit_price', 'is_checked', 'is_active']
 

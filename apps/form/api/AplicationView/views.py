@@ -49,7 +49,10 @@ class ApplicationListView(ListAPIView):
         ]
     )
     def get(self, request, *args, **kwargs):
-        return super().get(request, *args, **kwargs)
+        return Response(
+            self.get_serializer(self.get_queryset(), many=True).data,
+            status=status.HTTP_200_OK
+        )
 
     def get_queryset(self):
         user_uuid = self.request.META.get('HTTP_X_USER_UUID')
@@ -184,7 +187,6 @@ class ApplicationCreateView(CreateAPIView):
 
             elif application_type == 'for_open_obyekt':
                 obyekt_data = request.data.get('obyekt_data', {})
-
                 required_fields = ['name', 'lat', 'lon', 'address']
                 missing_fields = [field for field in required_fields if not obyekt_data.get(field)]
 
@@ -204,6 +206,7 @@ class ApplicationCreateView(CreateAPIView):
                         icon=obyekt_data.get('icon', 'nutrition'),
                         inn=obyekt_data.get('inn', ''),
                         plan=obyekt_data.get('plan', 0),
+                        pinfl= obyekt_data.get('pinfl', ''),
                         employee=employee,
                         in_proccess=True
                     )

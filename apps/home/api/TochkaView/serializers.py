@@ -15,7 +15,7 @@ class RastaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NTochka
-        fields = ['id', 'uuid', 'name', 'hudud', 'is_active', 'is_checked', 'all_count', 'finished', 'in_proccess', 'products']
+        fields = ['id', 'uuid', 'name', 'hudud', 'is_active', 'is_checked', 'all_count', 'finished', 'in_proccess']
 
     def get_all_count(self, obj):
         # Use prefetched data instead of database query

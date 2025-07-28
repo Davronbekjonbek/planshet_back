@@ -47,7 +47,7 @@ class District(BaseModel):
 
 
     def __str__(self):
-        return f"{self.region.code}{self.code} - {self.name}"
+        return f"{self.id}"
 
     class Meta:
         verbose_name = "Tuman"
@@ -63,7 +63,7 @@ class Period(BaseModel):
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
 
     def __str__(self):
-        return self.name
+        return f'{self.id}'
 
     class Meta:
         verbose_name = "Davr"
@@ -76,7 +76,7 @@ class PeriodDate(BaseModel):
     date = models.DateField(verbose_name=_("Sana"))
 
     def __str__(self):
-        return f"{self.period.name} - {self.date}"
+        return f"{self.id}"
 
     class Meta:
         verbose_name = "Davr sanasi"
@@ -113,6 +113,7 @@ class Tochka(BaseModel):
     uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
     district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='tochkas', verbose_name=_("Tuman"))
     code = models.CharField(max_length=20, unique=True, verbose_name=_("Obyekt kodi"))
+    pinfl = models.CharField(max_length=14, blank=True, null=True, verbose_name=_("PINFL"))
     inn = models.CharField(max_length=20, default=0, blank=True,  verbose_name=_("INN kodi"))
     address = models.CharField(max_length=255, verbose_name=_("Manzil"), blank=True, null=True)
     plan = models.IntegerField(verbose_name=_("Plan id"), default=0)
@@ -132,7 +133,7 @@ class Tochka(BaseModel):
         return  self.get_icon_display()
 
     def __str__(self):
-        return self.name
+        return f'{self.id}'
 
     class Meta:
         verbose_name = "Obyekt"
@@ -151,7 +152,7 @@ class NTochka(BaseModel):
     code = models.CharField(max_length=20, unique=True, verbose_name=_("Rasta kodi"))
 
     def __str__(self):
-        return f"{self.hudud.name} - {self.name}"
+        return f'{self.id}'
 
     class Meta:
         verbose_name = "Rasta"
@@ -183,7 +184,7 @@ class Employee(BaseModel):
     lang = models.CharField(max_length=10, default='uz', verbose_name=_("Til"), choices=(('uz', 'Uzbek'), ('ru', 'Rus')), blank=True)
 
     def __str__(self):
-        return f"{self.full_name}"
+        return f"{self.login}"
 
     class Meta:
         verbose_name = "Xodim"

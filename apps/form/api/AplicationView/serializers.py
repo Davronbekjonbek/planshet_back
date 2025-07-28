@@ -76,10 +76,7 @@ class ApplicationCreateSerializer(serializers.ModelSerializer):
 
         # FOR_OPEN_OBYEKT validatsiya
         elif application_type == 'for_open_obyekt':
-            if not attrs.get('products'):
-                raise serializers.ValidationError({
-                    'products': 'Kamida bitta mahsulot tanlang.'
-                })
+            pass
 
         return attrs
 

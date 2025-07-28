@@ -6,7 +6,7 @@ from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 from django.db.models import Prefetch
 
-from ..utils import get_product_by_uuid, get_period_by_type_today
+from ..utils import get_product_by_uuid, get_period_by_type_today, get_tochka_product_by_id
 from ...models import Application, TochkaProduct, Product, TochkaProductHistory
 
 from .serializers import TochkaProductSerializer, TochkaProductHistorySerializer, ProductSerializer, \
@@ -51,34 +51,24 @@ class TochkaProductListView(ListAPIView):
         rasta_uuid = req.META.get('HTTP_X_RASTA_UUID')
         in_process = req.query_params.get('in_proccess', 'false').lower() == 'true'
         period_type = req.query_params.get('period_type', 'weekly') == 'weekly'
-    
+
         employee = get_employee_by_uuid(uuid)
         ntochka = get_ntochka_by_uuid(rasta_uuid)
         qs = None
-        # if ntochka.in_proccess:
-        #     current_period = get_period_by_type_today(period_type)
-        #     app = Application.objects.get(
-        #         ntochka=ntochka,
-        #         application_type = 'for_open_rasta',
-        #     )
-        #     product_ids = [x['product_id'] for x in app.products]
-        #     qs = Product.objects.filter(
-        #         id__in=product_ids, is_special=True
-        #     ).select_related('category', 'unit').only(
-        #         'id', 'name', 'category', 'unit', 'is_special'
-        #     )
+
         if employee and ntochka:
             current_period = get_period_by_type_today()
+            
             history_prefetch = Prefetch(
-                'product__history',
+                'history', 
                 queryset=TochkaProductHistory.objects.filter(
-                    ntochka=ntochka,
-                    period=current_period
-                ).select_related('product', 'ntochka', 'period', 'employee'),
+                    period=current_period,
+                    is_active=True
+                ).select_related('tochka_product', 'period', 'employee'),
                 to_attr='current_history'
             )
 
-            qs =  TochkaProduct.objects.filter(
+            qs = TochkaProduct.objects.filter(
                 ntochka=ntochka
             ).select_related(
                 'product',
@@ -89,6 +79,7 @@ class TochkaProductListView(ListAPIView):
             ).prefetch_related(
                 history_prefetch
             )
+        
         print(f"Query count: {len(connection.queries)}")
         return qs
 
@@ -109,16 +100,9 @@ class TochkaProductHistoryCreateView(CreateAPIView):
                 required=True
             ),
             openapi.Parameter(
-                'X-Product-UUID',
+                'X-Tochka-Product-ID',
                 openapi.IN_HEADER,
-                description="Product UUID (query parameter)",
-                type=openapi.TYPE_STRING,
-                required=True
-            ),
-            openapi.Parameter(
-                'X-Rasta-UUID',
-                openapi.IN_HEADER,
-                description="Rasta UUID (query parameter)",
+                description="Tochka Product ID (header orqali)",
                 type=openapi.TYPE_STRING,
                 required=True
             )
@@ -126,25 +110,21 @@ class TochkaProductHistoryCreateView(CreateAPIView):
     )
     def post(self, request, *args, **kwargs):
         uuid = request.META.get('HTTP_X_USER_UUID')
-        product_uuid = request.META.get('HTTP_X_PRODUCT_UUID')
-        rasta_uuid = request.META.get('HTTP_X_RASTA_UUID')
-
+        tochka_product_id = request.META.get('HTTP_X_TOCHKA_PRODUCT_ID')
+        print(f"UUID: {uuid}, Tochka Product ID: {tochka_product_id}")
         employee = get_employee_by_uuid(uuid)
-        ntochka = get_ntochka_by_uuid(rasta_uuid)
-        product = get_product_by_uuid(product_uuid)
+        tochka_product = get_tochka_product_by_id(tochka_product_id)
         period_type = request.data.get('period_type')
         period = get_period_by_type_today(period_type)
-        print(employee, ntochka, product, period)
-        if not employee or not ntochka or not product:
-            return Response({"detail": "Xodim, NTochka yoki Mahsulot topilmadi."}, status=status.HTTP_400_BAD_REQUEST)
-
+        
         data = request.data.copy()
         data['employee'] = employee.id
-        data['ntochka'] = ntochka.id
-        data['hudud'] = ntochka.hudud.id
-        data['product'] = product.id
+        data['ntochka'] = tochka_product.ntochka.id
+        data['hudud'] = tochka_product.hudud.id
+        data['product'] = tochka_product.product.id
+        data['tochka_product'] = tochka_product.id
         data['period'] = period.id
-
+        print(f"Data: {data}")
         # Get product status
         product_status = data.get('status')
         # Handle alternative product if status is 'sotilmayapti'
@@ -171,12 +151,24 @@ class TochkaProductHistoryCreateView(CreateAPIView):
                     status=status.HTTP_400_BAD_REQUEST
                 )
 
-            # Create alternative product history
+            # Update or create TochkaProduct for alternative product
+            alt_ntochka_product, created = TochkaProduct.objects.get_or_create(
+                ntochka=tochka_product.ntochka,
+                product=alternative_product,
+                defaults={
+                    'hudud': tochka_product.hudud,
+                }
+            )
+
+            alt_ntochka_product.previous_price = alt_ntochka_product.last_price
+            alt_ntochka_product.last_price = float(alternative_product_price)
+            alt_ntochka_product.save()
             alternative_data = {
                 'employee': employee.id,
-                'ntochka': ntochka.id,
-                'hudud': ntochka.hudud.id,
+                'ntochka': tochka_product.ntochka.id,
+                'hudud': tochka_product.hudud.id,
                 'product': alternative_product.id,
+                'tochka_product': alt_ntochka_product.id,
                 'period': period.id,
                 'period_type':'weekly',
                 'price': float(alternative_product_price),
@@ -185,30 +177,14 @@ class TochkaProductHistoryCreateView(CreateAPIView):
                     alternative_product_quantity) * alternative_product.unit.miqdor,
                 'status': 'mavjud',  # Alternative product is available
                 'is_alternative': True,
-                'alternative_for': product,
                 'is_checked': True,
             }
-
+            print(alternative_data)
             # Save alternative product history
             alt_serializer = self.get_serializer(data=alternative_data)
             if alt_serializer.is_valid():
                 alt_serializer.save()
 
-                # Update or create TochkaProduct for alternative product
-                alt_ntochka_product, created = TochkaProduct.objects.get_or_create(
-                    ntochka=ntochka,
-                    product=alternative_product,
-                    defaults={
-                        'hudud': ntochka.hudud,
-                        'last_price': float(alternative_product_price),
-                        'previous_price': 0
-                    }
-                )
-
-                if not created:
-                    alt_ntochka_product.previous_price = alt_ntochka_product.last_price
-                    alt_ntochka_product.last_price = float(alternative_product_price)
-                    alt_ntochka_product.save()
             else:
                 print(alt_serializer.errors, 333)
                 return Response(alt_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -218,18 +194,15 @@ class TochkaProductHistoryCreateView(CreateAPIView):
             data['unit_miqdor'] = 0
             data['unit_price'] = 0
 
-        ntochka_product = TochkaProduct.objects.filter(ntochka=ntochka, product=product).first()
-        print(data)
 
         serializer = self.get_serializer(data=data)
-        print(serializer.is_valid())
 
         if serializer.is_valid():
             serializer.save()
             data = serializer.data
-            ntochka_product.previous_price = ntochka_product.last_price
-            ntochka_product.last_price = data['price']
-            ntochka_product.save()
+            tochka_product.previous_price = tochka_product.last_price
+            tochka_product.last_price = data['price']
+            tochka_product.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         print(serializer.errors, 444)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
