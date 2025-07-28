@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arizalar - Boshqaruv paneli</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fc;
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        
+        .navbar {
+            background-color: #4e73df;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+        }
+        
+        .navbar-brand {
+            color: #fff !important;
+            font-weight: 700;
+        }
+        
+        .container-fluid {
+            padding: 1.5rem;
+        }
+        
+        /* Statistics Cards */
+        .stat-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            border-radius: 0.35rem;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 2rem 0 rgba(58, 59, 69, 0.2) !important;
+        }
+        
+        .border-left-primary {
+            border-left: 0.25rem solid #4e73df !important;
+        }
+        
+        .border-left-warning {
+            border-left: 0.25rem solid #f6c23e !important;
+        }
+        
+        .border-left-success {
+            border-left: 0.25rem solid #1cc88a !important;
+        }
+        
+        .border-left-danger {
+            border-left: 0.25rem solid #e74a3b !important;
+        }
+        
+        .text-primary {
+            color: #4e73df !important;
+        }
+        
+        .text-warning {
+            color: #f6c23e !important;
+        }
+        
+        .text-success {
+            color: #1cc88a !important;
+        }
+        
+        .text-danger {
+            color: #e74a3b !important;
+        }
+        
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 0.35rem;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+        }
+        
+        .card-header {
+            background-color: #f8f9fc;
+            border-bottom: 1px solid #e3e6f0;
+            padding: 0.75rem 1.25rem;
+        }
+        
+        /* Badges */
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-weight: 500;
+        }
+        
+        .badge-pending {
+            background-color: #f6c23e;
+            color: #000;
+        }
+        
+        .badge-approved {
+            background-color: #1cc88a;
+            color: #fff;
+        }
+        
+        .badge-rejected {
+            background-color: #e74a3b;
+            color: #fff;
+        }
+        
+        .badge-secondary {
+            background-color: #858796;
+        }
+        
+        .badge-info {
+            background-color: #36b9cc;
+        }
+        
+        .badge-primary {
+            background-color: #4e73df;
+        }
+        
+        /* Buttons */
+        .btn {
+            border-radius: 0.35rem;
+            font-size: 0.8rem;
+            padding: 0.5rem 1rem;
+        }
+        
+        .btn-sm {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+        }
+        
+        .btn-primary {
+            background-color: #4e73df;
+            border-color: #4e73df;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2e59d9;
+            border-color: #2653d4;
+        }
+        
+        /* Table */
+        .table {
+            font-size: 0.85rem;
+        }
+        
+        .table thead th {
+            border-top: none;
+            border-bottom: 2px solid #e3e6f0;
+            color: #5a5c69;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            padding: 0.75rem;
+        }
+        
+        .table td {
+            padding: 0.75rem;
+            vertical-align: middle;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1050;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 30px;
+            border: none;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.3);
+            animation: slideIn 0.3s;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .close {
+            color: #858796;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+        }
+        
+        /* Pagination */
+        .pagination {
+            margin-top: 1rem;
+        }
+        
+        .page-link {
+            color: #4e73df;
+            border-color: #dddfeb;
+        }
+        
+        .page-item.active .page-link {
+            background-color: #4e73df;
+            border-color: #4e73df;
+        }
+        
+        /* Form Controls */
+        .form-control {
+            font-size: 0.8rem;
+            border-radius: 0.35rem;
+            border-color: #d1d3e2;
+        }
+        
+        .form-control:focus {
+            border-color: #bac8f3;
+            box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container-fluid {
+                padding: 1rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+            
+            .table-responsive {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-chart-line mr-2"></i>
+            Narx Monitoring
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">
+                        <i class="fas fa-user mr-1"></i>
+                        Admin
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Chiqish
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <!-- Page Header -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+            <h1 class="h3 mb-0 text-gray-800">Arizalar</h1>
+            <div>
+                <button class="btn btn-sm btn-info" onclick="refreshData()">
+                    <i class="fas fa-sync-alt"></i> Yangilash
+                </button>
+            </div>
+        </div>
+
+        <!-- Statistics Cards -->
+        <div class="row mb-4">
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2 stat-card">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Jami arizalar
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">245</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-file-alt fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning shadow h-100 py-2 stat-card">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    Kutilmoqda
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-clock fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2 stat-card">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Tasdiqlangan
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">215</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-check-circle fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-danger shadow h-100 py-2 stat-card">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                    Rad etilgan
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-times-circle fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Filtrlar</h6>
+            </div>
+            <div class="card-body">
+                <form method="get" action="" id="filterForm">
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="status">Holat</label>
+                            <select class="form-control" name="status" id="status">
+                                <option value="">Barchasi</option>
+                                <option value="pending">Kutilmoqda</option>
+                                <option value="approved">Tasdiqlangan</option>
+                                <option value="rejected">Rad etilgan</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-md-3 mb-3">
+                            <label for="type">Ariza turi</label>
+                            <select class="form-control" name="type" id="type">
+                                <option value="">Barchasi</option>
+                                <option value="for_close_rasta">Rasta yopish</option>
+                                <option value="for_open_rasta">Rasta ochish</option>
+                                <option value="for_close_obyekt">Obyekt yopish</option>
+                                <option value="for_open_obyekt">Obyekt ochish</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-md-3 mb-3">
+                            <label for="period">Davr</label>
+                            <select class="form-control" name="period" id="period">
+                                <option value="">Barchasi</option>
+                                <option value="1">2024 - Yanvar</option>
+                                <option value="2">2024 - Fevral</option>
+                                <option value="3">2024 - Mart</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-md-3 mb-3">
+                            <label for="employee">Xodim</label>
+                            <select class="form-control" name="employee" id="employee">
+                                <option value="">Barchasi</option>
+                                <option value="1">Ahmadjon Karimov</option>
+                                <option value="2">Gulnora Rahimova</option>
+                                <option value="3">Sardor Umarov</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-9 mb-3">
+                            <label for="search">Qidirish</label>
+                            <input type="text" class="form-control" name="search" id="search" 
+                                   placeholder="Xodim, obyekt, rasta yoki izoh bo'yicha qidirish...">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>&nbsp;</label>
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    <i class="fas fa-search"></i> Qidirish
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Applications Table -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Arizalar ro'yxati</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Ariza turi</th>
+                                <th>Xodim</th>
+                                <th>Obyekt/Rasta</th>
+                                <th>Davr</th>
+                                <th>Sana</th>
+                                <th>Holat</th>
+                                <th>Amallar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><span class="badge badge-info">Rasta ochish</span></td>
+                                <td>Ahmadjon Karimov</td>
+                                <td>
+                                    <strong>Obyekt:</strong> Chorsu bozori<br>
+                                    <strong>Rasta:</strong> A-12
+                                </td>
+                                <td>2024 - Mart</td>
+                                <td>15.03.2024 10:30</td>
+                                <td><span class="badge badge-pending">Kutilmoqda</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-info" onclick="viewApplication(1)" title="Ko'rish">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-success" onclick="approveApplication(1)" title="Tasdiqlash">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-danger" onclick="showRejectModal(1)" title="Rad etish">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><span class="badge badge-secondary">Rasta yopish</span></td>
+                                <td>Gulnora Rahimova</td>
+                                <td>
+                                    <strong>Obyekt:</strong> Eski Juva bozori<br>
+                                    <strong>Rasta:</strong> B-5
+                                </td>
+                                <td>2024 - Mart</td>
+                                <td>14.03.2024 15:45</td>
+                                <td><span class="badge badge-approved">Tasdiqlangan</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-info" onclick="viewApplication(2)" title="Ko'rish">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><span class="badge badge-danger">Obyekt yopish</span></td>
+                                <td>Sardor Umarov</td>
+                                <td>
+                                    <strong>Obyekt:</strong> Mirobod savdo markazi
+                                </td>
+                                <td>2024 - Mart</td>
+                                <td>13.03.2024 09:15</td>
+                                <td><span class="badge badge-rejected">Rad etilgan</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-info" onclick="viewApplication(3)" title="Ko'rish">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pagination -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Oldingi</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Keyingi</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Detail Modal -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetailModal()">&times;</span>
+            <h4 class="mb-4">Ariza tafsilotlari</h4>
+            <div id="detailContent">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Reject Modal -->
+    <div id="rejectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRejectModal()">&times;</span>
+            <h4 class="mb-4">Arizani rad etish</h4>
+            <form id="rejectForm" method="post">
+                <div class="form-group">
+                    <label for="rejection_comment">Rad etish sababi:</label>
+                    <textarea class="form-control" id="rejection_comment" name="rejection_comment" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-danger">Rad etish</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeRejectModal()">Bekor qilish</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap Bundle -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let currentApplicationId = null;
+
+        // Sample data for demonstration
+        const applications = {
+            1: {
+                id: 1,
+                application_type: 'Rasta ochish',
+                employee: 'Ahmadjon Karimov',
+                period: '2024 - Mart',
+                created_at: '15.03.2024 10:30',
+                is_checked: false,
+                is_active: false,
+                tochka: { name: 'Chorsu bozori', address: 'Toshkent, Chorsu' },
+                ntochka: { name: 'A-12' },
+                comment: '',
+                products: [
+                    { product_id: 101, price: 15000, miqdor: 1 },
+                    { product_id: 102, price: 25000, miqdor: 0.5 }
+                ]
+            },
+            2: {
+                id: 2,
+                application_type: 'Rasta yopish',
+                employee: 'Gulnora Rahimova',
+                period: '2024 - Mart',
+                created_at: '14.03.2024 15:45',
+                is_checked: true,
+                is_active: true,
+                checked_by: 'Admin User',
+                checked_at: '14.03.2024 16:00',
+                tochka: { name: 'Eski Juva bozori', address: 'Toshkent, Eski Juva' },
+                ntochka: { name: 'B-5' },
+                comment: 'Rasta faoliyati to\'xtatildi'
+            },
+            3: {
+                id: 3,
+                application_type: 'Obyekt yopish',
+                employee: 'Sardor Umarov',
+                period: '2024 - Mart',
+                created_at: '13.03.2024 09:15',
+                is_checked: true,
+                is_active: false,
+                checked_by: 'Admin User',
+                checked_at: '13.03.2024 11:30',
+                tochka: { name: 'Mirobod savdo markazi', address: 'Toshkent, Mirobod' },
+                comment: 'Rad etish sababi: Hujjatlar to\'liq emas'
+            }
+        };
+
+        function viewApplication(id) {
+            const data = applications[id];
+            
+            let content = `
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <strong>ID:</strong> ${data.id}<br>
+                        <strong>Ariza turi:</strong> ${data.application_type}<br>
+                        <strong>Xodim:</strong> ${data.employee}<br>
+                        <strong>Davr:</strong> ${data.period}<br>
+                        <strong>Yaratilgan:</strong> ${data.created_at}<br>
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Holat:</strong> ${data.is_checked ? (data.is_active ? 'Tasdiqlangan' : 'Rad etilgan') : 'Kutilmoqda'}<br>
+                        ${data.checked_by ? `<strong>Tekshiruvchi:</strong> ${data.checked_by}<br>` : ''}
+                        ${data.checked_at ? `<strong>Tekshirilgan:</strong> ${data.checked_at}<br>` : ''}
+                    </div>
+                </div>
+            `;
+
+            if (data.tochka) {
+                content += `
+                    <div class="mb-3">
+                        <strong>Obyekt:</strong> ${data.tochka.name}
+                        ${data.tochka.address ? ` (${data.tochka.address})` : ''}
+                    </div>
+                `;
+            }
+
+            if (data.ntochka) {
+                content += `
+                    <div class="mb-3">
+                        <strong>Rasta:</strong> ${data.ntochka.name}
+                    </div>
+                `;
+            }
+
+            if (data.comment) {
+                content += `
+                    <div class="mb-3">
+                        <strong>Izoh:</strong> ${data.comment}
+                    </div>
+                `;
+            }
+
+            if (data.products && data.products.length > 0) {
+                content += `
+                    <div class="mb-3">
+                        <strong>Mahsulotlar:</strong>
+                        <table class="table table-sm table-bordered mt-2">
+                            <thead>
+                                <tr>
+                                    <th>Mahsulot ID</th>
+                                    <th>Narx</th>
+                                    <th>Miqdor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${data.products.map(p => `
+                                    <tr>
+                                        <td>${p.product_id || '-'}</td>
+                                        <td>${p.price || 0}</td>
+                                        <td>${p.miqdor || 0}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            }
+
+            document.getElementById('detailContent').innerHTML = content;
+            document.getElementById('detailModal').style.display = 'block';
+        }
+
+        function closeDetailModal() {
+            document.getElementById('detailModal').style.display = 'none';
+        }
+
+        function approveApplication(id) {
+            if (confirm('Arizani tasdiqlashni xohlaysizmi?')) {
+                // Simulate API call
+                setTimeout(() => {
+                    alert('Ariza muvaffaqiyatli tasdiqlandi!');
+                    location.reload();
+                }, 500);
+            }
+        }
+
+        function showRejectModal(id) {
+            currentApplicationId = id;
+            document.getElementById('rejectModal').style.display = 'block';
+            document.getElementById('rejection_comment').value = '';
+        }
+
+        function closeRejectModal() {
+            document.getElementById('rejectModal').style.display = 'none';
+            currentApplicationId = null;
+        }
+
+        document.getElementById('rejectForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!currentApplicationId) return;
+            
+            const comment = document.getElementById('rejection_comment').value;
+            
+            // Simulate API call
+            setTimeout(() => {
+                alert('Ariza rad etildi!');
+                closeRejectModal();
+                location.reload();
+            }, 500);
+        });
+
+        function refreshData() {
+            location.reload();
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('detailModal')) {
+                closeDetailModal();
+            }
+            if (event.target == document.getElementById('rejectModal')) {
+                closeRejectModal();
+            }
+        }
+
+        // Filter form submission
+        document.getElementById('filterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In real application, this would filter the data
+            alert('Filtrlar qo\'llanildi!');
+        });
+    </script>
+</body>
+</html>
