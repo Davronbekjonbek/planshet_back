@@ -41,7 +41,8 @@ THIRD_PARTY_APPS = [
     'django_filters',
     'drf_spectacular',
     'drf_yasg',
-    'query_counter'
+    'query_counter',
+    'multiselectfield'
 ]
 
 

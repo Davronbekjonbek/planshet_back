@@ -31,8 +31,22 @@ class TochkaListView(ListAPIView):
                 description="Xodim UUID raqami (header orqali)",
                 type=openapi.TYPE_STRING,
                 required=True
-            )
-        ]
+            ),
+            openapi.Parameter(
+                'period_type',
+                openapi.IN_QUERY,
+                description="Davr turi (masalan: 'weekly', 'monthly')",
+                type=openapi.TYPE_STRING,
+                required=True
+            ),
+            openapi.Parameter(
+                'product_type',
+                openapi.IN_QUERY,
+                description="Mahsulot turi (masalan: 'food', 'non-food', 'service')",
+                type=openapi.TYPE_STRING,
+                required=True
+            )     
+        ]   
     )
     def get(self, request, *args, **kwargs):
         queryset = self.get_queryset()

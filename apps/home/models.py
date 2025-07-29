@@ -1,3 +1,5 @@
+from multiselectfield import MultiSelectField
+
 import  uuid
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -120,8 +122,18 @@ class Tochka(BaseModel):
     lat = models.FloatField(verbose_name=_("Lat"), default=0.0)
     lon = models.FloatField(verbose_name=_("Lon"), default=0.0)
     employee = models.ForeignKey('home.Employee', on_delete=models.CASCADE, related_name='tochkas', verbose_name=_("Xodim"))
+    weekly_type = MultiSelectField(
+        choices=((1,'haftalik'), (2, 'oylik')),
+        max_length=10,
+        verbose_name=_("Haftalik turi")
+    )
+    product_type = MultiSelectField(
+        choices=((1, 'mahsulot'), (2, 'no mahsulot'), (3, 'xizmat')),
+        max_length=10,
+        verbose_name=_("Mahsulot turi")
+    )
+
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
-    is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
     in_proccess = models.BooleanField(default=False, verbose_name=_("Ariza orqali yaratilgan"))
 
     @property
