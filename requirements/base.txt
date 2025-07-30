@@ -23,5 +23,5 @@ openpyxl
 django-query-counter==0.4.1
 Pygments
 sqlparse
-multiselectfield==1.0.1
+django-multiselectfield==1.0
 xlsxwriter==3.2.5
