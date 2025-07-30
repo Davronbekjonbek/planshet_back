@@ -1,4 +1,5 @@
 import uuid
+from multiselectfield import MultiSelectField
 
 from django.contrib import auth
 from django.core.validators import FileExtensionValidator, MinValueValidator, MaxValueValidator
@@ -30,7 +31,7 @@ class Birlik(BaseModel):
     class Meta:
         verbose_name = "Birlik"
         verbose_name_plural = "Birliklar"
-        ordering = ['name']
+        ordering = ['name']     
         db_table = 'birlik'
 
 
@@ -41,6 +42,17 @@ class ProductCategory(BaseModel):
     code = models.CharField(max_length=10, unique=True, verbose_name=_("Kategoriyaning kodi"))
     union = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='categories', verbose_name=_("Birlik"))
     rasfas = models.PositiveIntegerField(default=1, verbose_name=_("Rasfas"))
+    product_type = MultiSelectField(
+        choices=(('1', 'mahsulot'), ('2', 'no mahsulot'), ('3', 'xizmat')),
+        max_length=10,
+        verbose_name=_("Mahsulot turi"),
+        default=['1']
+    )
+    weekly_type = models.PositiveSmallIntegerField(
+        choices=((1, 'haftalik'), (2, 'oylik'), (3, 'bari')),
+        default=1,
+        verbose_name=_("Haftalik turi")
+    )
     logo = models.ImageField(
         upload_to='product_category_logos/', null=True, blank=True, verbose_name=_("Logo"),
         validators=[
@@ -72,6 +84,11 @@ class Product(BaseModel):
         verbose_name=_("HBHD   (1-B, 2-D, 3-HB, 4-HD)"),
         default=1,
         validators=[MinValueValidator(1), MaxValueValidator(4)]
+    )
+    weekly_type = models.PositiveSmallIntegerField(
+        choices=((1, 'haftalik'), (2, 'oylik')),
+        default=1,
+        verbose_name=_("Haftalik turi")
     )
     is_index = models.BooleanField(default=False, verbose_name=_("Indeks"))
     is_import = models.BooleanField(default=False, verbose_name=_("Import qilinganmi?"))

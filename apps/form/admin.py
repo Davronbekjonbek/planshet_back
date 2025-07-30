@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.forms import ValidationError
 from django.utils.html import format_html
 
-from apps.home.models import Employee, Tochka, NTochka, Period
+from apps.home.models import Employee, PeriodDate, Tochka, NTochka, Period
 from .models import Birlik, ProductCategory, Product, TochkaProduct, TochkaProductHistory, Application
 from ..common.admin import BaseAdmin
 
@@ -169,7 +169,10 @@ class TochkaProductHistoryAdmin(BaseAdmin):
             'fields': (
                 'tochka_product',
                 'employee', 
-                'period'
+                'period',
+                'hudud',
+                'ntochka',
+                'product',
             )
         }),
         ('Narx ma\'lumotlari', {
@@ -201,7 +204,7 @@ class TochkaProductHistoryAdmin(BaseAdmin):
         if db_field.name == "employee":
             kwargs["queryset"] = Employee.objects.order_by('full_name')
         elif db_field.name == "period":
-            kwargs["queryset"] = Period.objects.filter(is_active=True).order_by('-created_at')
+            kwargs["queryset"] = PeriodDate.objects.filter(period__is_active=True).order_by('-created_at')
         # elif db_field.name == "alternative_for":
         #     kwargs["queryset"] = TochkaProductHistory.objects.select_related(
         #         'product', 'hudud'

@@ -122,15 +122,16 @@ class Tochka(BaseModel):
     lat = models.FloatField(verbose_name=_("Lat"), default=0.0)
     lon = models.FloatField(verbose_name=_("Lon"), default=0.0)
     employee = models.ForeignKey('home.Employee', on_delete=models.CASCADE, related_name='tochkas', verbose_name=_("Xodim"))
-    weekly_type = MultiSelectField(
-        choices=((1,'haftalik'), (2, 'oylik')),
-        max_length=10,
+    weekly_type = models.PositiveSmallIntegerField(
+        choices=((1, 'haftalik'), (2, 'oylik'), (3, 'bari')),
+        default=1,
         verbose_name=_("Haftalik turi")
     )
     product_type = MultiSelectField(
-        choices=((1, 'mahsulot'), (2, 'no mahsulot'), (3, 'xizmat')),
+        choices=(('1', 'mahsulot'), ('2', 'no mahsulot'), ('3', 'xizmat')),
         max_length=10,
-        verbose_name=_("Mahsulot turi")
+        verbose_name=_("Mahsulot turi"),
+        default=['1']
     )
 
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
@@ -158,6 +159,17 @@ class NTochka(BaseModel):
     uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
     name = models.CharField(max_length=100, verbose_name=_("Rasta nomi"))
     hudud = models.ForeignKey(Tochka, on_delete=models.CASCADE, related_name='ntochkas', verbose_name=_("Obyekt"))
+    weekly_type = models.PositiveSmallIntegerField(
+        choices=((1, 'haftalik'), (2, 'oylik'), (3, 'bari')),
+        default=1,
+        verbose_name=_("Haftalik turi")
+    )
+    product_type = MultiSelectField(
+        choices=(('1', 'mahsulot'), ('2', 'no mahsulot'), ('3', 'xizmat')),
+        max_length=10,
+        verbose_name=_("Mahsulot turi"),
+        default=['1'],
+    )
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     in_proccess = models.BooleanField(default=False, verbose_name=_("Ariza orqali yaratilgan"))
     is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))

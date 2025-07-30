@@ -4,7 +4,7 @@ from rest_framework import status
 from django.db import connection
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
-from django.db.models import Prefetch
+from django.db.models import Prefetch, Q
 
 from ..utils import get_product_by_uuid, get_period_by_type_today, get_tochka_product_by_id
 from ...models import Application, TochkaProduct, Product, TochkaProductHistory
@@ -37,7 +37,21 @@ class TochkaProductListView(ListAPIView):
                 description="Rasta UUID (query parameter)",
                 type=openapi.TYPE_STRING,
                 required=True
-            )
+            ),
+            openapi.Parameter(
+                'weekly_type',
+                openapi.IN_QUERY,
+                description="Weekly type (1: weekly, 2: monthly, 3: all)",
+                type=openapi.TYPE_BOOLEAN,
+                required=True
+            ),
+            openapi.Parameter(
+                'obyekt_type',
+                openapi.IN_QUERY,
+                description="Product type (1: food, 2: non-food, 3: service)",
+                type=openapi.TYPE_STRING,
+                required=True
+            ),
         ]
     )
     def get(self, request, *args, **kwargs):
@@ -50,11 +64,20 @@ class TochkaProductListView(ListAPIView):
         uuid = req.META.get('HTTP_X_USER_UUID')
         rasta_uuid = req.META.get('HTTP_X_RASTA_UUID')
         in_process = req.query_params.get('in_proccess', 'false').lower() == 'true'
-        period_type = req.query_params.get('period_type', 'weekly') == 'weekly'
+        period_type = req.GET.get('period_type', 'weekly') == 'weekly'
+        obyekt_type = req.GET.get('obyekt_type', '1')
 
         employee = get_employee_by_uuid(uuid)
         ntochka = get_ntochka_by_uuid(rasta_uuid)
         qs = None
+
+        query = Q(
+            ntochka=ntochka,
+            is_active=True,
+            is_weekly=period_type,
+        )
+        if not period_type:
+            query &= Q(product__category__product_type__contains=obyekt_type)
 
         if employee and ntochka:
             current_period = get_period_by_type_today()
@@ -69,7 +92,7 @@ class TochkaProductListView(ListAPIView):
             )
 
             qs = TochkaProduct.objects.filter(
-                ntochka=ntochka
+                query
             ).select_related(
                 'product',
                 'ntochka',

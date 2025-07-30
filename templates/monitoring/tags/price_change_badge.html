@@ -1,0 +1,13 @@
+{% if is_increase %}
+<span class="badge bg-danger">
+    <i class="fas fa-arrow-up me-1"></i>{{ change|floatformat:2 }} so'm (+{{ percentage|floatformat:1 }}%)
+</span>
+{% elif is_decrease %}
+<span class="badge bg-success">
+    <i class="fas fa-arrow-down me-1"></i>{{ change|floatformat:2 }} so'm ({{ percentage|floatformat:1 }}%)
+</span>
+{% else %}
+<span class="badge bg-secondary">
+    <i class="fas fa-equals me-1"></i>O'zgarishsiz
+</span>
+{% endif %}
