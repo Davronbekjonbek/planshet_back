@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    {% load static %}
     
     <style>
         body {
@@ -298,6 +299,18 @@
         <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
             <h1 class="h3 mb-0 text-gray-800">Arizalar</h1>
             <div>
+                {% if messages %}
+                <div id="messages" class="d-inline-block mr-3">
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show py-2 px-3 mb-0">
+                        {{ message }}
+                        <button type="button" class="close py-1" data-dismiss="alert">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
                 <button class="btn btn-sm btn-info" onclick="refreshData()">
                     <i class="fas fa-sync-alt"></i> Yangilash
                 </button>
@@ -391,9 +404,9 @@
                             <label for="status">Holat</label>
                             <select class="form-control" name="status" id="status">
                                 <option value="">Barchasi</option>
-                                <option value="pending">Kutilmoqda</option>
-                                <option value="approved">Tasdiqlangan</option>
-                                <option value="rejected">Rad etilgan</option>
+                                <option value="pending" {% if current_status == 'pending' %}selected{% endif %}>Kutilmoqda</option>
+                                <option value="approved" {% if current_status == 'approved' %}selected{% endif %}>Tasdiqlangan</option>
+                                <option value="rejected" {% if current_status == 'rejected' %}selected{% endif %}>Rad etilgan</option>
                             </select>
                         </div>
                         
@@ -401,10 +414,10 @@
                             <label for="type">Ariza turi</label>
                             <select class="form-control" name="type" id="type">
                                 <option value="">Barchasi</option>
-                                <option value="for_close_rasta">Rasta yopish</option>
-                                <option value="for_open_rasta">Rasta ochish</option>
-                                <option value="for_close_obyekt">Obyekt yopish</option>
-                                <option value="for_open_obyekt">Obyekt ochish</option>
+                                <option value="for_close_rasta" {% if current_type == 'for_close_rasta' %}selected{% endif %}>Rasta yopish</option>
+                                <option value="for_open_rasta" {% if current_type == 'for_open_rasta' %}selected{% endif %}>Rasta ochish</option>
+                                <option value="for_close_obyekt" {% if current_type == 'for_close_obyekt' %}selected{% endif %}>Obyekt yopish</option>
+                                <option value="for_open_obyekt" {% if current_type == 'for_open_obyekt' %}selected{% endif %}>Obyekt ochish</option>
                             </select>
                         </div>
                         
@@ -412,9 +425,9 @@
                             <label for="period">Davr</label>
                             <select class="form-control" name="period" id="period">
                                 <option value="">Barchasi</option>
-                                <option value="1">2024 - Yanvar</option>
-                                <option value="2">2024 - Fevral</option>
-                                <option value="3">2024 - Mart</option>
+                                {% for period in periods %}
+                                <option value="{{ period.id }}" {% if current_period == period.id|stringformat:"s" %}selected{% endif %}>{{ period }}</option>
+                                {% endfor %}
                             </select>
                         </div>
                         
@@ -422,9 +435,9 @@
                             <label for="employee">Xodim</label>
                             <select class="form-control" name="employee" id="employee">
                                 <option value="">Barchasi</option>
-                                <option value="1">Ahmadjon Karimov</option>
-                                <option value="2">Gulnora Rahimova</option>
-                                <option value="3">Sardor Umarov</option>
+                                {% for employee in employees %}
+                                <option value="{{ employee.id }}" {% if current_employee == employee.id|stringformat:"s" %}selected{% endif %}>{{ employee.full_name }}</option>
+                                {% endfor %}
                             </select>
                         </div>
                     </div>
@@ -433,7 +446,8 @@
                         <div class="col-md-9 mb-3">
                             <label for="search">Qidirish</label>
                             <input type="text" class="form-control" name="search" id="search" 
-                                   placeholder="Xodim, obyekt, rasta yoki izoh bo'yicha qidirish...">
+                                   placeholder="Xodim, obyekt, rasta yoki izoh bo'yicha qidirish..."
+                                   value="{{ search_query }}">
                         </div>
                         <div class="col-md-3 mb-3">
                             <label>&nbsp;</label>
@@ -469,80 +483,116 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {% for app in applications %}
                             <tr>
-                                <td>1</td>
-                                <td><span class="badge badge-info">Rasta ochish</span></td>
-                                <td>Ahmadjon Karimov</td>
+                                <td>{{ app.id }}</td>
                                 <td>
-                                    <strong>Obyekt:</strong> Chorsu bozori<br>
-                                    <strong>Rasta:</strong> A-12
+                                    {% if app.application_type == 'for_close_rasta' %}
+                                        <span class="badge badge-secondary">Rasta yopish</span>
+                                    {% elif app.application_type == 'for_open_rasta' %}
+                                        <span class="badge badge-info">Rasta ochish</span>
+                                    {% elif app.application_type == 'for_close_obyekt' %}
+                                        <span class="badge badge-danger">Obyekt yopish</span>
+                                    {% elif app.application_type == 'for_open_obyekt' %}
+                                        <span class="badge badge-primary">Obyekt ochish</span>
+                                    {% else %}
+                                        <span class="badge badge-dark">{{ app.get_application_type_display }}</span>
+                                    {% endif %}
                                 </td>
-                                <td>2024 - Mart</td>
-                                <td>15.03.2024 10:30</td>
-                                <td><span class="badge badge-pending">Kutilmoqda</span></td>
+                                <td>{{ app.employee.full_name }}</td>
                                 <td>
-                                    <button class="btn btn-sm btn-info" onclick="viewApplication(1)" title="Ko'rish">
+                                    {% if app.tochka %}
+                                        <strong>Obyekt:</strong> {{ app.tochka.name }}<br>
+                                    {% endif %}
+                                    {% if app.ntochka %}
+                                        <strong>Rasta:</strong> {{ app.ntochka.name }}
+                                    {% endif %}
+                                    
+                                    {% if app.tochkas.exists %}
+                                        <strong>Obyektlar:</strong> {{ app.tochkas.count }}<br>
+                                    {% endif %}
+                                    {% if app.ntochkas.exists %}
+                                        <strong>Rastalar:</strong> {{ app.ntochkas.count }}
+                                    {% endif %}
+                                </td>
+                                <td>{{ app.period }}</td>
+                                <td>{{ app.created_at|date:"d.m.Y H:i" }}</td>
+                                <td>
+                                    {% if app.is_checked %}
+                                        {% if app.is_active %}
+                                            <span class="badge badge-approved">Tasdiqlangan</span>
+                                        {% else %}
+                                            <span class="badge badge-rejected">Rad etilgan</span>
+                                        {% endif %}
+                                    {% else %}
+                                        <span class="badge badge-pending">Kutilmoqda</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-info" onclick="viewApplication({{ app.id }})" title="Ko'rish">
                                         <i class="fas fa-eye"></i>
                                     </button>
-                                    <button class="btn btn-sm btn-success" onclick="approveApplication(1)" title="Tasdiqlash">
-                                        <i class="fas fa-check"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-danger" onclick="showRejectModal(1)" title="Rad etish">
-                                        <i class="fas fa-times"></i>
-                                    </button>
+                                    
+                                    {% if not app.is_checked %}
+                                        <button class="btn btn-sm btn-success" onclick="approveApplication({{ app.id }})" title="Tasdiqlash">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-danger" onclick="showRejectModal({{ app.id }})" title="Rad etish">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    {% endif %}
                                 </td>
                             </tr>
+                            {% empty %}
                             <tr>
-                                <td>2</td>
-                                <td><span class="badge badge-secondary">Rasta yopish</span></td>
-                                <td>Gulnora Rahimova</td>
-                                <td>
-                                    <strong>Obyekt:</strong> Eski Juva bozori<br>
-                                    <strong>Rasta:</strong> B-5
-                                </td>
-                                <td>2024 - Mart</td>
-                                <td>14.03.2024 15:45</td>
-                                <td><span class="badge badge-approved">Tasdiqlangan</span></td>
-                                <td>
-                                    <button class="btn btn-sm btn-info" onclick="viewApplication(2)" title="Ko'rish">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
+                                <td colspan="8" class="text-center py-4">
+                                    <i class="fas fa-search fa-lg mb-3 text-gray-400"></i>
+                                    <p class="mb-0">Arizalar topilmadi</p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><span class="badge badge-danger">Obyekt yopish</span></td>
-                                <td>Sardor Umarov</td>
-                                <td>
-                                    <strong>Obyekt:</strong> Mirobod savdo markazi
-                                </td>
-                                <td>2024 - Mart</td>
-                                <td>13.03.2024 09:15</td>
-                                <td><span class="badge badge-rejected">Rad etilgan</span></td>
-                                <td>
-                                    <button class="btn btn-sm btn-info" onclick="viewApplication(3)" title="Ko'rish">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
                 
                 <!-- Pagination -->
+                {% if is_paginated %}
                 <nav aria-label="Page navigation">
                     <ul class="pagination justify-content-center">
+                        {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?{% if request.GET.urlencode %}{{ request.GET.urlencode }}&{% endif %}page={{ page_obj.previous_page_number }}" tabindex="-1">Oldingi</a>
+                        </li>
+                        {% else %}
                         <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1">Oldingi</a>
                         </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        {% endif %}
+                        
+                        {% for i in paginator.page_range %}
+                            {% if i == page_obj.number %}
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">{{ i }}</a>
+                                </li>
+                            {% elif i > page_obj.number|add:'-3' and i < page_obj.number|add:'3' %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?{% if request.GET.urlencode %}{{ request.GET.urlencode }}&{% endif %}page={{ i }}">{{ i }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                        
+                        {% if page_obj.has_next %}
                         <li class="page-item">
+                            <a class="page-link" href="?{% if request.GET.urlencode %}{{ request.GET.urlencode }}&{% endif %}page={{ page_obj.next_page_number }}">Keyingi</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
                             <a class="page-link" href="#">Keyingi</a>
                         </li>
+                        {% endif %}
                     </ul>
                 </nav>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -564,6 +614,7 @@
             <span class="close" onclick="closeRejectModal()">&times;</span>
             <h4 class="mb-4">Arizani rad etish</h4>
             <form id="rejectForm" method="post">
+                {% csrf_token %}
                 <div class="form-group">
                     <label for="rejection_comment">Rad etish sababi:</label>
                     <textarea class="form-control" id="rejection_comment" name="rejection_comment" rows="4" required></textarea>
@@ -581,128 +632,146 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        // Initialize application ID for modals
         let currentApplicationId = null;
 
-        // Sample data for demonstration
-        const applications = {
-            1: {
-                id: 1,
-                application_type: 'Rasta ochish',
-                employee: 'Ahmadjon Karimov',
-                period: '2024 - Mart',
-                created_at: '15.03.2024 10:30',
-                is_checked: false,
-                is_active: false,
-                tochka: { name: 'Chorsu bozori', address: 'Toshkent, Chorsu' },
-                ntochka: { name: 'A-12' },
-                comment: '',
-                products: [
-                    { product_id: 101, price: 15000, miqdor: 1 },
-                    { product_id: 102, price: 25000, miqdor: 0.5 }
-                ]
-            },
-            2: {
-                id: 2,
-                application_type: 'Rasta yopish',
-                employee: 'Gulnora Rahimova',
-                period: '2024 - Mart',
-                created_at: '14.03.2024 15:45',
-                is_checked: true,
-                is_active: true,
-                checked_by: 'Admin User',
-                checked_at: '14.03.2024 16:00',
-                tochka: { name: 'Eski Juva bozori', address: 'Toshkent, Eski Juva' },
-                ntochka: { name: 'B-5' },
-                comment: 'Rasta faoliyati to\'xtatildi'
-            },
-            3: {
-                id: 3,
-                application_type: 'Obyekt yopish',
-                employee: 'Sardor Umarov',
-                period: '2024 - Mart',
-                created_at: '13.03.2024 09:15',
-                is_checked: true,
-                is_active: false,
-                checked_by: 'Admin User',
-                checked_at: '13.03.2024 11:30',
-                tochka: { name: 'Mirobod savdo markazi', address: 'Toshkent, Mirobod' },
-                comment: 'Rad etish sababi: Hujjatlar to\'liq emas'
-            }
-        };
-
         function viewApplication(id) {
-            const data = applications[id];
-            
-            let content = `
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <strong>ID:</strong> ${data.id}<br>
-                        <strong>Ariza turi:</strong> ${data.application_type}<br>
-                        <strong>Xodim:</strong> ${data.employee}<br>
-                        <strong>Davr:</strong> ${data.period}<br>
-                        <strong>Yaratilgan:</strong> ${data.created_at}<br>
-                    </div>
-                    <div class="col-md-6">
-                        <strong>Holat:</strong> ${data.is_checked ? (data.is_active ? 'Tasdiqlangan' : 'Rad etilgan') : 'Kutilmoqda'}<br>
-                        ${data.checked_by ? `<strong>Tekshiruvchi:</strong> ${data.checked_by}<br>` : ''}
-                        ${data.checked_at ? `<strong>Tekshirilgan:</strong> ${data.checked_at}<br>` : ''}
-                    </div>
-                </div>
-            `;
-
-            if (data.tochka) {
-                content += `
-                    <div class="mb-3">
-                        <strong>Obyekt:</strong> ${data.tochka.name}
-                        ${data.tochka.address ? ` (${data.tochka.address})` : ''}
-                    </div>
-                `;
-            }
-
-            if (data.ntochka) {
-                content += `
-                    <div class="mb-3">
-                        <strong>Rasta:</strong> ${data.ntochka.name}
-                    </div>
-                `;
-            }
-
-            if (data.comment) {
-                content += `
-                    <div class="mb-3">
-                        <strong>Izoh:</strong> ${data.comment}
-                    </div>
-                `;
-            }
-
-            if (data.products && data.products.length > 0) {
-                content += `
-                    <div class="mb-3">
-                        <strong>Mahsulotlar:</strong>
-                        <table class="table table-sm table-bordered mt-2">
-                            <thead>
-                                <tr>
-                                    <th>Mahsulot ID</th>
-                                    <th>Narx</th>
-                                    <th>Miqdor</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                ${data.products.map(p => `
-                                    <tr>
-                                        <td>${p.product_id || '-'}</td>
-                                        <td>${p.price || 0}</td>
-                                        <td>${p.miqdor || 0}</td>
-                                    </tr>
-                                `).join('')}
-                            </tbody>
-                        </table>
-                    </div>
-                `;
-            }
-
-            document.getElementById('detailContent').innerHTML = content;
+            // Show loading indicator
+            document.getElementById('detailContent').innerHTML = '<div class="text-center py-4"><i class="fas fa-spinner fa-spin fa-2x"></i><p class="mt-2">Ma\'lumotlar yuklanmoqda...</p></div>';
             document.getElementById('detailModal').style.display = 'block';
+            
+            // Fetch application details from the server
+            fetch(`/api/form/applications/${id}/detail-ajax/`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Serverdan ma\'lumotlarni olishda xatolik yuz berdi');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    let content = `
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <strong>ID:</strong> ${data.id}<br>
+                                <strong>Ariza turi:</strong> ${data.application_type}<br>
+                                <strong>Xodim:</strong> ${data.employee}<br>
+                                <strong>Davr:</strong> ${data.period}<br>
+                                <strong>Yaratilgan:</strong> ${data.created_at}<br>
+                            </div>
+                            <div class="col-md-6">
+                                <strong>Holat:</strong> ${data.is_checked ? (data.is_active ? '<span class="badge badge-approved">Tasdiqlangan</span>' : '<span class="badge badge-rejected">Rad etilgan</span>') : '<span class="badge badge-pending">Kutilmoqda</span>'}<br>
+                                ${data.checked_by ? `<strong>Tekshiruvchi:</strong> ${data.checked_by}<br>` : ''}
+                                ${data.checked_at ? `<strong>Tekshirilgan:</strong> ${data.checked_at}<br>` : ''}
+                            </div>
+                        </div>
+                    `;
+        
+                    // If single tochka/obyekt
+                    if (data.tochka) {
+                        content += `
+                            <div class="mb-3">
+                                <strong>Obyekt:</strong> ${data.tochka.name}
+                                ${data.tochka.address ? ` (${data.tochka.address})` : ''}
+                            </div>
+                        `;
+                    }
+        
+                    // If single rasta
+                    if (data.ntochka) {
+                        content += `
+                            <div class="mb-3">
+                                <strong>Rasta:</strong> ${data.ntochka.name}
+                            </div>
+                        `;
+                    }
+                    
+                    // If multiple tochka/obyekts
+                    if (data.tochkas && data.tochkas.length > 0) {
+                        content += `
+                            <div class="mb-3">
+                                <strong>Obyektlar:</strong>
+                                <ul class="list-unstyled mt-1 ml-3">
+                                    ${data.tochkas.map(t => `
+                                        <li><i class="fas fa-store-alt mr-1"></i> ${t.name}
+                                            ${t.address ? ` (${t.address})` : ''}
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        `;
+                    }
+                    
+                    // If multiple rastas
+                    if (data.ntochkas && data.ntochkas.length > 0) {
+                        content += `
+                            <div class="mb-3">
+                                <strong>Rastalar:</strong>
+                                <ul class="list-unstyled mt-1 ml-3">
+                                    ${data.ntochkas.map(n => `
+                                        <li><i class="fas fa-th mr-1"></i> ${n.name}</li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        `;
+                    }
+        
+                    if (data.comment) {
+                        content += `
+                            <div class="mb-3">
+                                <strong>Izoh:</strong> ${data.comment}
+                            </div>
+                        `;
+                    }
+                    
+                    // If detail additional field is present
+                    if (data.detail && data.detail.length > 0) {
+                        content += `
+                            <div class="mb-3">
+                                <strong>Qo'shimcha ma'lumotlar:</strong>
+                                <ul class="list-unstyled mt-1 ml-3">
+                                    ${data.detail.map(item => `
+                                        <li><i class="fas fa-info-circle mr-1"></i> ${item}</li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        `;
+                    }
+        
+                    if (data.products && data.products.length > 0) {
+                        content += `
+                            <div class="mb-3">
+                                <strong>Mahsulotlar:</strong>
+                                <table class="table table-sm table-bordered mt-2">
+                                    <thead>
+                                        <tr>
+                                            <th>Mahsulot ID</th>
+                                            <th>Narx</th>
+                                            <th>Miqdor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${data.products.map(p => `
+                                            <tr>
+                                                <td>${p.product_id || '-'}</td>
+                                                <td>${p.price || 0}</td>
+                                                <td>${p.miqdor || 0}</td>
+                                            </tr>
+                                        `).join('')}
+                                    </tbody>
+                                </table>
+                            </div>
+                        `;
+                    }
+        
+                    document.getElementById('detailContent').innerHTML = content;
+                })
+                .catch(error => {
+                    document.getElementById('detailContent').innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-triangle mr-2"></i> ${error.message || 'Ma\'lumotlarni olishda xatolik'}
+                        </div>
+                    `;
+                });
         }
 
         function closeDetailModal() {
@@ -711,11 +780,23 @@
 
         function approveApplication(id) {
             if (confirm('Arizani tasdiqlashni xohlaysizmi?')) {
-                // Simulate API call
-                setTimeout(() => {
-                    alert('Ariza muvaffaqiyatli tasdiqlandi!');
-                    location.reload();
-                }, 500);
+                // Create a form to submit the POST request
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = `/api/form/applications/${id}/approve/`;
+                
+                // Add CSRF token
+                const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+                const csrfInput = document.createElement('input');
+                csrfInput.type = 'hidden';
+                csrfInput.name = 'csrfmiddlewaretoken';
+                csrfInput.value = csrfToken;
+                form.appendChild(csrfInput);
+                
+                // Append form to body, submit and remove it
+                document.body.appendChild(form);
+                form.submit();
+                document.body.removeChild(form);
             }
         }
 
@@ -723,6 +804,8 @@
             currentApplicationId = id;
             document.getElementById('rejectModal').style.display = 'block';
             document.getElementById('rejection_comment').value = '';
+            // Set the form action to the correct URL
+            document.getElementById('rejectForm').action = `/api/form/applications/${id}/reject/`;
         }
 
         function closeRejectModal() {
@@ -736,13 +819,31 @@
             if (!currentApplicationId) return;
             
             const comment = document.getElementById('rejection_comment').value;
+            const formData = new FormData(this);
             
-            // Simulate API call
-            setTimeout(() => {
-                alert('Ariza rad etildi!');
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(data => {
+                        throw new Error(data.message || 'Xatolik yuz berdi');
+                    });
+                }
+                return response.json();
+            })
+            .then(data => {
+                alert(data.message || 'Ariza rad etildi!');
                 closeRejectModal();
                 location.reload();
-            }, 500);
+            })
+            .catch(error => {
+                alert(error.message || 'Xatolik yuz berdi');
+            });
         });
 
         function refreshData() {
