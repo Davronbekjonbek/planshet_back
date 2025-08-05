@@ -25,7 +25,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, Sp
 
 urlpatterns = [
     path('admin/export-all-csv/', export_all_csv_zip, name='export_all_csv'),
-    path('admin/', admin.site.urls),
+    path('boshqaruv/', admin.site.urls),
 
 ]
 
