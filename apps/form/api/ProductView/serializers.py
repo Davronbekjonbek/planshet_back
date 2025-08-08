@@ -47,7 +47,8 @@ class TochkaProductSerializer(serializers.ModelSerializer):
         history = getattr(obj, 'current_history', [])
         if not history:
             return 'unknown'
-
+	if history[0].status == 'sotilmayapti':
+            return 'unavailable'
         if obj.last_price > obj.previous_price:
             return 'increased'
         elif obj.last_price < obj.previous_price:
