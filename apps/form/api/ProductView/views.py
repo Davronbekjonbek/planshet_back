@@ -186,7 +186,7 @@ class TochkaProductHistoryCreateView(CreateAPIView):
             alt_ntochka_product.previous_price = alt_ntochka_product.last_price
             alt_ntochka_product.last_price = float(alternative_product_price)
             alt_ntochka_product.is_weekly = True
-	    	alt_ntochka_product.save()
+            alt_ntochka_product.save()
             alternative_data = {
                 'employee': employee.id,
                 'ntochka': tochka_product.ntochka.id,
