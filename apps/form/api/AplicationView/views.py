@@ -163,7 +163,9 @@ class ApplicationCreateView(CreateAPIView):
                                 product_id=product.get('product_id'),
                                 ntochka=ntochka,
                                 hudud=tochka,
-                                is_active=True
+                                is_active=True,
+is_weekly=product.get('is_weekly', True)
+
                             )
                             for product in products if product.get('product_id')
                         ]
