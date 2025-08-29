@@ -15,7 +15,7 @@ from drf_yasg.utils import swagger_auto_schema
 from apps.home.api.utils import get_employee_by_uuid
 from ...models import Application, Product, TochkaProduct, TochkaProductHistory
 from apps.home.models import NTochka, PeriodDate, Employee, Tochka
-from apps.form.api.utils import get_period_by_today, get_period_by_type_today
+from apps.form.api.utils import INN_in_DSQ, get_period_by_today, get_period_by_type_today
 
 from .serializers import (
     ApplicationListSerializer,
@@ -164,7 +164,7 @@ class ApplicationCreateView(CreateAPIView):
                                 ntochka=ntochka,
                                 hudud=tochka,
                                 is_active=True,
-is_weekly=product.get('is_weekly', True)
+                                is_weekly=product.get('is_weekly', True)
 
                             )
                             for product in products if product.get('product_id')
@@ -185,6 +185,11 @@ is_weekly=product.get('is_weekly', True)
                         {"detail": "Yopish uchun kamida bitta obyekt tanlang."},
                         status=status.HTTP_400_BAD_REQUEST
                     )
+                tochkas = Tochka.objects.filter(id__in=tochka_ids)
+                for t in tochkas:
+                    inn_is_inDSQ = INN_in_DSQ(int(t.inn))
+                    t.is_inDSQ = inn_is_inDSQ
+                    t.save()
                 mutable_data['tochkas'] = tochka_ids
 
             elif application_type == 'for_open_obyekt':
@@ -199,6 +204,11 @@ is_weekly=product.get('is_weekly', True)
                     )
 
                 try:
+                    inn = obyekt_data.get('inn', '')
+                    inn_is_inDSQ = False
+                    if inn and len(inn) == 9:
+                        inn_is_inDSQ = INN_in_DSQ(int(inn))
+                    
                     tochka = Tochka.objects.create(
                         name=obyekt_data['name'],
                         district=district,
@@ -210,6 +220,7 @@ is_weekly=product.get('is_weekly', True)
                         plan=obyekt_data.get('plan', 0),
                         pinfl= obyekt_data.get('pinfl', ''),
                         employee=employee,
+                        is_inDSQ=inn_is_inDSQ,
                         in_proccess=True
                     )
                     tochka.code=f"{district.region.code}{district.code}{tochka.id}"

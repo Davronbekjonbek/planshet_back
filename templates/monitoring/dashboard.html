@@ -366,8 +366,7 @@
                             <th>Status</th>
                             <th>Sana</th>
                             <th>Xodim</th>
-                            <th>Viloyat</th>
-                            <th>Tuman</th>
+                            <th>Soato</th>
                             <th>Harakatlar</th>
                         </tr>
                     </thead>
@@ -390,8 +389,7 @@
                                 </td>
                                 <td>{{ record.period.date|date:"d.m.Y" }}</td>
                                 <td>{{ record.employee.full_name }}</td>
-                                <td>{{ record.hudud.district.region.name }}</td>
-                                <td>{{ record.hudud.district.name }}</td>
+                                <td>{{ record.hudud.district.soato }}</td>
                                 <td>
                                     <a href="{% url 'admin:form_tochkaproducthistory_change' record.id %}" class="btn btn-sm btn-outline-primary" title="Tahrirlash">
                                         <i class="fas fa-edit"></i>

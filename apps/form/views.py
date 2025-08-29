@@ -109,7 +109,7 @@ def approve_application(request, pk):
     
     if application.is_checked:
         messages.warning(request, 'Bu ariza allaqachon tekshirilgan!')
-        return redirect('application_list')
+        return redirect('form:application_list')
     
     try:
         # Mark as checked and approved
@@ -186,7 +186,7 @@ def approve_application(request, pk):
                 'message': str(e)
             }, status=400)
     
-    return redirect('application_list')
+    return redirect('form:application_list')
 
 
 @login_required
@@ -197,7 +197,7 @@ def reject_application(request, pk):
     
     if application.is_checked:
         messages.warning(request, 'Bu ariza allaqachon tekshirilgan!')
-        return redirect('application_list')
+        return redirect('form:application_list')
     
     try:
         # Mark as checked but not active (rejected)
@@ -231,7 +231,7 @@ def reject_application(request, pk):
                 'message': str(e)
             }, status=400)
     
-    return redirect('application_list')
+    return redirect('form:application_list')
 
 
 @login_required
@@ -262,25 +262,27 @@ def application_detail_ajax(request, pk):
         data['tochka'] = {
             'id': application.tochka.id,
             'name': application.tochka.name,
-            'address': application.tochka.address or ''
+            'address': application.tochka.address or '',
+            'is_inDSQ': getattr(application.tochka, 'is_inDSQ', None)
         }
     
     if application.ntochka:
         data['ntochka'] = {
             'id': application.ntochka.id,
-            'name': application.ntochka.name
+            'name': application.ntochka.name,
+            'is_inDSQ': getattr(application.ntochka, 'is_inDSQ', None)
         }
     
     # Add multiple locations
     if application.tochkas.exists():
         data['tochkas'] = [
-            {'id': t.id, 'name': t.name, 'address': t.address or ''}
+            {'id': t.id, 'name': t.name, 'address': t.address or '', 'is_inDSQ': getattr(t, 'is_inDSQ', None)}
             for t in application.tochkas.all()
         ]
     
     if application.ntochkas.exists():
         data['ntochkas'] = [
-            {'id': n.id, 'name': n.name}
+            {'id': n.id, 'name': n.name, 'is_inDSQ': getattr(n, 'is_inDSQ', None)}
             for n in application.ntochkas.all()
         ]
     

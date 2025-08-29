@@ -327,7 +327,7 @@
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Jami arizalar
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">245</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ total_applications }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-file-alt fa-2x text-gray-300"></i>
@@ -345,7 +345,7 @@
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Kutilmoqda
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ pending_applications }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-clock fa-2x text-gray-300"></i>
@@ -363,7 +363,7 @@
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Tasdiqlangan
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">215</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ approved_applications }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-check-circle fa-2x text-gray-300"></i>
@@ -381,7 +381,7 @@
                                 <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
                                     Rad etilgan
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ rejected_applications }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-times-circle fa-2x text-gray-300"></i>
@@ -479,6 +479,7 @@
                                 <th>Davr</th>
                                 <th>Sana</th>
                                 <th>Holat</th>
+                                <th>DSQ da mavjud</th>
                                 <th>Amallar</th>
                             </tr>
                         </thead>
@@ -526,6 +527,22 @@
                                         {% endif %}
                                     {% else %}
                                         <span class="badge badge-pending">Kutilmoqda</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if app.application_type == 'for_open_obyekt' %}
+                                        {% if app.tochka.is_inDSQ %}
+                                            <span class="badge badge-success">
+                                                <i class="fas fa-check-circle mr-1"></i>
+                                                Mavjud
+                                            </span>
+                                        {% else %}
+                                            <span class="badge badge-danger">
+                                                <i class="fas fa-times-circle mr-1"></i>
+                                                Mavjud emas
+                                            </span>
+                                        {% endif %}
+                        
                                     {% endif %}
                                 </td>
                                 <td>
@@ -599,7 +616,7 @@
 
     <!-- Application Detail Modal -->
     <div id="detailModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-width:900px;">
             <span class="close" onclick="closeDetailModal()">&times;</span>
             <h4 class="mb-4">Ariza tafsilotlari</h4>
             <div id="detailContent">
@@ -636,12 +653,14 @@
         let currentApplicationId = null;
 
         function viewApplication(id) {
-            // Show loading indicator
-            document.getElementById('detailContent').innerHTML = '<div class="text-center py-4"><i class="fas fa-spinner fa-spin fa-2x"></i><p class="mt-2">Ma\'lumotlar yuklanmoqda...</p></div>';
+            document.getElementById('detailContent').innerHTML = `
+                <div class="text-center py-4">
+                    <i class="fas fa-spinner fa-spin fa-2x"></i>
+                    <p class="mt-2">Ma'lumotlar yuklanmoqda...</p>
+                </div>`;
             document.getElementById('detailModal').style.display = 'block';
-            
-            // Fetch application details from the server
-            fetch(`/api/form/applications/${id}/detail-ajax/`)
+
+            fetch(`/api/form/${id}/detail-ajax/`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Serverdan ma\'lumotlarni olishda xatolik yuz berdi');
@@ -649,6 +668,45 @@
                     return response.json();
                 })
                 .then(data => {
+                    let obyektlarHtml = '';
+                    if (data.tochkas && data.tochkas.length > 0) {
+                        obyektlarHtml = `
+                            <div class="mb-3">
+                                <strong>Obyektlar:</strong>
+                                <ul class="list-unstyled mt-1 ml-3">
+                                    ${data.tochkas.map(t => `
+                                        <li>
+                                            <i class="fas fa-store-alt mr-1"></i>
+                                            ${t.name}
+                                            ${t.address ? ` (${t.address})` : ''}
+                                            <span class="ml-2">
+                                                ${t.is_inDSQ !== undefined 
+                                                    ? (t.is_inDSQ 
+                                                        ? '<span class="badge badge-success">Soliqda mavjud</span>' 
+                                                        : '<span class="badge badge-danger">Soliqda yo\'q</span>')
+                                                    : ''}
+                                            </span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        `;
+                    } else if (data.tochka) {
+                        obyektlarHtml = `
+                            <div class="mb-3">
+                                <strong>Obyekt:</strong> ${data.tochka.name}
+                                ${data.tochka.address ? ` (${data.tochka.address})` : ''}
+                                <span class="ml-2">
+                                    ${data.tochka.is_inDSQ !== undefined 
+                                        ? (data.tochka.is_inDSQ 
+                                            ? '<span class="badge badge-success">Soliqda mavjud</span>' 
+                                            : '<span class="badge badge-danger">Soliqda yo\'q</span>')
+                                        : ''}
+                                </span>
+                            </div>
+                        `;
+                    }
+
                     let content = `
                         <div class="row mb-3">
                             <div class="col-md-6">
@@ -664,68 +722,37 @@
                                 ${data.checked_at ? `<strong>Tekshirilgan:</strong> ${data.checked_at}<br>` : ''}
                             </div>
                         </div>
-                    `;
-        
-                    // If single tochka/obyekt
-                    if (data.tochka) {
-                        content += `
-                            <div class="mb-3">
-                                <strong>Obyekt:</strong> ${data.tochka.name}
-                                ${data.tochka.address ? ` (${data.tochka.address})` : ''}
-                            </div>
-                        `;
-                    }
-        
-                    // If single rasta
-                    if (data.ntochka) {
-                        content += `
+                        ${obyektlarHtml}
+                        ${data.ntochka ? `
                             <div class="mb-3">
                                 <strong>Rasta:</strong> ${data.ntochka.name}
                             </div>
-                        `;
-                    }
-                    
-                    // If multiple tochka/obyekts
-                    if (data.tochkas && data.tochkas.length > 0) {
-                        content += `
-                            <div class="mb-3">
-                                <strong>Obyektlar:</strong>
-                                <ul class="list-unstyled mt-1 ml-3">
-                                    ${data.tochkas.map(t => `
-                                        <li><i class="fas fa-store-alt mr-1"></i> ${t.name}
-                                            ${t.address ? ` (${t.address})` : ''}
-                                        </li>
-                                    `).join('')}
-                                </ul>
-                            </div>
-                        `;
-                    }
-                    
-                    // If multiple rastas
-                    if (data.ntochkas && data.ntochkas.length > 0) {
-                        content += `
+                        ` : ''}
+                        ${data.ntochkas && data.ntochkas.length > 0 ? `
                             <div class="mb-3">
                                 <strong>Rastalar:</strong>
                                 <ul class="list-unstyled mt-1 ml-3">
                                     ${data.ntochkas.map(n => `
-                                        <li><i class="fas fa-th mr-1"></i> ${n.name}</li>
+                                        <li>
+                                            <i class="fas fa-th mr-1"></i> ${n.name}
+                                            <span class="ml-2">
+                                                ${n.is_inDSQ !== undefined 
+                                                    ? (n.is_inDSQ 
+                                                        ? '<span class="badge badge-success">Soliqda mavjud</span>' 
+                                                        : '<span class="badge badge-danger">Soliqda yo\'q</span>')
+                                                    : ''}
+                                            </span>
+                                        </li>
                                     `).join('')}
                                 </ul>
                             </div>
-                        `;
-                    }
-        
-                    if (data.comment) {
-                        content += `
+                        ` : ''}
+                        ${data.comment ? `
                             <div class="mb-3">
                                 <strong>Izoh:</strong> ${data.comment}
                             </div>
-                        `;
-                    }
-                    
-                    // If detail additional field is present
-                    if (data.detail && data.detail.length > 0) {
-                        content += `
+                        ` : ''}
+                        ${data.detail && data.detail.length > 0 ? `
                             <div class="mb-3">
                                 <strong>Qo'shimcha ma'lumotlar:</strong>
                                 <ul class="list-unstyled mt-1 ml-3">
@@ -734,11 +761,8 @@
                                     `).join('')}
                                 </ul>
                             </div>
-                        `;
-                    }
-        
-                    if (data.products && data.products.length > 0) {
-                        content += `
+                        ` : ''}
+                        ${data.products && data.products.length > 0 ? `
                             <div class="mb-3">
                                 <strong>Mahsulotlar:</strong>
                                 <table class="table table-sm table-bordered mt-2">
@@ -760,9 +784,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                        `;
-                    }
-        
+                        ` : ''}
+                    `;
                     document.getElementById('detailContent').innerHTML = content;
                 })
                 .catch(error => {
@@ -783,7 +806,7 @@
                 // Create a form to submit the POST request
                 const form = document.createElement('form');
                 form.method = 'POST';
-                form.action = `/api/form/applications/${id}/approve/`;
+                form.action = `/api/form/${id}/approve/`;
                 
                 // Add CSRF token
                 const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
@@ -805,7 +828,7 @@
             document.getElementById('rejectModal').style.display = 'block';
             document.getElementById('rejection_comment').value = '';
             // Set the form action to the correct URL
-            document.getElementById('rejectForm').action = `/api/form/applications/${id}/reject/`;
+            document.getElementById('rejectForm').action = `/api/form/${id}/reject/`;
         }
 
         function closeRejectModal() {
@@ -867,5 +890,9 @@
             alert('Filtrlar qo\'llanildi!');
         });
     </script>
+
+    <form style="display:none;">
+        {% csrf_token %}
+    </form>
 </body>
 </html>

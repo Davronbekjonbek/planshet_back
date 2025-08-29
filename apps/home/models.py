@@ -47,6 +47,9 @@ class District(BaseModel):
     region = models.ForeignKey(Region, on_delete=models.CASCADE, related_name='districts', verbose_name=_("Viloyat"))
     code = models.CharField(max_length=10, verbose_name=_("Tumanning kodi"))
 
+    @property
+    def soato(self):
+        return f"{self.region.code}{self.code}"
 
     def __str__(self):
         return f"{self.id}"
@@ -136,6 +139,7 @@ class Tochka(BaseModel):
 
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     in_proccess = models.BooleanField(default=False, verbose_name=_("Ariza orqali yaratilgan"))
+    is_inDSQ = models.BooleanField(default=False, verbose_name=_("DSQda mavjud"))
 
     @property
     def icon_color(self):
@@ -144,6 +148,7 @@ class Tochka(BaseModel):
     @property
     def icon_display(self):
         return  self.get_icon_display()
+    
 
     def __str__(self):
         return f'{self.id}'

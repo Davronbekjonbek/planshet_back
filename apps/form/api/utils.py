@@ -1,9 +1,12 @@
+import os
+from django.core.cache import cache
+
 from datetime import datetime, time, timedelta
 
 from ..models import Product, TochkaProduct, TochkaProductHistory
 from apps.home.models import PeriodDate, Tochka, NTochka
 
-from django.core.cache import cache
+import pandas as pd
 
 def get_product_by_uuid(uuid):
     """
@@ -113,3 +116,10 @@ def get_tochka_product_by_id(tochka_product_id):
         return TochkaProduct.objects.get(id=tochka_product_id)
     except TochkaProduct.DoesNotExist:
         return None
+
+def INN_in_DSQ(INN)->bool:
+    file_path = os.path.join('datas', 'DSQ_orgs.csv')
+    df = pd.read_csv(file_path)
+    orgs_set = set(df['INN'].values)
+    print(orgs_set, 'orgsssss')
+    return INN in orgs_set
