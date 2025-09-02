@@ -90,6 +90,7 @@ class Product(BaseModel):
         default=1,
         verbose_name=_("Haftalik turi")
     )
+    barcode = models.CharField(max_length=20, verbose_name=_("Shtrix kodi"), null=True, blank=True)
     is_index = models.BooleanField(default=False, verbose_name=_("Indeks"))
     is_import = models.BooleanField(default=False, verbose_name=_("Import qilinganmi?"))
     is_special = models.BooleanField(default=False, verbose_name=_("Maxsus"))
