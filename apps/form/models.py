@@ -27,6 +27,8 @@ class Birlik(BaseModel):
     code = models.CharField(max_length=10, unique=True, verbose_name=_("Birlikning kodi"))
     miqdor = models.FloatField(verbose_name=_("Miqdor"), default=0.0)
 
+    def __str__(self):
+        return f'{self.name}'
 
     class Meta:
         verbose_name = "Birlik"
@@ -74,7 +76,7 @@ class Product(BaseModel):
     uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
     name = models.CharField(max_length=400, verbose_name=_("Mahsulotning nomi"))
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, related_name='products', verbose_name=_("Kategoriyasi"))
-    code = models.CharField(max_length=10, unique=True, verbose_name=_("Mahsulot kodi"))
+    code = models.CharField(max_length=20, unique=True, verbose_name=_("Mahsulot kodi"))
     price = models.FloatField(verbose_name=_("Narxi"), default=0.0)
     top = models.IntegerField(default=0, verbose_name=_("Yuqori"))
     bottom = models.IntegerField(default=0, verbose_name=_("Quyi"))

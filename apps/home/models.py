@@ -113,7 +113,7 @@ class Tochka(BaseModel):
         ('location', 'Boshqa'),
     )
 
-    name = models.CharField(max_length=100, verbose_name=_("Obyekt nomi"))
+    name = models.CharField(max_length=155, verbose_name=_("Obyekt nomi"))
     icon = models.CharField(max_length=10, choices=ICON_CHOICES, default='nutrition', verbose_name=_("Icon"))
     uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
     district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='tochkas', verbose_name=_("Tuman"))

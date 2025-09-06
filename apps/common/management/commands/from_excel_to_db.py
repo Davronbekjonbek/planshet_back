@@ -28,7 +28,7 @@ class Command(BaseCommand):
             is_active = row.get('is_active', True)
             code = row.get('kod', None)
             unique_code = row.get('unique_kod', None)
-            inn = row.get('inn', None)
+            inn = row.get('INN', 0)
             is_weekly = row.get('is_weekly', False)
 
             # ForeignKey lar uchun (masalan: soato orqali District, pinfl orqali Employee qidirish mumkin)
@@ -62,12 +62,13 @@ class Command(BaseCommand):
                     icon='nutrition',          # yoki kerakli qiymat tanlang, default='nutrition'
                     district=district,
                     code=unique_code,
-                    inn=pinfl,
+                    inn=inn,
+                    pinfl=pinfl,
                     lat=lat,
                     lon=lon,
                     employee=employee,
                     is_active=bool(is_active),
-                    is_weekly=bool(is_weekly)
+                    weekly_type=int(is_weekly)
                 )
                 imported_count += 1
             except Exception as e:
@@ -306,18 +307,18 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write("Excel fayl topilgan ma'lumotlarni bazaga yuklash boshlandi...")
 
-        # obyekt_data = self.read_sheet('obyekt_oy')
-        # self.import_obyekt(obyekt_data)
+        obyekt_data = self.read_sheet('obyekt')
+        self.import_obyekt(obyekt_data)
         #
         # rasta_data = self.read_sheet('rasta')
         # self.import_ntochka(rasta_data)
         #
-        category_data = self.read_sheet('category_oy')
-        self.update_category(category_data)
-        # self.import_category(category_data)
+        category_data = self.read_sheet('category')
+        # self.update_category(category_data)
+        self.import_category(category_data)
         #
-        # product_data = self.read_sheet('product')
-        # self.import_products(product_data)
+        product_data = self.read_sheet('product')
+        self.import_products(product_data)
         #
         # rasta_hafta_product_data = self.read_sheet('rasta_hafta')
         # self.relate_rasta_hafta_product(rasta_hafta_product_data)
