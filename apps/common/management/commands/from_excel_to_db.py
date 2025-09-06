@@ -16,6 +16,66 @@ class Command(BaseCommand):
         df = pd.read_excel(file_path, sheet_name=sheet_name)
         return df
 
+    def import_employee(self, df):
+        imported_count = 0
+        existing_count = 0
+        errors_count = 0
+
+        for _, row in df.iterrows():
+            full_name = str(row.get('fio', '')).strip()
+            soato = str(row.get('soato', None))
+            is_active = row.get('is_active', 'yes').strip().lower() == 'yes'
+            pinfl = str(row.get('pinfl', None))
+            phone1 = str(row.get('phone1', None))
+            phone2 = str(row.get('phone2', None))
+            password = str(row.get('password', None))
+            login = str(row.get('soato', None)) or pinfl  # Agar login bo'sh bo'lsa, pinfl ishlatiladi
+
+            # Districtni soato orqali topish
+            try:
+                district = District.objects.get(code=(soato[4:]), region__code=soato[:4])
+            except District.DoesNotExist:
+                self.stdout.write(
+                    self.style.WARNING(f"Tuman topilmadi: {soato} - {full_name}")
+                )
+                errors_count += 1
+                continue
+
+            # login unique bo‘lgani uchun mavjudligini tekshirish
+            if Employee.objects.filter(login=soato).exists():
+                existing_count += 1
+                continue
+
+            try:
+                Employee.objects.create(
+                    full_name=full_name,
+                    login=login,
+                    password=password,
+                    district=district,
+                    pinfl=pinfl,
+                    phone1=phone1,
+                    phone2=phone2,
+                    permission_plov=False,
+                    status=1.0 if is_active else 0.0,
+                    permission1=True,
+                    permission2=True,
+                    permission3=True,
+                    permission4=False,
+                    permission5=False,
+                    gps_permission=True,
+                    lang='uz'
+                )
+                imported_count += 1
+            except Exception as e:
+                self.stdout.write(
+                    self.style.ERROR(f"Xato: {full_name} - {str(e)}")
+                )
+                errors_count += 1
+        print(Employee.objects.all())
+        self.stdout.write(self.style.SUCCESS(
+            f"Yangi xodimlar: {imported_count}, mavjud xodimlar: {existing_count}, xatoliklar: {errors_count}"
+        ))
+
     def import_obyekt(self, df):
         imported_count = 0
         existing_count = 0
@@ -43,7 +103,7 @@ class Command(BaseCommand):
                 continue
 
             try:
-                employee = Employee.objects.get(pinfl=pinfl) if pinfl else None
+                employee = Employee.objects.get(district=district) if district else None
             except Employee.DoesNotExist:
                 employee = None
 
@@ -163,6 +223,9 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(
             f"Yangi kategoriyalar: {imported_count}, mavjudlari: {existing_count}, xatoliklar: {errors_count}"
         ))
+
+
+
 
     def import_products(self, df):
 
@@ -306,6 +369,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         self.stdout.write("Excel fayl topilgan ma'lumotlarni bazaga yuklash boshlandi...")
+
+        employee_data = self.read_sheet('users')
+        self.import_employee(employee_data)
 
         obyekt_data = self.read_sheet('obyekt')
         self.import_obyekt(obyekt_data)
