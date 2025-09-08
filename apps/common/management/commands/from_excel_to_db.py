@@ -244,7 +244,12 @@ class Command(BaseCommand):
             is_special = bool(is_weekly == 3)
             is_index = bool(row.get('is_index', False))
             unique_code = str(row.get('kod_unique') or '').strip()
-
+            barcode_val = row.get('barcode')
+            if barcode_val is None or str(barcode_val).strip() == '' or pd.isna(barcode_val):
+                barcode = ''
+            else:
+                barcode = str(int(float(barcode_val))).strip()
+            print(barcode)
             try:
                 category = ProductCategory.objects.get(code=category_code)
             except ProductCategory.DoesNotExist:
@@ -261,6 +266,7 @@ class Command(BaseCommand):
                 Product.objects.create(
                     name=name,
                     code=unique_code,
+                    barcode=barcode,
                     category=category,
                     price=narxi,
                     bottom=narxi * 0.8,

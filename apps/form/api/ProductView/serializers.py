@@ -23,8 +23,10 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = [
-            'id', 'uuid', 'name', 'category', 'category_name','category_code', 'category_logo', 'rasfas', 'code', 'price',
-            'unit_id', 'unit_name', 'unit_miqdor', 'top', 'bottom', 'is_import', 'created_at', 'updated_at',
+            'id', 'uuid', 'name', 'category', 'category_name','category_code', 
+            'category_logo', 'rasfas', 'code', 'price', 'barcode',
+            'unit_id', 'unit_name', 'unit_miqdor', 'top', 
+            'bottom', 'is_import', 'created_at', 'updated_at',
         ]
 
 
