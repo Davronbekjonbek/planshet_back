@@ -1,0 +1,382 @@
+{% load static %}
+{% load i18n %}
+{% load monitoring_tags %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mahsulot Narxlari Monitoring{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --success-color: #2ecc71;
+            --danger-color: #e74c3c;
+            --warning-color: #f39c12;
+            --info-color: #1abc9c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .sidebar {
+            background-color: var(--secondary-color);
+            color: white;
+            min-height: calc(100vh - 56px);
+            padding-top: 20px;
+        }
+        
+        .sidebar .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 5px;
+            border-radius: 4px;
+            padding: 10px 15px;
+        }
+        
+        .sidebar .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .sidebar .nav-link.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .sidebar .nav-link i {
+            margin-right: 10px;
+        }
+        
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .card-header {
+            background-color: white;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+        }
+        
+        .stat-card {
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white;
+        }
+        
+        .table-responsive {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        .data-table th {
+            background-color: var(--secondary-color);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .data-table tbody tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+        
+        .data-table tbody tr:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+        
+        .filter-card {
+            margin-bottom: 20px;
+        }
+        
+        .filter-card .card-body {
+            padding: 15px;
+        }
+        
+        .btn-filter {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+        }
+        
+        .btn-filter:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+        
+        .btn-export {
+            background-color: var(--success-color);
+            color: white;
+            border: none;
+        }
+        
+        .btn-export:hover {
+            background-color: #27ae60;
+            color: white;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                min-height: auto;
+                margin-bottom: 20px;
+            }
+            
+            .chart-container {
+                height: 200px;
+            }
+        }
+        
+        /* Status badge styles */
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .status-mavjud {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .status-chegirma {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-mavsumiy {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-vaqtinchalik {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+        
+        .status-sotilmayapti {
+            background-color: #e2e3e5;
+            color: #383d41;
+        }
+        
+        .status-obyekt_yopilgan {
+            background-color: #ccc;
+            color: #333;
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'monitoring:dashboard' %}">
+                <i class="fas fa-chart-line me-2"></i>Mahsulot Narxlari Monitoring
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}" href="{% url 'monitoring:dashboard' %}">
+                            <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'region_comparison' %}active{% endif %}" href="{% url 'monitoring:region_comparison' %}">
+                            <i class="fas fa-map-marked-alt me-1"></i>Hududiy taqqoslash
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="exportDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-download me-1"></i>Export
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="{% url 'monitoring:export_excel' %}{% if request.GET %}?{{ request.GET.urlencode }}{% endif %}">
+                                    <i class="fas fa-file-excel me-2 text-success"></i>Excel formatida
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'monitoring:export_csv' %}{% if request.GET %}?{{ request.GET.urlencode }}{% endif %}">
+                                    <i class="fas fa-file-csv me-2 text-primary"></i>CSV formatida
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'admin:index' %}">
+                            <i class="fas fa-cog me-1"></i>Admin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}" href="{% url 'monitoring:dashboard' %}">
+                                <i class="fas fa-home"></i> Asosiy sahifa
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.resolver_match.url_name == 'region_comparison' %}active{% endif %}" href="{% url 'monitoring:region_comparison' %}">
+                                <i class="fas fa-chart-bar"></i> Hududiy taqqoslash
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="toggleFilters">
+                                <i class="fas fa-filter"></i> Filtrlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'monitoring:export_excel' %}{% if request.GET %}?{{ request.GET.urlencode }}{% endif %}">
+                                <i class="fas fa-file-excel"></i> Excel ga yuklash
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'monitoring:export_csv' %}{% if request.GET %}?{{ request.GET.urlencode }}{% endif %}">
+                                <i class="fas fa-file-csv"></i> CSV ga yuklash
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-white">
+                        <span>Qo'shimcha</span>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'admin:form_tochkaproducthistory_changelist' %}">
+                                <i class="fas fa-history"></i> Narx tarixi (admin)
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'admin:form_product_changelist' %}">
+                                <i class="fas fa-box"></i> Mahsulotlar (admin)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Main content -->
+            <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-muted py-3 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; {% now "Y" %} Monitoring Tizimi</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        // Toggle filters visibility
+        $(document).ready(function() {
+            $("#toggleFilters").click(function(e) {
+                e.preventDefault();
+                $(".filter-card").slideToggle();
+            });
+            
+            // Dependent dropdowns
+            $("#id_region").change(function() {
+                var regionId = $(this).val();
+                if (regionId) {
+                    $.ajax({
+                        url: "{% url 'monitoring:dashboard' %}",
+                        data: {
+                            'region': regionId,
+                            'get_districts': 'true'
+                        },
+                        dataType: 'json',
+                        success: function(data) {
+                            $("#id_district").html('<option value="">-- Tanlang --</option>');
+                            $.each(data, function(key, value) {
+                                $("#id_district").append('<option value="' + value.id + '">' + value.name + '</option>');
+                            });
+                        }
+                    });
+                } else {
+                    $("#id_district").html('<option value="">-- Avval viloyatni tanlang --</option>');
+                }
+            });
+            
+            $("#id_category").change(function() {
+                var categoryId = $(this).val();
+                if (categoryId) {
+                    $.ajax({
+                        url: "{% url 'monitoring:dashboard' %}",
+                        data: {
+                            'category': categoryId,
+                            'get_products': 'true'
+                        },
+                        dataType: 'json',
+                        success: function(data) {
+                            $("#id_product").html('<option value="">-- Tanlang --</option>');
+                            $.each(data, function(key, value) {
+                                $("#id_product").append('<option value="' + value.id + '">' + value.name + '</option>');
+                            });
+                        }
+                    });
+                } else {
+                    $("#id_product").html('<option value="">-- Avval kategoriyani tanlang --</option>');
+                }
+            });
+        });
+    </script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

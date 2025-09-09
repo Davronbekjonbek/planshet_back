@@ -1,0 +1,11 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block content %}
+  <h1>📥 Excel yuklash (Planshet)</h1>
+  <form method="post" enctype="multipart/form-data" style="max-width:640px;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="default">Importni boshlash</button>
+  </form>
+{% endblock %}

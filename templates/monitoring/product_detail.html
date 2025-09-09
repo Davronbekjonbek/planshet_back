@@ -1,0 +1,272 @@
+{% extends 'monitoring/base.html' %}
+{% load static %}
+
+{% block title %}{{ product.name }} - Mahsulot Tarixi{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2"><i class="fas fa-box me-2"></i>{{ product.name }}</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+            <a href="{% url 'monitoring:export_excel' %}?product={{ product.id }}" class="btn btn-sm btn-outline-success">
+                <i class="fas fa-file-excel me-1"></i>Excel
+            </a>
+            <a href="{% url 'admin:form_product_change' product.id %}" class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-edit me-1"></i>Tahrirlash
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Product Info Card -->
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <i class="fas fa-info-circle me-2"></i>Mahsulot ma'lumotlari
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-sm">
+                    <tr>
+                        <th style="width: 150px;">Nomi:</th>
+                        <td>{{ product.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Kategoriya:</th>
+                        <td>{{ product.category.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Kodi:</th>
+                        <td>{{ product.code }}</td>
+                    </tr>
+                    <tr>
+                        <th>O'lchov birligi:</th>
+                        <td>{{ product.unit.name }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-sm">
+                    <tr>
+                        <th style="width: 150px;">Narxi:</th>
+                        <td>{{ product.price|floatformat:2 }} so'm</td>
+                    </tr>
+                    <tr>
+                        <th>Haftalik:</th>
+                        <td>{% if product.weekly_type == 1 %}Haftalik{% else %}Oylik{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <th>Indeks:</th>
+                        <td>{% if product.is_index %}Ha{% else %}Yo'q{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <th>Import:</th>
+                        <td>{% if product.is_import %}Ha{% else %}Yo'q{% endif %}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Filter Card -->
+<div class="card filter-card mb-4">
+    <div class="card-header bg-primary text-white">
+        <i class="fas fa-filter me-2"></i>Filtrlash parametrlari
+    </div>
+    <div class="card-body">
+        <form method="get" class="row g-3">
+            <input type="hidden" name="product" value="{{ product.id }}">
+            
+            <div class="col-md-4">
+                <label for="id_region" class="form-label">Viloyat</label>
+                <select name="region" id="id_region" class="form-select">
+                    <option value="">-- Tanlang --</option>
+                    {% for region in regions %}
+                        <option value="{{ region.id }}" {% if selected_region.id == region.id %}selected{% endif %}>
+                            {{ region.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="col-md-4">
+                <label for="id_district" class="form-label">Tuman</label>
+                <select name="district" id="id_district" class="form-select">
+                    <option value="">-- Tanlang --</option>
+                    {% for district in districts %}
+                        <option value="{{ district.id }}" {% if selected_district.id == district.id %}selected{% endif %}>
+                            {{ district.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="col-md-4 text-end align-self-end">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-filter me-2"></i>Filtrlash
+                </button>
+                <a href="{% url 'monitoring:product_detail' product.id %}" class="btn btn-secondary">
+                    <i class="fas fa-undo me-2"></i>Tozalash
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Price Trends Chart -->
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-chart-line me-2"></i>{{ product.name }} narx dinamikasi
+            </div>
+            <div class="card-body">
+                <div class="chart-container">
+                    <canvas id="priceTrendChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Data Table -->
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-2"></i>{{ product.name }} narxlari tarixi
+        <span class="badge bg-primary ms-2">{{ history|length }} natija</span>
+    </div>
+    <div class="card-body">
+        {% if history %}
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover data-table">
+                    <thead>
+                        <tr>
+                            <th>Viloyat</th>
+                            <th>Tuman</th>
+                            <th>Obyekt</th>
+                            <th>Rasta</th>
+                            <th>Narx</th>
+                            <th>Birlik narxi</th>
+                            <th>Birlik miqdori</th>
+                            <th>Status</th>
+                            <th>Sana</th>
+                            <th>Xodim</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for record in history %}
+                            <tr>
+                                <td>{{ record.hudud.district.region.name }}</td>
+                                <td>{{ record.hudud.district.name }}</td>
+                                <td>{{ record.hudud.name }}</td>
+                                <td>{{ record.ntochka.name }}</td>
+                                <td class="text-end">{{ record.price|floatformat:2 }} so'm</td>
+                                <td class="text-end">{{ record.unit_price|floatformat:2 }} so'm</td>
+                                <td class="text-end">{{ record.unit_miqdor|floatformat:2 }}</td>
+                                <td>
+                                    <span class="status-badge status-{{ record.status }}">
+                                        {{ record.get_status_display }}
+                                    </span>
+                                </td>
+                                <td>{{ record.period.date|date:"d.m.Y" }}</td>
+                                <td>{{ record.employee.full_name }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>Bu mahsulot uchun hech qanday ma'lumot topilmadi.
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Price Trend Chart
+    var trendCtx = document.getElementById('priceTrendChart').getContext('2d');
+    var trendData = {{ trend_data|safe }};
+    
+    var priceTrendChart = new Chart(trendCtx, {
+        type: 'line',
+        data: {
+            labels: trendData.labels,
+            datasets: [
+                {
+                    label: 'O\'rtacha narx',
+                    data: trendData.avg,
+                    backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                    borderColor: 'rgba(52, 152, 219, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(52, 152, 219, 1)',
+                    pointBorderColor: '#fff',
+                    pointRadius: 4,
+                    tension: 0.3
+                },
+                {
+                    label: 'Eng yuqori narx',
+                    data: trendData.max,
+                    backgroundColor: 'rgba(231, 76, 60, 0.2)',
+                    borderColor: 'rgba(231, 76, 60, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(231, 76, 60, 1)',
+                    pointBorderColor: '#fff',
+                    pointRadius: 4,
+                    tension: 0.3,
+                    borderDash: [5, 5]
+                },
+                {
+                    label: 'Eng past narx',
+                    data: trendData.min,
+                    backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                    borderColor: 'rgba(46, 204, 113, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(46, 204, 113, 1)',
+                    pointBorderColor: '#fff',
+                    pointRadius: 4,
+                    tension: 0.3,
+                    borderDash: [5, 5]
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    title: {
+                        display: true,
+                        text: 'Narx (so\'m)'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Sana'
+                    }
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: '{{ product.name }} - Narx Dinamikasi'
+                },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    callbacks: {
+                        label: function(context) {
+                            return context.dataset.label + ': ' + context.parsed.y.toFixed(2) + ' so\'m';
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}

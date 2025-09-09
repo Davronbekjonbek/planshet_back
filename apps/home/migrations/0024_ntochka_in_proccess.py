@@ -1,0 +1,18 @@
+
+
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('home', '0023_tochka_code'),
+    ]
+
+    operations = [
+        migrations.AddField(
+            model_name='ntochka',
+            name='in_proccess',
+            field=models.BooleanField(default=False, verbose_name='Ariza orqali yaratilgan'),
+        ),
+    ]

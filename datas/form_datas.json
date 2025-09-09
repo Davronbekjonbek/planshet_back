@@ -1,0 +1,93 @@
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "_id": 513976890,
+            "formhub/uuid": "5ff6769fe0bc477d9dca9769771dbc14",
+            "group_repeat_count": "3",
+            "group_repeat": [
+                {
+                    "group_repeat/group_id": "1",
+                    "group_repeat/person_repeat_count": "3",
+                    "group_repeat/person_repeat": [
+                        {
+                            "group_repeat/person_repeat/person_id": "1",
+                            "group_repeat/person_repeat/person_label": "Person 1",
+                            "group_repeat/person_repeat/person_group/age": "15"
+                        },
+                        {
+                            "group_repeat/person_repeat/person_id": "2",
+                            "group_repeat/person_repeat/person_label": "Person 2",
+                            "group_repeat/person_repeat/person_group/age": "15"
+                        },
+                        {
+                            "group_repeat/person_repeat/person_id": "3",
+                            "group_repeat/person_repeat/person_label": "Person 3",
+                            "group_repeat/person_repeat/person_group/age": "15"
+                        }
+                    ]
+                },
+                {
+                    "group_repeat/group_id": "2",
+                    "group_repeat/person_repeat_count": "4",
+                    "group_repeat/person_repeat": [
+                        {
+                            "group_repeat/person_repeat/person_id": "4",
+                            "group_repeat/person_repeat/person_label": "Person 4",
+                            "group_repeat/person_repeat/person_group/age": "19"
+                        },
+                        {
+                            "group_repeat/person_repeat/person_id": "5",
+                            "group_repeat/person_repeat/person_label": "Person 5",
+                            "group_repeat/person_repeat/person_group/age": "90"
+                        },
+                        {
+                            "group_repeat/person_repeat/person_id": "6",
+                            "group_repeat/person_repeat/person_label": "Person 6",
+                            "group_repeat/person_repeat/person_group/age": "90"
+                        },
+                        {
+                            "group_repeat/person_repeat/person_id": "7",
+                            "group_repeat/person_repeat/person_label": "Person 7",
+                            "group_repeat/person_repeat/person_group/age": "50"
+                        }
+                    ]
+                },
+                {
+                    "group_repeat/group_id": "3",
+                    "group_repeat/person_repeat_count": "2",
+                    "group_repeat/person_repeat": [
+                        {
+                            "group_repeat/person_repeat/person_id": "8",
+                            "group_repeat/person_repeat/person_label": "Person 8",
+                            "group_repeat/person_repeat/person_group/age": "50"
+                        },
+                        {
+                            "group_repeat/person_repeat/person_id": "9",
+                            "group_repeat/person_repeat/person_label": "Person 9",
+                            "group_repeat/person_repeat/person_group/age": "50"
+                        }
+                    ]
+                }
+            ],
+            "__version__": "vtbCyThpDKUcLdxvZEENZG",
+            "meta/instanceID": "uuid:a820b432-4421-4a9c-bb37-64a98830e404",
+            "_xform_id_string": "a3WMHNNSSxrN5k3sQ5rbRQ",
+            "_uuid": "a820b432-4421-4a9c-bb37-64a98830e404",
+            "meta/rootUuid": "uuid:a820b432-4421-4a9c-bb37-64a98830e404",
+            "_attachments": [],
+            "_status": "submitted_via_web",
+            "_geolocation": [
+                null,
+                null
+            ],
+            "_submission_time": "2025-07-10T07:15:23",
+            "_tags": [],
+            "_notes": [],
+            "_validation_status": {},
+            "_submitted_by": "oqdevpy"
+        }
+    ]
+}
