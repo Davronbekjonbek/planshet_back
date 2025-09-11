@@ -4,7 +4,7 @@ from django.utils.html import format_html
 
 from apps.home.models import Employee, PeriodDate, Tochka, NTochka, Period
 from .models import Birlik, ProductCategory, Product, TochkaProduct, TochkaProductHistory, Application
-from ..common.admin import BaseAdmin
+from apps.common.admin import BaseAdmin
 
 
 @admin.register(Birlik)

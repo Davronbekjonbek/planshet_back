@@ -19,3 +19,17 @@ class KoboForm(models.Model):
     name = models.CharField(max_length=255, verbose_name="Form nomi")
     api_token = models.CharField(max_length=255, verbose_name="API token")
     is_active = models.BooleanField(default=True, verbose_name="Faol")
+
+
+class PlanshetExcelImport(KoboForm):
+    class Meta:
+        proxy = True
+        verbose_name = "📥 Excel import (Planshet)"
+        verbose_name_plural = "📥 Excel import (Planshet)"
+
+
+class HududImportProxy(KoboForm):
+    class Meta:
+        proxy = True
+        verbose_name = "📥 Hududlar (JSON import)"
+        verbose_name_plural = "📥 Hududlar (JSON import)"
