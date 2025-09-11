@@ -363,3 +363,6 @@ QUERY_COUNT = {
         30: 'red',
     },
 }
+
+
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 100000
