@@ -4,9 +4,11 @@ from apps.form.models import Birlik, ProductCategory, Product
 from apps.common.models import KoboForm
 from apps.home.models import Employee, District, Tochka
 import pandas as pd
+import logging
 
+logger = logging.getLogger(__name__)
 
-# Shu yerga sening helperlaringni qo'yamiz (s, s_or_none, b, i, f)
+# Helper functions
 def s(v, default=""):
     import pandas as pd
     if v is None: return default
@@ -43,8 +45,7 @@ def f(v, default=0.0):
 
 class PlanshetExcelImporter:
     """
-    Shu klass ichida xuddi management command’dagi metodlarni ishlatamiz.
-    Farqi: fayl path emas, uploaded file (InMemoryUploadedFile/TemporaryUploadedFile) bilan ishlaymiz.
+    Optimized Excel importer with better transaction management and bulk operations
     """
 
     def __init__(self, file_obj):
@@ -52,66 +53,86 @@ class PlanshetExcelImporter:
         self.results = {}
 
     def read_sheet(self, sheet_name):
-        # Uploaded file bilan bevosita ishlash
-        self.file_obj.seek(0)
-        return pd.read_excel(
-            self.file_obj,
-            sheet_name=sheet_name,
-            dtype=str,
-            keep_default_na=False,
-            engine="openpyxl",
-        )
+        try:
+            self.file_obj.seek(0)
+            return pd.read_excel(
+                self.file_obj,
+                sheet_name=sheet_name,
+                dtype=str,
+                keep_default_na=False,
+                engine="openpyxl",
+            )
+        except Exception as e:
+            logger.error(f"Error reading sheet {sheet_name}: {e}")
+            return pd.DataFrame()
 
-    @transaction.atomic
+    def preload_data(self):
+        """Preload all necessary data to reduce database queries"""
+        self.existing_employee_logins = set(Employee.objects.values_list("login", flat=True))
+        self.existing_tochka_codes = set(Tochka.objects.values_list("code", flat=True))
+        self.existing_category_codes = set(ProductCategory.objects.values_list("code", flat=True))
+        self.existing_product_codes = set(Product.objects.values_list("code", flat=True))
+        
+        # Cache districts and regions
+        self.district_cache = {}
+        districts = District.objects.select_related('region').all()
+        for district in districts:
+            key = (district.region.code, district.code)
+            self.district_cache[key] = district
+        
+        # Cache employees by district
+        self.employees_by_district = {}
+        employees = Employee.objects.select_related('district').all()
+        for emp in employees:
+            district_id = emp.district_id
+            if district_id not in self.employees_by_district:
+                self.employees_by_district[district_id] = emp
+        
+        # Cache birlik objects
+        self.birlik_cache = {birlik.name: birlik for birlik in Birlik.objects.all()}
+        
+        # Cache categories
+        self.category_cache = {cat.code: cat for cat in ProductCategory.objects.select_related('union').all()}
+
     def import_employee(self, df):
-        # from apps.home.models import District  # mos joyingga qarab import qil
-        # from apps.form.models import Employee
+        if df.empty:
+            self.results['employees'] = dict(imported=0, existing=0, errors=0)
+            return
 
         imported = existing = errors = 0
-        existing_logins = set(Employee.objects.values_list("login", flat=True))
-        district_cache = {}
+        employees_to_create = []
+        batch_size = 500
 
         for _, row in df.iterrows():
-            full_name = s(row.get('fio'))
-            soato = s_or_none(row.get('soato'))
-            is_active = b(row.get('is_active', 'yes'), True)
-            pinfl = s_or_none(row.get('pinfl'))
-            phone1 = s_or_none(row.get('phone1'))
-            phone2 = s_or_none(row.get('phone2'))
-            password = s_or_none(row.get('password'))
-            login = s_or_none(row.get('soato')) or pinfl
-
-            if not login:
-                errors += 1
-                continue
-
-            if login in existing_logins:
-                existing += 1
-                continue
-
-            if not soato or len(soato) < 6:
-                errors += 1
-                continue
-
-            region_code = soato[:4]
-            district_code = soato[4:]
-            key = (region_code, district_code)
-
-            if key in district_cache:
-                district = district_cache[key]
-            else:
-                try:
-                    district = District.objects.get(code=district_code, region__code=region_code)
-                    district_cache[key] = district
-                except District.DoesNotExist:
-                    errors += 1
-                    continue
-                except District.MultipleObjectsReturned:
-                    errors += 1
-                    continue
-
             try:
-                Employee.objects.create(
+                full_name = s(row.get('fio'))
+                soato = s_or_none(row.get('soato'))
+                is_active = b(row.get('is_active', 'yes'), True)
+                pinfl = s_or_none(row.get('pinfl'))
+                phone1 = s_or_none(row.get('phone1'))
+                phone2 = s_or_none(row.get('phone2'))
+                password = s_or_none(row.get('password'))
+                login = s_or_none(row.get('soato')) or pinfl
+
+                if not login or not soato or len(soato) < 6:
+                    errors += 1
+                    continue
+
+                if login in self.existing_employee_logins:
+                    existing += 1
+                    continue
+
+                region_code = soato[:4]
+                district_code = soato[4:]
+                key = (region_code, district_code)
+
+                if key not in self.district_cache:
+                    errors += 1
+                    continue
+
+                district = self.district_cache[key]
+
+                employees_to_create.append(Employee(
                     full_name=full_name,
                     login=login,
                     password=password,
@@ -125,79 +146,91 @@ class PlanshetExcelImporter:
                     permission4=False, permission5=False,
                     gps_permission=True,
                     lang='uz'
-                )
-                existing_logins.add(login)
+                ))
+                
+                self.existing_employee_logins.add(login)
                 imported += 1
-            except Exception:
+
+                # Bulk create when batch size is reached
+                if len(employees_to_create) >= batch_size:
+                    try:
+                        Employee.objects.bulk_create(employees_to_create, ignore_conflicts=True)
+                        employees_to_create = []
+                    except Exception as e:
+                        logger.error(f"Error in bulk create employees: {e}")
+                        errors += len(employees_to_create)
+                        employees_to_create = []
+
+            except Exception as e:
+                logger.error(f"Error processing employee row: {e}")
                 errors += 1
+
+        # Create remaining employees
+        if employees_to_create:
+            try:
+                Employee.objects.bulk_create(employees_to_create, ignore_conflicts=True)
+            except Exception as e:
+                logger.error(f"Error in final bulk create employees: {e}")
+                errors += len(employees_to_create)
 
         self.results['employees'] = dict(imported=imported, existing=existing, errors=errors)
 
-    @transaction.atomic
     def import_obyekt(self, df):
-
+        if df.empty:
+            self.results['tochka'] = dict(imported=0, existing=0, errors=0)
+            return
 
         imported = existing = errors = 0
-        existing_codes = set(Tochka.objects.values_list("code", flat=True))
-        district_cache = {}
-        employees_by_district = {}
+        tochkas_to_create = []
+        batch_size = 500
 
         for _, row in df.iterrows():
-            name = s(row.get('nomi'))
-            lon = f(row.get('lon'))
-            lat = f(row.get('lat'))
-            is_active = b(row.get('is_active'), True)
-            unique_code = s_or_none(row.get('unique_kod')) or s_or_none(row.get('kod'))
-            inn = s_or_none(row.get('INN'))
-            is_weekly = i(row.get('is_weekly'), 0)
-            soato = s_or_none(row.get('soato'))
-            pinfl = s_or_none(row.get('pinfl'))
-
-            if not unique_code:
-                errors += 1
-                continue
-
-            if unique_code in existing_codes:
-                existing += 1
-                continue
-
-            if not soato or len(soato) < 6:
-                errors += 1
-                continue
-
-            region_code = soato[:4]
-            district_code = soato[4:]
-            key = (region_code, district_code)
-
-            if key in district_cache:
-                district = district_cache[key]
-            else:
-                try:
-                    district = District.objects.get(code=district_code, region__code=region_code)
-                    district_cache[key] = district
-                except District.DoesNotExist:
-                    errors += 1
-                    continue
-                except District.MultipleObjectsReturned:
-                    errors += 1
-                    continue
-
-            employee = None
-            if pinfl:
-                employee = Employee.objects.filter(pinfl=pinfl, district=district).order_by('id').first()
-            if not employee:
-                if key in employees_by_district:
-                    employee = employees_by_district[key]
-                else:
-                    employee = Employee.objects.filter(district=district).order_by('id').first()
-                    employees_by_district[key] = employee
-
-            if not employee:
-                errors += 1
-                continue
-
             try:
-                Tochka.objects.create(
+                name = s(row.get('nomi'))
+                lon = f(row.get('lon'))
+                lat = f(row.get('lat'))
+                is_active = b(row.get('is_active'), True)
+                unique_code = s_or_none(row.get('unique_kod')) or s_or_none(row.get('kod'))
+                inn = s_or_none(row.get('INN'))
+                is_weekly = i(row.get('is_weekly'), 0)
+                soato = s_or_none(row.get('soato'))
+                pinfl = s_or_none(row.get('pinfl'))
+
+                if not unique_code or not soato or len(soato) < 6:
+                    errors += 1
+                    continue
+
+                if unique_code in self.existing_tochka_codes:
+                    existing += 1
+                    continue
+
+                region_code = soato[:4]
+                district_code = soato[4:]
+                key = (region_code, district_code)
+
+                if key not in self.district_cache:
+                    errors += 1
+                    continue
+
+                district = self.district_cache[key]
+
+                # Find employee more efficiently
+                employee = None
+                if pinfl:
+                    # Try to find employee by pinfl and district from cached data
+                    for emp_district_id, emp in self.employees_by_district.items():
+                        if emp.district_id == district.id and emp.pinfl == pinfl:
+                            employee = emp
+                            break
+                
+                if not employee and district.id in self.employees_by_district:
+                    employee = self.employees_by_district[district.id]
+
+                if not employee:
+                    errors += 1
+                    continue
+
+                tochkas_to_create.append(Tochka(
                     name=name,
                     icon='nutrition',
                     district=district,
@@ -209,89 +242,139 @@ class PlanshetExcelImporter:
                     employee=employee,
                     is_active=is_active,
                     weekly_type=is_weekly
-                )
-                existing_codes.add(unique_code)
+                ))
+                
+                self.existing_tochka_codes.add(unique_code)
                 imported += 1
-            except Exception:
+
+                # Bulk create when batch size is reached
+                if len(tochkas_to_create) >= batch_size:
+                    try:
+                        Tochka.objects.bulk_create(tochkas_to_create, ignore_conflicts=True)
+                        tochkas_to_create = []
+                    except Exception as e:
+                        logger.error(f"Error in bulk create tochkas: {e}")
+                        errors += len(tochkas_to_create)
+                        tochkas_to_create = []
+
+            except Exception as e:
+                logger.error(f"Error processing obyekt row: {e}")
                 errors += 1
+
+        # Create remaining tochkas
+        if tochkas_to_create:
+            try:
+                Tochka.objects.bulk_create(tochkas_to_create, ignore_conflicts=True)
+            except Exception as e:
+                logger.error(f"Error in final bulk create tochkas: {e}")
+                errors += len(tochkas_to_create)
 
         self.results['tochka'] = dict(imported=imported, existing=existing, errors=errors)
 
-    @transaction.atomic
     def import_category(self, df):
+        if df.empty:
+            self.results['category'] = dict(imported=0, existing=0, errors=0)
+            return
 
         imported = existing = errors = 0
-        existing_codes = set(ProductCategory.objects.values_list("code", flat=True))
+        categories_to_create = []
+        batch_size = 500
 
         for _, row in df.iterrows():
-            name = s(row.get('nomi'))
-            code3 = s_or_none(row.get('kod{3}'))
-            code8 = s_or_none(row.get('kod{8}'))
-            code = code8 or code3
-            birlik_nomi = s(row.get('birligi'))
-            rasfas = i(row.get('rasfas'), 1)
-            number = code3
-
-            if not code:
-                errors += 1
-                continue
-
-            if code in existing_codes:
-                existing += 1
-                continue
-
             try:
-                birligi = Birlik.objects.get(name=birlik_nomi)
-            except Birlik.DoesNotExist:
-                errors += 1
-                continue
+                name = s(row.get('nomi'))
+                code3 = s_or_none(row.get('kod{3}'))
+                code8 = s_or_none(row.get('kod{8}'))
+                code = code8 or code3
+                birlik_nomi = s(row.get('birligi'))
+                rasfas = i(row.get('rasfas'), 1)
+                number = code3
 
-            try:
-                ProductCategory.objects.create(
+                if not code:
+                    errors += 1
+                    continue
+
+                if code in self.existing_category_codes:
+                    existing += 1
+                    continue
+
+                if birlik_nomi not in self.birlik_cache:
+                    errors += 1
+                    continue
+
+                birligi = self.birlik_cache[birlik_nomi]
+
+                categories_to_create.append(ProductCategory(
                     name=name,
                     code=code,
                     union=birligi,
                     rasfas=rasfas,
                     number=number,
-                )
-                existing_codes.add(code)
+                ))
+                
+                self.existing_category_codes.add(code)
+                # Update cache
+                self.category_cache[code] = categories_to_create[-1]
                 imported += 1
-            except Exception:
+
+                # Bulk create when batch size is reached
+                if len(categories_to_create) >= batch_size:
+                    try:
+                        ProductCategory.objects.bulk_create(categories_to_create, ignore_conflicts=True)
+                        categories_to_create = []
+                    except Exception as e:
+                        logger.error(f"Error in bulk create categories: {e}")
+                        errors += len(categories_to_create)
+                        categories_to_create = []
+
+            except Exception as e:
+                logger.error(f"Error processing category row: {e}")
                 errors += 1
+
+        # Create remaining categories
+        if categories_to_create:
+            try:
+                ProductCategory.objects.bulk_create(categories_to_create, ignore_conflicts=True)
+            except Exception as e:
+                logger.error(f"Error in final bulk create categories: {e}")
+                errors += len(categories_to_create)
 
         self.results['category'] = dict(imported=imported, existing=existing, errors=errors)
 
-    @transaction.atomic
     def import_products(self, df):
+        if df.empty:
+            self.results['products'] = dict(imported=0, existing=0, errors=0)
+            return
 
         imported = existing = errors = 0
-        existing_codes = set(Product.objects.values_list("code", flat=True))
-        cat_by_code = ProductCategory.objects.in_bulk(field_name='code')
+        products_to_create = []
+        batch_size = 500
 
         for _, row in df.iterrows():
-            name = s(row.get('nomi'))
-            category_code = s_or_none(row.get('kod{8}.cat'))
-            weekly_val = i(row.get('is_weekly'), 1)
-            narxi = f(row.get('Narxi'), 0.0)
-            unique_code = s_or_none(row.get('kod_unique'))
-            barcode = s(row.get('barcode'))
-            is_import_val = s(row.get('is_import'))
-
-            if not unique_code:
-                errors += 1
-                continue
-
-            if unique_code in existing_codes:
-                existing += 1
-                continue
-
-            if not category_code or category_code not in cat_by_code:
-                errors += 1
-                continue
-
-            category = cat_by_code[category_code]
             try:
-                Product.objects.create(
+                name = s(row.get('nomi'))
+                category_code = s_or_none(row.get('kod{8}.cat'))
+                weekly_val = i(row.get('is_weekly'), 1)
+                narxi = f(row.get('Narxi'), 0.0)
+                unique_code = s_or_none(row.get('kod_unique'))
+                barcode = s(row.get('barcode'))
+                is_import_val = s(row.get('is_import'))
+
+                if not unique_code:
+                    errors += 1
+                    continue
+
+                if unique_code in self.existing_product_codes:
+                    existing += 1
+                    continue
+
+                if not category_code or category_code not in self.category_cache:
+                    errors += 1
+                    continue
+
+                category = self.category_cache[category_code]
+
+                products_to_create.append(Product(
                     name=name,
                     code=unique_code,
                     barcode=barcode,
@@ -305,24 +388,57 @@ class PlanshetExcelImporter:
                     is_import=b(is_import_val, False),
                     is_special=(int(weekly_val) == 3),
                     is_index=(int(weekly_val) == 3),
-                )
-                existing_codes.add(unique_code)
+                ))
+                
+                self.existing_product_codes.add(unique_code)
                 imported += 1
-            except Exception:
+
+                # Bulk create when batch size is reached
+                if len(products_to_create) >= batch_size:
+                    try:
+                        Product.objects.bulk_create(products_to_create, ignore_conflicts=True)
+                        products_to_create = []
+                    except Exception as e:
+                        logger.error(f"Error in bulk create products: {e}")
+                        errors += len(products_to_create)
+                        products_to_create = []
+
+            except Exception as e:
+                logger.error(f"Error processing product row: {e}")
                 errors += 1
+
+        # Create remaining products
+        if products_to_create:
+            try:
+                Product.objects.bulk_create(products_to_create, ignore_conflicts=True)
+            except Exception as e:
+                logger.error(f"Error in final bulk create products: {e}")
+                errors += len(products_to_create)
 
         self.results['products'] = dict(imported=imported, existing=existing, errors=errors)
 
+    @transaction.atomic
     def run(self, sheets=("users","obyekt","category","product")):
         """
-        Admin formdan checkboxlar bilan qaysi listlarni ishlatishni tanlaymiz.
+        Import data from Excel sheets with optimized database operations
         """
-        if "users" in sheets:
-            self.import_employee(self.read_sheet("users"))
-        if "obyekt" in sheets:
-            self.import_obyekt(self.read_sheet("obyekt"))
-        if "category" in sheets:
-            self.import_category(self.read_sheet("category"))
-        if "product" in sheets:
-            self.import_products(self.read_sheet("product"))
-        return self.results
+        try:
+            # Preload all data to minimize database queries
+            self.preload_data()
+            
+            # Import in order to maintain dependencies
+            if "users" in sheets:
+                self.import_employee(self.read_sheet("users"))
+            if "obyekt" in sheets:
+                self.import_obyekt(self.read_sheet("obyekt"))
+            if "category" in sheets:
+                self.import_category(self.read_sheet("category"))
+            if "product" in sheets:
+                self.import_products(self.read_sheet("product"))
+                
+            return self.results
+            
+        except Exception as e:
+            logger.error(f"Error in import process: {e}")
+            # Re-raise to trigger transaction rollback
+            raise
