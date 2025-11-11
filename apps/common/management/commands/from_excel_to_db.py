@@ -7,7 +7,7 @@ from django.core.management.base import BaseCommand, CommandError
 import pandas as pd
 import os
 
-file_path = "datas/planshet_data.xlsx"
+file_path = "datas/plantochtovar_oxirgi.xlsx"
 
 class Command(BaseCommand):
     help = "Excel fayl topilgan ma'lumotlarni bazaga yuklaydi"
@@ -15,21 +15,21 @@ class Command(BaseCommand):
     def read_sheet(self, sheet_name):
         df = pd.read_excel(file_path, sheet_name=sheet_name)
         return df
-
+    
     def import_employee(self, df):
         imported_count = 0
         existing_count = 0
         errors_count = 0
 
         for _, row in df.iterrows():
-            full_name = str(row.get('fio', '')).strip()
-            soato = str(row.get('soato', None))
+            full_name = str(row.get('fish', '')).strip()
+            soato = str(row.get('tuman_soato', None))
             is_active = row.get('is_active', 'yes').strip().lower() == 'yes'
             pinfl = str(row.get('pinfl', None))
             phone1 = str(row.get('phone1', None))
             phone2 = str(row.get('phone2', None))
-            password = str(row.get('password', None))
-            login = str(row.get('soato', None)) or pinfl  # Agar login bo'sh bo'lsa, pinfl ishlatiladi
+            password = str(row.get('parol', None))
+            login = str(row.get('tuman_soato', None)) or pinfl  # Agar login bo'sh bo'lsa, pinfl ishlatiladi
 
             # Districtni soato orqali topish
             try:
@@ -82,18 +82,22 @@ class Command(BaseCommand):
         errors_count = 0
 
         for _, row in df.iterrows():
-            name = row.get('nomi', '').strip()
+            name = str(row.get('nomi', '')).strip()
             lon = row.get('lon', 0.0) or 0.0
             lat = row.get('lat', 0.0) or 0.0
-            is_active = row.get('is_active', True)
+            is_active = row.get('faol', True)
             code = row.get('kod', None)
-            unique_code = row.get('unique_kod', None)
-            inn = row.get('INN', 0)
-            is_weekly = row.get('is_weekly', False)
+            unique_code = row.get('obyekt_code', None)
+            inn = row.get('inn', 0)
+            is_weekly = row.get('haftalik', False)
 
             # ForeignKey lar uchun (masalan: soato orqali District, pinfl orqali Employee qidirish mumkin)
-            soato = str(row.get('soato', None))
+            soato = str(row.get('tuman', None))
             pinfl = row.get('pinfl', None)
+            adress = row.get('manzil', '').strip()
+            raw_value = row.get('mahsulot_turi', '')
+            mahsulot_turi = [x.strip() for x in raw_value.strip("()").split(",")]
+            print(mahsulot_turi, name)
             try:
                 district = District.objects.get(code=(soato[4:]), region__code=soato[:4])
             except District.DoesNotExist:
@@ -128,7 +132,8 @@ class Command(BaseCommand):
                     lon=lon,
                     employee=employee,
                     is_active=bool(is_active),
-                    weekly_type=int(is_weekly)
+                    weekly_type=int(is_weekly),
+                    product_type=mahsulot_turi,
                 )
                 imported_count += 1
             except Exception as e:
@@ -148,11 +153,15 @@ class Command(BaseCommand):
 
         for _, row in df.iterrows():
             name = row.get('nomi', '').strip()
-            obyekt_unique = str(row.get('kod_obyekt_unique', None))
-            code = str(row.get('kod_unique', None))
+            obyekt_unique = str(row.get('obyekt', None))
+            code = str(row.get('rasta_kodi', None))
             is_weekly = bool(row.get('is_weekly', False))
+            weekly_type = int(row.get('haftalik_turi', 1))
             print(obyekt_unique, type(obyekt_unique))
             # Kod bo'yicha obyektni (Tochka) topish
+            raw_value = row.get('mahsulot_turi', '')
+            mahsulot_turi = [x.strip() for x in raw_value.strip("()").split(",")]
+
             hudud = Tochka.objects.get(code=obyekt_unique)
 
 
@@ -168,7 +177,9 @@ class Command(BaseCommand):
                     is_active=True,
                     is_weekly=is_weekly,
                     in_proccess=False,
-                    code=code
+                    code=code,
+                    weekly_type=weekly_type,
+                    product_type=mahsulot_turi,
                 )
                 imported_count += 1
             except Exception as e:
@@ -235,23 +246,26 @@ class Command(BaseCommand):
 
         for _, row in df.iterrows():
             name = (row.get('nomi') or '').strip()
-            code = str(row.get('kod{8}.cat') or '').strip()
+            code = str(row.get('kategoriya_kodi') or '').strip()
             category_code = code  # product category code ham bo‘lishi mumkin, kerak bo‘lsa moslashtiring
             # hbhd = int(row.get('HBHD', 1) or 1)
             is_import = bool(row.get('is_import', False))
-            is_weekly = int(row.get('is_weekly', 1) or 1)
-            narxi = float(row.get('Narxi', 0) or 0)
+            is_weekly = int(row.get('haftalik', 1) or 1)
+            narxi = float(row.get('narxi', 0) or 0)
             is_special = bool(is_weekly == 3)
             is_index = bool(row.get('is_index', False))
-            unique_code = str(row.get('kod_unique') or '').strip()
+            unique_code = str(row.get('mahsulot_kodi') or '').strip()
             barcode_val = row.get('barcode')
-            if barcode_val is None or str(barcode_val).strip() == '' or pd.isna(barcode_val):
-                barcode = ''
-            else:
-                barcode = str(int(float(barcode_val))).strip()
-            print(barcode)
             try:
-                category = ProductCategory.objects.get(code=category_code)
+                if barcode_val is None or str(barcode_val).strip() == '' or pd.isna(barcode_val):
+                    barcode = ''
+                else:
+                    barcode = str(int(float(barcode_val))).strip()
+            except Exception as e:
+                barcode = ''
+            print(name)
+            try:
+                category = ProductCategory.objects.get(number=category_code)
             except ProductCategory.DoesNotExist:
                 self.stdout.write(self.style.WARNING(f"Kategoriya topilmadi: {category_code}"))
                 errors_count += 1
@@ -271,7 +285,8 @@ class Command(BaseCommand):
                     price=narxi,
                     bottom=narxi * 0.8,
                     top=narxi * 1.2,
-                    weekly=int(is_weekly),
+                    weekly_type=int(is_weekly),
+                    weekly = True,
                     unit=category.union ,
                     hbhd=3,
                     is_import=bool(int(is_import)==1),
@@ -287,36 +302,38 @@ class Command(BaseCommand):
             f"Yangi mahsulotlar: {imported_count}, mavjudlari: {existing_count}, xatoliklar: {errors_count}"
         ))
 
-    def relate_rasta_hafta_product(self, rasta_hafta):
+    def relate_rasta_product(self, rasta_product):
         imported_count = 0
         existing_count = 0
         errors_count = 0
         error_messages = []
 
-        for _, row in rasta_hafta.iterrows():
+        for _, row in rasta_product.iterrows():
             try:
-                kod_unique = str(int(row.get('kod_unique', ''))).strip()
-                kod_product_unique = str(int(row.get('kod_product_unique', ''))).strip()
-                print(kod_product_unique)
-                if not kod_unique or not kod_product_unique:
+                rasta_kodi = str(int(row.get('rasta_kodi', ''))).strip()
+                mahsulot_kodi = str(int(row.get('mahsulot_kodi', ''))).strip()
+                print(mahsulot_kodi)
+                if not rasta_kodi or not mahsulot_kodi:
                     errors_count += 1
-                    error_messages.append(f"Row {_ + 1}: kod_unique yoki kod_product_unique bo'sh")
+                    error_messages.append(f"Row {_ + 1}: rasta_kodi yoki mahsulot_kodi bo'sh")
                     continue
 
                 try:
-                    ntochka = NTochka.objects.get(code=kod_unique)
+                    ntochka = NTochka.objects.get(code=rasta_kodi)
                 except NTochka.DoesNotExist:
                     errors_count += 1
-                    error_messages.append(f"Row {_ + 1}: NTochka topilmadi kod_unique={kod_unique}")
+                    error_messages.append(f"Row {_ + 1}: NTochka topilmadi rasta_kodi={rasta_kodi}")
                     continue
 
                 try:
-                    product = Product.objects.get(code=kod_product_unique)
+                    product = Product.objects.get(code=mahsulot_kodi)
                 except Product.DoesNotExist:
                     errors_count += 1
-                    error_messages.append(f"Row {_ + 1}: Product topilmadi kod_product_unique={kod_product_unique}")
+                    error_messages.append(f"Row {_ + 1}: Product topilmadi mahsulot_kodi={mahsulot_kodi}")
                     continue
 
+                haftalik = row.get('haftalik', True)
+                weekly = True if haftalik in [1, '1', True, 'True', 'true', 'Haftalik'] else False
                 tochka_product = TochkaProduct.objects.create(
                     hudud = ntochka.hudud,
                     product=product,
@@ -326,7 +343,7 @@ class Command(BaseCommand):
                     miqdor = 0.0,
                     is_active = True,
                     is_udalen = False,
-                    is_weekly = True
+                    is_weekly = weekly
                 )
 
 
@@ -376,24 +393,24 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write("Excel fayl topilgan ma'lumotlarni bazaga yuklash boshlandi...")
 
-        employee_data = self.read_sheet('users')
+        employee_data = self.read_sheet('xodim')
         self.import_employee(employee_data)
 
         obyekt_data = self.read_sheet('obyekt')
         self.import_obyekt(obyekt_data)
         #
-        # rasta_data = self.read_sheet('rasta')
-        # self.import_ntochka(rasta_data)
+        rasta_data = self.read_sheet('rasta')
+        self.import_ntochka(rasta_data)
         #
-        category_data = self.read_sheet('category')
-        # self.update_category(category_data)
-        self.import_category(category_data)
+        # category_data = self.read_sheet('category')
+        # # self.update_category(category_data)
+        # self.import_category(category_data)
         #
-        product_data = self.read_sheet('product')
+        product_data = self.read_sheet('mahsulot')
         self.import_products(product_data)
         #
-        # rasta_hafta_product_data = self.read_sheet('rasta_hafta')
-        # self.relate_rasta_hafta_product(rasta_hafta_product_data)
+        rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
+        self.relate_rasta_product(rasta_hafta_product_data)
         #
         # rasta_oy_product_data = self.read_sheet('rasta_oy')
         # self.relate_rasta_hafta_product(rasta_oy_product_data)
