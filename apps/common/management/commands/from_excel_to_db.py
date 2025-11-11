@@ -389,28 +389,59 @@ class Command(BaseCommand):
             cat.rasfas = rasfas
             cat.save()
 
+    def update_products(self, df):
+        updated_count = 0
+        errors_count = 0
+
+        for _, row in df.iterrows():
+            product_kodi = str(row.get('mahsulot_kodi') or '').strip()
+            product = Product.objects.filter(code=product_kodi).first()
+            if not product:
+                errors_count += 1
+                self.stdout.write(
+                    self.style.WARNING(f"Mahsulot topilmadi: {product_kodi}")
+                )
+                continue
+
+            kategory = str(row.get('kategoriya_kodi') or '').strip()
+            category = ProductCategory.objects.filter(code=kategory).first()
+            if not category:
+                errors_count += 1
+                self.stdout.write(
+                    self.style.WARNING(f"Kategoriya topilmadi: {kategory} for product {product_kodi}")
+                )
+                continue
+            product.category = category
+            product.save()
+            updated_count += 1
+
+        self.stdout.write(self.style.SUCCESS(
+            f"Yangilangan mahsulotlar: {updated_count}, xatoliklar: {errors_count}"
+        ))
+
 
     def handle(self, *args, **options):
         self.stdout.write("Excel fayl topilgan ma'lumotlarni bazaga yuklash boshlandi...")
 
-        employee_data = self.read_sheet('xodim')
-        self.import_employee(employee_data)
+        # employee_data = self.read_sheet('xodim')
+        # self.import_employee(employee_data)
 
-        obyekt_data = self.read_sheet('obyekt')
-        self.import_obyekt(obyekt_data)
-        #
-        rasta_data = self.read_sheet('rasta')
-        self.import_ntochka(rasta_data)
+        # obyekt_data = self.read_sheet('obyekt')
+        # self.import_obyekt(obyekt_data)
+        # #
+        # rasta_data = self.read_sheet('rasta')
+        # self.import_ntochka(rasta_data)
         #
         # category_data = self.read_sheet('category')
         # # self.update_category(category_data)
         # self.import_category(category_data)
         #
         product_data = self.read_sheet('mahsulot')
-        self.import_products(product_data)
+        self.update_products(product_data)
+        # self.import_products(product_data)
         #
-        rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
-        self.relate_rasta_product(rasta_hafta_product_data)
+        # rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
+        # self.relate_rasta_product(rasta_hafta_product_data)
         #
         # rasta_oy_product_data = self.read_sheet('rasta_oy')
         # self.relate_rasta_hafta_product(rasta_oy_product_data)
