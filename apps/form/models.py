@@ -44,11 +44,10 @@ class ProductCategory(BaseModel):
     code = models.CharField(max_length=10, unique=True, verbose_name=_("Kategoriyaning kodi"))
     union = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='categories', verbose_name=_("Birlik"))
     rasfas = models.PositiveIntegerField(default=1, verbose_name=_("Rasfas"))
-    product_type = MultiSelectField(
-        choices=(('1', 'mahsulot'), ('2', 'no mahsulot'), ('3', 'xizmat')),
-        max_length=10,
+    product_type = models.PositiveSmallIntegerField(
+        choices=((1, 'mahsulot'), (2, 'no mahsulot'), (3, 'xizmat')),
         verbose_name=_("Mahsulot turi"),
-        default=['1']
+        default=1
     )
     weekly_type = models.PositiveSmallIntegerField(
         choices=((1, 'haftalik'), (2, 'oylik'), (3, 'bari')),

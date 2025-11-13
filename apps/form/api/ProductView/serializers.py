@@ -66,9 +66,9 @@ class TochkaProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = TochkaProduct
         fields = [
-            'id', 'product', 'ntochka', 'last_price',
+            'id', 'product', 'ntochka', 'last_price', 
             'previous_price', 'status', 'product_status',
-            'is_active', 'is_udalen'
+            'is_active', 'is_udalen', 'miqdor'
         ]
 
 class TochkaProductHistorySerializer(serializers.ModelSerializer):

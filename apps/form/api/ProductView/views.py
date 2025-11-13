@@ -63,25 +63,27 @@ class TochkaProductListView(ListAPIView):
         req = self.request
         uuid = req.META.get('HTTP_X_USER_UUID')
         rasta_uuid = req.META.get('HTTP_X_RASTA_UUID')
+        print(f"UUID: {uuid}, Rasta UUID: {rasta_uuid}")
         in_process = req.query_params.get('in_proccess', 'false').lower() == 'true'
-        period_type = req.GET.get('period_type', 'weekly') == 'weekly'
-        obyekt_type = req.GET.get('obyekt_type', '1')
+        period_type = req.GET.get('period_type', 'weekly')
+        is_weekly = period_type == 'weekly'
+        _product_type = req.GET.get('obyekt_type', None)
+        product_type = {'food': '1', 'nofood': '2', 'services': '3'}.get(_product_type, '1')
 
         employee = get_employee_by_uuid(uuid)
         ntochka = get_ntochka_by_uuid(rasta_uuid)
         qs = None
-
         query = Q(
             ntochka=ntochka,
             is_active=True,
-            is_weekly=period_type,
+            is_weekly=is_weekly,
         )
-        if not period_type:
-            query &= Q(product__category__product_type__contains=obyekt_type)
-
+        if not is_weekly:
+            query &= Q(product__category__product_type=product_type)
+        print(f"Employee: {employee}, NTochka: {ntochka}, In process: {in_process}, Period type: {period_type}, Obyekt type: {product_type}",f"Query: {query}")
         if employee and ntochka:
-            current_period = get_period_by_type_today()
-            
+            current_period = get_period_by_type_today(period_type=period_type)
+            print(f"Current Period: {current_period}", period_type)
             history_prefetch = Prefetch(
                 'history', 
                 queryset=TochkaProductHistory.objects.filter(
@@ -138,6 +140,7 @@ class TochkaProductHistoryCreateView(CreateAPIView):
         employee = get_employee_by_uuid(uuid)
         tochka_product = get_tochka_product_by_id(tochka_product_id)
         period_type = request.data.get('period_type')
+        print(f"Employee: {employee}, Tochka Product: {tochka_product}, Period Type: {period_type}")
         period = get_period_by_type_today(period_type)
         
         data = request.data.copy()
@@ -275,7 +278,12 @@ class AlternativeProductListView(ListAPIView):
             return Response({"detail": "Invalid headers or not found"}, status=400)
 
         category = product.category
-        category_products = Product.objects.filter(category=category)
+        category_products = Product.objects.filter(category=category).select_related(
+            'category',
+            'unit'
+        )
+
+
 
         # Ushbu rasta (ntochka)da mavjud bo‘lgan productlar ID ro‘yxati
         existing_product_ids = ntochka.products.filter(
@@ -286,7 +294,6 @@ class AlternativeProductListView(ListAPIView):
         missing_products = category_products.exclude(id__in=existing_product_ids)
 
         serializer = ProductSerializer(missing_products, many=True)
-        print(serializer.data)
         return Response(serializer.data, status=200)
 
 

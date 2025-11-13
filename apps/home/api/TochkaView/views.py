@@ -51,8 +51,10 @@ class TochkaListView(ListAPIView):
     )
     def get(self, request, *args, **kwargs):
         queryset = self.get_queryset()
+        print(f"Tochka queryset count: {queryset.count()}", queryset)
         serializer = self.get_serializer(queryset, many=True)
-        print(serializer.data)
+        # print(serializer.data)
+
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def get_queryset(self):
@@ -64,11 +66,12 @@ class TochkaListView(ListAPIView):
         _weekly_type = req.GET.get('weekly_type', 1)
         weekly_type = 1 if _weekly_type == 'weekly' else 2
         print(f"Weekly type: {weekly_type}, Product type: {product_type}, {_product_type} for employee: {employee}, {_weekly_type}")
+        print(f"Employee: {employee}")
         if not employee:
             return Tochka.objects.none()
 
 
-        period_date = get_period_by_type_today()
+        period_date = get_period_by_type_today(_weekly_type)
         if not period_date:
             return Tochka.objects.none()
 
@@ -88,11 +91,11 @@ class TochkaListView(ListAPIView):
             is_weekly=_weekly_type == 'weekly',
         )
         if product_type:
-            ntochka_query &= Q(product_type=product_type)
+            ntochka_query &= Q(product_type__contains=product_type)
 
         if weekly_type == 2 and product_type:
             base_query &= Q(product_type__contains=product_type)
-            tochka_product_query &= Q(product__category__product_type__contains=product_type)
+            tochka_product_query &= Q(product__category__product_type=int(product_type))
         print(f"Base query: {base_query} NTochka query: {ntochka_query} TochkaProduct query: {tochka_product_query}")
         ntochka_prefetch = Prefetch(
             'ntochkas',
@@ -114,6 +117,8 @@ class TochkaListView(ListAPIView):
                     'product_history',
                     queryset=TochkaProductHistory.objects.filter(
                         period__period=period_date.period,
+                        product__category__product_type=int(product_type)
+
                     ).exclude(
                         status__in=['sotilmayapti', 'vaqtinchalik', 'obyekt_yopilgan', 'mavsumiy', 'chegirma']
                     ).only('id', 'ntochka_id', 'status'),
@@ -122,7 +127,6 @@ class TochkaListView(ListAPIView):
             ),
             to_attr='active_ntochkas'
         )
-        print(Tochka.objects.filter(product_type__contains='f'))
 
         return Tochka.objects.filter(base_query).select_related(
             'employee',
