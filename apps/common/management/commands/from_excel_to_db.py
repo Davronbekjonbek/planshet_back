@@ -419,6 +419,31 @@ class Command(BaseCommand):
             f"Yangilangan mahsulotlar: {updated_count}, xatoliklar: {errors_count}"
         ))
 
+    
+    def update_rasta_product(self, df):
+        """Rasta mahsulotlarini birliklarini yangliash"""
+        updated_count = 0
+        errors_count = 0
+
+        rasta_product_count = {
+
+        } 
+
+        for _, row in df.iterrows():
+            mahsulot_kodi = int(row.get('mahsulot_kodi') or '')
+            rasta_kodi = int(row.get('rasta_kodi') or '')
+            obyekt_kodi = int(row.get('obyekt_kodi') or '')
+            miqdor = float(row.get('miqdor') or 0.0)
+            rasta_products = TochkaProduct.objects.filter(
+                ntochka__code=rasta_kodi,
+                product__code=mahsulot_kodi,
+            )
+            print(rasta_products, mahsulot_kodi, rasta_kodi, rasta_products.count(), "print")
+            count_ = rasta_products.count()
+            rasta_product_count[count_] = rasta_product_count.get(count_, 0) + 1
+            rasta_products.update(miqdor=miqdor)
+            updated_count += rasta_products.count()
+        print(rasta_product_count)
 
     def handle(self, *args, **options):
         self.stdout.write("Excel fayl topilgan ma'lumotlarni bazaga yuklash boshlandi...")
@@ -436,8 +461,8 @@ class Command(BaseCommand):
         # # self.update_category(category_data)
         # self.import_category(category_data)
         #
-        product_data = self.read_sheet('mahsulot')
-        self.update_products(product_data)
+        # product_data = self.read_sheet('mahsulot')
+        # self.update_products(product_data)
         # self.import_products(product_data)
         #
         # rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
@@ -445,6 +470,9 @@ class Command(BaseCommand):
         #
         # rasta_oy_product_data = self.read_sheet('rasta_oy')
         # self.relate_rasta_hafta_product(rasta_oy_product_data)
+
+        rasta_product_data = self.read_sheet('rasta_mahsulotlari')
+        self.update_rasta_product(rasta_product_data)
 
         self.stdout.write(self.style.SUCCESS("Import jarayoni muvaffaqiyatli yakunlandi!"))
 
