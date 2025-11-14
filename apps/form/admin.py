@@ -111,7 +111,11 @@ class TochkaProductHistoryAdmin(BaseAdmin):
         'status',
         'is_active',
         'is_checked',
-        'created_at'
+        'created_at',
+        'tochka_product',
+        'ntochka',
+        'hudud',
+        'product'
     )
     search_fields = ('employee__full_name',)
     ordering = ('-created_at',)
