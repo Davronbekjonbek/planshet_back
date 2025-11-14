@@ -87,7 +87,7 @@ class TochkaProductListView(ListAPIView):
             history_prefetch = Prefetch(
                 'history', 
                 queryset=TochkaProductHistory.objects.filter(
-                    period__period=current_period,
+                    period__period=current_period.period,
                     is_active=True
                 ).select_related('tochka_product', 'period', 'employee'),
                 to_attr='current_history'
