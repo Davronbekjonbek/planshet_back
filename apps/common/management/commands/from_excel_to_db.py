@@ -433,7 +433,7 @@ class Command(BaseCommand):
             mahsulot_kodi = int(row.get('mahsulot_kodi') or '')
             rasta_kodi = int(row.get('rasta_kodi') or '')
             obyekt_kodi = int(row.get('obyekt_kodi') or '')
-            miqdor = float(row.get('miqdor') or 0.0)
+            miqdor = float(row.get('birlik') or 0.0)
             rasta_products = TochkaProduct.objects.filter(
                 ntochka__code=rasta_kodi,
                 product__code=mahsulot_kodi,
