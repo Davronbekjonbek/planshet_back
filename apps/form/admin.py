@@ -115,7 +115,8 @@ class TochkaProductHistoryAdmin(BaseAdmin):
         'tochka_product',
         'ntochka',
         'hudud',
-        'product'
+        'product',
+        'employee'
     )
     search_fields = ('employee__full_name',)
     ordering = ('-created_at',)
