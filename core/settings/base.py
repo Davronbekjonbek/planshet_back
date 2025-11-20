@@ -16,6 +16,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(','
 CSRF_TRUSTED_ORIGINS = [
     "http://hisobot2.stat.uz",
     "https://hisobot2.stat.uz",
+    "http://172.16.8.137"
 ]
 
 
@@ -76,7 +77,8 @@ if DEBUG:
     INTERNAL_IPS = [
         '127.0.0.1',
         'localhost',
-        '172.16.5.61'
+        '172.16.5.61',
+        '172.16.8.137'
     ]
 
     # Debug Toolbar konfiguratsiyasi
