@@ -93,6 +93,7 @@ from django.db.models.functions import TruncDay, TruncWeek, TruncMonth, Concat
 from django.utils import timezone
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 import pandas as pd
 from datetime import datetime, timedelta
 import json
@@ -126,6 +127,9 @@ class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
         date_from = self.request.GET.get('date_from')
         date_to = self.request.GET.get('date_to')
         
+        selected_period = None
+        per_page = 50
+
         # Base queryset with optimized prefetch/select
         history_qs = TochkaProductHistory.objects.select_related(
             'product', 'ntochka', 'hudud', 'employee', 'period',
@@ -134,7 +138,7 @@ class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
         ).prefetch_related(
             'tochka_product',
             'product__category__union'
-        ).all()
+        ).filter(is_active=True)
         
         # Apply filters
         filters = {}
@@ -148,8 +152,11 @@ class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
             context['selected_district'] = District.objects.get(id=district_id)
         
         if period_id:
-            filters['period_id'] = period_id
-            context['selected_period'] = PeriodDate.objects.get(id=period_id)
+            try:
+                selected_period = Period.objects.get(id=period_id)
+                filters['period__period_id'] = period_id
+            except Period.DoesNotExist:
+                selected_period = None
         
         if category_id:
             filters['product__category_id'] = category_id
@@ -178,19 +185,32 @@ class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
             except ValueError:
                 pass
                 
-        # Limit to recent data if no period or date range specified
-        if not period_id and not (date_from and date_to):
-            latest_period = PeriodDate.objects.order_by('-date').first()
+        # Limit to latest period if nothing specified to keep view fast
+        if not filters.get('period__period_id') and not (date_from and date_to):
+            latest_period = PeriodDate.objects.select_related('period').order_by('-date').first()
             if latest_period:
-                filters['period'] = latest_period
-                context['selected_period'] = latest_period
+                filters['period__period_id'] = latest_period.period_id
+                selected_period = latest_period.period
         
         # Apply all filters
-        history_qs = history_qs
-        print
+        history_qs = history_qs.filter(**filters).order_by('-period__date', '-id')
+        context['selected_period'] = selected_period
+
+        total_count = history_qs.count()
         # Add to context
-        context['history_records'] = history_qs
-        context['total_count'] = history_qs.count()
+        paginator = Paginator(history_qs, per_page)
+        page_number = self.request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        query_params = self.request.GET.copy()
+        if 'page' in query_params:
+            query_params.pop('page')
+        context['query_string'] = query_params.urlencode()
+
+        context['history_records'] = page_obj.object_list
+        context['page_obj'] = page_obj
+        context['paginator'] = paginator
+        context['total_count'] = total_count
+        context['per_page'] = per_page
         
         # Dropdown data for filters
         context['regions'] = Region.objects.all().order_by('name')
@@ -200,7 +220,7 @@ class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
         else:
             context['districts'] = District.objects.all().order_by('name')
             
-        context['periods'] = PeriodDate.objects.select_related('period').order_by('-date')[:50]
+        context['periods'] = Period.objects.filter(is_active=True).order_by('-id')
         context['categories'] = ProductCategory.objects.all().order_by('name')
         
         if category_id:
@@ -212,11 +232,16 @@ class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
         context['status_choices'] = dict(TochkaProductHistory.PRODUCT_STATUS_CHOICES)
         
         # Statistics
+        aggregates = history_qs.aggregate(
+            avg_price=Avg('price'),
+            max_price=Max('price'),
+            min_price=Min('price')
+        )
         context['stats'] = {
-            'avg_price': history_qs.aggregate(Avg('price'))['price__avg'],
-            'max_price': history_qs.aggregate(Max('price'))['price__max'],
-            'min_price': history_qs.aggregate(Min('price'))['price__min'],
-            'total_records': history_qs.count(),
+            'avg_price': aggregates['avg_price'],
+            'max_price': aggregates['max_price'],
+            'min_price': aggregates['min_price'],
+            'total_records': total_count,
             'unique_products': history_qs.values('product_id').distinct().count(),
             'unique_tochkas': history_qs.values('hudud_id').distinct().count()
         }
@@ -229,16 +254,14 @@ class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
             
             # Product price comparison across regions
             if product_id:
-                region_comparison = self._get_region_comparison(product_id)
+                region_comparison = self._get_region_comparison(
+                    product_id,
+                    selected_period.id if selected_period else None
+                )
                 context['region_comparison'] = json.dumps(region_comparison)
         
         # Top 10 most expensive products
-        top_products = TochkaProductHistory.objects.filter(
-            is_active=True, 
-            period=context.get('selected_period')
-        ).select_related(
-            'product', 'product__category'
-        ).values(
+        top_products = history_qs.values(
             'product__name', 'product__category__name'
         ).annotate(
             avg_price=Avg('price')
@@ -265,12 +288,17 @@ class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
             'data': [float(t['avg_price']) if t['avg_price'] else 0 for t in trends]
         }
     
-    def _get_region_comparison(self, product_id):
+    def _get_region_comparison(self, product_id, period_id=None):
         """Compare product prices across regions"""
         comparison = TochkaProductHistory.objects.filter(
             product_id=product_id, 
             is_active=True
-        ).select_related(
+        )
+
+        if period_id:
+            comparison = comparison.filter(period__period_id=period_id)
+
+        comparison = comparison.select_related(
             'hudud__district__region'
         ).values(
             'hudud__district__region__name'
@@ -416,7 +444,7 @@ def export_to_excel(request):
         filters['hudud__district_id'] = district_id
     
     if period_id:
-        filters['period_id'] = period_id
+        filters['period__period_id'] = period_id
     
     if category_id:
         filters['product__category_id'] = category_id
@@ -571,7 +599,7 @@ def export_to_csv(request):
     if district_id:
         filters['hudud__district_id'] = district_id
     if period_id:
-        filters['period_id'] = period_id
+        filters['period__period_id'] = period_id
     if category_id:
         filters['product__category_id'] = category_id
     if product_id:
