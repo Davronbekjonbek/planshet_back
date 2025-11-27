@@ -7,7 +7,8 @@ from django.core.management.base import BaseCommand, CommandError
 import pandas as pd
 import os
 
-file_path = "datas/plantochtovar_oxirgi.xlsx"
+# file_path = "datas/plantochtovar_oxirgi.xlsx"
+file_path = "datas/plantochtovar_oxirgi_has_product_mhik.xlsx"
 
 class Command(BaseCommand):
     help = "Excel fayl topilgan ma'lumotlarni bazaga yuklaydi"
@@ -254,7 +255,7 @@ class Command(BaseCommand):
             narxi = float(row.get('narxi', 0) or 0)
             is_special = bool(is_weekly == 3)
             is_index = bool(row.get('is_index', False))
-            unique_code = str(row.get('mahsulot_kodi') or '').strip()
+            unique_code = str(row.get('mahsulot_mhik_kodi') or '').strip()
             barcode_val = row.get('barcode')
             try:
                 if barcode_val is None or str(barcode_val).strip() == '' or pd.isna(barcode_val):
@@ -419,6 +420,28 @@ class Command(BaseCommand):
             f"Yangilangan mahsulotlar: {updated_count}, xatoliklar: {errors_count}"
         ))
 
+    def set_mhik_to_exists_products(self, df):
+        updated_count = 0
+        errors_count = 0
+
+        for _, row in df.iterrows():
+            product_kodi = str(row.get('mahsulot_kodi') or '').strip()
+            product = Product.objects.filter(code=product_kodi).first()
+            if not product:
+                errors_count += 1
+                self.stdout.write(
+                    self.style.WARNING(f"Mahsulot topilmadi: {product_kodi}")
+                )
+                continue
+
+            mahsulot_mhik_kodi = str(row.get('mahsulot_mhik_kodi') or '').strip()
+            product.code = mahsulot_mhik_kodi
+            product.save()
+            updated_count += 1
+
+        self.stdout.write(self.style.SUCCESS(
+            f"Yangilangan mahsulotlar: {updated_count}, xatoliklar: {errors_count}"
+        ))
     
     def update_rasta_product(self, df):
         """Rasta mahsulotlarini birliklarini yangliash"""
@@ -461,9 +484,9 @@ class Command(BaseCommand):
         # # self.update_category(category_data)
         # self.import_category(category_data)
         #
-        # product_data = self.read_sheet('mahsulot')
+        product_data = self.read_sheet('mahsulot')
         # self.update_products(product_data)
-        # self.import_products(product_data)
+        self.import_products(product_data)
         #
         # rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
         # self.relate_rasta_product(rasta_hafta_product_data)
@@ -471,8 +494,12 @@ class Command(BaseCommand):
         # rasta_oy_product_data = self.read_sheet('rasta_oy')
         # self.relate_rasta_hafta_product(rasta_oy_product_data)
 
-        rasta_product_data = self.read_sheet('rasta_mahsulotlari')
-        self.update_rasta_product(rasta_product_data)
+        # rasta_product_data = self.read_sheet('rasta_mahsulotlari')
+        # self.update_rasta_product(rasta_product_data)
+
+        exists_products_data = self.read_sheet('exists_mahsulot_mhik')
+        self.set_mhik_to_exists_products(exists_products_data)
+
 
         self.stdout.write(self.style.SUCCESS("Import jarayoni muvaffaqiyatli yakunlandi!"))
 
