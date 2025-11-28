@@ -120,7 +120,7 @@ class EmployeeAdmin(BaseAdmin):
     search_fields = ('full_name', 'login', 'district__name')
     ordering = ('full_name',)
     readonly_fields = ('uuid', 'created_at', 'updated_at')
-    list_select_related = ("region",) 
+    list_select_related = ("district","district__region") 
 
     # fieldsets = (
     #     ('Shaxsiy ma\'lumotlar', {

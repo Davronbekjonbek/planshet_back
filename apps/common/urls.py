@@ -11,7 +11,8 @@ urlpatterns = [
     path('product/<int:pk>/', views.ProductHistoryDetailView.as_view(), name='product_detail'),
     
     # Region comparison view
-    path('regions/', views.RegionComparisonView.as_view(), name='region_comparison'),
+    path('regions/', views.RegionMonitoringView.as_view(), name='region_monitoring'),
+
     
     # Export data
     path('export/excel/', views.export_to_excel, name='export_excel'),

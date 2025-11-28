@@ -220,7 +220,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.resolver_match.url_name == 'region_comparison' %}active{% endif %}" href="{% url 'monitoring:region_comparison' %}">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'region_monitoring' %}active{% endif %}" href="{% url 'monitoring:region_monitoring' %}">
                             <i class="fas fa-map-marked-alt me-1"></i>Hududiy taqqoslash
                         </a>
                     </li>
@@ -264,25 +264,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'region_comparison' %}active{% endif %}" href="{% url 'monitoring:region_comparison' %}">
-                                <i class="fas fa-chart-bar"></i> Hududiy taqqoslash
+                            <a class="nav-link {% if request.resolver_match.url_name == 'region_monitoring' %}active{% endif %}" href="{% url 'monitoring:region_monitoring' %}">
+                                <i class="fas fa-chart-bar"></i> Hududiy monitoring
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="toggleFilters">
-                                <i class="fas fa-filter"></i> Filtrlar
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'monitoring:export_excel' %}{% if request.GET %}?{{ request.GET.urlencode }}{% endif %}">
-                                <i class="fas fa-file-excel"></i> Excel ga yuklash
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'monitoring:export_csv' %}{% if request.GET %}?{{ request.GET.urlencode }}{% endif %}">
-                                <i class="fas fa-file-csv"></i> CSV ga yuklash
-                            </a>
-                        </li>
+            
                     </ul>
                     
                     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-white">
@@ -323,13 +309,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <script>
-        // Toggle filters visibility
-        $(document).ready(function() {
-            $("#toggleFilters").click(function(e) {
-                e.preventDefault();
-                $(".filter-card").slideToggle();
-            });
-            
+
             // Dependent dropdowns
             $("#id_region").change(function() {
                 var regionId = $(this).val();

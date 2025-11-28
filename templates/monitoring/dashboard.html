@@ -251,8 +251,8 @@
 </div>
 {% endif %}
 
-<!-- Region Comparison Chart (if product selected) -->
-{% if region_comparison %}
+<!-- Region Monitoring Chart (if product selected) -->
+{% if region_monitoring %}
 <div class="row">
     <div class="col-12">
         <div class="card mb-4">
@@ -478,11 +478,11 @@
 </script>
 {% endif %}
 
-{% if region_comparison %}
+{% if region_monitoring %}
 <script>
     // Region Comparison Chart
     var regionCtx = document.getElementById('regionComparisonChart').getContext('2d');
-    var regionData = {{ region_comparison|safe }};
+    var regionData = {{ region_monitoring|safe }};
     
     var regionComparisonChart = new Chart(regionCtx, {
         type: 'bar',

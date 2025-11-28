@@ -10,7 +10,30 @@ from django.utils.safestring import mark_safe
 from apps.form.models import *
 from apps.home.models import *
 from apps.common.models import  *
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.views.generic import ListView, DetailView, TemplateView
+from django.db.models import Avg, Min, Max, Count, Q, F, Sum, Value, CharField, Case, When, IntegerField, Prefetch
+from django.db.models.functions import TruncDay, TruncWeek, TruncMonth, Concat
+from django.utils import timezone
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
+import pandas as pd
+from datetime import datetime, timedelta
+import json
+from io import BytesIO
+import xlsxwriter
+import csv
 
+from apps.home.models import (
+    Tochka, NTochka, Region, District, 
+    Employee, Period, PeriodDate
+)
+from apps.form.models import (
+    TochkaProductHistory, TochkaProduct, 
+    Product, ProductCategory, Birlik, Application
+)
 
 def export_all_csv_zip(request):
     """Namuna formatida CSV fayllarni ZIP da export qilish"""
@@ -85,30 +108,7 @@ def export_all_csv_zip(request):
 
     return response
 
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.views.generic import ListView, DetailView, TemplateView
-from django.db.models import Avg, Min, Max, Count, Q, F, Sum, Value, CharField
-from django.db.models.functions import TruncDay, TruncWeek, TruncMonth, Concat
-from django.utils import timezone
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.decorators import login_required
-from django.core.paginator import Paginator
-import pandas as pd
-from datetime import datetime, timedelta
-import json
-from io import BytesIO
-import xlsxwriter
-import csv
 
-from apps.home.models import (
-    Tochka, NTochka, Region, District, 
-    Employee, Period, PeriodDate
-)
-from apps.form.models import (
-    TochkaProductHistory, TochkaProduct, 
-    Product, ProductCategory, Birlik, Application
-)
 
 class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
     template_name = 'monitoring/dashboard.html'
@@ -254,11 +254,11 @@ class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
             
             # Product price comparison across regions
             if product_id:
-                region_comparison = self._get_region_comparison(
+                region_monitoring = self._get_region_monitoring(
                     product_id,
                     selected_period.id if selected_period else None
                 )
-                context['region_comparison'] = json.dumps(region_comparison)
+                context['region_monitoring'] = json.dumps(region_monitoring)
         
         # Top 10 most expensive products
         top_products = history_qs.values(
@@ -288,7 +288,7 @@ class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
             'data': [float(t['avg_price']) if t['avg_price'] else 0 for t in trends]
         }
     
-    def _get_region_comparison(self, product_id, period_id=None):
+    def _get_region_monitoring(self, product_id, period_id=None):
         """Compare product prices across regions"""
         comparison = TochkaProductHistory.objects.filter(
             product_id=product_id, 
@@ -366,49 +366,307 @@ class ProductHistoryDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class RegionComparisonView(LoginRequiredMixin, TemplateView):
-    template_name = 'monitoring/region_comparison.html'
+class RegionMonitoringView(LoginRequiredMixin, TemplateView):
+    template_name = 'monitoring/region_monitoring.html'
+
+    def get(self, request, *args, **kwargs):
+        if request.GET.get('export') == 'excel':
+            return self.export_excel()
+        return super().get(request, *args, **kwargs)
+
+    def export_excel(self):
+        context = self.get_context_data(**self.kwargs)
+        data = context['data']
+        
+        output = BytesIO()
+        workbook = xlsxwriter.Workbook(output)
+        worksheet = workbook.add_worksheet("Monitoring")
+        
+        # Headers
+        headers = ['Nomi', 'SOATO', 'Jami obyektlar', 'Kiritilgan', 'Foiz', "Mas'ul xodimlar"]
+        header_format = workbook.add_format({'bold': True, 'bg_color': '#D7E4BC', 'border': 1})
+        
+        for col, header in enumerate(headers):
+            worksheet.write(0, col, header, header_format)
+            worksheet.set_column(col, col, 20)
+            
+        # Data
+        for row, item in enumerate(data, start=1):
+            worksheet.write(row, 0, item['name'])
+            worksheet.write(row, 1, item.get('soato', ''))
+            worksheet.write(row, 2, item['total'])
+            worksheet.write(row, 3, item['entered'])
+            worksheet.write(row, 4, f"{item['percent']}%")
+            employees = ", ".join([e.full_name for e in item['employees']])
+            worksheet.write(row, 5, employees)
+            
+        # Total Row
+        if 'total_data' in context:
+            total = context['total_data']
+            row += 1
+            worksheet.write(row, 0, "Jami", header_format)
+            worksheet.write(row, 1, "", header_format)
+            worksheet.write(row, 2, total['total'], header_format)
+            worksheet.write(row, 3, total['entered'], header_format)
+            worksheet.write(row, 4, f"{total['percent']}%", header_format)
+            worksheet.write(row, 5, "", header_format)
+            
+        workbook.close()
+        output.seek(0)
+        
+        filename = f"monitoring_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
+        response = HttpResponse(
+            output.read(),
+            content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        )
+        response['Content-Disposition'] = f'attachment; filename="{filename}"'
+        return response
+
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         
-        # Get selected period
-        period_id = self.request.GET.get('period')
-        if period_id:
-            period = PeriodDate.objects.get(id=period_id)
-        else:
-            period = PeriodDate.objects.order_by('-date').first()
+        # 1. Filters - Safe Integer Conversion
+        try:
+            period_id = int(self.request.GET.get('period', ''))
+        except (ValueError, TypeError):
+            period_id = None
             
-        context['selected_period'] = period
-        context['periods'] = PeriodDate.objects.select_related('period').order_by('-date')[:30]
+        try:
+            date_id = int(self.request.GET.get('date', ''))
+        except (ValueError, TypeError):
+            date_id = None
+            
+        try:
+            region_id = int(self.request.GET.get('region', ''))
+        except (ValueError, TypeError):
+            region_id = None
+            
+        try:
+            district_id = int(self.request.GET.get('district', ''))
+        except (ValueError, TypeError):
+            district_id = None
+
+        try:
+            tochka_id = int(self.request.GET.get('tochka', ''))
+        except (ValueError, TypeError):
+            tochka_id = None
+            
+        status_filter = self.request.GET.get('status')
+
+        # Context for filters
+        context['periods'] = Period.objects.filter(is_active=True).order_by('-id')
+        context['regions'] = Region.objects.all().order_by('name')
         
-        # Get selected category
-        category_id = self.request.GET.get('category')
-        if category_id:
-            category = ProductCategory.objects.get(id=category_id)
-            context['selected_category'] = category
+        # Determine target dates
+        target_dates = []
+        selected_period = None
+        selected_date = None
+
+        if period_id:
+            selected_period = Period.objects.filter(id=period_id).first()
+            context['selected_period'] = selected_period
+            # Filter dates by period
+            period_dates = PeriodDate.objects.filter(period_id=period_id).order_by('-date')
+            context['period_dates'] = period_dates
+        
+        if date_id:
+            selected_date = PeriodDate.objects.filter(id=date_id).first()
+            if selected_date:
+                target_dates = [selected_date]
+                if not selected_period:
+                    selected_period = selected_date.period
+                    context['selected_period'] = selected_period
+                    context['period_dates'] = PeriodDate.objects.filter(period=selected_period).order_by('-date')
+        elif selected_period:
+            # If period selected but no date, use all dates in period
+            target_dates = list(PeriodDate.objects.filter(period=selected_period))
+        else:
+            # Default to very latest date if nothing selected
+            latest_date = PeriodDate.objects.order_by('-date').first()
+            if latest_date:
+                target_dates = [latest_date]
+                selected_date = latest_date
+                selected_period = latest_date.period
+                context['selected_period'] = selected_period
+                context['period_dates'] = PeriodDate.objects.filter(period=selected_period).order_by('-date')
+
+        context['selected_date'] = selected_date
+
+        # 2. Region & District Filters
+        if region_id:
+            context['districts'] = District.objects.filter(region_id=region_id).order_by('name')
+            context['selected_region'] = region_id
+        
+        if district_id:
+            context['selected_district'] = district_id
+        
+        context['selected_status'] = status_filter
+
+        # 3. Data Aggregation
+        data = []
+        mode = 'region' # region, district, tochka
+
+        if not target_dates:
+             context['data'] = []
+             context['mode'] = mode
+             return context
+
+        def get_status_class(percent):
+            if percent >= 100: return 'bg-success', 'To\'liq'
+            elif percent >= 70: return 'bg-warning', 'Yaxshi'
+            return 'bg-danger', 'Qoniqarsiz'
+
+        if tochka_id:
+            mode = 'product'
+            context['selected_tochka'] = Tochka.objects.get(id=tochka_id)
             
-            # Get average prices by region for this category
-            region_data = TochkaProductHistory.objects.filter(
-                period=period,
-                product__category=category,
-                is_active=True
-            ).select_related(
-                'hudud__district__region'
-            ).values(
-                'hudud__district__region__name'
-            ).annotate(
-                avg_price=Avg('price')
-            ).order_by('hudud__district__region__name')
+            queryset = TochkaProduct.objects.filter(hudud_id=tochka_id, is_active=True).select_related('product', 'product__unit')
             
-            comparison_data = {
-                'labels': [r['hudud__district__region__name'] for r in region_data],
-                'data': [float(r['avg_price']) if r['avg_price'] else 0 for r in region_data]
-            }
+            # Optimization: Fetch latest history for each product in bulk
+            histories = TochkaProductHistory.objects.filter(
+                tochka_product__in=queryset,
+                period__in=target_dates
+            ).select_related('employee').order_by('tochka_product_id', '-period__date')
             
-            context['comparison_data'] = json.dumps(comparison_data)
+            # Create a map of tochka_product_id -> latest history
+            history_map = {}
+            for h in histories:
+                if h.tochka_product_id not in history_map:
+                    history_map[h.tochka_product_id] = h
             
-        context['categories'] = ProductCategory.objects.all().order_by('name')
+            for obj in queryset:
+                history = history_map.get(obj.id)
+                
+                entered = 1 if history else 0
+                percent = 100 if entered else 0
+                status_cls, status_text = get_status_class(percent)
+                
+                data.append({
+                    'id': obj.id,
+                    'name': obj.product.name,
+                    'soato': obj.product.code,
+                    'total': 1,
+                    'entered': entered,
+                    'percent': percent,
+                    'employees': [history.employee] if history else [],
+                    'status_class': status_cls,
+                    'status_text': history.get_status_display() if history else 'Kiritilmagan',
+                    'price': history.price if history else 0,
+                    'unit': obj.product.unit.name
+                })
+
+        elif district_id:
+            mode = 'tochka'
+            # Show Tochkas in the district
+            queryset = Tochka.objects.filter(district_id=district_id, is_active=True).select_related('employee')
+            
+            # Annotate with entered status
+            queryset = queryset.annotate(
+                total_products=Count('products', filter=Q(products__is_active=True)),
+                entered_products=Count('products', filter=Q(products__is_active=True, products__history__period__in=target_dates), distinct=True)
+            )
+            
+            for obj in queryset:
+                total = obj.total_products
+                entered = obj.entered_products
+                percent = (entered / total * 100) if total > 0 else 0
+                status_cls, status_text = get_status_class(percent)
+                
+                data.append({
+                    'id': obj.id,
+                    'name': obj.name,
+                    'soato': obj.code,
+                    'total': total,
+                    'entered': entered,
+                    'percent': round(percent, 1),
+                    'employees': [obj.employee] if obj.employee else [],
+                    'status_class': status_cls,
+                    'status_text': status_text
+                })
+
+        elif region_id:
+            mode = 'district'
+            # Show Districts in the region
+            queryset = District.objects.filter(region_id=region_id).prefetch_related(
+                Prefetch('employees', queryset=Employee.objects.all())
+            )
+            
+            # Annotate total active tochkas
+            queryset = queryset.annotate(
+                total_tochkas=Count('tochkas', filter=Q(tochkas__is_active=True)),
+                entered_tochkas=Count('tochkas', filter=Q(tochkas__is_active=True, tochkas__product_history__period__in=target_dates), distinct=True)
+            )
+
+            for obj in queryset:
+                total = obj.total_tochkas
+                entered = obj.entered_tochkas
+                percent = (entered / total * 100) if total > 0 else 0
+                status_cls, status_text = get_status_class(percent)
+                
+                data.append({
+                    'id': obj.id,
+                    'name': obj.name,
+                    'soato': f"{obj.region.code}{obj.code}",
+                    'total': total,
+                    'entered': entered,
+                    'percent': round(percent, 1),
+                    'employees': list(obj.employees.all()),
+                    'status_class': status_cls,
+                    'status_text': status_text
+                })
+
+        else:
+            mode = 'region'
+            # Show All Regions
+            queryset = Region.objects.annotate(
+                total_tochkas=Count('districts__tochkas', filter=Q(districts__tochkas__is_active=True)),
+                entered_tochkas=Count('districts__tochkas', filter=Q(districts__tochkas__is_active=True, districts__tochkas__product_history__period__in=target_dates), distinct=True)
+            ).prefetch_related('districts__employees')
+            
+            for obj in queryset:
+                total = obj.total_tochkas
+                entered = obj.entered_tochkas
+                percent = (entered / total * 100) if total > 0 else 0
+                status_cls, status_text = get_status_class(percent)
+                
+                # Get employees for this region
+                employees = []
+                for district in obj.districts.all():
+                    employees.extend(list(district.employees.all()))
+                
+                data.append({
+                    'id': obj.id,
+                    'name': obj.name,
+                    'soato': obj.code,
+                    'total': total,
+                    'entered': entered,
+                    'percent': round(percent, 1),
+                    'employees': employees,
+                    'status_class': status_cls,
+                    'status_text': status_text
+                })
+
+        # Apply Status Filter
+        if status_filter:
+            data = [d for d in data if status_filter in d['status_class']]
+
+        context['data'] = data
+        context['mode'] = mode
+        
+        # Calculate Totals
+        total_obj = sum(d['total'] for d in data)
+        total_ent = sum(d['entered'] for d in data)
+        total_percent = (total_ent / total_obj * 100) if total_obj else 0
+        status_cls, status_text = get_status_class(total_percent)
+        
+        context['total_data'] = {
+            'total': total_obj,
+            'entered': total_ent,
+            'percent': round(total_percent, 1),
+            'status_class': status_cls,
+            'status_text': status_text
+        }
         
         return context
 
