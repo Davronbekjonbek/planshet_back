@@ -252,7 +252,8 @@ class Command(BaseCommand):
             # hbhd = int(row.get('HBHD', 1) or 1)
             is_import = bool(row.get('is_import', False))
             is_weekly = int(row.get('haftalik', 1) or 1)
-            narxi = float(row.get('narxi', 0) or 0)
+            # narxi = float(row.get('narxi', 0) or 0)
+            narxi = 0.0
             is_special = bool(is_weekly == 3)
             is_index = bool(row.get('is_index', False))
             unique_code = str(row.get('mahsulot_mhik_kodi') or '').strip()
@@ -284,8 +285,10 @@ class Command(BaseCommand):
                     barcode=barcode,
                     category=category,
                     price=narxi,
-                    bottom=narxi * 0.8,
-                    top=narxi * 1.2,
+                    # bottom=narxi * 0.8,
+                    # top=narxi * 1.2,
+                    bottom=0,
+                    top=100000,
                     weekly_type=int(is_weekly),
                     weekly = True,
                     unit=category.union ,
