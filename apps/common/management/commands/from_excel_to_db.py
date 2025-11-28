@@ -266,7 +266,7 @@ class Command(BaseCommand):
                 barcode = ''
             print(name)
             try:
-                category = ProductCategory.objects.get(number=category_code)
+                category = ProductCategory.objects.get(code=category_code)
             except ProductCategory.DoesNotExist:
                 self.stdout.write(self.style.WARNING(f"Kategoriya topilmadi: {category_code}"))
                 errors_count += 1
