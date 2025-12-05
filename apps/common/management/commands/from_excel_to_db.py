@@ -502,25 +502,25 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write("Excel fayl topilgan ma'lumotlarni bazaga yuklash boshlandi...")
 
-        # employee_data = self.read_sheet('xodim')
-        # self.import_employee(employee_data)
+        employee_data = self.read_sheet('xodim')
+        self.import_employee(employee_data)
 
-        # obyekt_data = self.read_sheet('obyekt')
-        # self.import_obyekt(obyekt_data)
-        # #
-        # rasta_data = self.read_sheet('rasta')
-        # self.import_ntochka(rasta_data)
+        obyekt_data = self.read_sheet('obyekt')
+        self.import_obyekt(obyekt_data)
         #
-        # category_data = self.read_sheet('kategoriya')
+        rasta_data = self.read_sheet('rasta')
+        self.import_ntochka(rasta_data)
+        #
+        category_data = self.read_sheet('kategoriya')
         # self.update_category(category_data)
-        # self.import_category(category_data)
+        self.import_category(category_data)
         #
-        # product_data = self.read_sheet('mahsulot')
+        product_data = self.read_sheet('mahsulot')
         # self.update_products(product_data)
-        # self.import_products(product_data)
+        self.import_products(product_data)
         #
-        # rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
-        # self.relate_rasta_product(rasta_hafta_product_data)
+        rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
+        self.relate_rasta_product(rasta_hafta_product_data)
         #
         # rasta_oy_product_data = self.read_sheet('rasta_oy')
         # self.relate_rasta_hafta_product(rasta_oy_product_data)
@@ -531,8 +531,8 @@ class Command(BaseCommand):
         # exists_products_data = self.read_sheet('exists_mahsulot_mhik')
         # self.set_mhik_to_exists_products(exists_products_data)
 
-        rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
-        self.add_price_for_last_period(rasta_hafta_product_data)
+        # rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
+        # self.add_price_for_last_period(rasta_hafta_product_data)
 
 
         self.stdout.write(self.style.SUCCESS("Import jarayoni muvaffaqiyatli yakunlandi!"))
