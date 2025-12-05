@@ -88,7 +88,7 @@ class PeriodDateAdmin(admin.ModelAdmin):
 @admin.register(Tochka)
 class TochkaAdmin(BaseAdmin):
     list_display = ('id', 'name', 'district', 'inn', 'address', 'plan', 'location', 'created_at')
-    list_filter = ('district__region__code', 'district__code', 'created_at')
+    list_filter = ('district__region__code', 'district__code', 'code')
     search_fields = ('name', 'inn', 'address', 'district__name')
     ordering = ('district__region__name', 'district__name', 'name')
     readonly_fields = ('uuid', 'created_at', 'updated_at')

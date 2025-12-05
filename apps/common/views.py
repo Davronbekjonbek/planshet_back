@@ -588,7 +588,7 @@ class RegionMonitoringView(LoginRequiredMixin, TemplateView):
         elif region_id:
             mode = 'district'
             # Show Districts in the region
-            queryset = District.objects.filter(region_id=region_id).prefetch_related(
+            queryset = District.objects.filter(region_id=region_id, employees__isnull=False).distinct().prefetch_related(
                 Prefetch('employees', queryset=Employee.objects.all())
             )
             
@@ -619,30 +619,51 @@ class RegionMonitoringView(LoginRequiredMixin, TemplateView):
         else:
             mode = 'region'
             # Show All Regions
-            queryset = Region.objects.annotate(
-                total_tochkas=Count('districts__tochkas', filter=Q(districts__tochkas__is_active=True)),
-                entered_tochkas=Count('districts__tochkas', filter=Q(districts__tochkas__is_active=True, districts__tochkas__product_history__period__in=target_dates), distinct=True)
-            ).prefetch_related('districts__employees')
+            # Instead of complex annotation on Region, we aggregate from Districts
             
-            for obj in queryset:
-                total = obj.total_tochkas
-                entered = obj.entered_tochkas
+            # 1. Get all districts that have employees
+            districts_qs = District.objects.filter(employees__isnull=False).distinct().annotate(
+                total_tochkas=Count('tochkas', filter=Q(tochkas__is_active=True)),
+                entered_tochkas=Count('tochkas', filter=Q(tochkas__is_active=True, tochkas__product_history__period__in=target_dates), distinct=True)
+            ).select_related('region').prefetch_related('employees')
+
+            # 2. Initialize Region Data
+            region_map = {}
+            all_regions = Region.objects.all().order_by('name')
+            
+            for r in all_regions:
+                region_map[r.id] = {
+                    'obj': r,
+                    'total': 0,
+                    'entered': 0,
+                    'employees': set()
+                }
+            
+            # 3. Aggregate District Data into Regions
+            for d in districts_qs:
+                if d.region_id in region_map:
+                    r_data = region_map[d.region_id]
+                    r_data['total'] += d.total_tochkas
+                    r_data['entered'] += d.entered_tochkas
+                    for emp in d.employees.all():
+                        r_data['employees'].add(emp)
+            
+            # 4. Build final data list
+            for r in all_regions:
+                r_data = region_map[r.id]
+                total = r_data['total']
+                entered = r_data['entered']
                 percent = (entered / total * 100) if total > 0 else 0
                 status_cls, status_text = get_status_class(percent)
                 
-                # Get employees for this region
-                employees = []
-                for district in obj.districts.all():
-                    employees.extend(list(district.employees.all()))
-                
                 data.append({
-                    'id': obj.id,
-                    'name': obj.name,
-                    'soato': obj.code,
+                    'id': r.id,
+                    'name': r.name,
+                    'soato': r.code,
                     'total': total,
                     'entered': entered,
                     'percent': round(percent, 1),
-                    'employees': employees,
+                    'employees': list(r_data['employees']),
                     'status_class': status_cls,
                     'status_text': status_text
                 })

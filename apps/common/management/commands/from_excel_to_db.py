@@ -1,3 +1,4 @@
+import time
 from apps.common.models import *
 from apps.form.models import *
 from apps.home.models import *
@@ -7,8 +8,8 @@ from django.core.management.base import BaseCommand, CommandError
 import pandas as pd
 import os
 
-# file_path = "datas/plantochtovar_oxirgi.xlsx"
-file_path = "datas/plantochtovar_oxirgi_has_product_mhik.xlsx"
+file_path = "datas/plantochtovar_oxirgi.xlsx"
+# file_path = "datas/plantochtovar_oxirgi_has_product_mhik.xlsx"
 
 class Command(BaseCommand):
     help = "Excel fayl topilgan ma'lumotlarni bazaga yuklaydi"
@@ -154,7 +155,7 @@ class Command(BaseCommand):
 
         for _, row in df.iterrows():
             name = row.get('nomi', '').strip()
-            obyekt_unique = str(row.get('obyekt', None))
+            obyekt_unique = str(int(row.get('obyekt', None)))
             code = str(row.get('rasta_kodi', None))
             is_weekly = bool(row.get('is_weekly', False))
             weekly_type = int(row.get('haftalik_turi', 1))
@@ -184,6 +185,7 @@ class Command(BaseCommand):
                 )
                 imported_count += 1
             except Exception as e:
+                time.sleep(5)
                 self.stdout.write(
                     self.style.ERROR(f"Xato: {name} - {str(e)}")
                 )
@@ -199,19 +201,21 @@ class Command(BaseCommand):
         errors_count = 0
 
         for _, row in df.iterrows():
-            name = (row.get('nomi') or '').strip()
-            code3 = row.get('kod{3}', None)
-            code8 = row.get('kod{8}', None)
+            name = str(row.get('nomi') or '').strip()
+            code3 = row.get('kod3', None)
+            code8 = row.get('kod8', None)
             code = code8
-            birlik_nomi = (row.get('birligi') or '').strip()
+            # birlik_nomi = (row.get('birligi') or '').strip()
+            birlik_code = int(row.get('birlik_kodi', 1) or 1)
+            
             rasfas = row.get('rasfas', 1)
             number = code3
 
 
             try:
-                birligi = Birlik.objects.get(name=birlik_nomi)
+                birligi = Birlik.objects.get(code=birlik_code)
             except Birlik.DoesNotExist:
-                self.stdout.write(self.style.WARNING(f"Birlik topilmadi: {birlik_nomi} {row}"))
+                self.stdout.write(self.style.WARNING(f"Birlik topilmadi: {birlik_code} {row}"))
                 errors_count += 1
                 continue
 
@@ -225,8 +229,9 @@ class Command(BaseCommand):
                     code=code,
                     union=birligi,
                     rasfas=rasfas,
-                    number=number,
+                    number=int(number),
                 )
+                print(name, code, birligi, rasfas, number)
                 imported_count += 1
             except Exception as e:
                 self.stdout.write(self.style.ERROR(f"Xato: {name} - {str(e)}"))
@@ -253,11 +258,13 @@ class Command(BaseCommand):
             is_import = bool(row.get('is_import', False))
             is_weekly = int(row.get('haftalik', 1) or 1)
             # narxi = float(row.get('narxi', 0) or 0)
-            narxi = 0.0
-            is_special = bool(is_weekly == 3)
+            narxi = float(row.get('narxi', 0) or 0)
+            is_special = bool(row.get('is_special', False))
             is_index = bool(row.get('is_index', False))
             unique_code = str(row.get('mahsulot_mhik_kodi') or '').strip()
             barcode_val = row.get('barcode')
+            _bottom = row.get('bottom', 20) * narxi / 100 
+            _top = row.get('top', 300) * narxi / 100
             try:
                 if barcode_val is None or str(barcode_val).strip() == '' or pd.isna(barcode_val):
                     barcode = ''
@@ -285,10 +292,8 @@ class Command(BaseCommand):
                     barcode=barcode,
                     category=category,
                     price=narxi,
-                    # bottom=narxi * 0.8,
-                    # top=narxi * 1.2,
-                    bottom=0,
-                    top=100000,
+                    top=_top,
+                    bottom=_bottom,
                     weekly_type=int(is_weekly),
                     weekly = True,
                     unit=category.union ,
@@ -471,6 +476,29 @@ class Command(BaseCommand):
             updated_count += rasta_products.count()
         print(rasta_product_count)
 
+    def add_price_for_last_period(self, df):
+        updated_count = 0
+        errors_count = 0
+
+        for _, row in df.iterrows():
+            mahsulot_kodi = int(row.get('mahsulot_kodi') or '')
+            rasta_kodi = int(row.get('rasta_kodi') or '')
+            obyekt_kodi = int(row.get('obyekt_kodi') or '')
+            narxi = float(row.get('narxi') or 0.0)
+            rasta_products = TochkaProduct.objects.filter(
+                ntochka__code=rasta_kodi,
+                product__code=mahsulot_kodi,
+            )
+            print(rasta_products, mahsulot_kodi, rasta_kodi, rasta_products.count(), "print")
+            for rp in rasta_products:
+                rp.last_price = narxi
+                rp.save()
+            updated_count += rasta_products.count()
+
+        self.stdout.write(self.style.SUCCESS(
+            f"Yangilangan rasta mahsulotlar: {updated_count}, xatoliklar: {errors_count}"
+        ))
+
     def handle(self, *args, **options):
         self.stdout.write("Excel fayl topilgan ma'lumotlarni bazaga yuklash boshlandi...")
 
@@ -483,13 +511,13 @@ class Command(BaseCommand):
         # rasta_data = self.read_sheet('rasta')
         # self.import_ntochka(rasta_data)
         #
-        # category_data = self.read_sheet('category')
-        # # self.update_category(category_data)
+        # category_data = self.read_sheet('kategoriya')
+        # self.update_category(category_data)
         # self.import_category(category_data)
         #
-        product_data = self.read_sheet('mahsulot')
+        # product_data = self.read_sheet('mahsulot')
         # self.update_products(product_data)
-        self.import_products(product_data)
+        # self.import_products(product_data)
         #
         # rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
         # self.relate_rasta_product(rasta_hafta_product_data)
@@ -500,8 +528,11 @@ class Command(BaseCommand):
         # rasta_product_data = self.read_sheet('rasta_mahsulotlari')
         # self.update_rasta_product(rasta_product_data)
 
-        exists_products_data = self.read_sheet('exists_mahsulot_mhik')
-        self.set_mhik_to_exists_products(exists_products_data)
+        # exists_products_data = self.read_sheet('exists_mahsulot_mhik')
+        # self.set_mhik_to_exists_products(exists_products_data)
+
+        rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
+        self.add_price_for_last_period(rasta_hafta_product_data)
 
 
         self.stdout.write(self.style.SUCCESS("Import jarayoni muvaffaqiyatli yakunlandi!"))

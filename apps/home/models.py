@@ -162,7 +162,7 @@ class Tochka(BaseModel):
 
 class NTochka(BaseModel):
     uuid = models.UUIDField(default=uuid.uuid4, unique=True, verbose_name=_("UUID"))
-    name = models.CharField(max_length=100, verbose_name=_("Rasta nomi"))
+    name = models.CharField(max_length=200, verbose_name=_("Rasta nomi"))
     hudud = models.ForeignKey(Tochka, on_delete=models.CASCADE, related_name='ntochkas', verbose_name=_("Obyekt"))
     weekly_type = models.PositiveSmallIntegerField(
         choices=((1, 'haftalik'), (2, 'oylik'), (3, 'bari')),
