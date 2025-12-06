@@ -242,7 +242,30 @@ class Command(BaseCommand):
         ))
 
 
+    def update_ntochka_product_type(self, df):
+        updated_count = 0
+        errors_count = 0
 
+        for _, row in df.iterrows():
+            rasta_kodi = str(int(row.get('rasta_kodi', ''))).strip()
+            raw_value = row.get('mahsulot_turi', '')
+            mahsulot_turi = [x.strip() for x in raw_value.strip("()").split(",")]
+            try:
+                ntochka = NTochka.objects.get(code=rasta_kodi)
+                ntochka.product_type = mahsulot_turi
+                ntochka.save()
+                updated_count += 1
+                print(rasta_kodi, mahsulot_turi, ntochka.product_type)
+            except NTochka.DoesNotExist:
+                errors_count += 1
+                self.stdout.write(
+                    self.style.WARNING(f"NTochka topilmadi: {rasta_kodi}")
+                )
+                continue
+
+        self.stdout.write(self.style.SUCCESS(
+            f"Yangilangan NTochka mahsulot turlari: {updated_count}, xatoliklar: {errors_count}"
+        ))
 
     def import_products(self, df):
 
@@ -502,25 +525,26 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write("Excel fayl topilgan ma'lumotlarni bazaga yuklash boshlandi...")
 
-        employee_data = self.read_sheet('xodim')
-        self.import_employee(employee_data)
+        # employee_data = self.read_sheet('xodim')
+        # self.import_employee(employee_data)
 
-        obyekt_data = self.read_sheet('obyekt')
-        self.import_obyekt(obyekt_data)
-        #
+        # obyekt_data = self.read_sheet('obyekt')
+        # self.import_obyekt(obyekt_data)
+        # #
         rasta_data = self.read_sheet('rasta')
-        self.import_ntochka(rasta_data)
-        #
-        category_data = self.read_sheet('kategoriya')
-        # self.update_category(category_data)
-        self.import_category(category_data)
-        #
-        product_data = self.read_sheet('mahsulot')
-        # self.update_products(product_data)
-        self.import_products(product_data)
-        #
-        rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
-        self.relate_rasta_product(rasta_hafta_product_data)
+        self.update_ntochka_product_type(rasta_data)
+        # self.import_ntochka(rasta_data)
+        # #
+        # category_data = self.read_sheet('kategoriya')
+        # # self.update_category(category_data)
+        # self.import_category(category_data)
+        # #
+        # product_data = self.read_sheet('mahsulot')
+        # # self.update_products(product_data)
+        # self.import_products(product_data)
+        # #
+        # rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
+        # self.relate_rasta_product(rasta_hafta_product_data)
         #
         # rasta_oy_product_data = self.read_sheet('rasta_oy')
         # self.relate_rasta_hafta_product(rasta_oy_product_data)
