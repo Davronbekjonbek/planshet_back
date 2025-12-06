@@ -90,7 +90,7 @@ class TochkaListView(ListAPIView):
             is_udalen=False,
             is_weekly=_weekly_type == 'weekly',
         )
-        if product_type:
+        if product_type and weekly_type == 2:   # bu yerda faqat oylik bolgandagina filter qilinadi product type boyicha aks holda bolsa haftalikka tegishli bolga barcha rastalar korilishi kerak
             ntochka_query &= Q(product_type__contains=product_type)
 
         if weekly_type == 2 and product_type:
