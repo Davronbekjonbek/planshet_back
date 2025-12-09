@@ -80,58 +80,57 @@ class ProductAdmin(BaseAdmin):
 @admin.register(TochkaProduct)
 class TochkaProductAdmin(BaseAdmin):
     list_display = ('id', 'product_name', 'ntochka_name', 'last_price', 'is_udalen', 'created_at')
-    list_filter = ('product__category', 'created_at','ntochka__hudud','ntochka', 'product__category__product_type', 'hudud__employee' )
-    # list_editable = ('is_udalen',)
-    search_fields = ('product__name', 'hudud__name')
-    ordering = ('-created_at',)
+    list_filter = ('is_udalen', 'is_active')
+    search_fields = ('product__name', 'id')
+    ordering = ('-id',)
     readonly_fields = ('created_at', 'updated_at')
+    list_per_page = 50
+    raw_id_fields = ('product', 'ntochka', 'hudud')
+    show_full_result_count = False
 
     @admin.display(description='Product')
     def product_name(self, obj):
-        return f"{obj.product.name} - {obj.product.category.name}" if obj.product else '-'
-    
+        return f"{obj.product.name}" if obj.product else '-'
+
     @admin.display(description='NTochka')
     def ntochka_name(self, obj):
-        return f"{obj.ntochka.name} ({obj.ntochka.hudud.name})" if obj.ntochka else '-'
-    
+        return f"{obj.ntochka.name}" if obj.ntochka else '-'
+
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        return qs.select_related('product', 'ntochka', 'hudud').prefetch_related(
-            'product__category',
-            'ntochka__hudud'
-        )
+        return qs.select_related('product', 'ntochka', 'hudud')
 
 
 @admin.register(TochkaProductHistory)
 class TochkaProductHistoryAdmin(BaseAdmin):
-    list_display = ('id',   'price', 'employee', 'period', 'status_display', 'created_at')
+    list_display = ('id', 'price', 'employee', 'period', 'status_display', 'created_at')
     list_filter = (
-        'period', 
         'status',
         'is_active',
         'is_checked',
-        'created_at',
-        'tochka_product',
-        'ntochka',
-        'hudud',
-        'product',
-        'employee',
-        'product__category__product_type',
     )
-    search_fields = ('employee__full_name',)
-    ordering = ('-created_at',)
+    search_fields = ('employee__full_name', 'id')
+    ordering = ('-id',)
     readonly_fields = ('created_at', 'updated_at')
     date_hierarchy = 'created_at'
-    list_per_page = 50
-    
+    list_per_page = 30
+    raw_id_fields = ('tochka_product', 'ntochka', 'hudud', 'product', 'employee', 'period', 'alternative_for')
+    show_full_result_count = False  # Jami sonini hisoblashni o'chirish - juda tezlashtiradi!
+
     # N+1 query muammosini hal qilish
     def get_queryset(self, request):
         return super().get_queryset(request).select_related(
             'tochka_product',
             'employee',
             'period',
-            # 'alternative_for'
+            'product',
+        ).only(
+            'id', 'price', 'status', 'is_active', 'is_checked', 'created_at',
+            'employee__full_name', 'employee__id',
+            'period__id', 'period__date',
+            'tochka_product__id',
+            'product__id', 'product__name',
         )
     
     # Form sahifasi uchun alohida optimizatsiya

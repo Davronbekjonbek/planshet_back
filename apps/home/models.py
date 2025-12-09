@@ -60,6 +60,9 @@ class District(BaseModel):
         ordering = ['name']
         unique_together = ('code', 'region')
         db_table = 'district'
+        indexes = [
+            models.Index(fields=['region', 'name']),
+        ]
 
 
 class Period(BaseModel):
@@ -158,6 +161,11 @@ class Tochka(BaseModel):
         verbose_name_plural = "Obyektlar"
         ordering = ['name']
         db_table = 'obyekt'
+        indexes = [
+            models.Index(fields=['district', 'is_active']),
+            models.Index(fields=['employee']),
+            models.Index(fields=['-id']),
+        ]
 
 
 class NTochka(BaseModel):
@@ -188,6 +196,10 @@ class NTochka(BaseModel):
         verbose_name_plural = "Rastalar"
         ordering = ['name']
         db_table = 'rasta'
+        indexes = [
+            models.Index(fields=['hudud', 'is_active']),
+            models.Index(fields=['-id']),
+        ]
 
 
 class Employee(BaseModel):
@@ -219,4 +231,8 @@ class Employee(BaseModel):
         verbose_name = "Xodim"
         verbose_name_plural = "Xodimlar"
         db_table = 'employee'
+        indexes = [
+            models.Index(fields=['district', 'status']),
+            models.Index(fields=['full_name']),
+        ]
 
