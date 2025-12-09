@@ -34,10 +34,15 @@ class RegionAdmin(BaseAdmin):
     ordering = ('name',)
     readonly_fields = ('created_at', 'updated_at')
 
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        return qs.annotate(_districts_count=models.Count('districts'))
+
     def districts_count(self, obj):
-        return obj.districts.count()
+        return obj._districts_count
 
     districts_count.short_description = 'Tumanlar soni'
+    districts_count.admin_order_field = '_districts_count'
 
 
 @admin.register(District)
@@ -47,12 +52,17 @@ class DistrictAdmin(BaseAdmin):
     search_fields = ('name', 'code', 'region__name')
     ordering = ('region__name', 'name')
     readonly_fields = ('created_at', 'updated_at')
+    list_select_related = ('region',)
 
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        return qs.annotate(_employees_count=models.Count('employees'))
 
     def employees_count(self, obj):
-        return obj.employees.count()
+        return obj._employees_count
 
     employees_count.short_description = 'Xodimlar soni'
+    employees_count.admin_order_field = '_employees_count'
 
 
 class PeriodDateForm(ModelForm):
@@ -88,16 +98,19 @@ class PeriodDateAdmin(admin.ModelAdmin):
 @admin.register(Tochka)
 class TochkaAdmin(BaseAdmin):
     list_display = ('id', 'name', 'district', 'inn', 'address', 'plan', 'location', 'created_at')
-    list_filter = ('district__region__code', 'district__code', 'code')
-    search_fields = ('name', 'inn', 'address', 'district__name')
-    ordering = ('district__region__name', 'district__name', 'name')
+    list_filter = ('district__region', 'district', 'is_active')
+    search_fields = ('name', 'inn', 'address', 'code')
+    ordering = ('-id',)
     readonly_fields = ('uuid', 'created_at', 'updated_at')
     exclude = ('uuid',)
+    list_select_related = ('district', 'district__region', 'employee')
+    list_per_page = 50
+    raw_id_fields = ('employee', 'district')
 
     def location(self, obj):
         if obj.lat and obj.lon:
             return format_html(
-                '<a href="https://maps.google.com/?q={},{}" target="_blank">📍 Xaritada ko\'rish</a>',
+                '<a href="https://maps.google.com/?q={},{}" target="_blank">Xaritada</a>',
                 obj.lat, obj.lon
             )
         return '-'
@@ -107,9 +120,13 @@ class TochkaAdmin(BaseAdmin):
 @admin.register(NTochka)
 class NTochkaAdmin(BaseAdmin):
     list_display = ('id', 'name', 'hudud', 'code', 'is_active')
-    list_filter = ('hudud','is_active', 'weekly_type', "product_type", "hudud__employee")
+    list_filter = ('is_active', 'weekly_type', 'product_type')
     readonly_fields = ('uuid',)
-    search_fields = ('name', 'hudud__name', 'code', "hudud__code")
+    search_fields = ('name', 'code')
+    list_select_related = ('hudud', 'hudud__district', 'hudud__employee')
+    list_per_page = 50
+    raw_id_fields = ('hudud',)
+    autocomplete_fields = []
 
 
 @admin.register(Employee)

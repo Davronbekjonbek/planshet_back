@@ -123,9 +123,14 @@ class TochkaProduct(BaseModel):
     class Meta:
         verbose_name = "Rasta mahsulot"
         verbose_name_plural = "Rasta mahsulotlari"
-        ordering = ['product__name']
-        # unique_together = ('product', 'ntochka')  # Mahsulot, Hudud va Kichik hudud birgalikda unikalligi uchun
+        ordering = ['-id']
         db_table = 'rasta_product'
+        indexes = [
+            models.Index(fields=['product', 'ntochka']),
+            models.Index(fields=['hudud']),
+            models.Index(fields=['-id']),
+            models.Index(fields=['is_udalen', 'is_active']),
+        ]
 
 class TochkaProductHistory(BaseModel):
     PRODUCT_STATUS_CHOICES = [
@@ -160,6 +165,13 @@ class TochkaProductHistory(BaseModel):
         verbose_name_plural = "Mahsulot narxlari tarixi"
         unique_together = ('tochka_product', 'period')
         db_table = 'product_history'
+        indexes = [
+            models.Index(fields=['-id']),
+            models.Index(fields=['employee', '-created_at']),
+            models.Index(fields=['status', 'is_active', 'is_checked']),
+            models.Index(fields=['period', 'hudud']),
+            models.Index(fields=['created_at']),
+        ]
 
 
 class Application(BaseModel):
