@@ -531,8 +531,8 @@ class Command(BaseCommand):
         # obyekt_data = self.read_sheet('obyekt')
         # self.import_obyekt(obyekt_data)
         # #
-        rasta_data = self.read_sheet('rasta')
-        self.update_ntochka_product_type(rasta_data)
+        # rasta_data = self.read_sheet('rasta')
+        # self.update_ntochka_product_type(rasta_data)
         # self.import_ntochka(rasta_data)
         # #
         # category_data = self.read_sheet('kategoriya')
@@ -549,8 +549,8 @@ class Command(BaseCommand):
         # rasta_oy_product_data = self.read_sheet('rasta_oy')
         # self.relate_rasta_hafta_product(rasta_oy_product_data)
 
-        # rasta_product_data = self.read_sheet('rasta_mahsulotlari')
-        # self.update_rasta_product(rasta_product_data)
+        rasta_product_data = self.read_sheet('rasta_mahsulotlari')
+        self.update_rasta_product(rasta_product_data)
 
         # exists_products_data = self.read_sheet('exists_mahsulot_mhik')
         # self.set_mhik_to_exists_products(exists_products_data)
