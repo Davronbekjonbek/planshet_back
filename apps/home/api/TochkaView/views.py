@@ -51,10 +51,7 @@ class TochkaListView(ListAPIView):
     )
     def get(self, request, *args, **kwargs):
         queryset = self.get_queryset()
-        print(f"Tochka queryset count: {queryset.count()}", queryset)
         serializer = self.get_serializer(queryset, many=True)
-        # print(serializer.data)
-
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def get_queryset(self):
@@ -65,8 +62,6 @@ class TochkaListView(ListAPIView):
         product_type = {'food': '1', 'nofood': '2', 'services': '3'}.get(_product_type, '1')
         _weekly_type = req.GET.get('weekly_type', 1)
         weekly_type = 1 if _weekly_type == 'weekly' else 2
-        print(f"Weekly type: {weekly_type}, Product type: {product_type}, {_product_type} for employee: {employee}, {_weekly_type}")
-        print(f"Employee: {employee}")
         if not employee:
             return Tochka.objects.none()
 
@@ -96,7 +91,6 @@ class TochkaListView(ListAPIView):
         if weekly_type == 2 and product_type:
             base_query &= Q(product_type__contains=product_type)
             tochka_product_query &= Q(product__category__product_type=int(product_type))
-        print(f"Base query: {base_query} NTochka query: {ntochka_query} TochkaProduct query: {tochka_product_query}")
         ntochka_prefetch = Prefetch(
             'ntochkas',
             queryset=NTochka.objects.filter(

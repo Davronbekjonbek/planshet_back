@@ -12,7 +12,7 @@ class ProductSerializer(serializers.ModelSerializer):
     category_code = serializers.CharField(source='category.code', read_only=True)
     rasfas = serializers.CharField(source='category.rasfas', read_only=True)
     category_logo = serializers.SerializerMethodField(read_only=True)
-    unit_name = serializers.CharField(source='unit.name', read_only=True)
+    unit_name = serializers.CharField(source='category.union', read_only=True)
     unit_miqdor = serializers.FloatField(source='category.rasfas', read_only=True)
 
     def get_category_logo(self, obj):
@@ -24,8 +24,7 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         fields = [
             'id', 'uuid', 'name', 'category', 'category_name','category_code', 
-            'category_logo', 'rasfas', 'code', 'price', 'barcode',
-            'unit_id', 'unit_name', 'unit_miqdor', 'top', 
+            'category_logo', 'rasfas', 'code', 'price', 'barcode', 'unit_name', 'unit_miqdor', 'top', 
             'bottom', 'is_import', 'created_at', 'updated_at',
         ]
 

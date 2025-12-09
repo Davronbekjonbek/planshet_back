@@ -117,8 +117,11 @@ class TochkaAdmin(BaseAdmin):
 
     location.short_description = 'Joylashuv'
 
+
+
 @admin.register(NTochka)
 class NTochkaAdmin(BaseAdmin):
+    
     list_display = ('id', 'name', 'hudud', 'code', 'is_active')
     list_filter = ('is_active', 'weekly_type', 'product_type')
     readonly_fields = ('uuid',)

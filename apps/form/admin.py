@@ -80,7 +80,7 @@ class ProductAdmin(BaseAdmin):
 @admin.register(TochkaProduct)
 class TochkaProductAdmin(BaseAdmin):
     list_display = ('id', 'product_name', 'ntochka_name', 'last_price', 'is_udalen', 'created_at')
-    list_filter = ('is_udalen', 'is_active')
+    list_filter = ('is_udalen', 'is_active', 'ntochka')
     search_fields = ('product__name', 'id')
     ordering = ('-id',)
     readonly_fields = ('created_at', 'updated_at')

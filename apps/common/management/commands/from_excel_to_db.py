@@ -8,8 +8,9 @@ from django.core.management.base import BaseCommand, CommandError
 import pandas as pd
 import os
 
-file_path = "datas/plantochtovar_oxirgi.xlsx"
+# file_path = "datas/plantochtovar_oxirgi.xlsx"
 # file_path = "datas/plantochtovar_oxirgi_has_product_mhik.xlsx"
+file_path = "datas/planshet_data.xlsx"
 
 class Command(BaseCommand):
     help = "Excel fayl topilgan ma'lumotlarni bazaga yuklaydi"
@@ -417,8 +418,13 @@ class Command(BaseCommand):
             code8 = row.get('kod{8}', None)
             code = code8
             rasfas = row.get('rasfas', 1)
+            union = row.get('birligi', None)
+            number  = row.get('kod{3}', 1)
+
             cat = ProductCategory.objects.get(code=code)
             cat.rasfas = rasfas
+            cat.union = union
+            cat.number = number
             cat.save()
 
     def update_products(self, df):
@@ -535,8 +541,8 @@ class Command(BaseCommand):
         # self.update_ntochka_product_type(rasta_data)
         # self.import_ntochka(rasta_data)
         # #
-        # category_data = self.read_sheet('kategoriya')
-        # # self.update_category(category_data)
+        category_data = self.read_sheet('category')
+        self.update_category(category_data)
         # self.import_category(category_data)
         # #
         # product_data = self.read_sheet('mahsulot')
@@ -549,8 +555,8 @@ class Command(BaseCommand):
         # rasta_oy_product_data = self.read_sheet('rasta_oy')
         # self.relate_rasta_hafta_product(rasta_oy_product_data)
 
-        rasta_product_data = self.read_sheet('rasta_mahsulotlari')
-        self.update_rasta_product(rasta_product_data)
+        # rasta_product_data = self.read_sheet('rasta_mahsulotlari')
+        # self.update_rasta_product(rasta_product_data)
 
         # exists_products_data = self.read_sheet('exists_mahsulot_mhik')
         # self.set_mhik_to_exists_products(exists_products_data)

@@ -18,7 +18,6 @@ class RastaSerializer(serializers.ModelSerializer):
         fields = ['id', 'uuid', 'name', 'hudud', 'is_active', 'is_checked', 'all_count', 'finished', 'in_proccess']
 
     def get_all_count(self, obj):
-        print(f"Getting all_count for Rasta {obj.id}", obj.active_products)
         return len(getattr(obj, 'active_products', []))
 
     def get_finished(self, obj):

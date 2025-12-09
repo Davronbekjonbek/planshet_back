@@ -42,7 +42,7 @@ class ProductCategory(BaseModel):
     name = models.CharField(max_length=400, unique=True, verbose_name=_("Kategoriyaning nomi"))
     number = models.IntegerField(default=0, verbose_name=_("Kategoriyaning tartib raqami (nt)"))
     code = models.CharField(max_length=10, unique=True, verbose_name=_("Kategoriyaning kodi"))
-    union = models.ForeignKey(Birlik, on_delete=models.CASCADE, related_name='categories', verbose_name=_("Birlik"))
+    union = models.CharField(max_length=100, verbose_name=_("Birligi"), null=True, blank=True)
     rasfas = models.PositiveIntegerField(default=1, verbose_name=_("Rasfas"))
     product_type = models.PositiveSmallIntegerField(
         choices=((1, 'mahsulot'), (2, 'no mahsulot'), (3, 'xizmat')),
@@ -118,11 +118,9 @@ class TochkaProduct(BaseModel):
     is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
 
     def __str__(self):
-        return f"{self.id}"
+        return f"{self.ntochka} - {self.product}"        
 
     class Meta:
-        verbose_name = "Rasta mahsulot"
-        verbose_name_plural = "Rasta mahsulotlari"
         ordering = ['-id']
         db_table = 'rasta_product'
         indexes = [
@@ -172,6 +170,12 @@ class TochkaProductHistory(BaseModel):
             models.Index(fields=['period', 'hudud']),
             models.Index(fields=['created_at']),
         ]
+        verbose_name = "Mahsulot narxlari tarixi"
+        verbose_name_plural = "Mahsulot narxlari tarixi"
+        unique_together = ('tochka_product', 'period')
+        db_table = 'product_history'
+
+        db_table = 'product_history'
 
 
 class Application(BaseModel):
