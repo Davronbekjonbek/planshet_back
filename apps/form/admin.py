@@ -254,5 +254,5 @@ class TochkaProductHistoryAdmin(BaseAdmin):
 
 @admin.register(Application)
 class ApplicationAdmin(BaseAdmin):
-    list_display = ('id','application_type', 'tochka', 'tochkas')
+    list_display = ('id','application_type', 'comment')
     list_filter = ('application_type',)
