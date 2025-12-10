@@ -202,12 +202,8 @@ class Application(BaseModel):
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     is_checked = models.BooleanField(default=False, verbose_name=_("Tekshirilgan")) 
 
-    def get_is_active(self):
-        return self.is_active
-
-    get_is_active.boolean = True
-    get_is_active.short_description = 'Faol'
-
+    def get_is_active(self, obj):
+        return obj.tochka.is_active if obj.tochka else None
 
     class Meta:
         verbose_name = "Ariza"

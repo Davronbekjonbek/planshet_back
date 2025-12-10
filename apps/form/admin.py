@@ -1,5 +1,8 @@
+from pyexpat.errors import messages
 from django.contrib import admin
 from django.forms import ValidationError
+from django.shortcuts import get_object_or_404, redirect
+from django.urls import path
 from django.utils.html import format_html
 
 from apps.home.models import Employee, PeriodDate, Tochka, NTochka, Period
@@ -257,10 +260,51 @@ class TochkaProductHistoryAdmin(BaseAdmin):
 
 @admin.register(Application)
 class ApplicationAdmin(BaseAdmin):
-    list_display = ('id','application_type', 'is_active_display')
-    list_editable = ('is_active',)
+    list_display = ('id','application_type', 'get_is_active', 'tochka_toggle_link')
     list_filter = ('application_type',)
 
-    @admin.display(boolean=True, description='Faol')
-    def is_active_display(self, obj):
-        return obj.is_active
+    def get_urls(self):
+        urls = super().get_urls()
+        custom_urls = [
+            path(
+                'toggle-tochka/<int:pk>/',
+                self.admin_site.admin_view(self.toggle_tochka),
+                name='toggle-tochka'
+            ),
+        ]
+        return custom_urls + urls
+
+    # --- Admin ro‘yxatidagi tugma ---
+    def tochka_toggle_link(self, obj):
+        if not obj.tochka:
+            return "-"
+
+        url = f"/admin/{self.model._meta.app_label}/{self.model._meta.model_name}/toggle-tochka/{obj.id}/"
+
+        icon = "✔ Faol qilish" if not obj.tochka.is_active else "✖ Nofaol qilish"
+        color = "green" if not obj.tochka.is_active else "red"
+
+        return format_html(
+            '<a href="{}" style="color:{}; font-weight:bold;">{}</a>',
+            url, color, icon
+        )
+
+    tochka_toggle_link.short_description = "Tochka holati"
+
+    # --- Tugma orqali ishlaydigan funksiyasi ---
+    def toggle_tochka(self, request, pk, *args, **kwargs):
+        app = get_object_or_404(Application, pk=pk)
+
+        if not app.tochka:
+            messages.error(request, "Bu Application uchun bog‘langan Tochka mavjud emas.")
+            return redirect(request.META.get("HTTP_REFERER"))
+
+        tochka = app.tochka
+        tochka.is_active = not tochka.is_active
+        tochka.save(update_fields=['is_active'])
+
+        messages.success(request,
+            f"Tochka holati o'zgartirildi: {'Faol' if tochka.is_active else 'Nofaol'}"
+        )
+
+        return redirect(request.META.get("HTTP_REFERER"))
