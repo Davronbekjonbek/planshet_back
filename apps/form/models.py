@@ -200,7 +200,7 @@ class Application(BaseModel):
     comment = models.CharField(max_length=255, verbose_name=_("Comment"), null=True, blank=True)
     detail = models.JSONField(verbose_name=_("To'liq mahsulotlar"), default=list, null=True, blank=True)
     is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
-    is_checked = models.BooleanField(default=False, verbose_name=_("Tekshirilgan"))
+    is_checked = models.BooleanField(default=False, verbose_name=_("Tekshirilgan")) 
 
     class Meta:
         verbose_name = "Ariza"
