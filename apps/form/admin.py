@@ -106,9 +106,9 @@ class TochkaProductAdmin(BaseAdmin):
 class TochkaProductHistoryAdmin(BaseAdmin):
     list_display = ('id', 'price', 'employee', 'period', 'status_display', 'created_at')
     list_filter = (
-        'status',
-        'is_active',
-        'is_checked',
+        # 'status',
+        # 'is_active',
+        # 'is_checked',
         'product',
         'ntochka',
         'hudud',
