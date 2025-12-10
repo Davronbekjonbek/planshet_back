@@ -2,9 +2,8 @@ from pyexpat.errors import messages
 from django.contrib import admin
 from django.forms import ValidationError
 from django.shortcuts import get_object_or_404, redirect
-from django.urls import path
+from django.urls import path, reverse
 from django.utils.html import format_html
-from networkx import reverse
 
 from apps.home.models import Employee, PeriodDate, Tochka, NTochka, Period
 from .models import Birlik, ProductCategory, Product, TochkaProduct, TochkaProductHistory, Application
