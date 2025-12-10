@@ -301,8 +301,8 @@ class ApplicationAdmin(admin.ModelAdmin):
         app = get_object_or_404(Application, pk=pk)
         
         if not app.tochka:
-            messages.error(request, "Bu Application uchun bog‘langan Tochka mavjud emas.")
-            return redirect(reverse('home:application_list'))
+            messages.error(request, "Bu Application uchun bog'langan Tochka mavjud emas.")
+            return redirect(reverse('admin:form_application_changelist'))
 
         tochka = app.tochka
         tochka.is_active = not tochka.is_active
@@ -313,5 +313,5 @@ class ApplicationAdmin(admin.ModelAdmin):
             f"Tochka holati o'zgartirildi: {'Faol' if tochka.is_active else 'Nofaol'}"
         )
 
-        # Muvaffaqiyatli bo‘lsa application_list ga qaytarish
-        return redirect(reverse('home:application_list'))
+        # Muvaffaqiyatli bo'lsa admin changelist ga qaytarish
+        return redirect(reverse('admin:form_application_changelist'))
