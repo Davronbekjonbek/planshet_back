@@ -109,6 +109,9 @@ class TochkaProductHistoryAdmin(BaseAdmin):
         'status',
         'is_active',
         'is_checked',
+        'product',
+        'ntochka',
+        'hudud',
     )
     search_fields = ('employee__full_name', 'id')
     ordering = ('-id',)
