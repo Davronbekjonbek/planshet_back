@@ -264,24 +264,18 @@ class ApplicationAdmin(admin.ModelAdmin):
 
     # --- Tochka va NTochka holatini ko'rsatadi ---
     def get_all_tochkas(self, obj):
-        # application_type ga qarab holat ko'rsatish
-        status_list = []
-        if obj.application_type == 'Rasta yaratish uchun' and obj.ntochka:
-            status_list.append(f"NTochka: {'✔' if obj.ntochka.is_active else '✖'}")
-        if obj.application_type == 'Obyekt yaratish uchun' and obj.tochka:
-            status_list.append(f"Tochka: {'✔' if obj.tochka.is_active else '✖'}")
-        if not status_list:
-            return "-"
-        return format_html(" | ".join(status_list))
+        if self.application_type == 'Rasta yaratish uchun':
+            status = f"{'✔' if obj.ntochka and obj.ntochka.is_active else '✖'}"
+        elif self.application_type == 'Obyekt yaratish uchun':
+            status = f"{'✔' if obj.tochka and obj.tochka.is_active else '✖'}"
+        return format_html(f"{status}")
     get_all_tochkas.short_description = "Holatlar"
+    get_all_tochkas.allow_tags = True
 
     # --- Toggle tugmalari ---
     def toggle_links(self, obj):
         links = []
-        for attr, label, type_name in [('tochka', 'Tochka', 'Obyekt yaratish uchun'),
-                                       ('ntochka', 'NTochka', 'Rasta yaratish uchun')]:
-            if obj.application_type != type_name:
-                continue  # faqat tegishli type uchun tugma
+        for attr, label in [('tochka', 'Tochka'), ('ntochka', 'NTochka')]:
             attr_obj = getattr(obj, attr, None)
             if not attr_obj:
                 links.append("-")
@@ -294,8 +288,6 @@ class ApplicationAdmin(admin.ModelAdmin):
                 icon = f"✔ {label} Faol qilish"
                 color = "green"
             links.append(format_html('<a href="{}" style="color:{}; font-weight:bold;">{}</a>', url, color, icon))
-        if not links:
-            return "-"
         return format_html(" | ".join(links))
     toggle_links.short_description = "Tasdiqlash"
 
