@@ -259,59 +259,63 @@ class TochkaProductHistoryAdmin(BaseAdmin):
 
 @admin.register(Application)
 class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ('id','application_type', 'get_tochka_is_active', 'tochka_toggle_link')
+    list_display = ('id', 'application_type', 'get_all_tochkas', 'toggle_links')
     list_filter = ('application_type',)
 
-    # --- Tochka holatini ko'rsatadi ---
-    def get_tochka_is_active(self, obj):
-        if obj.tochka:
-            return obj.tochka.is_active
-        return None
-    get_tochka_is_active.boolean = True
-    get_tochka_is_active.short_description = "Tochka Faol"
+    # --- Tochka va NTochka holatini ko'rsatadi ---
+    def get_all_tochkas(self, obj):
+        tochka_status = f"Tochka: {'✔' if obj.tochka and obj.tochka.is_active else '✖'}"
+        ntochka_status = f"NTochka: {'✔' if obj.ntochka and obj.ntochka.is_active else '✖'}"
+        return format_html(f"{tochka_status} | {ntochka_status}")
+    get_all_tochkas.short_description = "Holatlar"
+    get_all_tochkas.allow_tags = True
 
-    # --- Toggle tugmasi ---
-    def tochka_toggle_link(self, obj):
-        if not obj.tochka:
-            return "-"
-        url = reverse('admin:toggle-tochka', args=[obj.pk])
-        if obj.tochka.is_active:
-            icon = "✖ Nofaol qilish"
-            color = "red"
-        else:
-            icon = "✔ Faol qilish"
-            color = "green"
-        return format_html('<a href="{}" style="color:{}; font-weight:bold;">{}</a>', url, color, icon)
-    tochka_toggle_link.short_description = "Tochka holati"
+    # --- Toggle tugmalari ---
+    def toggle_links(self, obj):
+        links = []
+        for attr, label in [('tochka', 'Tochka'), ('ntochka', 'NTochka')]:
+            attr_obj = getattr(obj, attr, None)
+            if not attr_obj:
+                links.append("-")
+                continue
+            url = reverse('admin:toggle-tochka', args=[obj.pk, attr])
+            if attr_obj.is_active:
+                icon = f"✖ {label} Nofaol qilish"
+                color = "red"
+            else:
+                icon = f"✔ {label} Faol qilish"
+                color = "green"
+            links.append(format_html('<a href="{}" style="color:{}; font-weight:bold;">{}</a>', url, color, icon))
+        return format_html(" | ".join(links))
+    toggle_links.short_description = "Toggle"
 
     # --- Custom URL ---
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
             path(
-                'toggle-tochka/<int:pk>/',
+                'toggle-tochka/<int:pk>/<str:attr>/',
                 self.admin_site.admin_view(self.toggle_tochka),
                 name='toggle-tochka'
             ),
         ]
         return custom_urls + urls
 
-    # --- Tugma orqali ishlash ---
-    def toggle_tochka(self, request, pk, *args, **kwargs):
+    # --- Toggle funksiyasi ---
+    def toggle_tochka(self, request, pk, attr, *args, **kwargs):
         app = get_object_or_404(Application, pk=pk)
-        
-        if not app.tochka:
-            messages.error(request, "Bu Application uchun bog'langan Tochka mavjud emas.")
+        target = getattr(app, attr, None)
+
+        if not target:
+            messages.error(request, f"Bu Application uchun bog'langan {attr.capitalize()} mavjud emas.")
             return redirect(reverse('admin:form_application_changelist'))
 
-        tochka = app.tochka
-        tochka.is_active = not tochka.is_active
-        tochka.save(update_fields=['is_active'])
+        target.is_active = not target.is_active
+        target.save(update_fields=['is_active'])
 
         messages.success(
             request,
-            f"Tochka holati o'zgartirildi: {'Faol' if tochka.is_active else 'Nofaol'}"
+            f"{attr.capitalize()} holati o'zgartirildi: {'Faol' if target.is_active else 'Nofaol'}"
         )
 
-        # Muvaffaqiyatli bo'lsa admin changelist ga qaytarish
         return redirect(reverse('admin:form_application_changelist'))
