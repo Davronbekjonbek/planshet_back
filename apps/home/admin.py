@@ -3,7 +3,7 @@ from django.contrib.admin.widgets import AdminDateWidget
 from django.forms import ModelForm
 from django.urls import path
 from django.utils.html import format_html
-
+from django.db import models
 from .models import Region, District, Period, PeriodDate, Tochka, Employee, NTochka
 from ..common.admin import BaseAdmin
 from apps.common.views import export_all_csv_zip
