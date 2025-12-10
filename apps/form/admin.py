@@ -264,11 +264,9 @@ class ApplicationAdmin(admin.ModelAdmin):
 
     # --- Tochka va NTochka holatini ko'rsatadi ---
     def get_all_tochkas(self, obj):
-        if obj.application_type == 'Rasta yaratish uchun':
-            status = f"{'✔' if obj.ntochka and obj.ntochka.is_active else '✖'}"
-        elif obj.application_type == 'Obyekt yaratish uchun':
-            status = f"{'✔' if obj.tochka and obj.tochka.is_active else '✖'}"
-        return format_html(f"{status}")
+        tochka_status = f"{'✔' if obj.tochka and obj.tochka.is_active else '✖'}"
+        ntochka_status = f"{'✔' if obj.ntochka and obj.ntochka.is_active else '✖'}"
+        return format_html(f"{tochka_status} | {ntochka_status}")
     get_all_tochkas.short_description = "Holatlar"
     get_all_tochkas.allow_tags = True
 
