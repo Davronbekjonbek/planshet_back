@@ -4,6 +4,7 @@ from django.forms import ValidationError
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import path
 from django.utils.html import format_html
+from networkx import reverse
 
 from apps.home.models import Employee, PeriodDate, Tochka, NTochka, Period
 from .models import Birlik, ProductCategory, Product, TochkaProduct, TochkaProductHistory, Application
@@ -260,10 +261,10 @@ class TochkaProductHistoryAdmin(BaseAdmin):
 
 @admin.register(Application)
 class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ('id', 'application_type', 'get_tochka_is_active', 'tochka_toggle_link')
+    list_display = ('id','application_type', 'get_tochka_is_active', 'tochka_toggle_link')
     list_filter = ('application_type',)
 
-    # --- Tochka modelidagi is_active ni ko'rsatish ---
+    # --- Tochka holatini ko'rsatadi ---
     def get_tochka_is_active(self, obj):
         if obj.tochka:
             return obj.tochka.is_active
@@ -271,17 +272,21 @@ class ApplicationAdmin(admin.ModelAdmin):
     get_tochka_is_active.boolean = True
     get_tochka_is_active.short_description = "Tochka Faol"
 
-    # --- Toggle tugma ---
+    # --- Toggle tugmasi ---
     def tochka_toggle_link(self, obj):
         if not obj.tochka:
             return "-"
-        url = f"/admin/{self.model._meta.app_label}/{self.model._meta.model_name}/toggle-tochka/{obj.id}/"
-        icon = "✔ Faol qilish" if not obj.tochka.is_active else "✖ Nofaol qilish"
-        color = "green" if not obj.tochka.is_active else "red"
+        url = reverse('admin:toggle-tochka', args=[obj.pk])
+        if obj.tochka.is_active:
+            icon = "✖ Nofaol qilish"
+            color = "red"
+        else:
+            icon = "✔ Faol qilish"
+            color = "green"
         return format_html('<a href="{}" style="color:{}; font-weight:bold;">{}</a>', url, color, icon)
     tochka_toggle_link.short_description = "Tochka holati"
 
-    # --- Custom URL --- 
+    # --- Custom URL ---
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
@@ -293,14 +298,19 @@ class ApplicationAdmin(admin.ModelAdmin):
         ]
         return custom_urls + urls
 
-    # --- Toggle funksiyasi ---
+    # --- Tugma orqali ishlash ---
     def toggle_tochka(self, request, pk, *args, **kwargs):
         app = get_object_or_404(Application, pk=pk)
         if not app.tochka:
             messages.error(request, "Bu Application uchun bog‘langan Tochka mavjud emas.")
             return redirect(request.META.get("HTTP_REFERER"))
+
         tochka = app.tochka
         tochka.is_active = not tochka.is_active
         tochka.save(update_fields=['is_active'])
-        messages.success(request, f"Tochka holati o'zgartirildi: {'Faol' if tochka.is_active else 'Nofaol'}")
+
+        messages.success(
+            request,
+            f"Tochka holati o'zgartirildi: {'Faol' if tochka.is_active else 'Nofaol'}"
+        )
         return redirect(request.META.get("HTTP_REFERER"))
