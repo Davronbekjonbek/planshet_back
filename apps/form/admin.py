@@ -257,6 +257,10 @@ class TochkaProductHistoryAdmin(BaseAdmin):
 
 @admin.register(Application)
 class ApplicationAdmin(BaseAdmin):
-    list_display = ('id','application_type', 'get_is_active')
-    list_editable = ('get_is_active',)
+    list_display = ('id','application_type', 'is_active_display')
+    list_editable = ('is_active',)
     list_filter = ('application_type',)
+
+    @admin.display(boolean=True, description='Faol')
+    def is_active_display(self, obj):
+        return obj.is_active
