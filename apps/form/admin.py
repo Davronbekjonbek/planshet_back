@@ -312,4 +312,4 @@ class ApplicationAdmin(admin.ModelAdmin):
             request,
             f"Tochka holati o'zgartirildi: {'Faol' if tochka.is_active else 'Nofaol'}"
         )
-        return redirect(request.META.get("HTTP_REFERER"))
+        return redirect(reverse('home:application_list'))
