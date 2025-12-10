@@ -137,7 +137,6 @@ class MonitoringDashboardView(LoginRequiredMixin, TemplateView):
             'product__category', 'product__unit'
         ).prefetch_related(
             'tochka_product',
-            'product__category__union'
         ).filter(is_active=True)
         
         # Apply filters
