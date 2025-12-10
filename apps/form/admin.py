@@ -300,9 +300,10 @@ class ApplicationAdmin(admin.ModelAdmin):
     # --- Tugma orqali ishlash ---
     def toggle_tochka(self, request, pk, *args, **kwargs):
         app = get_object_or_404(Application, pk=pk)
+        
         if not app.tochka:
             messages.error(request, "Bu Application uchun bog‘langan Tochka mavjud emas.")
-            return redirect(request.META.get("HTTP_REFERER"))
+            return redirect(reverse('home:application_list'))
 
         tochka = app.tochka
         tochka.is_active = not tochka.is_active
@@ -312,4 +313,6 @@ class ApplicationAdmin(admin.ModelAdmin):
             request,
             f"Tochka holati o'zgartirildi: {'Faol' if tochka.is_active else 'Nofaol'}"
         )
+
+        # Muvaffaqiyatli bo‘lsa application_list ga qaytarish
         return redirect(reverse('home:application_list'))
