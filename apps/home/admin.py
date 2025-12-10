@@ -123,7 +123,7 @@ class TochkaAdmin(BaseAdmin):
 class NTochkaAdmin(BaseAdmin):
     
     list_display = ('id', 'name', 'hudud', 'code', 'is_active')
-    list_filter = ('is_active', 'weekly_type', 'product_type', 'hudud')
+    list_filter = ('id', 'is_active', 'weekly_type', 'product_type', 'hudud')
     readonly_fields = ('uuid',)
     search_fields = ('name', 'code')
     list_select_related = ('hudud', 'hudud__district', 'hudud__employee')
