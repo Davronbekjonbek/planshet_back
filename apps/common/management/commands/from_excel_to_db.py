@@ -8,9 +8,9 @@ from django.core.management.base import BaseCommand, CommandError
 import pandas as pd
 import os
 
-# file_path = "datas/plantochtovar_oxirgi.xlsx"
+file_path = "datas/plantochtovar_oxirgi.xlsx"
 # file_path = "datas/plantochtovar_oxirgi_has_product_mhik.xlsx"
-file_path = "datas/planshet_data.xlsx"
+# file_path = "datas/planshet_data.xlsx"
 
 class Command(BaseCommand):
     help = "Excel fayl topilgan ma'lumotlarni bazaga yuklaydi"
