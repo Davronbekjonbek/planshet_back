@@ -106,12 +106,12 @@ class TochkaProductAdmin(BaseAdmin):
 class TochkaProductHistoryAdmin(BaseAdmin):
     list_display = ('id', 'price', 'employee', 'period', 'status_display', 'created_at')
     list_filter = (
-        # 'status',
-        # 'is_active',
-        # 'is_checked',
-        'product',
-        'ntochka',
-        'hudud',
+        'status',
+        'is_active',
+        'is_checked',
+        # 'product',
+        # 'ntochka',
+        # 'hudud',
     )
     search_fields = ('employee__full_name', 'id')
     ordering = ('-id',)
