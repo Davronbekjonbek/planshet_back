@@ -513,15 +513,15 @@ class Command(BaseCommand):
             mahsulot_kodi = int(row.get('mahsulot_kodi') or '')
             rasta_kodi = int(row.get('rasta_kodi') or '')
             obyekt_kodi = int(row.get('obyekt_kodi') or '')
-            narxi = float(row.get('narxi') or 0.0)
+            narxi = float(row.get('price') or 0.0)
             rasta_products = TochkaProduct.objects.filter(
                 ntochka__code=rasta_kodi,
                 product__code=mahsulot_kodi,
             )
-            print(rasta_products, mahsulot_kodi, rasta_kodi, rasta_products.count(), "print")
             for rp in rasta_products:
                 rp.last_price = narxi
                 rp.save()
+            print(rasta_products, narxi, mahsulot_kodi, rasta_kodi, rasta_products.count(), "print")
             updated_count += rasta_products.count()
 
         self.stdout.write(self.style.SUCCESS(
