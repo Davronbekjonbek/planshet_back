@@ -541,8 +541,8 @@ class Command(BaseCommand):
         # self.update_ntochka_product_type(rasta_data)
         # self.import_ntochka(rasta_data)
         # #
-        category_data = self.read_sheet('category')
-        self.update_category(category_data)
+        # category_data = self.read_sheet('category')
+        # self.update_category(category_data)
         # self.import_category(category_data)
         # #
         # product_data = self.read_sheet('mahsulot')
@@ -561,8 +561,8 @@ class Command(BaseCommand):
         # exists_products_data = self.read_sheet('exists_mahsulot_mhik')
         # self.set_mhik_to_exists_products(exists_products_data)
 
-        # rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
-        # self.add_price_for_last_period(rasta_hafta_product_data)
+        rasta_hafta_product_data = self.read_sheet('rasta_mahsulotlari')
+        self.add_price_for_last_period(rasta_hafta_product_data)
 
 
         self.stdout.write(self.style.SUCCESS("Import jarayoni muvaffaqiyatli yakunlandi!"))
