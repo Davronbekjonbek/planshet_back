@@ -262,13 +262,16 @@ class ApplicationAdmin(admin.ModelAdmin):
     list_display = ('id', 'application_type', 'get_all_tochkas', 'toggle_links')
     list_filter = ('application_type',)
 
-    # --- Tochka va NTochka holatini ko'rsatadi ---
+    # --- Holatlarni ko'rsatish ---
     def get_all_tochkas(self, obj):
-        tochka_status = f"{'✔' if obj.tochka and obj.tochka.is_active else '✖'}"
-        ntochka_status = f"{'✔' if obj.ntochka and obj.ntochka.is_active else '✖'}"
-        return format_html(f"{tochka_status} | {ntochka_status}")
+        statuses = []
+        for attr, label in [('tochka', 'Tochka'), ('ntochka', 'NTochka')]:
+            attr_obj = getattr(obj, attr, None)
+            if attr_obj:
+                status = '✔' if attr_obj.is_active else '✖'
+                statuses.append(f"{label}: {status}")
+        return format_html("".join(statuses))
     get_all_tochkas.short_description = "Holatlar"
-    get_all_tochkas.allow_tags = True
 
     # --- Toggle tugmalari ---
     def toggle_links(self, obj):
@@ -276,7 +279,6 @@ class ApplicationAdmin(admin.ModelAdmin):
         for attr, label in [('tochka', 'Tochka'), ('ntochka', 'NTochka')]:
             attr_obj = getattr(obj, attr, None)
             if not attr_obj:
-                links.append("-")
                 continue
             url = reverse('admin:toggle-tochka', args=[obj.pk, attr])
             if attr_obj.is_active:
@@ -286,7 +288,7 @@ class ApplicationAdmin(admin.ModelAdmin):
                 icon = f"✔ {label} Faol qilish"
                 color = "green"
             links.append(format_html('<a href="{}" style="color:{}; font-weight:bold;">{}</a>', url, color, icon))
-        return format_html(" | ".join(links))
+        return format_html("".join(links))
     toggle_links.short_description = "Tasdiqlash"
 
     # --- Custom URL ---
@@ -307,7 +309,7 @@ class ApplicationAdmin(admin.ModelAdmin):
         target = getattr(app, attr, None)
 
         if not target:
-            messages.error(request, f"Bu Application uchun bog'langan {attr.capitalize()} mavjud emas.")
+            messages.error(request, f"{attr.capitalize()} mavjud emas.")
             return redirect(reverse('admin:form_application_changelist'))
 
         target.is_active = not target.is_active
