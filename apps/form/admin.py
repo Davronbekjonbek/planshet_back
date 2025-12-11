@@ -81,8 +81,8 @@ class ProductAdmin(BaseAdmin):
 
 @admin.register(TochkaProduct)
 class TochkaProductAdmin(BaseAdmin):
-    list_display = ('id', 'product_name', 'ntochka_name', 'district_name', 'last_price', 'is_udalen', 'created_at')
-    list_filter = ('is_udalen', 'is_active', 'ntochka')
+    list_display = ('id', 'product_name', 'ntochka_name', 'district_code', 'last_price', 'is_udalen', 'created_at')
+    list_filter = ('is_udalen', 'is_active', 'ntochka', 'hudud__district')
     search_fields = ('product__name', 'id')
     ordering = ('-id',)
     readonly_fields = ('created_at', 'updated_at')
@@ -99,7 +99,7 @@ class TochkaProductAdmin(BaseAdmin):
         return f"{obj.ntochka.name}" if obj.ntochka else '-'
     
     @admin.display(description='District')
-    def district_name(self, obj):
+    def district_code(self, obj):
         return obj.hudud.district if obj.hudud else '-'
 
     def get_queryset(self, request):

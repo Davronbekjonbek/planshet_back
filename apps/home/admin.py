@@ -122,7 +122,7 @@ class TochkaAdmin(BaseAdmin):
 @admin.register(NTochka)
 class NTochkaAdmin(BaseAdmin):
     
-    list_display = ('id', 'name', 'hudud', 'code', 'is_active')
+    list_display = ('id', 'name', 'hudud', 'weekly_type', 'is_active')
     list_filter = ('id', 'is_active', 'weekly_type', 'product_type', 'hudud')
     readonly_fields = ('uuid',)
     search_fields = ('name', 'code')
