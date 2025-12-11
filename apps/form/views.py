@@ -131,7 +131,7 @@ def approve_application(request, pk):
         elif application.application_type == 'for_open_rasta':
             # Open rastas
             for ntochka in application.ntochkas.all():
-                ntochka.is_active = True
+                ntochka.is_active = False
                 ntochka.save()
                 
                 # Process products if any
@@ -163,7 +163,7 @@ def approve_application(request, pk):
         elif application.application_type == 'for_open_obyekt':
             # Open obyekt
             if application.tochka:
-                application.tochka.is_active = True
+                application.tochka.is_active = False
                 application.tochka.save()
         
         application.save()
