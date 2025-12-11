@@ -140,7 +140,7 @@ class Tochka(BaseModel):
         default=['1']
     )
 
-    is_active = models.BooleanField(default=False, verbose_name=_("Faol"))
+    is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     in_proccess = models.BooleanField(default=False, verbose_name=_("Ariza orqali yaratilgan"))
     is_inDSQ = models.BooleanField(default=False, verbose_name=_("DSQda mavjud"))
 
@@ -184,7 +184,7 @@ class NTochka(BaseModel):
         verbose_name=_("Mahsulot turi"),
         default=['1'],
     )
-    is_active = models.BooleanField(default=False, verbose_name=_("Faol"))
+    is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     in_proccess = models.BooleanField(default=False, verbose_name=_("Ariza orqali yaratilgan"))
     is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
     code = models.CharField(max_length=20, unique=True, verbose_name=_("Rasta kodi"))

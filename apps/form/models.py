@@ -199,7 +199,7 @@ class Application(BaseModel):
     checked_at = models.DateTimeField(verbose_name=_("Tekshirilgan vaqt"), null=True, blank=True)
     comment = models.CharField(max_length=255, verbose_name=_("Comment"), null=True, blank=True)
     detail = models.JSONField(verbose_name=_("To'liq mahsulotlar"), default=list, null=True, blank=True)
-    is_active = models.BooleanField(default=False, verbose_name=_("Faol"))
+    is_active = models.BooleanField(default=True, verbose_name=_("Faol"))
     is_checked = models.BooleanField(default=False, verbose_name=_("Tekshirilgan")) 
 
     def get_is_active(self, obj):
