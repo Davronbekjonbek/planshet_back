@@ -81,7 +81,7 @@ class ProductAdmin(BaseAdmin):
 
 @admin.register(TochkaProduct)
 class TochkaProductAdmin(BaseAdmin):
-    list_display = ('id', 'product_name', 'ntochka_name', 'district_code', 'last_price', 'is_udalen', 'created_at')
+    list_display = ('id', 'product_name', 'ntochka_name', 'district_code', 'previous_price', 'last_price', 'is_udalen', 'created_at', 'updated_at')
     list_filter = ('is_udalen', 'is_active', 'ntochka', 'hudud__district')
     search_fields = ('product__name', 'id')
     ordering = ('-id',)
@@ -268,7 +268,7 @@ class ApplicationAdmin(admin.ModelAdmin):
     # --- Holatlarni ko'rsatish ---
     def get_all_tochkas(self, obj):
         statuses = []
-        for attr, label in [('tochka', 'Tochka'), ('ntochka', 'NTochka')]:
+        for attr, label in [('tochka', 'Obyekt'), ('ntochka', 'Rasta')]:
             attr_obj = getattr(obj, attr, None)
             if attr_obj:
                 status = '✔' if attr_obj.is_active else '✖'
@@ -279,7 +279,7 @@ class ApplicationAdmin(admin.ModelAdmin):
     # --- Toggle tugmalari ---
     def toggle_links(self, obj):
         links = []
-        for attr, label in [('tochka', 'Tochka'), ('ntochka', 'NTochka')]:
+        for attr, label in [('tochka', 'Obyekt'), ('ntochka', 'Rasta')]:
             attr_obj = getattr(obj, attr, None)
             if not attr_obj:
                 continue

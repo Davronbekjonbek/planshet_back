@@ -144,7 +144,7 @@ def approve_application(request, pk):
                                 ntochka=ntochka,
                                 hudud=application.tochka,
                                 defaults={
-                                    'is_active': True,
+                                    'is_active': False,
                                     'last_price': product_data.get('price', 0),
                                     'miqdor': product_data.get('miqdor', 0)
                                 }
