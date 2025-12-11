@@ -262,22 +262,8 @@ class TochkaProductHistoryAdmin(BaseAdmin):
 
 @admin.register(Application)
 class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ('id', 'application_type', 'employee', 'district_soato', 'get_all_tochkas', 'toggle_links')
+    list_display = ('id', 'application_type', 'employee', 'get_all_tochkas', 'toggle_links')
     list_filter = ('application_type',)
-
-    @admin.display(description="SOATO")
-    def district_soato(self, obj):
-        # Agar RASTA kiritilgan bo'lsa
-        if obj.ntochka:
-            district = obj.ntochka.hudud.district
-            return district.soato if district else "-"
-
-        # Agar OBYEKT kiritilgan bo'lsa
-        if obj.tochka:
-            district = obj.tochka.district
-            return district.soato if district else "-"
-        
-        return "-"
 
     # --- Holatlarni ko'rsatish ---
     def get_all_tochkas(self, obj):
