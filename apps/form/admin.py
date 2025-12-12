@@ -109,7 +109,7 @@ class TochkaProductAdmin(BaseAdmin):
 
 @admin.register(TochkaProductHistory)
 class TochkaProductHistoryAdmin(BaseAdmin):
-    list_display = ('id', 'product__name', 'price', 'employee', 'period', 'status_display', 'created_at')
+    list_display = ('id', 'product_name', 'price', 'employee', 'period', 'status_display', 'created_at')
     list_filter = (
         'status',
         'is_active',
@@ -125,6 +125,11 @@ class TochkaProductHistoryAdmin(BaseAdmin):
     list_per_page = 30
     raw_id_fields = ('tochka_product', 'ntochka', 'hudud', 'product', 'employee', 'period', 'alternative_for')
     show_full_result_count = False  # Jami sonini hisoblashni o'chirish - juda tezlashtiradi!
+
+    def product_name(self, obj):
+        return obj.product.name
+    product_name.short_description = "Nomi"
+    product_name.admin_order_field = "product__name"
 
     # N+1 query muammosini hal qilish
     def get_queryset(self, request):
