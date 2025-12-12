@@ -121,12 +121,12 @@ def approve_application(request, pk):
         # Process based on application type
         if application.application_type == 'for_close_rasta':
             # Close rastas
-            for ntochka in application.ntochkas.all():
-                ntochka.is_active = False
-                ntochka.save()
+            for rasta in application.ntochka.all():
+                rasta.is_active = False
+                rasta.save()
                 
                 # Deactivate all products in this rasta
-                TochkaProduct.objects.filter(ntochka=ntochka).update(is_active=False)
+                TochkaProduct.objects.filter(ntochka=rasta).update(is_active=False)
         
         elif application.application_type == 'for_open_rasta':
             # Open rastas
