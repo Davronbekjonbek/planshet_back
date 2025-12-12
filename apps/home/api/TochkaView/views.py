@@ -85,12 +85,16 @@ class TochkaListView(ListAPIView):
             is_udalen=False,
             is_weekly=_weekly_type == 'weekly',
         )
+        tochka_history_query = Q(
+            period__period=period_date.period
+        )
+
         if product_type and weekly_type == 2:   # bu yerda faqat oylik bolgandagina filter qilinadi product type boyicha aks holda bolsa haftalikka tegishli bolga barcha rastalar korilishi kerak
             ntochka_query &= Q(product_type__contains=product_type)
-
-        if weekly_type == 2 and product_type:
             base_query &= Q(product_type__contains=product_type)
             tochka_product_query &= Q(product__category__product_type=int(product_type))
+            tochka_history_query &= Q(product__category__product_type=int(product_type))
+
         ntochka_prefetch = Prefetch(
             'ntochkas',
             queryset=NTochka.objects.filter(
@@ -110,9 +114,7 @@ class TochkaListView(ListAPIView):
                 Prefetch(
                     'product_history',
                     queryset=TochkaProductHistory.objects.filter(
-                        period__period=period_date.period,
-                        product__category__product_type=int(product_type)
-
+                        tochka_history_query
                     ).exclude(
                         status__in=['sotilmayapti', 'vaqtinchalik', 'obyekt_yopilgan', 'mavsumiy', 'chegirma']
                     ).only('id', 'ntochka_id', 'status'),
