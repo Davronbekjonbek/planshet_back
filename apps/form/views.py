@@ -127,7 +127,6 @@ def approve_application(request, pk):
                 
                 # Deactivate all products in this rasta
                 TochkaProduct.objects.filter(ntochka=ntochka).update(is_active=False)
-                NTochka.objects.filter(ntochka=ntochka).update(is_active=False)
         
         elif application.application_type == 'for_open_rasta':
             # Open rastas
