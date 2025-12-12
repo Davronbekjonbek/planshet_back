@@ -109,7 +109,7 @@ class TochkaProductAdmin(BaseAdmin):
 
 @admin.register(TochkaProductHistory)
 class TochkaProductHistoryAdmin(BaseAdmin):
-    list_display = ('id', 'price', 'employee', 'period', 'status_display', 'created_at')
+    list_display = ('id', 'product__name', 'price', 'employee', 'period', 'status_display', 'created_at')
     list_filter = (
         'status',
         'is_active',
