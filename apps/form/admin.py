@@ -262,8 +262,9 @@ class TochkaProductHistoryAdmin(BaseAdmin):
 
 @admin.register(Application)
 class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ('id', 'application_type', 'employee', 'get_all_tochkas', 'toggle_links')
-    list_filter = ('application_type',)
+    list_display = ('id', 'application_type', 'employee', 'get_all_tochkas', 'toggle_links', 'is_checked', 'created_at')
+    list_editable = ('is_checked',)
+    list_filter = ('application_type','employee')
 
     # --- Holatlarni ko'rsatish ---
     def get_all_tochkas(self, obj):
