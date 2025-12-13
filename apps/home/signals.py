@@ -40,7 +40,7 @@ def create_history_for_new_period(sender, instance, created, **kwargs):
         return
 
     # Import here to avoid circular import
-    from apps.form.models import TochkaProductHistory
+    from apps.form.models import TochkaProductHistory, TochkaProduct
 
     # Oldingi perioddagi shartga mos history larni olish
     previous_histories = TochkaProductHistory.objects.filter(
@@ -49,25 +49,43 @@ def create_history_for_new_period(sender, instance, created, **kwargs):
         tochka_product__is_weekly=True
     ).select_related('tochka_product')
 
-    # Yangi history larni yaratish
+    # Yangi history larni yaratish va TochkaProduct larni yangilash
     new_histories = []
+    tochka_products_to_update = []
+
     for history in previous_histories:
+        tochka_product = history.tochka_product
+
+        # TochkaProduct narxlarini yangilash
+        tochka_product.previous_price = tochka_product.last_price
+        tochka_product.last_price = 0
+        tochka_products_to_update.append(tochka_product)
+
+        # Yangi history yaratish
         new_histories.append(
             TochkaProductHistory(
                 product=history.product,
                 ntochka=history.ntochka,
                 hudud=history.hudud,
-                tochka_product=history.tochka_product,
+                tochka_product=tochka_product,
                 employee=history.employee,
                 period=instance,  # Yangi PeriodDate
                 status=history.status,  # Oldingi status saqlanadi
                 price=0,
                 unit_price=0,
-                unit_miqdor=history.tochka_product.miqdor,
+                unit_miqdor=tochka_product.miqdor,
                 is_from_period_create=True,
             )
         )
 
+    # TochkaProduct larni bulk update qilish
+    if tochka_products_to_update:
+        TochkaProduct.objects.bulk_update(
+            tochka_products_to_update,
+            ['last_price', 'previous_price']
+        )
+
+    # History larni bulk create qilish
     if new_histories:
         TochkaProductHistory.objects.bulk_create(
             new_histories,
