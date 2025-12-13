@@ -25,7 +25,7 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'uuid', 'name', 'category', 'category_name','category_code', 
             'category_logo', 'rasfas', 'code', 'price', 'barcode', 'unit_name', 'unit_miqdor', 'top', 
-            'bottom', 'is_import', 'created_at', 'updated_at',
+            'bottom', 'is_import', 'is_index'
         ]
 
 
@@ -42,12 +42,31 @@ class TochkaProductSerializer(serializers.ModelSerializer):
     product = ProductSerializer(read_only=True)
     status = serializers.SerializerMethodField(read_only=True)
     product_status = serializers.SerializerMethodField(read_only=True)
+    last_price = serializers.SerializerMethodField(read_only=True)
+    previous_price = serializers.SerializerMethodField(read_only=True)
+    is_from_period_create = serializers.SerializerMethodField(read_only=True)
+
+    def _has_history(self, obj):
+        """History mavjudligini tekshirish"""
+        history = getattr(obj, 'current_history', [])
+        return len(history) > 0
+
+    def get_last_price(self, obj):
+        if self._has_history(obj):
+            return obj.last_price
+        return 0
+
+    def get_previous_price(self, obj):
+        if self._has_history(obj):
+            return obj.previous_price
+        return obj.last_price
 
     def get_status(self, obj):
-        # Prefetch qilingan ma'lumotlardan foydalanish
-        history = getattr(obj, 'current_history', [])
-        if not history:
+        
+        if not self._has_history(obj):
             return 'unknown'
+        
+        history = getattr(obj, 'current_history', [])
         if history[0].status == 'sotilmayapti':
             return 'unavailable'
         if obj.last_price > obj.previous_price:
@@ -58,16 +77,20 @@ class TochkaProductSerializer(serializers.ModelSerializer):
             return 'unchanged'
 
     def get_product_status(self, obj):
-        # Prefetch qilingan ma'lumotlardan foydalanish
         history = getattr(obj, 'current_history', [])
         return history[0].status if history else None
+
+    def get_is_from_period_create(self, obj):
+        history = getattr(obj, 'current_history', [])
+        return history[0].is_from_period_create if history else False
+    
 
     class Meta:
         model = TochkaProduct
         fields = [
             'id', 'product', 'ntochka', 'last_price', 
             'previous_price', 'status', 'product_status',
-            'is_active', 'is_udalen', 'miqdor'
+            'is_active', 'is_udalen', 'miqdor', 'is_from_period_create'
         ]
 
 class TochkaProductHistorySerializer(serializers.ModelSerializer):

@@ -89,9 +89,11 @@ class PeriodAdmin(CSVExportMixin, admin.ModelAdmin):
 @admin.register(PeriodDate)
 class PeriodDateAdmin(admin.ModelAdmin):
     form = PeriodDateForm
-    list_display = ['period', 'date']
-    list_filter = ['period', 'date']
+    list_display = ['id', 'date']
+    list_filter = ['period__name', 'date']
     date_hierarchy = 'date'
+
+
 
 
 

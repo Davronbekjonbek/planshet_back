@@ -21,6 +21,7 @@ class RastaSerializer(serializers.ModelSerializer):
         return len(getattr(obj, 'active_products', []))
 
     def get_finished(self, obj):
+        # print(getattr(obj, 'completed_history', []))
         return len(getattr(obj, 'completed_history', []))
 
     def get_is_checked(self, obj):

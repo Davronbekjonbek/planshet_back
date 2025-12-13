@@ -115,9 +115,11 @@ class TochkaListView(ListAPIView):
                     'product_history',
                     queryset=TochkaProductHistory.objects.filter(
                         tochka_history_query
-                    ).exclude(
-                        status__in=['sotilmayapti', 'vaqtinchalik', 'obyekt_yopilgan', 'mavsumiy', 'chegirma']
-                    ).only('id', 'ntochka_id', 'status'),
+                    )
+                    # .exclude(
+                    #     status__in=['sotilmayapti', 'vaqtinchalik', 'obyekt_yopilgan', 'mavsumiy', 'chegirma']
+                    # )
+                    .only('id', 'ntochka_id', 'status'),
                     to_attr='completed_history'
                 )
             ),

@@ -117,8 +117,8 @@ class TochkaProduct(BaseModel):
     is_udalen = models.BooleanField(default=False, verbose_name=_("Udalen"))
     is_weekly = models.BooleanField(default=False, verbose_name=_("Haftalik"))
 
-    def __str__(self):
-        return f"{self.ntochka} - {self.product}"        
+    # def __str__(self):
+    #     return f"{self.ntochka} - {self.product}"        
 
     class Meta:
         ordering = ['-id']
@@ -154,9 +154,9 @@ class TochkaProductHistory(BaseModel):
     is_alternative = models.BooleanField(default=False, verbose_name=_("Alternativ"))
     is_from_application = models.BooleanField(default=False, verbose_name=_("Ariza tomonidan yaratilgan"))
     alternative_for = models.ForeignKey(TochkaProduct, on_delete=models.CASCADE, verbose_name=_("Alternativ Product"), null=True, blank=True)
-
-    def __str__(self):
-        return f"{self.tochka_product} - {self.price}"
+    is_from_period_create = models.BooleanField(default=False, verbose_name=_("Davr yaratishda yaratilgan"))
+    # def __str__(self):
+    #     return f"{self.tochka_product} - {self.price}"
 
     class Meta:
         verbose_name = "Mahsulot marx tarixi"

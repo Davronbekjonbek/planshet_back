@@ -278,7 +278,7 @@ class AlternativeProductListView(ListAPIView):
             return Response({"detail": "Invalid headers or not found"}, status=400)
 
         category = product.category
-        category_products = Product.objects.filter(category=category).select_related(
+        category_products = Product.objects.filter(category=category, is_index=True).select_related(
             'category',
             'unit'
         )

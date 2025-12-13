@@ -109,7 +109,7 @@ class TochkaProductAdmin(BaseAdmin):
 
 @admin.register(TochkaProductHistory)
 class TochkaProductHistoryAdmin(BaseAdmin):
-    list_display = ('id', 'product_name', 'price', 'employee', 'period', 'status_display', 'created_at')
+    list_display = ('id', 'product_name', 'price', 'employee_name', 'period', 'status_display', 'created_at')
     list_filter = (
         'status',
         'is_active',
@@ -133,6 +133,11 @@ class TochkaProductHistoryAdmin(BaseAdmin):
     product_name.short_description = "Nomi"
     product_name.admin_order_field = "product__name"
 
+    def employee_name(self, obj):
+        return obj.employee.login if obj.employee else '-'
+    employee_name.short_description = "Xodim"
+    employee_name.admin_order_field = "employee__login"
+
     # N+1 query muammosini hal qilish
     def get_queryset(self, request):
         return super().get_queryset(request).select_related(
@@ -142,7 +147,7 @@ class TochkaProductHistoryAdmin(BaseAdmin):
             'product',
         ).only(
             'id', 'price', 'status', 'is_active', 'is_checked', 'created_at',
-            'employee__full_name', 'employee__id',
+            'employee__id', 'employee__login',
             'period__id', 'period__date',
             'tochka_product__id',
             'product__id', 'product__name',
